@@ -1,1 +1,57 @@
+Aplicação base com locais e percursos em que cada percurso tem parâmetros de:
+-pavimento
+-inclinação
+-qualidade do ambiente e do ar (poluição sonora, visual, indice de carbono, polen/alergias...)
+-trânsito
+-multidão
+-hora do dia
+-passadeiras
+-passeios
+-acessibiliadde a cadeira de rodas, pessoas com limitações
+(mais algumas coisas)
 
+Possíveis locais nos mapas:
+-locais de construção/obras (obstrução de vias, poluição..)
+-hospitais
+-parques naturais
+-fábricas
+-escolas
+-áreas comerciais
+-áreas rurais
+-rios/mares/lagos
+-multibanco
+-centro de camionagem/táxis/...
+-paragem de autocarros
+-esquadra da polícia
+-bombeiros
+-farmácia
+-camara municipal/junta de freguesia
+-ecopontos
+-estações de carregamento de carros elétricos
+
+Coisas extra:
+-opção de login/sign in
+-sistema de bicicletas ou trotinetes (+ sustentabilidade)
+-banco de cidades
+-"uber"/transportes
+-imposições de horário (limitações no horário) 
+-luz
+-metereologia
+-hora do dia
+-distância percorrida (dependendo do meio de transporte, sistema de pontos para obter vantagens promocionais)
+
+Informações e inputs do usuário (selecionar entre opcções: "#")
+-nome
+-idade
+-incapacidades #
+-problemas de saúde #
+-alergias #
+-meio de transporte #
+-destino #
+
+Métricas, cálculos:
+-tempo que demora a percorrer caminho
+-alternativas de rota limitadas (função do tempo, das condições, das preferências... usuário escolhe)
+
+Interface:
+- interativa, estilo aplicação de telmóvel
