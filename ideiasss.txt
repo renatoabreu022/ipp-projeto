@@ -1,4 +1,4 @@
-Aplicação base com locais e percursos em que cada percurso tem parâmetros de:
+eAplicação base com locais e percursos em que cada percurso tem parâmetros de:
 -pavimento
 -inclinação
 -qualidade do ambiente e do ar (poluição sonora, visual, indice de carbono, polen/alergias...)
@@ -28,6 +28,7 @@ Possíveis locais nos mapas:
 -camara municipal/junta de freguesia
 -ecopontos
 -estações de carregamento de carros elétricos
+- bebedouros, ...
 
 Coisas extra:
 -opção de login/sign in
