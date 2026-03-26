@@ -56,3 +56,64 @@ Métricas, cálculos:
 
 Interface:
 - interativa, estilo aplicação de telmóvel
+
+
+ideia de estrutura de ficheiros:
+
+projeto/
+│
+├── main.py
+│
+├── modelo/        MODEL
+│   ├── __init__.py
+│   ├── local.py
+│   ├── percurso.py
+│   ├── indicadores_ambientais.py
+│   ├── indicadores_acessibilidade.py
+│   ├── utilizador.py
+│   ├── grafo.py
+│
+├── servicos/      CONTROLLER
+│   ├── __init__.py
+│   ├── gestor_dados.py
+│   ├── motor_analise.py
+│   ├── motor_recomendacao.py
+│
+├── interface/
+│   ├── __init__.py
+│   ├── comandos.py   CONTROLLER
+│   ├── consola.py    VIEW
+│   ├── gui.py        VIEW
+│
+├── dados/
+│   ├── base.json     
+│
+└── docs/
+    ├── relatorio.md
+    ├── diagramas/
+
+main.py -- parte que interliga todos os outros ficheiros
+
+modelo\ classes a usar
+local.py -- hospitais, parques, escolas, fábricas, etc.
+percurso.py -- dados que um percurso pode ter (origem, destino, indicadores de poulição,etc.)
+indicadores_ambientais.py -- fatores de poluição do ambiente e fatores que beneficiam o ambiente
+indicadores_acessibilidade.py -- fatores que dificultam/facilitam o trânsito do usuario
+utilizador.py -- dados do utilizador (nome, idade, problemas de saude, etc.)
+grafo.py -- rede de percursos com metodos para adicionar nós (locais) e arestas (ligações entre lugares), calcular percursos, etc.
+
+pelo que estive a ver, é boa prática ter um ficheiro para uma única classe
+
+servicos\ funções do sistema
+gestor_dados.py -- gere os ficheiros necessários (carregar, guardar) e permite mexer na base de dados
+motor_analise.py -- no geral, trata dos cálculos de inidces de conforto e de outras formulas
+motor_recomendacao.py -- encontra caminhos e adapta-os ao perfil do utilizador
+
+interface\ o que o utilizador vê/interage
+consola.py -- loop principal, mostrar menus, interpretar comandos
+comandos.py -- implementa as funções ligadas à interação do utilizador (guardar, sair, recomendar, etc.)
+gui.py -- parte gráfica
+
+dados\ possíveis bases de dados
+
+docs\ possíveis documentos a guardar, como o README ou exemplos de outputs
