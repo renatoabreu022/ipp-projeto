@@ -4,6 +4,7 @@
 #tipo = string
 #alergias = list
 #incapacidades = list
+import json
 
 class Perfil:
     
@@ -118,27 +119,32 @@ class Sistema:
     def add_user(self,user:Utilizador): # Adiciona um novo utilizador ao sistem
         self._users.append(user)
 
-    def login(self,username,password):
+    def login(self,Inusername,Inpassword):
         found = False
         i = 0
-        ile nssion = Falsen = False and i < len(self._users):
-              if self._ an
-        while not found elf._users): crie um novo.")
-              found =_username==username True    
+        permission = False
 
- # Encontra o user
-     #Encon    o username                if self._users[i].get:password==password:
-                    permission = True_  #valida a password                    
+        while not found and i <len(self._users):
+            if self._users[i].u_username == Inusername:
+                found = True                       #verifica username
 
-                
-            i+=1_  #Valida a pas
-                    if not found:
-            print(f"O username {username} não existe.")
+                if self._users[i].u_password==Inpassword: # verifica password
+                    permission = True
 
-        if not permisson:
-                      i 
-sword inválida")
-    
-        return permission                #Dá a ordem de login. Ou eremover :user_user()self,usernamentão não
+            i += 1
 
-    def 
+        if not found:
+            print("Username não encontrado.")
+
+        if not permission:
+            print("Password inválida.")
+            
+        return permission # Dá a ordem de seguir se as credenciais estiverem corretas
+
+    def save_users(self):
+        save = {}
+        for user in self._users:
+            if user.u_username not in save:
+                save[user.u_username] = {"pass"=user.u_password,"perfil"=user.u_perfil}
+
+        json.load(save)

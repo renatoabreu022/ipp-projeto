@@ -63,12 +63,39 @@ class Rua(Percurso):
             elif 5 < num :
                 self.passadeiras ="Elevado"
         elif 1000 <= dist < 1500:
-            if num <= 2:
+            if num <= 4:
                 self.passadeiras ="Baixo"
-            elif 2 < num <= 5:
+            elif 4 < num <= 8:
                 self.passadeiras ="Moderado"
-            elif 5 < num :
+            elif 8 < num :
                 self.passadeiras ="Elevado"
+        elif 1500 <= dist < 2000:
+            if num <= 6:
+                self.passadeiras ="Baixo"
+            elif 6 < num <= 10:
+                self.passadeiras ="Moderado"
+            elif 10 < num :
+                self.passadeiras ="Elevado"
+        elif 2000 <= dist < 2500:
+            if num <= 8:
+                self.passadeiras ="Baixo"
+            elif 8 < num <= 12:
+                self.passadeiras ="Moderado"
+            elif 12 < num :
+                self.passadeiras ="Elevado"
+        elif 2500 <= dist < 3000:
+            if num <= 10:
+                self.passadeiras ="Baixo"
+            elif 10 < num <= 14:
+                self.passadeiras ="Moderado"
+            elif 14 < num :
+                self.passadeiras ="Elevado"
+        elif dist >= 3000:
+            if num <= 12:
+                self.passadeiras = "Baixo"
+            elif num > 12:
+                self.passadeiras = "Aceitável"
+        elif dist < 0
 
 
 #--------------------------------------------------------------------------------
@@ -84,6 +111,10 @@ class ParametrosAmbiente(Percurso):
         self.nivel_polen= None       #Pode ser em percentagem ou em True or False
         self.iluminacao= None
 
+    def temp(self, temperatura):
+        if 18<=temperatura<=24:
+            self.temperatura
+
     def percqualidade_ar(self, perc_qualidade_ar):
         #perc_qualidade_ar: 100% é ar puro,_ 0% é ar extremamente poluído.
         if perc_qualidade_ar >=80:
@@ -96,14 +127,19 @@ class ParametrosAmbiente(Percurso):
             self.qualidade_ar= "Péssimo"
         
     def poluison(self, poluicaosonora):
+        #poluison: 0% (silêncio/natureza), 100% ruído ensurdecedor
+        if poluicaosonora<50:
+            self.poluicao_sonora= "Terrível"
+        elif 50<=poluicaosonora<80:
+            self.poluicao_sonora= "Aceitável"
+        else:
+            self.poluicao_sonora= "Ideal"
+
+
+    def puluivisu (self, poluicaovisual):
         
 
-        if poluicaosonora<=50:
-            self.poluicao_sonora= "Terrível"
-        elif 50<poluicao_sonora
-
-
-    
+        
 #parâmetros de população
 class ParametrosPopulacao(Percurso):
     def __init__(self, nome, origem, destino):
