@@ -4,11 +4,13 @@ class Percurso:
         self.origem = origem
         self.destino = destino
 
-#-----------------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------------------------
+
+#parâmetros de rua
+
 class Rua(Percurso):
     def __init__(self, nome, origem, destino):
         super().__init__(nome, origem, destino)
-        #parâmetros de rua
         self.pavimento = None
         self.inclinacao = None
         self.passadeiras = None
@@ -16,7 +18,8 @@ class Rua(Percurso):
         self.textura_cego = None #ruas com textura no chão para guia de pessoas cegas
         self.escadas = None
         
-    #as funções têm todas um underscore no seu nome para que não sejam barakha
+    #as funções têm todas um underscore no seu nome para que não sejam baralhadas com o nome do atributo
+    
     def pavimento_(self,rugosidade):
         #em termos de percentagem
         if 0 <= rugosidade < 30:
@@ -125,9 +128,12 @@ class Rua(Percurso):
             self.escadas = "O percurso inclui escadas."
         else:
             self.escadas = "O percurso não inclui escadas."
-#--------------------------------------------------------------------------------
+            
+            
+#-----------------------------------------------------------------------------------------
 
 #parâmetros de ambiente
+
 class ParametrosAmbiente(Percurso):
     def __init__(self,nome, origem, destino):
         super().__init__(nome, origem, destino)
@@ -140,25 +146,27 @@ class ParametrosAmbiente(Percurso):
         self.sombra= None
 
     def temp(self, temperatura):
-        if 18<=temperatura<=24:
-            self.temperatura= "Ideal"
+        if 0 <= temperatura <15:
+            self.temperatura = "Desconforto Ligeiro."
+        elif 15<=temperatura<=24:
+            self.temperatura= "Ideal."
         elif 25<=temperatura<=30 or 10<=temperatura<=17:
-            self.temperatura= "Desconforto Ligeiro"
+            self.temperatura= "Desconforto Ligeiro."
         elif temperatura<=10 or 30<=temperatura:
-            self.temperatura= "Risco Moderado"
+            self.temperatura= "Risco Moderado."
         else:
-            self.temperatura= "Risco Elevado"
+            self.temperatura= "Risco Elevado."
 
     def percqualidade_ar(self, perc_qualidade_ar):
         #perc_qualidade_ar: 100% é ar puro,_ 0% é ar extremamente poluído.
         if perc_qualidade_ar >=80:
             self.qualidade_ar= "Excelente"
         elif 50<=perc_qualidade_ar<80:
-            self.qualidade_ar= "Bom"
+            self.qualidade_ar= "Boa"
         elif 20<=perc_qualidade_ar<50:
-            self.qualidade_ar= "Mau"
+            self.qualidade_ar= "Má"
         else:
-            self.qualidade_ar= "Péssimo"
+            self.qualidade_ar= "Péssima"
         
     def poluison(self, poluicaosonora):
         #poluison: 0% (silêncio/natureza), 100% ruído ensurdecedor
@@ -167,38 +175,94 @@ class ParametrosAmbiente(Percurso):
         elif 30<=poluicaosonora<70:
             self.poluicao_sonora= "Aceitável"
         else:
-            self.poluicao_sonora= "Terrível"
+            self.poluicao_sonora= "Desconfortável"
 
 
     def puluivisu (self, poluicaovisual):
-
-        pass
+        if poluicaovisual<30:
+            self.poluicao_visual= "Ideal"
+        elif 30<=poluicaovisual<60:
+            self.poluicao_visual= "Aceitável"
+        elif 60<=poluicaovisual<=100:
+            self.poluicao_visual= "Desconfortável"
+        else:
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
+        
         
     def nivelpolen(self, polen):
         #ar limpo (sem polen) 0%, ar com polen 100%
-        if polen<=15:
-            self.nivel_polen= "Ideal (ar limpo)"
+        if 0<polen<=15:
+            self.nivel_polen= "Ideal. Ar limpo."
         elif 15<polen<=40:
             self.nivel_polen= "Risco Ligeiro"
         elif 40<polen<=70:
+            self.nivel_polen= "Risco Moderado"
+        elif 70<polen<=100:
             self.nivel_polen= "Risco Elevado"
         else:
-            self.nivel_polen= "Nao sei mas é péssimo"
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
+            
 
     
-    def iluminacao(self, numpostes, hora, dist):
+    def ilumina(self, numpostes, hora, dist):
+        
+        dia = hora <= 20 or hora >= 7
         if dia:
             self.iluminacao= "Ótima"
         else:
+            if numpostes==0:
+                self.iluminacao= "Iluminação reduzida."
+            else:
+                metros_por_poste= dist/numpostes
+
+            if metros_por_poste<=30:
+                self.iluminacao="Excelente"
+            elif 30< metros_por_poste<= 60:
+                self.iluminacao= "Iluminação Moderada"
+            else:
+                self.iluminacaoo="Fraco (Má visibilidade)"
             
-        pass
     
-    def sombra(self, )
+    def sombra1(self, nsombra):
+        if nsombra<30:
+            self.sombra= " Terrível"
+        elif 30<=nsombra<60:
+            self.sombra= "Aceitável"
+        else:
+            self.sombra= "Ideal"
     
+    def sombra2(self, nsombra, dist):
+        perc_cobertura= (nsombra/dist)*100
+        if perc_cobertura<30:
+            self.sombra= " Terrível"
+        elif 30<=perc_cobertura<60:
+            self.sombra= "Aceitável"
+        else:
+            self.sombra= "Ideal"
+    
+    
+#-------------------------------------------------------------------------------------------
+
 #parâmetros de população
+
 class ParametrosPopulacao(Percurso):
     def __init__(self, nome, origem, destino):
         super().__init__(nome, origem, destino)
         self.transito = None
         self.multidao = None
         
+    #nestas funções a condiçaõ de True ou False vai atualizar o atributo. Se há trânsito ou não, se há multidão ou não...
+    def transito_(self,res):
+        if res == True:
+            self.transito = "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada."
+        else:
+            self.transito = "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida."
+    
+    def multidao_(self,res):
+        if res == True:
+            self.multidao = "Zona de elevada afluência de peões."
+        else:
+            self.multidao = "Zona de reduzida afluência de peões."
+
+
+                
