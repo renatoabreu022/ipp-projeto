@@ -1,3 +1,3 @@
 # ipp-projeto
-hi lindos, vamos arrasar esta merda
-## :-
+hi lindos, vamos arrasar este lindo projeto
+## 
