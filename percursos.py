@@ -221,7 +221,7 @@ class ParametrosAmbiente(Percurso):
             self.iluminacao= "Ótima"
         else:
             if numpostes==0:
-                self.iluminacao= "Iluminação reduzida."
+                self.iluminacao= "Sem iluminação."
             else:
                 metros_por_poste= dist/numpostes
 
