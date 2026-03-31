@@ -168,34 +168,34 @@ class MotorCalculo:
 
         if ambiente.ilumina=="Sem iluminação.":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=20
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=15
             elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=15
             else:
-                score-=
+                score-=10
                 
         elif ambiente.ilumina=="Fraco (Má visibilidade)":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=15
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=10
             elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=10
             else:
-                score-=
+                score-=5
 
                 
         elif ambiente.ilumina=="Iluminação Moderada":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=10
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=5
             elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=5
             else:
-                score-=
+                score-=0
                 
         
         
