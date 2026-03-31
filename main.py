@@ -77,6 +77,32 @@ def main():
             else:
                 sistema.load_users(args[1])
                 print("Utilizadores carregados com sucesso.")
+                
+                
+        elif comando == 'simular':
+            if not user_login:
+                print("ERRO: O processo de login não foi efetuado.")
+                
+            #se já tiver feito login, carrega a base de dados dos locais
+            else: 
+                try:
+                    with open("locais.json", "r") as f:
+                        cidades = json.load(f)
+                
+                except FileNotFoundError:
+                    print("ERRO: Base de dados 'locais.json' não encontrada.")
+                    continue
+                
+            #aceder às cidades na base de dados
+            cid = cidades.keys()
+            print(f"Cidades disponíveis: {cid}")
+            cid_selecionada = input("Insira a cidade: ")
+            
+            if cid_selecionada in cidades:
+                estabelecimentos = cidades[cid_selecionada]
+                print(f"Locais na cidade selecionada: {estabelecimentos}")
+                
+            
         
         else:
             print("ERRO: Comando não reconhecido.")
