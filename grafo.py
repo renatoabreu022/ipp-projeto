@@ -79,7 +79,7 @@ class Mapa:
     def pesquisa_perc(self,origem,destino): # pesquisa o grafo inteiro por todos os caminhos possíveis entre os dois pontos
         if origem not in self.adjacencias or destino not in self.adjacencias:
             print('ERRO: O ínicio ou o fim do percurso não estão presentes no mapa.')
-            return
+            return [] # este return de lista vazia protege o código caso alguém tente gerar uma recomendação dando erro aqui, pois fará com que a recomendação tenha algo em que pegar
         
         queue = [[origem]] # aqui vai-se listar os caminhos a explorar, iniciamos somente com a origem, depois os caminhos expandem até se chegar a todos os caminhos que levam ao destino
         visitados = set() # conjunto de locais já explorados, permite que o método não fique em loop infinito, é um set pq a pesquisa nele é O(1), mas é melhor perguntar à stora se podemos usar
