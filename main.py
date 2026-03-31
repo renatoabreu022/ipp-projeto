@@ -56,7 +56,7 @@ def main():
             
             else:
                 nome, password = args
-                user_login = sistema.login(nome)
+                user_login = sistema.login(nome,password)
                 if sistema.login(nome,password):
                     print('Login realizado com sucesso.')
 
@@ -68,14 +68,14 @@ def main():
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar <arquivo.json>.")
             
             else:
-                sistema.save_users(args[1])
+                sistema.save_users(args[0])
                 print("Utilizadores gravados com sucesso.")
 
         elif comando == 'ler':
             if not args:
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ler <arquivo.json>.")
             else:
-                sistema.load_users(args[1])
+                sistema.load_users(args[0])
                 print("Utilizadores carregados com sucesso.")
                 
                 

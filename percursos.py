@@ -216,7 +216,7 @@ class ParametrosAmbiente(Percurso):
     
     def ilumina(self, numpostes, hora, dist):
         
-        dia = hora <= 20 or hora >= 7
+        dia = hora in range(7,21)
         if dia:
             self.iluminacao= "Ótima"
         else:
@@ -230,7 +230,7 @@ class ParametrosAmbiente(Percurso):
             elif 30< metros_por_poste<= 60:
                 self.iluminacao= "Iluminação Moderada"
             elif 60< metros_por_poste<= 100:
-                self.iluminacaoo="Fraco (Má visibilidade)"
+                self.iluminacao="Fraco (Má visibilidade)"
             else:
                 print("Erro! Percentagens assumem valores entre 0 e 100.")
                 

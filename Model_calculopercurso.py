@@ -50,7 +50,7 @@ class MotorCalculo:
         
         
 #_________________Alergias I guess____________________________________________________________#
-        if perfil.has_alegia("pólen"):
+        if perfil.has_alergia("pólen"):
             if "Risco Elevado" in ambiente.nivel_polen:
                 score+=30
 
@@ -135,7 +135,7 @@ class MotorCalculo:
         if tipo_user in pvulneraveis and"Desconfortável" in ambiente.poluicao_sonora:
             score+=10
 
-        elif "Desconfortàvel" in ambiente.poulicao_sonora:
+        elif "Desconfortàvel" in ambiente.poluicao_sonora:
             score+=5
 
         elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_sonora:
@@ -148,11 +148,11 @@ class MotorCalculo:
         if "cego" in [inc.lower() for inc in perfil.get_incapacidades()] and ("Desconfortável" in ambiente.poluicao_visual or "Aceitável" in ambiente.poluicao_visual):
             pass # os cegos não se importam com poluição visual
 
-        elif tipo_user in pvulneraveis and "Desconfortável" in ambiente.poluicao_sonora:
+        elif tipo_user in pvulneraveis and "Desconfortável" in ambiente.poluicao_visual:
             score+=10
-        elif "Desconfortável" in ambiente.poluicao_sonora:
+        elif "Desconfortável" in ambiente.poluicao_visual:
             score+=5
-        elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_sonora:
+        elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_visual:
             score+=5
             #mesma coisa que na pol sonora
 
@@ -193,6 +193,11 @@ class MotorCalculo:
         
         
 #------------sombra---------------#
+#IMPORTANTE!!!!!!!
+#@Renato
+#não quero estar a mexer muito no que não fui eu a fazer, mas aqui vocês usaram coisas como ambiente.sombra1
+#como se fossem variaveis, mas isso são métodos
+#isto também está em outras partes do ficheiro, mas notei mais aqui
 
         if ambiente.sombra1=="Sombra Reduzida":
             if ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
