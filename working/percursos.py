@@ -1,4 +1,4 @@
-#------- 30/03/2026 ------ Cláudia e Inês ------------
+#------- 30/03/2026 ------ @Cláudia e @Inês ------------
 
 class Percurso:
     def __init__(self, nome, origem, destino):
