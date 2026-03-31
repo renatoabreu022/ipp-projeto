@@ -1,73 +1,6 @@
 #------------31/03/2026-------@Lucas@Inês------------------#
 
 #____________imports______________#
-from user.py import Perfil
-from percursos.py import Rua, ParametrosAmbiente
-
-class MotorCalculo:
-
-    @staticmethod
-    def calcular_IC(perfil:Perfil,rua:Rua,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto mais próximo de 1 melhor
-        score = 100
-
-        if perfil.need_acessibilidade() and "inclui_escadas" in rua.escadas:
-            score-=50
-
-        elif perfil.need_acessibilidade() and ""
-
-
-    
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#------------31/03/2026-------@Lucas@Inês------------------#
-
-#____________imports______________#
 from user import Perfil
 from percursos import Rua, ParametrosAmbiente
 
@@ -177,33 +110,33 @@ class MotorCalculo:
 
         if ambiente.percqualidade_ar=="Risco Elevado":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=30
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=20
             elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=25
             else:
-                score-=
+                score-=10
                 
         elif ambiente.percqualidade_ar=="Risco Moderado":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=20
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=10
             elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=15
             else:
-                score-=
+                score-=5
                 
         elif ambiente.percqualidade_ar=="Boa":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=10
             elif tipo_user in pvulneraveis:
-                score-=
+                score-=0
             elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score-=
+                score-=5
             else:
-                score-=
+                score-=0
 
 #-------poluicao sonora---------------#
         if tipo_user in pvulneraveis and"Desconfortável" in ambiente.poluicao_sonora:
@@ -219,15 +152,18 @@ class MotorCalculo:
         
     
 #------poluicao visual--------------#
-        if
+        if "cego" in [inc.lower() for inc in perfil.get_incapacidades()] and ("Desconfortável" in ambiente.poluicao_visual or "Aceitável" in ambiente.poluicao_visual):
+            pass # os cegos não se importam com poluição visual
 
+        elif tipo_user in pvulneraveis and "Desconfortável" in ambiente.poluicao_sonora:
+            score-=10
+        elif "Desconfortável" in ambiente.poluicao_sonora:
+            score-=5
+        elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_sonora:
+            score-=5
+            #mesma coisa que na pol sonora
 
-
-
-
-
-
-
+        
 #----------Iluminação------------
 
         if ambiente.ilumina=="Sem iluminação.":
