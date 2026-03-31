@@ -1,5 +1,5 @@
 # ----Dia 30/03/2026 @Renato
-# este ficheiro vai servir como o Model no MVC
+# este ficheiro vai servir como o Controller no MVC
 # ele estará num ciclo infinito à espera de inputs e chama quem os deve processar
 
 from user import Sistema, Utilizador, Perfil
