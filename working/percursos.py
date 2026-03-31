@@ -158,26 +158,31 @@ class ParametrosAmbiente(Percurso):
             self.temperatura= "Risco Moderado."
         else:
             self.temperatura= "Risco Elevado."
+        
 
     def percqualidade_ar(self, perc_qualidade_ar):
         #perc_qualidade_ar: 100% é ar puro,_ 0% é ar extremamente poluído.
-        if perc_qualidade_ar >=80:
+        if 100<=perc_qualidade_ar >=80:
             self.qualidade_ar= "Excelente"
         elif 50<=perc_qualidade_ar<80:
             self.qualidade_ar= "Boa"
         elif 20<=perc_qualidade_ar<50:
-            self.qualidade_ar= "Má"
+            self.qualidade_ar= "Risco Moderado"
+        elif 0<=perc_qualidade_ar<20:
+            self.qualidade_ar= "Risco Elevado"
         else:
-            self.qualidade_ar= "Péssima"
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
         
     def poluison(self, poluicaosonora):
         #poluison: 0% (silêncio/natureza), 100% ruído ensurdecedor
-        if poluicaosonora<30:
+        if 0<=poluicaosonora<30:
             self.poluicao_sonora= "Ideal"
         elif 30<=poluicaosonora<70:
             self.poluicao_sonora= "Aceitável"
-        else:
+        elif 70<=poluicaosonora<=100:
             self.poluicao_sonora= "Desconfortável"
+        else:
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
 
 
     def puluivisu (self, poluicaovisual):
