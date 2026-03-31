@@ -247,4 +247,4 @@ class MotorCalculo:
                 score+=5
         
         
-       return score 
+        return score 
