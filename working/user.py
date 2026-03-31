@@ -188,3 +188,4 @@ class Sistema:
         except FileNotFoundError:
             print("Ficheiro não encontrado. Começar com a lista vazia")
             return [] # Retornar lista vazia em vez de dicionário para manter a consistência
+            
