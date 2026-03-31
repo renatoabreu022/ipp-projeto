@@ -5,7 +5,7 @@
 # ----Dia 31/03/2026 @Renato @Claudia
 
 from user import Sistema, Utilizador, Perfil
-from percursos import Rua, ParametrosAmbiente, ParametrosPopulacao
+from percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 import json
 
 

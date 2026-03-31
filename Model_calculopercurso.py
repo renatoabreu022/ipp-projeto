@@ -2,12 +2,12 @@
 
 #____________imports______________#
 from user import Perfil
-from percursos import Rua, ParametrosAmbiente
+from percursos import ParametrosAcessibilidade, ParametrosAmbiente
 
 class MotorCalculo:
 
     @staticmethod
-    def calcular_IC(perfil:Perfil,rua:Rua,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto mais próximo de 100 melhor
+    def calcular_IC(perfil:Perfil,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto mais próximo de 100 melhor
         score = 0
         tipo_user=perfil.get_tipo().lower()
 #__________________________________________Penalização de acessibilidade__________________________________________________#

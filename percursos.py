@@ -13,7 +13,7 @@ class Percurso:
 
 #parâmetros de rua
 
-class Rua(Percurso):
+class ParametrosAcessibilidade(Percurso):
     def __init__(self, nome, origem, destino):
         super().__init__(nome, origem, destino)
         self.pavimento = None
@@ -224,15 +224,14 @@ class ParametrosAmbiente(Percurso):
                 self.iluminacao= "Sem iluminação."
             else:
                 metros_por_poste= dist/numpostes
-
-            if 0<metros_por_poste<=30:
-                self.iluminacao="Excelente"
-            elif 30< metros_por_poste<= 60:
-                self.iluminacao= "Iluminação Moderada"
-            elif 60< metros_por_poste<= 100:
-                self.iluminacao="Fraco (Má visibilidade)"
-            else:
-                print("Erro! Percentagens assumem valores entre 0 e 100.")
+                if 0<metros_por_poste<=30:
+                    self.iluminacao="Excelente"
+                elif 30< metros_por_poste<= 60:
+                    self.iluminacao= "Iluminação Moderada"
+                elif 60< metros_por_poste<= 100:
+                    self.iluminacao="Fraco (Má visibilidade)"
+                else:
+                    print("Erro! Percentagens assumem valores entre 0 e 100.")
                 
     
     def sombra1(self, nsombra):
