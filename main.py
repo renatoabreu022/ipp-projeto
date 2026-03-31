@@ -22,6 +22,7 @@ def help():
 
 def main():
     sistema = Sistema()  # cria a base de dados de utilizadores
+    user_login = None
     print("Bem-vind@! Digite 'help' para comandos.")
 
     while True:
@@ -55,6 +56,7 @@ def main():
             
             else:
                 nome, password = args
+                user_login = sistema.login(nome)
                 if sistema.login(nome,password):
                     print('Login realizado com sucesso.')
 
@@ -79,4 +81,5 @@ def main():
         else:
             print("ERRO: Comando não reconhecido.")
             
-
+if __name__ == '__main__':
+    main()
