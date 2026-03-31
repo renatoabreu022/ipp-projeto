@@ -144,7 +144,7 @@ class Sistema:
         if not found:
             print("Username não encontrado.")
 
-        if not permission:
+        elif not permission: # @Renato - coloquei elif porque quando não encontra o user, basta mostrar 1 mensagem de erro
             print("Password inválida.")
             
         return permission # Dá a ordem de seguir se as credenciais estiverem corretas
