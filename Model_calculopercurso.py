@@ -61,9 +61,6 @@ class MotorCalculo:
                 score+=5
 
 
-
-
-
 #_________________Penalização de Parametros do ambiente???????____________________________________________________________#
 
 
@@ -100,10 +97,6 @@ class MotorCalculo:
                 score+=5
             else:
                 score-=0
-        
-        
-        
-    
 
 
 #____________Qualidade Ar____________________#
