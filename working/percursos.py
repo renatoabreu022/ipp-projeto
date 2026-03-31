@@ -1,5 +1,8 @@
 #------- 30/03/2026 ------ @Cláudia e @Inês ------------
 
+
+# ----Dia 31/03/2026 @Inês --- Mensagens d
+
 class Percurso:
     def __init__(self, nome, origem, destino):
         self.nome = nome
@@ -158,11 +161,11 @@ class ParametrosAmbiente(Percurso):
             self.temperatura= "Risco Moderado."
         else:
             self.temperatura= "Risco Elevado."
-        
+
 
     def percqualidade_ar(self, perc_qualidade_ar):
         #perc_qualidade_ar: 100% é ar puro,_ 0% é ar extremamente poluído.
-        if 100<=perc_qualidade_ar >=80:
+        if 100>=perc_qualidade_ar >=80:
             self.qualidade_ar= "Excelente"
         elif 50<=perc_qualidade_ar<80:
             self.qualidade_ar= "Boa"
@@ -185,7 +188,7 @@ class ParametrosAmbiente(Percurso):
             print("Erro! Percentagens assumem valores entre 0 e 100.")
 
 
-    def puluivisu (self, poluicaovisual):
+    def puluivisu(self, poluicaovisual):
         if poluicaovisual<30:
             self.poluicao_visual= "Ideal"
         elif 30<=poluicaovisual<60:
@@ -222,30 +225,36 @@ class ParametrosAmbiente(Percurso):
             else:
                 metros_por_poste= dist/numpostes
 
-            if metros_por_poste<=30:
+            if 0<metros_por_poste<=30:
                 self.iluminacao="Excelente"
             elif 30< metros_por_poste<= 60:
                 self.iluminacao= "Iluminação Moderada"
-            else:
+            elif 60< metros_por_poste<= 100:
                 self.iluminacaoo="Fraco (Má visibilidade)"
-            
+            else:
+                print("Erro! Percentagens assumem valores entre 0 e 100.")
+                
     
     def sombra1(self, nsombra):
-        if nsombra<30:
-            self.sombra= " Terrível"
+        if 0<=nsombra<30:
+            self.sombra= ""
         elif 30<=nsombra<60:
             self.sombra= "Aceitável"
-        else:
+        elif 60<=nsombra<100:
             self.sombra= "Ideal"
+        else:
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
     
     def sombra2(self, nsombra, dist):
         perc_cobertura= (nsombra/dist)*100
-        if perc_cobertura<30:
+        if 0<=perc_cobertura<30:
             self.sombra= " Terrível"
         elif 30<=perc_cobertura<60:
             self.sombra= "Aceitável"
-        else:
+        elif 60<=perc_cobertura<=100:
             self.sombra= "Ideal"
+        else:
+            print("Erro! Percentagens assumem valores entre 0 e 100.")
     
     
 #-------------------------------------------------------------------------------------------
@@ -270,6 +279,9 @@ class ParametrosPopulacao(Percurso):
             self.multidao = "Zona de elevada afluência de peões."
         else:
             self.multidao = "Zona de reduzida afluência de peões."
+
+
+                
 
 
                 
