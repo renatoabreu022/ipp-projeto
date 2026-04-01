@@ -133,7 +133,6 @@ def main():
 
 
                     #--gerado de parâmetros ambientais--
-
                     ambiente = ParametrosAmbiente(nome_percurso, origem, destino)
 
                     temper = ambiente.temp(random.randint(-5, 35))
@@ -147,16 +146,12 @@ def main():
                     polen = ambiente.nivelpolen(random.randint(0,100))
 
                     #esta ambiente.ilumina() vai depender depois da hora do dia mas para já vou meter como se a hora não fosse levada em conta (=None)
-
                     #ambiente.ilumina(random.randint(0,15), None, distancia_percurso)
-
                     #não usei o sombra1 que a Inês definiu usei só o sombra 2
-
                     somb = ambiente.sombra2(random.randint(0,100), distancia_percurso)
 
 
                     #--gerador de parâmetros populacionais
-
                     popul = ParametrosPopulacao(nome_percurso, origem, destino)
 
                     trans = popul.transito_(random.choice([True, False]))
@@ -170,7 +165,8 @@ def main():
                                          "Parâmetros Populacionais": f"Trânsito:{trans}\n Multidão:{mult}\n}
                     
                     opcoes_percurso.append(percurso_completo)
-        
+                    
+                print(opcoes_percurso)
         else:
             print("ERRO: Comando não reconhecido.")
             
