@@ -7,6 +7,7 @@
 from user import Sistema, Utilizador, Perfil
 from percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 import json
+import random
 
 
 def help():
@@ -82,27 +83,93 @@ def main():
         elif comando == 'simular':
             if not user_login:
                 print("ERRO: O processo de login não foi efetuado.")
-                
+
             #se já tiver feito login, carrega a base de dados dos locais
-            else: 
+            else:
                 try:
                     with open("locais.json", "r") as f:
                         cidades = json.load(f)
-                
+
                 except FileNotFoundError:
                     print("ERRO: Base de dados 'locais.json' não encontrada.")
                     continue
-                
+
             #aceder às cidades na base de dados
             cid = cidades.keys()
             print(f"Cidades disponíveis: {cid}")
             cid_selecionada = input("Insira a cidade: ")
-            
+
             if cid_selecionada in cidades:
                 estabelecimentos = cidades[cid_selecionada]
                 print(f"Locais na cidade selecionada: {estabelecimentos}")
-                
-            
+
+                origem = input("Ponto de partida: ")
+                destino = input("Ponto de chegada: ")
+
+                if origem in estabelecimentos and destino in estabelecimentos:
+                    opcoes_percurso = []
+                    distancia_percurso = random.randint(5, 3500)
+                    #as distâncias entre locais para diferentes percursos são geradas aleatorimente. um número entre 5m e 3500m     
+
+                #no máximo, 2 localizações podem ter 4 percursos possíveis
+                for i in range(4):
+                    nome_percurso = f"Opção {i+1}: {origem} - {destino}"
+                    #aqui se depois formos dar nomes aos percursos, ao invés de "opção", escrevemos a rua
+
+                    #--gerador de parâmetros de pavimento--
+                    rua = ParametrosAcessibilidade(nome_percurso, origem, destino)
+
+                    pav = rua.pavimento_(random.randint(0,100))
+
+                    inc =rua.inclinacao_(round(random.random(),2)) #o random.random() gera valores decimais entre 0 e 1
+
+                    passad = rua.passadeiras_(random.randint(0,15), distancia_percurso)
+
+                    passei = rua.passeios_(random.randint(0,100))
+
+                    textu = rua.textura_(random.choice([True, False]))
+
+                    escad = rua.escadas_(random.choice([True, False]))
+
+
+                    #--gerado de parâmetros ambientais--
+
+                    ambiente = ParametrosAmbiente(nome_percurso, origem, destino)
+
+                    temper = ambiente.temp(random.randint(-5, 35))
+
+                    qualar = ambiente.percqualidade_ar(random.randint(0,100))
+
+                    pol_som = ambiente.poluison(random.randint(0,100))
+
+                    pol_visual = ambiente.puluivisu(random.randint(0,100))
+
+                    polen = ambiente.nivelpolen(random.randint(0,100))
+
+                    #esta ambiente.ilumina() vai depender depois da hora do dia mas para já vou meter como se a hora não fosse levada em conta (=None)
+
+                    #ambiente.ilumina(random.randint(0,15), None, distancia_percurso)
+
+                    #não usei o sombra1 que a Inês definiu usei só o sombra 2
+
+                    somb = ambiente.sombra2(random.randint(0,100), distancia_percurso)
+
+
+                    #--gerador de parâmetros populacionais
+
+                    popul = ParametrosPopulacao(nome_percurso, origem, destino)
+
+                    trans = popul.transito_(random.choice([True, False]))
+
+                    mult = popul.multidao_(random.choice([True, False]))
+                    
+                    
+                    #no final do ciclo for, guardamos o conjunto de objetos num dicionário
+                    percurso_completo = {"Parâmetros de Pavimento": f"Irregularidade do Pavimento: {pav}\n Inclinação: {inc}\n Passadeiras: {passad}\n Passeios: {passei}\n Textura: {textu}\n Escadas: {escad}\n" , 
+                                         "Parâmetros ambientais": f"Temperatura: {temper}\n Qualidade do ar:{qualar}\n Poluição Sonora:{pol_som}\n Poluição Visual:{pol_visual}\n Nível de pólen:{polen}\n",
+                                         "Parâmetros Populacionais": f"Trânsito:{trans}\n Multidão:{mult}\n}
+                    
+                    opcoes_percurso.append(percurso_completo)
         
         else:
             print("ERRO: Comando não reconhecido.")
