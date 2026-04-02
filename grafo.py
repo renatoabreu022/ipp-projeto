@@ -55,7 +55,7 @@ class Mapa:
             'distancia': distancia,
             'acessibilidade': parAcess,
             'ambiente': parAmb,
-            'população': parPop
+            'populacao': parPop
         }
         self.adjacencias[origem].append(percurso) # após estar criado, o percurso é adicionado à sua origem
 
