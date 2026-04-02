@@ -7,7 +7,7 @@ from percursos import ParametrosAcessibilidade, ParametrosAmbiente
 class MotorCalculo:
 
     @staticmethod
-    def calcular_IC(perfil:Perfil,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto mais próximo de 100 melhor
+    def calcular_IC(perfil:Perfil,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto maior pior o percurso, maior o IC, ou seja, mais stressante é o percurso
         score = 0
         tipo_user=perfil.get_tipo().lower()
 #__________________________________________Penalização de acessibilidade__________________________________________________#
@@ -16,7 +16,7 @@ class MotorCalculo:
         if perfil.need_acessibilidade() and "inclui_escadas" in rua.escadas:
             score+=40
 
-        elif perfil.need_acessibilidade() and "Nível Muito Elevado" in rua.inclinacao:
+        if perfil.need_acessibilidade() and "Nível Muito Elevado" in rua.inclinacao:
             score+=30
         
         elif perfil.need_acessibilidade() and "Nível Elevado" in rua.inclinacao:
@@ -76,7 +76,7 @@ class MotorCalculo:
             elif perfil.need_acessibilidade():
                 score+=15
             else:
-                score-=0
+                score-=10
             
         elif ambiente.temp=="Risco Moderado.":
             if tipo_user in pvulneraveis and perfil.need_acessibilidade():
