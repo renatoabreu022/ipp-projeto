@@ -76,7 +76,7 @@ class MotorCalculo:
             elif perfil.need_acessibilidade():
                 score+=15
             else:
-                score-=10
+                score+=10
             
         elif ambiente.temp=="Risco Moderado.":
             if tipo_user in pvulneraveis and perfil.need_acessibilidade():
