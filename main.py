@@ -162,7 +162,7 @@ def main():
                     #no final do ciclo for, guardamos o conjunto de objetos num dicionário
                     percurso_completo = {"Parâmetros de Pavimento": f"Irregularidade do Pavimento: {pav}\n Inclinação: {inc}\n Passadeiras: {passad}\n Passeios: {passei}\n Textura: {textu}\n Escadas: {escad}\n" , 
                                          "Parâmetros ambientais": f"Temperatura: {temper}\n Qualidade do ar:{qualar}\n Poluição Sonora:{pol_som}\n Poluição Visual:{pol_visual}\n Nível de pólen:{polen}\n",
-                                         "Parâmetros Populacionais": f"Trânsito:{trans}\n Multidão:{mult}\n}
+                                         "Parâmetros Populacionais": f"Trânsito:{trans}\n Multidão:{mult}\n"}
                     
                     opcoes_percurso.append(percurso_completo)
                     
