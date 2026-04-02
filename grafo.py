@@ -1,4 +1,5 @@
 # -- Dia 31/03/2026 @Renato
+# -- Dia 02/04/2026 @Renato
 
 # um grafo é um meio de representar conexões entre coisas e é constituído por 2 componentes:
 # Nós - o nosso caso, locais dass cidades
@@ -16,7 +17,9 @@
 
 # para nós, um grafo é o mapa da cidade
 
+from percursos import ParametrosAcessibilidade, ParametrosAmbiente,ParametrosPopulacao
 from Model_calculopercurso import MotorCalculo
+import json
 
 class Mapa:
     def __init__(self):
@@ -33,7 +36,7 @@ class Mapa:
     def get_locais(self):
         return list(j for j in self.adjacencias)
 
-    def add_percurso(self, origem, destino, parAcess=None, parAmb=None, parPop=None):
+    def add_percurso(self, origem, destino, distancia:float, parAcess=None, parAmb=None, parPop=None):
         if origem not in self.adjacencias: # verifica se os locais já estão identificados no mapa
             print(f'ERRO: {origem} não existe no mapa.')
             return
@@ -49,6 +52,7 @@ class Mapa:
 
         percurso = { # aqui cria-se o percurso caso passe os testes anteriores
             'destino': destino,
+            'distancia': distancia,
             'acessibilidade': parAcess,
             'ambiente': parAmb,
             'população': parPop
@@ -108,3 +112,55 @@ class Mapa:
     
     def recomendar(self,):
         pass # isto vai ter que se ligar ao ficheiro do motor de calculo, ainda não o vi direito, por isso não me vou atrever a trabalhar com ele hahahaha
+
+    def save_mapa(self, ficheiro):
+        dados = {} # dicionario que vai replicar a estrutura do grafo para algo que o JSON lê
+
+        for origem, percursos in self.adjacencias.items():
+            dados[origem] = []
+
+            for perc in percursos:
+                perc_dict = {
+                    'destino': perc['destino'],
+                    'distancia':perc['distancia'],
+                    # to_dict() converte os objetos dos parametros em dicionarios para JSON
+                    # estes if ... else None protegem o codigo no caso de os parametros não existirem por alguma razão
+                    'acessibilidade': perc['acessibilidade'].to_dict() if perc['acessibilidade'] else None,
+                    'ambiente': perc['ambiente'].to_dict() if perc['ambiente'] else None,
+                    'populacao': perc['populacao'].to_dict() if perc['populacao'] else None
+                }
+                dados[origem].append(perc_dict) # adiciona-se cada percurso à sua origem
+        
+        with open(ficheiro + '.json', 'w', encoding= 'utf-8') as f:
+            json.dump(dados,f,indent=4,ensure_ascii=False) # foi a AI que me mostrou isto, mas ensure_ascii=False garante que coisas como ç,ã,etc. não se percam
+        
+        print(f'Mapa gravado com sucesso em "{ficheiro}.json".')
+    
+    def load_mapa(self, ficheiro):
+        try:
+            with open(ficheiro + '.json', 'r', encoding= 'utf-8') as f:
+                dados = json.load(f)
+
+            self.adjacencias = {} # limpa o mapa atual antes de carregar o novo TER CUIDADO DE GUARDAR ANTES DE IMPORTAR
+
+            for origem, percursos in dados.items():
+                self.adjacencias[origem] = []
+
+                for perc_dict in percursos:
+                    # from_dict() é o inverso de to_dict(). este retorna os dados ao seu estado original
+                    acess = ParametrosAcessibilidade.from_dict(perc_dict['acessibilidade']) if perc_dict['acessibilidade'] else None
+                    amb = ParametrosAmbiente.from_dict(perc_dict['ambiente']) if perc_dict['ambiente'] else None
+                    pop = ParametrosPopulacao.from_dict(perc_dict['populacao']) if perc_dict['populacao'] else None
+
+                    percurso = {
+                        'destino': perc_dict['destino'],
+                        'distancia': perc_dict['distancia'],
+                        'acessibilidade': acess,
+                        'ambiente': amb,
+                        'populacao': pop
+                    }
+                    self.adjacencias[origem].append(percurso)
+            print(f'Mapa carregado com sucesso de "{ficheiro}.json".')
+
+        except FileNotFoundError:
+            print(f'ERRO: Ficheiro "{ficheiro}.json" não encontrado.')

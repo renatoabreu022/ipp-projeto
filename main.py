@@ -4,6 +4,9 @@
 
 # ----Dia 31/03/2026 @Renato @Claudia
 
+# ----Dia 02/04/2026 @Renato
+
+from grafo import Mapa
 from user import Sistema, Utilizador, Perfil
 from percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 import json
@@ -23,6 +26,7 @@ def help():
 
 def main():
     sistema = Sistema()  # cria a base de dados de utilizadores
+    mapa = Mapa()
     user_login = None
     print("Bem-vind@! Digite 'help' para comandos.")
 
@@ -58,7 +62,7 @@ def main():
             else:
                 nome, password = args
                 user_login = sistema.login(nome,password)
-                if sistema.login(nome,password):
+                if user_login:
                     print('Login realizado com sucesso.')
 
                 else:
@@ -78,7 +82,18 @@ def main():
             else:
                 sistema.load_users(args[0])
                 print("Utilizadores carregados com sucesso.")
-                
+        
+        elif comando == 'gravar_mapa':
+            if not args:
+                print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar_mapa <ficheiro>.')
+            else:
+                mapa.save_mapa(args[0])
+        
+        elif comando == 'carregar_mapa':
+            if not args:
+                print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: carregar_mapa <ficheiro>.')
+            else:
+                mapa.load_mapa(args[0])
                 
         elif comando == 'simular':
             if not user_login:

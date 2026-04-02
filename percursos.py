@@ -133,6 +133,33 @@ class ParametrosAcessibilidade(Percurso):
             self.escadas = "O percurso inclui escadas."
         else:
             self.escadas = "O percurso não inclui escadas."
+    
+    def to_dict(self):
+        # converte dados em dicionarios para o JSON -- mesma coisa para os outros to_dict()
+        return {
+            "nome": self.nome,
+            "origem": self.origem,
+            "destino": self.destino,
+            "pavimento": self.pavimento,
+            "inclinacao": self.inclinacao,
+            "passadeiras": self.passadeiras,
+            "passeios": self.passeios,
+            "textura_cego": self.textura_cego,
+            "escadas": self.escadas
+        }
+
+    @staticmethod 
+    def from_dict(dados):
+        # retorna os dados de JSON para o que o nosso programa lê -- mesma coisa para os outros from_dict()
+        # usa staticmethod porque não precisa de um objeto que exista aqui para funcionar -- mesma coisa para os outros from_dict()
+        obj = ParametrosAcessibilidade(dados["nome"], dados["origem"], dados["destino"])
+        obj.pavimento = dados["pavimento"]
+        obj.inclinacao = dados["inclinacao"]
+        obj.passadeiras = dados["passadeiras"]
+        obj.passeios = dados["passeios"]
+        obj.textura_cego = dados["textura_cego"]
+        obj.escadas = dados["escadas"]
+        return obj
             
             
 #-----------------------------------------------------------------------------------------
@@ -255,6 +282,31 @@ class ParametrosAmbiente(Percurso):
         else:
             print("Erro! Percentagens assumem valores entre 0 e 100.")
     
+    def to_dict(self):
+        return {
+            "nome": self.nome,
+            "origem": self.origem,
+            "destino": self.destino,
+            "temperatura": self.temp,
+            "qualidade_ar": self.qualidade_ar,
+            "poluicao_sonora": self.poluicao_sonora,
+            "poluicao_visual": self.poluicao_visual,
+            "nivel_polen": self.nivel_polen,
+            "iluminacao": self.iluminacao,
+            "sombra": self.sombra
+        }
+
+    @staticmethod
+    def from_dict(dados):
+        obj = ParametrosAmbiente(dados["nome"], dados["origem"], dados["destino"])
+        obj.temperatura = dados["temperatura"]
+        obj.qualidade_ar = dados["qualidade_ar"]
+        obj.poluicao_sonora = dados["poluicao_sonora"]
+        obj.poluicao_visual = dados["poluicao_visual"]
+        obj.nivel_polen = dados["nivel_polen"]
+        obj.iluminacao = dados["iluminacao"]
+        obj.sombra = dados["sombra"]
+        return obj
     
 #-------------------------------------------------------------------------------------------
 
@@ -279,6 +331,21 @@ class ParametrosPopulacao(Percurso):
         else:
             self.multidao = "Zona de reduzida afluência de peões."
 
+    def to_dict(self):
+        return {
+            "nome": self.nome,
+            "origem": self.origem,
+            "destino": self.destino,
+            "transito": self.transito,
+            "multidao": self.multidao
+        }
+
+    @staticmethod
+    def from_dict(dados):
+        obj = ParametrosPopulacao(dados["nome"], dados["origem"], dados["destino"])
+        obj.transito = dados["transito"]
+        obj.multidao = dados["multidao"]
+        return obj
 
                 
 
