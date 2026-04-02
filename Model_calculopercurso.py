@@ -101,7 +101,7 @@ class MotorCalculo:
 
 #____________Qualidade Ar____________________#
 
-        if ambiente.percqualidade_ar=="Risco Elevado":
+        if ambiente.qualidade_ar=="Risco Elevado":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=30
             elif tipo_user in pvulneraveis:
@@ -111,7 +111,7 @@ class MotorCalculo:
             else:
                 score+=10
                 
-        elif ambiente.percqualidade_ar=="Risco Moderado":
+        elif ambiente.qualidade_ar=="Risco Moderado":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=20
             elif tipo_user in pvulneraveis:
@@ -121,7 +121,7 @@ class MotorCalculo:
             else:
                 score+=5
                 
-        elif ambiente.percqualidade_ar=="Boa":
+        elif ambiente.qualidade_ar=="Boa":
             if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=10
             elif tipo_user in pvulneraveis:
@@ -159,7 +159,7 @@ class MotorCalculo:
         
 #----------Iluminação------------
 
-        if ambiente.ilumina=="Sem iluminação.":
+        if ambiente.iluminacao=="Sem iluminação.":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=20
             elif tipo_user in pvulneraveis:
@@ -169,7 +169,7 @@ class MotorCalculo:
             else:
                 score+=10
                 
-        elif ambiente.ilumina=="Fraco (Má visibilidade)":
+        elif ambiente.iluminacao=="Fraco (Má visibilidade)":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=15
             elif tipo_user in pvulneraveis:
@@ -180,7 +180,7 @@ class MotorCalculo:
                 score+=5
 
                 
-        elif ambiente.ilumina=="Iluminação Moderada":
+        elif ambiente.iluminacao=="Iluminação Moderada":
             if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
                 score+=10
             elif tipo_user in pvulneraveis:
@@ -199,7 +199,7 @@ class MotorCalculo:
 #como se fossem variaveis, mas isso são métodos
 #isto também está em outras partes do ficheiro, mas notei mais aqui
 
-        if ambiente.sombra1=="Sombra Reduzida":
+        if ambiente.sombra=="Sombra Reduzida":
             if ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
                 score+=35
             elif ambiente.temp=="Risco Elevado." and perfil.need_acessibilidade():
@@ -226,7 +226,7 @@ class MotorCalculo:
          
             
         
-        elif ambiente.sombra1=="Sombra Moderada":
+        elif ambiente.sombra=="Sombra Moderada":
             if ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
                 score+=25 
             elif ambiente.temp=="Risco Elevado." and perfil.need_acessibilidade():

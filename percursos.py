@@ -142,7 +142,7 @@ class ParametrosAcessibilidade(Percurso):
 class ParametrosAmbiente(Percurso):
     def __init__(self,nome, origem, destino):
         super().__init__(nome, origem, destino)
-        self.temperatura= None
+        self.temp= None
         self.qualidade_ar= None
         self.poluicao_sonora= None
         self.poluicao_visual= None
@@ -150,17 +150,17 @@ class ParametrosAmbiente(Percurso):
         self.iluminacao= None
         self.sombra= None
 
-    def temp(self, temperatura):
+    def temperatura_(self, temperatura):
         if 0 <= temperatura <15:
-            self.temperatura = "Desconforto Ligeiro."
+            self.temp = "Desconforto Ligeiro."
         elif 15<=temperatura<=24:
-            self.temperatura= "Ideal."
+            self.temp= "Ideal."
         elif 25<=temperatura<=30 or 10<=temperatura<=17:
-            self.temperatura= "Desconforto Ligeiro."
+            self.temp= "Desconforto Ligeiro."
         elif temperatura<=10 or 30<=temperatura:
-            self.temperatura= "Risco Moderado."
+            self.temp= "Risco Moderado."
         else:
-            self.temperatura= "Risco Elevado."
+            self.temp= "Risco Elevado."
 
 
     def percqualidade_ar(self, perc_qualidade_ar):
