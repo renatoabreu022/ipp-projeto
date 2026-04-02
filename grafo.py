@@ -131,14 +131,14 @@ class Mapa:
                 }
                 dados[origem].append(perc_dict) # adiciona-se cada percurso à sua origem
         
-        with open(ficheiro + '.json', 'w', encoding= 'utf-8') as f:
+        with open(ficheiro, 'w', encoding= 'utf-8') as f:
             json.dump(dados,f,indent=4,ensure_ascii=False) # foi a AI que me mostrou isto, mas ensure_ascii=False garante que coisas como ç,ã,etc. não se percam
         
         print(f'Mapa gravado com sucesso em "{ficheiro}.json".')
     
     def load_mapa(self, ficheiro):
         try:
-            with open(ficheiro + '.json', 'r', encoding= 'utf-8') as f:
+            with open(ficheiro, 'r', encoding= 'utf-8') as f:
                 dados = json.load(f)
 
             self.adjacencias = {} # limpa o mapa atual antes de carregar o novo TER CUIDADO DE GUARDAR ANTES DE IMPORTAR
@@ -160,7 +160,22 @@ class Mapa:
                         'populacao': pop
                     }
                     self.adjacencias[origem].append(percurso)
-            print(f'Mapa carregado com sucesso de "{ficheiro}.json".')
+            print(f'Mapa carregado com sucesso de "{ficheiro}".')
 
         except FileNotFoundError:
-            print(f'ERRO: Ficheiro "{ficheiro}.json" não encontrado.')
+            print(f'ERRO: Ficheiro "{ficheiro}" não encontrado.')
+    
+    def load_locais(self, ficheiro): # ter cuidado, pois isto carrega todos os locais de uma vez sem separar por cidade, depois vemos como queremos implementar cidades
+        try:
+            with open(ficheiro, 'r', encoding= 'utf-8') as f:
+                cidades = json.load(f)
+            
+            for cidade, locais in cidades.items():
+                for local in locais:
+                    if local not in self.adjacencias():
+                        self.adjacencias(local) = []
+            
+            print(f'Locais carregados com sucesso de "{ficheiro}".')
+        
+        except FileNotFoundError:
+            print(f'ERRO: Ficheiro "{ficheiro}" não encontrado.')
