@@ -17,8 +17,8 @@
 
 # para nós, um grafo é o mapa da cidade
 
-from percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
-from Model_calculopercurso import MotorCalculo
+from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
+from engine.calculo_percurso import MotorCalculo
 import json
 
 class Mapa:

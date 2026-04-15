@@ -1,8 +1,8 @@
 #------------31/03/2026-------@Lucas@Inês------------------#
 
 #____________imports______________#
-from user import Perfil
-from percursos import ParametrosAcessibilidade, ParametrosAmbiente
+from models.user import Perfil
+from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente
 
 class MotorCalculo:
 

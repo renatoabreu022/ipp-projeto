@@ -10,9 +10,9 @@
 # USA CADEIRA DE RODAS? - ESQUERDA(SIM); DIREITA(NÃO); DEPOIS SE SIM AS PERGUNTAS SEGUINTES SERÃO MAIS ADEQUADAS PARA CADEIRA DE RODAS
 # SE NÃO, NAS PERGUNTAS SEGUINTES ASSUME-SE QUE A PESSOA CONSEGUE ANDAR POR QUALQUER PAVIMENTO, MAS TEM PREFERÊNCIAS E QUESTIONA-SE SOBRE ESSAS PREFERÊNCIAS
 
-from grafo import Mapa
-from user import Sistema, Utilizador, Perfil
-from percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
+from models.grafo import Mapa
+from models.user import Sistema, Utilizador, Perfil
+from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 import json
 import random
 
