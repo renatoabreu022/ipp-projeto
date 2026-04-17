@@ -82,6 +82,7 @@ class Mapa:
             for perc in percs:
                 print(f'{origem} -> {perc['destino']}\n')
     
+    #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO
     def pesquisa_perc(self,origem,destino): # pesquisa o grafo inteiro por todos os caminhos possíveis entre os dois pontos
         if origem not in self.adjacencias or destino not in self.adjacencias:
             print('ERRO: O ínicio ou o fim do percurso não estão presentes no mapa.')

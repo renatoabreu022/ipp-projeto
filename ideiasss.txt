@@ -117,3 +117,16 @@ gui.py -- parte gráfica
 dados\ possíveis bases de dados
 
 docs\ possíveis documentos a guardar, como o README ou exemplos de outputs
+
+------------------------
+
+Resolução de problemas de procura:
+    Processo:
+        -Não Informado
+            BFS (Breadth First Search)
+            DFS (Depth First Search)
+            Custo Uniforme (Djisthra)
+
+        -Informado
+            Greedy (Gulosa)
+            A*
