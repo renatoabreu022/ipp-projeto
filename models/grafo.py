@@ -1,5 +1,6 @@
 # -- Dia 31/03/2026 @Renato
 # -- Dia 02/04/2026 @Renato
+# -- Dia 18/04/2026 @Cláudia
 
 # um grafo é um meio de representar conexões entre coisas e é constituído por 2 componentes:
 # Nós - o nosso caso, locais dass cidades
@@ -20,6 +21,7 @@
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from engine.calculo_percurso import MotorCalculo
 import json
+import random
 
 class Mapa:
     def __init__(self):
@@ -110,9 +112,39 @@ class Mapa:
         
         return caminhos #NOTA: não havendo locais ligados ao atual ainda não visitados, não se cria novo caminho, logo, não há caminhos na fila, estando a fila vazia, o loop acaba
     
-    def recomendar(self,):
-        pass # isto vai ter que se ligar ao ficheiro do motor de calculo, ainda não o vi direito, por isso não me vou atrever a trabalhar com ele hahahaha
 
+    def recomendar(self, origem, destino, perfil):
+        percursos_todos = self.pesquisa_perc(origem, destino)
+        
+        if not percursos_todos:
+            return None, 0
+        
+        melhor_perc = None
+        melhor_score = float('inf') #começamos com "infinito" para qualquer score ser menor que este
+        
+        for perc in percursos_todos:
+            score_atual = 0
+            #vamos percorrer os percursos entre pontos, ou seja, se quero ir de A a D vou de A-B, B-C, C-D...
+            for i in range(len(perc) - 1):
+                de = perc[i]
+                para = perc[i+1]
+            
+                #no nosso grafo, cada item em self.adjacencias[de] é um dic
+                #procura a ligação certa no grafo
+                for ligacao in self.adjacencias[de]:
+                    if ligacao['destino'] == para:
+                        acess = ligacao['acessibilidade']
+                        amb = ligacao['ambiente']
+                    #chama o motor de pontuação
+                        score_atual += MotorCalculo.calcular_IC(perfil, acess, amb)
+        
+            if score_atual < melhor_score:
+                melhor_score = score_atual #o melhor score é o mais pequeno, certo?
+                melhor_perc = perc
+                
+        return melhor_perc, melhor_score
+
+    
     def save_mapa(self, ficheiro):
         dados = {} # dicionario que vai replicar a estrutura do grafo para algo que o JSON lê
 
@@ -179,3 +211,53 @@ class Mapa:
         
         except FileNotFoundError:
             print(f'ERRO: Ficheiro "{ficheiro}" não encontrado.')
+
+
+#----- sinto que esta função está meio deslocada 
+
+#função que supostamente une tudo, a geração de percurso e a recomendação
+#aqui reaproveitei aquilo que antes estava no main em "simular" para criar parâmetros aleatórios
+
+def simular_e_recomendar(mapa, perfil, origem, destino):
+    #gerar 4 ou menos opções de percurso entre a origem e o destino
+    #(Isto garante que o grafo tem dados para trabalhar)
+    distancia_base = random.randint(500, 2000) #os percursos podem ser de 500 a 2000 metros
+    
+    for i in range(4):
+        nome_rua = f"Opção {i+1} de {origem} para {destino}"
+        
+        #parâmetros de pavimemto
+        rua = ParametrosAcessibilidade(nome_rua, origem, destino)
+        rua.pavimento_(random.randint(0, 100))
+        rua.inclinacao_(random.random(0, 100))
+        rua.passadeiras_(random.randint(0, 5), distancia_base)
+        rua.passeios_(random.randint(0, 100))
+        rua.textura_(random.choice([True, False]))
+        rua.escadas_(random.choice([True, False]))
+
+        #parâmetros ambientais 
+        amb = ParametrosAmbiente(nome_rua, origem, destino)
+        amb.temp(random.randint(-5, 35)) 
+        amb.percqualidade_ar(random.randint(0, 100))
+        amb.poluison(random.randint(0, 100))
+        amb.puluivisu(random.randint(0, 100))
+        amb.nivelpolen(random.randint(0, 100))
+        amb.sombra2(random.randint(0, 100), distancia_base)
+
+        #parâmetros populacionais
+        pop = ParametrosPopulacao(nome_rua, origem, destino)
+        pop.transito_(random.choice([True, False]))
+        pop.multidao_(random.choice([True, False]))
+
+        #adicionar ao grafo 
+        mapa.add_percurso(origem, destino, distancia_base, rua, amb, pop)
+
+    #pedimos a recomendação
+    percurso, score = mapa.recomendar(origem, destino, perfil)
+
+    if percurso:
+        print(f" De acordo com as suas preferância, sugerimos o seguinte percurso: ")
+        print(f" {' -> '.join(percurso)}")
+        print(f" Índice de Desconforto (IC): {score:.2f}")
+    else:
+        print("ERRO: Não foi possível calcular um percurso.")
