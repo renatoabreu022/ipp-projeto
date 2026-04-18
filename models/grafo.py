@@ -131,7 +131,7 @@ class Mapa:
             
                 #no nosso grafo, cada item em self.adjacencias[de] é um dic
                 #procura a ligação certa no grafo
-                for ligacao in self.adjacencias[de]:
+                for ligacao in self.adjacencias[de]: #percorre todas as ruas que saem do "de" para ver qual delas vai para "para".
                     if ligacao['destino'] == para:
                         acess = ligacao['acessibilidade']
                         amb = ligacao['ambiente']
