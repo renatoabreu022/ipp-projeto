@@ -191,7 +191,7 @@ class Sistema:
         
 
     def select_incapacidades(self, user):
-        incapacidades = ["respiraória","cego","surdo","mobilidade reduzida","cadeira de rodas","grávida","hipersensibilidade","outro"]
+        incapacidades = ["respiratória","cego","surdo","mobilidade reduzida","cadeira de rodas","grávida","hipersensibilidade","outro"]
         lista_select={num:inc for num,inc in list(enumerate(incapacidades))}
         
         select=input("Selecione as incapacidades do utilizador (separadas por vírgula):\n" + "\n".join([f"{num}: {inc}" for num, inc in lista_select.items()]) + "\n")
