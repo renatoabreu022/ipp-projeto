@@ -82,8 +82,9 @@ class Mapa:
             for perc in percs:
                 print(f'{origem} -> {perc['destino']}\n')
     
-    #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO
-    def pesquisa_perc(self,origem,destino,perfil,k=3): # pesquisa o grafo inteiro por todos os caminhos possíveis entre os dois pontos
+    #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO ~~done
+
+    def pesquisa_perc(self,origem,destino,perfil,k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
         if origem not in self.adjacencias:
             print(f'ERRO: {origem} não existe no mapa.')
             return []
@@ -92,39 +93,51 @@ class Mapa:
             print(f'ERRO: {destino} não existe no mapa.')
             return []
         
-        candidatos = [(0, [origem])]
-        encontrados = []
-        visitados = set()
+        candidatos = [(0, [origem])] # cada caminho é definido como (score acumulado, [locais ordenados])
+        encontrados = [] # lista dos k melhores caminhos já encontrados
+        visitados = set() # caminhos completos pelos quais já se passou
 
-        while candidatos and len(encontrados) < k:
-            melhor = 0
-            for i in range(1,len(candidatos)):
-                if candidatos[i][0] < candidatos[melhor][0]:
+        while candidatos: # enquanto houver candidatos para explorar
+            if len(encontrados) >= k: # se já se tiver encontrado k caminhos
+                melhor_cand = min(c[0] for c in candidatos) # verifica o score do candidato com menor score
+                pior_enc = max(e[0] for e in encontrados) # verifica o score do pior entre os k encontrados
+
+                # se o pior dos encontrados tiver score maior que o melhor dos candidatos, o ciclo termina
+                if melhor_cand >= pior_enc:
+                    break
+
+            melhor = 0 # índice do melhor candidato, assume que o primeiro é melhor no início
+
+            for i in range(1, len(candidatos)): # percorre os restantes candidatos
+                if candidatos[i][0] < candidatos[melhor][0]: # se encontrar algum melhor, atualiza qual é o melhor
                     melhor = i
             
-            score_atual, caminho = candidatos.pop(melhor)
-            local_atual = caminho[-1]
+            score_atual, caminho = candidatos.pop(melhor) # remove e obtém o melhor candidato
+            local_atual = caminho[-1] # o local atual é o último do caminho
 
-            if local_atual == destino:
-                caminho_tup = tuple(caminho)
-                if caminho_tup not in visitados:
-                    encontrados.append((score_atual, caminho))
-                    visitados.add(caminho_tup)
+            if local_atual == destino: # caso o caminho termine no destino
+                caminho_tup = tuple(caminho) # converte o caminho em tuplo para ser usado no set
+                if caminho_tup not in visitados: # verifica se este ainda não foi encontrado antes
+                    encontrados.append((score_atual, caminho)) # guarda como um dos k melhores
+                    visitados.add(caminho_tup) # atualiza os visitados para não haver repetição
                 continue
 
-            for adj in self.adjacencias[local_atual]:
-                viz = adj['destino']
+            for adj in self.adjacencias[local_atual]: # para cada percurso que sai do local em que estamos
+                viz = adj['destino'] # o 'vizinho' é o destino desse percurso
 
-                if viz not in caminho:
+                if viz not in caminho: # para evitar ciclos, verifica se esse vizinho não está já no nosso caminho
+                    # extrai parâmetros
                     acess = adj['acessibilidade']
                     amb = adj['ambiente']
                     #adicionar população
+                    
+                    # calcula o 'custo' do caminho atual
                     score_increm = MotorCalculo.calcular_IC(perfil,acess,amb) if acess and amb else 0
                     score_new = score_atual + score_increm
 
                     novo_caminho = caminho + [viz]
-                    candidatos.append(score_new, novo_caminho)
-        return sorted(encontrados, key=lambda x: x[0])
+                    candidatos.append((score_new, novo_caminho))
+        return sorted(encontrados, key=lambda x: x[0]) # devolve os caminhos do melhor para o pior
 
 
     def recomendar(self, origem, destino, perfil):
