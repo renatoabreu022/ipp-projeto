@@ -204,3 +204,15 @@ class Sistema:
                 print(f"Seleção inválida: {num}")
 
 
+    def select_alergias(self, user):
+        alergias = ["pólen"]
+        lista_selct={num:al for num,al in list(enumerate(alergias))}
+
+        selct=input("Selecione as alergias do utilizador (separadas por vírgula):\n" + "\n".join([f"{num}: {al}" for num, al in lista_selct.items()]) + "\n")
+        selct = selct.split(",")
+        for num in selct:
+            num = num.strip()
+            if num.isdigit() and int(num) in lista_selct:
+                user.u_perfil.add_alergia(lista_selct[int(num)])
+            else:
+                print(f"Seleção inválida: {num}")
