@@ -83,36 +83,49 @@ class Mapa:
                 print(f'{origem} -> {perc['destino']}\n')
     
     #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO
-    def pesquisa_perc(self,origem,destino): # pesquisa o grafo inteiro por todos os caminhos possíveis entre os dois pontos
-        if origem not in self.adjacencias or destino not in self.adjacencias:
-            print('ERRO: O ínicio ou o fim do percurso não estão presentes no mapa.')
-            return [] # este return de lista vazia protege o código caso alguém tente gerar uma recomendação dando erro aqui, pois fará com que a recomendação tenha algo em que pegar
+    def pesquisa_perc(self,origem,destino,perfil,k=3): # pesquisa o grafo inteiro por todos os caminhos possíveis entre os dois pontos
+        if origem not in self.adjacencias:
+            print(f'ERRO: {origem} não existe no mapa.')
+            return []
         
-        queue = [[origem]] # aqui vai-se listar os caminhos a explorar, iniciamos somente com a origem, depois os caminhos expandem até se chegar a todos os caminhos que levam ao destino
-        visitados = set() # conjunto de locais já explorados, permite que o método não fique em loop infinito, é um set pq a pesquisa nele é O(1), mas é melhor perguntar à stora se podemos usar
-        caminhos = [] # lista de caminhos entre a origem e o destino já encontrados
+        if destino not in self.adjacencias:
+            print(f'ERRO: {destino} não existe no mapa.')
+            return []
+        
+        candidatos = [(0, [origem])]
+        encontrados = []
+        visitados = set()
 
-        while queue:
-            cam_atual = queue.pop(0) # retira o caminho mais antigo da fila
-            local_atual = cam_atual[-1] # o local em que estamos é sempre o último do caminho
+        while candidatos and len(encontrados) < k:
+            melhor = 0
+            for i in range(1,len(candidatos)):
+                if candidatos[i][0] < candidatos[melhor][0]:
+                    melhor = i
+            
+            score_atual, caminho = candidatos.pop(melhor)
+            local_atual = caminho[-1]
 
-            if local_atual == destino: # caminho completo encontrado
-                caminhos.append(cam_atual)
+            if local_atual == destino:
+                caminho_tup = tuple(caminho)
+                if caminho_tup not in visitados:
+                    encontrados.append((score_atual, caminho))
+                    visitados.add(caminho_tup)
                 continue
 
-            if local_atual in visitados: # já estivemos cá, vamos evitar loops infinitos
-                continue
+            for adj in self.adjacencias[local_atual]:
+                viz = adj['destino']
 
-            visitados.add(local_atual)
+                if viz not in caminho:
+                    acess = adj['acessibilidade']
+                    amb = adj['ambiente']
+                    #adicionar população
+                    score_increm = MotorCalculo.calcular_IC(perfil,acess,amb) if acess and amb else 0
+                    score_new = score_atual + score_increm
 
-            for perc in self.adjacencias[local_atual]:
-                vizinho = perc['destino'] # vai buscar um local ligado ao que estamos agora
-                if vizinho not in cam_atual: # evita que se volte para trás
-                    cam_novo = cam_atual + [vizinho] # cria um novo caminho com esse local ligado ao atual como local seguinte
-                    queue.append(cam_novo) # adiciona esse caminho à fila de caminhos para ser explorado
-        
-        return caminhos #NOTA: não havendo locais ligados ao atual ainda não visitados, não se cria novo caminho, logo, não há caminhos na fila, estando a fila vazia, o loop acaba
-    
+                    novo_caminho = caminho + [viz]
+                    candidatos.append(score_new, novo_caminho)
+        return sorted(encontrados, key=lambda x: x[0])
+
 
     def recomendar(self, origem, destino, perfil):
         percursos_todos = self.pesquisa_perc(origem, destino)
@@ -206,7 +219,7 @@ class Mapa:
             for cidade, locais in cidades.items():
                 for local in locais:
                     if local not in self.adjacencias():
-                        self.adjacencias(local) = []
+                        self.adjacencias[local] = []
             
             print(f'Locais carregados com sucesso de "{ficheiro}".')
         

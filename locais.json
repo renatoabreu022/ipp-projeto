@@ -1,45 +1,112 @@
 {
-  "Porto": ["FEUP", "Farmácia Barreiros", "Jardim do Palácio de Cristal", "Estação de São Bento", "NorteShopping", "Centro Hospitalar Universitário de São João"],
+  "Porto": [
+    "FEUP", "Farmácia Barreiros", "Jardim do Palácio de Cristal", "Estação de São Bento", 
+    "NorteShopping", "Centro Hospitalar Universitário de São João", "Bebedouro Jardim do Morro", 
+    "Posto de Primeiros Socorros Aliados", "Ecoponto Asprela", "WC Público Cordoaria", "Zona de Descanso Aliados"
+  ],
 
-  "Braga": ["Bom Jesus do Monte", "Avenida da Liberdade", "Hospital de Braga", "Universidade do Minho - Gualtar", "Braga Parque"],
+  "Braga": [
+    "Bom Jesus do Monte", "Avenida da Liberdade", "Hospital de Braga", "Universidade do Minho - Gualtar", 
+    "Braga Parque", "Bebedouro Arcada", "Ciclovia do Rio Este", "Ecoponto Gualtar", "WC Público Praça do Município"
+  ],
 
-  "Fafe": ["Praça Mártires de Ferreira do Amaral", "Hospital da Misericórdia", "Parque da Cidade", "Pavilhão Multiusos", "Terminal Rodoviário"],
+  "Fafe": [
+    "Praça Mártires de Ferreira do Amaral", "Hospital da Misericórdia", "Parque da Cidade", "Pavilhão Multiusos", 
+    "Terminal Rodoviário", "Bebedouro Parque da Cidade", "Parque Infantil do Centro", "Ecoponto Multiusos"
+  ],
 
-  "Marco de Canaveses": ["Igreja de Santa Maria (Siza Vieira)", "Hospital Santa Isabel", "Estação Ferroviária", "Jardim Municipal", "Marco Fórum"],
+  "Marco de Canaveses": [
+    "Igreja de Santa Maria (Siza Vieira)", "Hospital Santa Isabel", "Estação Ferroviária", "Jardim Municipal", 
+    "Marco Fórum", "Bebedouro Jardim Municipal", "Posto de Informação Turística", "Ecoponto Marco Fórum"
+  ],
 
-  "Guimarães": ["Castelo de Guimarães", "Hospital da Senhora da Oliveira", "Universidade do Minho (Azurém)", "GuimarãeShopping", "Largo do Toural"],
+  "Guimarães": [
+    "Castelo de Guimarães", "Hospital da Senhora da Oliveira", "Universidade do Minho (Azurém)", 
+    "GuimarãeShopping", "Largo do Toural", "Bebedouro Largo da Oliveira", "Parque da Cidade Guimarães", "WC Público Toural"
+  ],
 
-  "Vila Nova de Gaia": ["El Corte Inglés", "Hospital Eduardo Santos Silva", "Cais de Gaia", "GaiaShopping", "Jardim do Morro"],
+  "Vila Nova de Gaia": [
+    "El Corte Inglés", "Hospital Eduardo Santos Silva", "Cais de Gaia", "GaiaShopping", "Jardim do Morro", 
+    "Bebedouro Cais de Gaia", "Ciclovia da Orla Marítima", "Ecoponto Jardim do Morro"
+  ],
 
-  "Famalicão": ["Hospital de Famalicão", "Parque da Devesa", "Estação de Famalicão", "Universidade Lusíada", "Praça D. Maria II"],
+  "Famalicão": [
+    "Hospital de Famalicão", "Parque da Devesa", "Estação de Famalicão", "Universidade Lusíada", 
+    "Praça D. Maria II", "Bebedouro Parque da Devesa", "Posto de Primeiros Socorros", "WC Público Praça D. Maria II"
+  ],
 
-  "Barcelos": ["IPCA", "Campo da Feira", "Hospital Santa Maria Maior", "Templo do Senhor da Cruz", "Estação de Barcelos"],
+  "Barcelos": [
+    "IPCA", "Campo da Feira", "Hospital Santa Maria Maior", "Templo do Senhor da Cruz", 
+    "Estação de Barcelos", "Bebedouro IPCA", "Parque Infantil de Barcelos", "Ecoponto Estação"
+  ],
 
-  "Póvoa de Varzim": ["Casino da Póvoa", "Hospital da Luz Póvoa de Varzim", "Passeio Alegre", "Biblioteca Municipal Rocha Peixoto", "Estação de Metro da Póvoa"],
+  "Póvoa de Varzim": [
+    "Casino da Póvoa", "Hospital da Luz Póvoa de Varzim", "Passeio Alegre", "Biblioteca Municipal Rocha Peixoto", 
+    "Estação de Metro da Póvoa", "Bebedouro Passeio Alegre", "Posto de Socorros da Praia", "WC Público Biblioteca"
+  ],
 
-  "Coimbra": ["Universidade de Coimbra - Polo I", "Hospitais da Universidade de Coimbra", "Portugal dos Pequenitos", "Estação Coimbra-B", "Forum Coimbra"],
+  "Coimbra": [
+    "Universidade de Coimbra - Polo I", "Hospitais da Universidade de Coimbra", "Portugal dos Pequenitos", 
+    "Estação Coimbra-B", "Forum Coimbra", "Bebedouro Praça da República", "Parque Verde do Mondego", "WC Público Baixa"
+  ],
 
-  "Figueira da Foz": ["Casino Figueira", "Hospital Distrital da Figueira da Foz", "Mercado Municipal", "Torre do Relógio", "Parque das Abadias"],
+  "Figueira da Foz": [
+    "Casino Figueira", "Hospital Distrital da Figueira da Foz", "Mercado Municipal", "Torre do Relógio", 
+    "Parque das Abadias", "Bebedouro Marginal", "Ciclovia da Marginal", "Ecoponto Mercado"
+  ],
 
-  "Covilhã": ["UBI", "Centro Hospitalar Cova da Beira", "Praça do Município", "Serra Shopping", "Ponte da Carpinteira"],
+  "Covilhã": [
+    "UBI", "Centro Hospitalar Cova da Beira", "Praça do Município", "Serra Shopping", 
+    "Ponte da Carpinteira", "Bebedouro UBI", "Jardim Público da Covilhã", "WC Público Praça"
+  ],
 
-  "Caldas da Rainha": ["Praça da Fruta", "Hospital Termal", "Parque D. Carlos I", "Centro Comercial La Vie", "ESAD.CR"],
+  "Caldas da Rainha": [
+    "Praça da Fruta", "Hospital Termal", "Parque D. Carlos I", "Centro Comercial La Vie", 
+    "ESAD.CR", "Bebedouro Parque D. Carlos I", "Posto de Informação"
+  ],
 
-  "Tomar": ["Convento de Cristo", "Praça da República", "Hospital de Tomar", "Mata dos Sete Montes", "Politécnico de Tomar"],
+  "Tomar": [
+    "Convento de Cristo", "Praça da República", "Hospital de Tomar", "Mata dos Sete Montes", 
+    "Politécnico de Tomar", "Bebedouro Mata", "Parque do Mouchão", "WC Público Centro"
+  ],
 
-  "Viseu": ["Sé de Viseu", "Palácio do Gelo", "Hospital de São Teotónio", "Parque do Fontelo", "Rossio"],
+  "Viseu": [
+    "Sé de Viseu", "Palácio do Gelo", "Hospital de São Teotónio", "Parque do Fontelo", 
+    "Rossio", "Bebedouro Parque do Fontelo", "Ecoponto Sé", "Posto de Primeiros Socorros"
+  ],
 
-  "Aveiro": ["Fórum Aveiro", "Universidade de Aveiro", "Estação de Aveiro", "Hospital Infante D. Pedro", "Salinas de Aveiro"],
+  "Aveiro": [
+    "Fórum Aveiro", "Universidade de Aveiro", "Estação de Aveiro", "Hospital Infante D. Pedro", 
+    "Salinas de Aveiro", "Bebedouro Salinas", "Parque Infante D. Pedro", "WC Público Estação"
+  ],
 
-  "Lisboa": ["Hospital de Santa Maria", "Estação do Oriente", "Castelo de São Jorge", "Terreiro do Paço", "Centro Comercial Colombo"],
+  "Lisboa": [
+    "Hospital de Santa Maria", "Estação do Oriente", "Castelo de São Jorge", "Terreiro do Paço", 
+    "Centro Comercial Colombo", "Bebedouro Parque das Nações", "Jardim da Estrela", "WC Público Rossio", "Posto Polícia Baixa"
+  ],
 
-  "Évora": ["Sé de Évora", "Templo Romano", "Colégio do Espírito Santo", "Hospital do Espírito Santo", "Praça do Giraldo"],
+  "Évora": [
+    "Sé de Évora", "Templo Romano", "Colégio do Espírito Santo", "Hospital do Espírito Santo", 
+    "Praça do Giraldo", "Bebedouro Templo Romano", "Jardim Público de Évora", "Ecoponto Centro"
+  ],
 
-  "Beja": ["Castelo de Beja", "Hospital José Joaquim Fernandes", "Politécnico de Beja", "Parque de Feiras", "Museu Regional"],
+  "Beja": [
+    "Castelo de Beja", "Hospital José Joaquim Fernandes", "Politécnico de Beja", "Parque de Feiras", 
+    "Museu Regional", "Bebedouro Castelo", "Parque de Merendas", "WC Público Parque de Feiras"
+  ],
 
-  "Portimão": ["Portimão Arena", "Hospital Particular", "Praia da Rocha", "Aqua Portimão", "Museu de Portimão"],
+  "Portimão": [
+    "Portimão Arena", "Hospital Particular", "Praia da Rocha", "Aqua Portimão", 
+    "Museu de Portimão", "Bebedouro Praia da Rocha", "Posto de Socorros Marítimo", "WC Público Centro"
+  ],
 
-  "Lagos": ["Marina de Lagos", "Hospital de Lagos", "Mercado Municipal", "Ponta da Piedade", "Praça Infante Dom Henrique"],
-  
-  "Faro": ["UAlg - Penha", "Hospital de Faro", "Fórum Algarve", "Doca de Faro", "Arco da Vila"]
+  "Lagos": [
+    "Marina de Lagos", "Hospital de Lagos", "Mercado Municipal", "Ponta da Piedade", 
+    "Praça Infante Dom Henrique", "Bebedouro Marina", "Centro de Ciência Viva", "WC Público Centro"
+  ],
+
+  "Faro": [
+    "UAlg - Penha", "Hospital de Faro", "Fórum Algarve", "Doca de Faro", "Arco da Vila", 
+    "Bebedouro Doca", "Parque Ribeirinho", "Ecoponto Fórum"
+  ]
 }

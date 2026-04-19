@@ -67,8 +67,11 @@ def main():
             
             else:
                 nome, password = args
-                user_login = sistema.login(nome,password)
-                if user_login:
+                if sistema.login(nome,password):
+                    for u in sistema._users:
+                        if u.u_username == nome:
+                            user_login = u
+                            break
                     print('Login realizado com sucesso.')
 
                 else:
@@ -103,7 +106,7 @@ def main():
                 
         #novo comando simular com a nova função que está nos grafos
         elif comando == "simular":
-            if sistema.utilizador_atual is None:
+            if user_login is None:
                 print("ERRO: O processo de login não foi efetuado.")
             else:
                 #carregar base de dados
@@ -126,7 +129,7 @@ def main():
 
                     if origem in estabelecimentos and destino in estabelecimentos:
                         #CHAMA A FUNÇÃO QUE LIGA TUDO que está no file dos grafos
-                        grafos.simular_e_recomendar(mapa, sistema.utilizador_atual.u_perfil, origem, destino)
+                        mapa.simular_e_recomendar(mapa, sistema.login.u_perfil, origem, destino)
                     else:
                         print("ERRO: Um dos locais não pertence à cidade ou não existe.")
                 else:

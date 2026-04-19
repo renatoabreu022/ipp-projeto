@@ -261,17 +261,9 @@ class ParametrosAmbiente(Percurso):
                     print("Erro! Percentagens assumem valores entre 0 e 100.")
                 
     
-    def sombra1(self, nsombra):
-        if 0<=nsombra<30:
-            self.sombra= "Sombra reduzida"
-        elif 30<=nsombra<60:
-            self.sombra= "Sombra moderada"
-        elif 60<=nsombra<100:
-            self.sombra= "Sombra abragente"
-        else:
-            print("Erro! Percentagens assumem valores entre 0 e 100.")
     
-    def sombra2(self, nsombra, dist):
+    
+    def sombra(self, nsombra, dist):
         perc_cobertura= (nsombra/dist)*100
         if 0<=perc_cobertura<30:
             self.sombra= " Sombra reduzida"
