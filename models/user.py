@@ -188,4 +188,19 @@ class Sistema:
         except FileNotFoundError:
             print("Ficheiro não encontrado. Começar com a lista vazia")
             return [] # Retornar lista vazia em vez de dicionário para manter a consistência
-            
+        
+
+    def select_incapacidades(self, user):
+        incapacidades = ["respiraória","cego","surdo","mobilidade reduzida","cadeira de rodas","grávida","hipersensibilidade","outro"]
+        lista_select={num:inc for num,inc in list(enumerate(incapacidades))}
+        
+        select=input("Selecione as incapacidades do utilizador (separadas por vírgula):\n" + "\n".join([f"{num}: {inc}" for num, inc in lista_select.items()]) + "\n")
+        select = select.split(",")
+        for num in select:
+            num = num.strip()
+            if num.isdigit() and int(num) in lista_select:
+                user.u_perfil.add_incapacidade(lista_select[int(num)])
+            else:
+                print(f"Seleção inválida: {num}")
+
+
