@@ -84,6 +84,7 @@ class Mapa:
     
     #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO ~~done
 
+    # esta procura é uma 'mistura' de Custo Uniforme com Dijkstra
     def pesquisa_perc(self,origem,destino,perfil,k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
         if origem not in self.adjacencias:
             print(f'ERRO: {origem} não existe no mapa.')
