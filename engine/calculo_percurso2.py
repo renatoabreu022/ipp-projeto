@@ -1,5 +1,5 @@
 #---29/04/2026----------------#
-#---Mi persona Lucas e talvez Cláudia----------#
+#--- @Lucas e @Cláudia ------#
 #_____Reformulação do cálculo de percurso______#
 
 #-----Imports---------#
@@ -10,7 +10,7 @@ class CalculoPeso:
     @staticmethod
     
     def calcular_score(preferencias:Preferencias,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente):
-        score = 0
+        score = 0.0
 
         match rua.pavimento:
             case "Pavimento Muito Irregular":
@@ -54,7 +54,7 @@ class CalculoPeso:
                 score += preferencias.peso_textura_cego
         
         match rua.escadas:
-            case "O percurso não inclui escadas.":
+            case "O percurso inclui escadas.":
                 score += preferencias.peso_escadas
 
         match ambiente.temp:
@@ -67,21 +67,44 @@ class CalculoPeso:
             case "Ideal.":
                 score+=preferencias.peso_temperatura*0.25
                 
-        match ambiente.qualiadade_ar:
+        match ambiente.qualidade_ar:
             case "Excelente":
-                score+=preferencias.peso_ar*0.2
+                score+=preferencias.peso_ar*0.25
             case "Boa":
-                score += preferencias.peso_ar*0.4
+                score += preferencias.peso_ar*0.5
             case "Risco Moderado":
-                score += preferencias.pesso_ar*0.6
-            case 
+                score += preferencias.peso_ar*0.75
+            case "Risco Elevado":
+                score += preferencias.peso_ar*1
                 
+        match ambiente.poluicaosonora:
+            case "Ideal":
+                score += preferencias.peso_ruido*(1/3)
+            case "Aceitável":
+                score += preferencias.peso_ruido*(2/3)
+            case "Desconfortável":
+                score += preferencias.peso_ruido*1
         
-        match ambiente.polen:
-            case "Ideal. Ar limpo."
-
-selfcore += pref                   
-
+        match ambiente.poluicao_visual:
+            case "Ideal":
+                score += preferencias.peso_visual*(1/3)
+            case "Aceitável":
+                score += preferencias.peso_visual*(2/3)
+            case "Desconfortável":
+                score += preferencias.peso_visual*1
+        
+        
+        match ambiente.nivelpolen:
+            case "Ideal. Ar limpo.":
+                score += preferencias.peso_polen*0.25
+            case "Risco Ligeiro":
+                score += preferencias.peso_polen*0.50
+            case "Risco Moderado":
+                score += preferencias.peso_polen*0.75
+            case "Risco Elevado":
+                score += preferencias.peso_polen*1
+                
+                
         match ambiente.iluminacao:
             case "Iluminação Elevada":
                 score += preferencias.peso_iluminacao*(1/3)
@@ -93,11 +116,15 @@ selfcore += pref
             
         match ambiente.sombra:
             case "Sombra reduzida":
-                score += preferencias.peso_sombra*(1/3)
+                score += preferencias.peso_sombra*(1)
             case "Sombra moderada":
                 score += preferencias.peso_sombra*(2/3)
             case "Sombra abrangente":
-                score += preferencias.peso_sombra*(1)
+                score += preferencias.peso_sombra*(1/3)
+                
+                
+        return score
+
                 
                 
                 
