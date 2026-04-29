@@ -19,7 +19,8 @@
 # para nós, um grafo é o mapa da cidade
 
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
-from engine.calculo_percurso import MotorCalculo
+from models.user import Preferencias
+from engine.calculo_percurso2 import CalculoPeso
 import json
 import random
 
@@ -85,7 +86,7 @@ class Mapa:
     #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO ~~done
 
     # esta procura é uma 'mistura' de Custo Uniforme com Dijkstra
-    def pesquisa_perc(self,origem,destino,perfil,k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
+    def pesquisa_perc(self,origem,destino,preferencias,k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
         if origem not in self.adjacencias:
             print(f'ERRO: {origem} não existe no mapa.')
             return []
@@ -133,7 +134,7 @@ class Mapa:
                     #adicionar população
                     
                     # calcula o 'custo' do caminho atual
-                    score_increm = MotorCalculo.calcular_IC(perfil,acess,amb) if acess and amb else 0
+                    score_increm = CalculoPeso.calcular_score(preferencias,acess,amb) if acess and amb else 0
                     score_new = score_atual + score_increm
 
                     novo_caminho = caminho + [viz]
@@ -141,8 +142,8 @@ class Mapa:
         return sorted(encontrados, key=lambda x: x[0]) # devolve os caminhos do melhor para o pior
 
 
-    def recomendar(self, origem, destino, perfil):
-        percursos_todos = self.pesquisa_perc(origem, destino)
+    def recomendar(self, origem, destino, preferencias):
+        percursos_todos = self.pesquisa_perc(origem, destino, preferencias)
         
         if not percursos_todos:
             return None, 0
@@ -164,7 +165,7 @@ class Mapa:
                         acess = ligacao['acessibilidade']
                         amb = ligacao['ambiente']
                     #chama o motor de pontuação
-                        score_atual += MotorCalculo.calcular_IC(perfil, acess, amb)
+                        score_atual += CalculoPeso.calcular_score(preferencias, acess, amb)
         
             if score_atual < melhor_score:
                 melhor_score = score_atual #o melhor score é o mais pequeno, certo?
