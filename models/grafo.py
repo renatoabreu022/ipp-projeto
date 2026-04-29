@@ -232,7 +232,7 @@ class Mapa:
             
             for cidade, locais in cidades.items():
                 for local in locais:
-                    if local not in self.adjacencias():
+                    if local not in self.adjacencias:
                         self.adjacencias[local] = []
             
             print(f'Locais carregados com sucesso de "{ficheiro}".')
@@ -289,3 +289,5 @@ def simular_e_recomendar(mapa, perfil, origem, destino):
         print(f" Índice de Desconforto (IC): {score:.2f}")
     else:
         print("ERRO: Não foi possível calcular um percurso.")
+
+

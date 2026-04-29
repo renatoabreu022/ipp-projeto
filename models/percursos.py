@@ -178,11 +178,9 @@ class ParametrosAmbiente(Percurso):
         self.sombra= None
 
     def temperatura_(self, temperatura):
-        if 0 <= temperatura <15:
-            self.temp = "Desconforto Ligeiro."
-        elif 15<=temperatura<=24:
+        if 15<=temperatura<=24:
             self.temp= "Ideal."
-        elif 25<=temperatura<=30 or 10<=temperatura<=17:
+        elif 25<=temperatura<=30 or 0<=temperatura<=15:
             self.temp= "Desconforto Ligeiro."
         elif temperatura<=10 or 30<=temperatura:
             self.temp= "Risco Moderado."
@@ -252,7 +250,7 @@ class ParametrosAmbiente(Percurso):
             else:
                 metros_por_poste= dist/numpostes
                 if 0<metros_por_poste<=30:
-                    self.iluminacao="Excelente"
+                    self.iluminacao="Iluminação Elevada"
                 elif 30< metros_por_poste<= 60:
                     self.iluminacao= "Iluminação Moderada"
                 elif 60< metros_por_poste<= 100:
