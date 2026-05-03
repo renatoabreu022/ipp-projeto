@@ -22,7 +22,7 @@ class Utilizador: #--Permite dar login na app, introduz cerednciais e retorna in
 
     def __init__(self,username,password,preferencias=None):
         self.__username=username
-        if is_hash:
+        if is_hash: # @Renato 3/05 -- não está definido
             self.__password = password
         else:
             self.__password = hash_password(password)
@@ -125,7 +125,7 @@ class Sistema:
                 #Criamos o objeto Perfil com os dados do JSON
                 u_prefs = Preferencias()
                 if "preferencias" in info:
-                    u_prefs.atualizar_parametros(info["preferencias"])
+                    u_prefs.atualizar_parametros(info["preferencias"]) #este método não está nas preferencias @Renato 3/05
 
                 #Criamos o utilizador com as suas preferências carregadas
                 novo_user = Utilizador(username, "_", u_prefs)

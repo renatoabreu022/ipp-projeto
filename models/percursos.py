@@ -3,6 +3,12 @@
 
 # ----Dia 31/03/2026 @Inês --- Mensagens d
 
+# @Renato 3/05 ---- 
+# UMA COISA 
+# acho melhor tirarmos um tempo para uniformizar os nomes de variáveis e funções 
+# para ficar mais fácil de ler o projeto. também acho que a stora deve valorizar isso 
+# -----------------
+
 class Percurso:
     def __init__(self, origem, destino):
         self.origem = origem
@@ -150,7 +156,7 @@ class ParametrosAcessibilidade(Percurso):
     def from_dict(dados):
         # retorna os dados de JSON para o que o nosso programa lê -- mesma coisa para os outros from_dict()
         # usa staticmethod porque não precisa de um objeto que exista aqui para funcionar -- mesma coisa para os outros from_dict()
-        obj = ParametrosAcessibilidade(dados["nome"], dados["origem"], dados["destino"])
+        obj = ParametrosAcessibilidade(dados["origem"], dados["destino"])
         obj.pavimento = dados["pavimento"]
         obj.inclinacao = dados["inclinacao"]
         obj.passadeiras = dados["passadeiras"]
@@ -282,7 +288,7 @@ class ParametrosAmbiente(Percurso):
 
     @staticmethod
     def from_dict(dados):
-        obj = ParametrosAmbiente(dados["nome"], dados["origem"], dados["destino"])
+        obj = ParametrosAmbiente(dados["origem"], dados["destino"])
         obj.temperatura = dados["temperatura"]
         obj.qualidade_ar = dados["qualidade_ar"]
         obj.poluicao_sonora = dados["poluicao_sonora"]
@@ -325,7 +331,7 @@ class ParametrosPopulacao(Percurso):
 
     @staticmethod
     def from_dict(dados):
-        obj = ParametrosPopulacao(dados["nome"], dados["origem"], dados["destino"])
+        obj = ParametrosPopulacao(dados["origem"], dados["destino"])
         obj.transito = dados["transito"]
         obj.multidao = dados["multidao"]
         return obj
