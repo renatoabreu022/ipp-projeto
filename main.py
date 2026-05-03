@@ -13,19 +13,22 @@
 # SE NÃO, NAS PERGUNTAS SEGUINTES ASSUME-SE QUE A PESSOA CONSEGUE ANDAR POR QUALQUER PAVIMENTO, MAS TEM PREFERÊNCIAS E QUESTIONA-SE SOBRE ESSAS PREFERÊNCIAS
 
 from models.grafo import Mapa
-from models.user import Sistema, Utilizador, Perfil
-from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
+from models.user import Sistema, Utilizador, Preferencias
 import json
-import random
+
 
 
 def help():
     print("\n--- COMANDOS DISPONÍVEIS ---")
-    print("ins_utilizador <nome> <perfil>   -> Regista novo utilizador")
-    print("login <nome> <password>          -> Login")
-    print("gravar <arquivo.json>            -> Salva utilizadores")
-    print("ler <arquivo.json>               -> Carrega utilizadores")
-    print("sair                             -> Encerra a aplicação")
+    print("ins_utilizador <nome>          -> Regista novo utilizador")
+    print("login <nome> <password>        -> Login")
+    print("quizz                          -> Altera os parâmetros de preferências")
+    print("gravar <arquivo>               -> Salva utilizadores")
+    print("ler <arquivo>                  -> Carrega utilizadores")
+    print("simular                        -> Calcula a rota ideal entre dois pontos")
+    print("gravar_mapa <ficheiro>         -> Guarda o mapa atual")
+    print("carregar_mapa <ficheiro>       -> Carrega um mapa guardado")
+    print("sair                           -> Encerra a aplicação")
     print("----------------------------")
 
 # --- LOOP PRINCIPAL ---
@@ -34,6 +37,10 @@ def main():
     sistema = Sistema()  # cria a base de dados de utilizadores
     mapa = Mapa()
     user_login = None
+    arquivo_db = "utilizadores"
+    
+    #Tenta carregar os utilizadores logo ao iniciar o programa
+    sistema.load_users(arquivo_db)
     print("Bem-vind@! Digite 'help' para comandos.")
 
     while True:
@@ -56,10 +63,19 @@ def main():
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_utilizador <nome> <perfil>.")
 
             else:
-                nome, perfil = args
-                u = Utilizador(nome, "0000", Perfil(perfil))  # atribui uma password predifinida, deverá ser trocada pelo utilizador
-                sistema.add_user(u)
-                print(f'Utilizador {nome} criado com o perfil {perfil}.\n Note que lhe foi atribuida a password 0000, por favor, modifique-a.')
+                nome = args[0]
+                if sistema.cria_username(nome):
+                    # Criamos um utilizador com a password padrão e preferências padrão (tudo a 5)
+                    novo_user = Utilizador(nome, "0000", Preferencias())
+                    sistema.add_user(novo_user)
+                    
+                    # Guardamos logo na base de dados
+                    sistema.save_users(arquivo_db)
+                    
+                    print(f"Utilizador {nome} criado com sucesso!")
+                    print("Note que lhe foi atribuída a password 0000. Por favor, modifique-a assim que puder.")
+                else:
+                    print("ERRO: Não foi possível criar o utilizador.")
         
         elif comando == 'login':
             if len(args) != 2:
@@ -72,24 +88,34 @@ def main():
                         if u.u_username == nome:
                             user_login = u
                             break
-                    print('Login realizado com sucesso.')
+                    print(f"Login realizado com sucesso. Bem-vindo, {nome}!")
 
                 else:
-                    print('Falha no login.')
+                    print("Falha no login. Verifique as credenciais.")
+        
+        elif comando == "quizz":
+            if user_login is None:
+                print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
+            else:
+                #chama o questionário que já criámos no user.py da classe Preferências
+                user_login.u_preferencias.forms_pref()
+                
+                sistema.save_users(arquivo_db)
+                print("\n[Sucesso] As suas preferências foram atualizadas na base de dados!")
+        
         
         elif comando == 'gravar':
-            if not args:
-                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar <arquivo.json>.")
-            
-            else:
-                sistema.save_users(args[0])
-                print("Utilizadores gravados com sucesso.")
+            nome_arquivo = args[0] if args else arquivo_db
+            sistema.save_users(nome_arquivo)
+            print(f"Utilizadores gravados com sucesso em '{nome_arquivo}.json'.")
+
+
 
         elif comando == 'ler':
             if not args:
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ler <arquivo.json>.")
             else:
-                sistema.load_users(args[0])
+                mapa.save_mapa(args[0])
                 print("Utilizadores carregados com sucesso.")
         
         elif comando == 'gravar_mapa':
@@ -97,12 +123,14 @@ def main():
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar_mapa <ficheiro>.')
             else:
                 mapa.save_mapa(args[0])
+                print("Mapa guardado com sucesso.")
         
         elif comando == 'carregar_mapa':
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: carregar_mapa <ficheiro>.')
             else:
                 mapa.load_mapa(args[0])
+                print("Mapa carregado com sucesso.")
                 
         #novo comando simular com a nova função que está nos grafos
         elif comando == "simular":

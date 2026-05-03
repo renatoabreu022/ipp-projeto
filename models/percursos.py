@@ -4,8 +4,7 @@
 # ----Dia 31/03/2026 @Inês --- Mensagens d
 
 class Percurso:
-    def __init__(self, nome, origem, destino):
-        self.nome = nome
+    def __init__(self, origem, destino):
         self.origem = origem
         self.destino = destino
 
@@ -14,8 +13,8 @@ class Percurso:
 #parâmetros de rua
 
 class ParametrosAcessibilidade(Percurso):
-    def __init__(self, nome, origem, destino):
-        super().__init__(nome, origem, destino)
+    def __init__(self, origem, destino):
+        super().__init__(origem, destino)
         self.pavimento = None
         self.inclinacao = None
         self.passadeiras = None
@@ -41,13 +40,13 @@ class ParametrosAcessibilidade(Percurso):
 
     def inclinacao_(self, declive):
         #o declive é um valor entre 0 e 1. 1 corresponde a um declive muito acentuado. 0 correspinde a um declive nulo, ou seja, rua plana.
-        if 0 <= declive < 0.3:
+        if 0 <= declive < 30:
             self.inclinacao = "Nível Baixo" #rua plana
-        elif 0.3 <= declive < 0.5:
+        elif 30 <= declive < 50:
             self.inclinacao = "Nível Moderado"
-        elif 0.5 <= declive < 0.7:
+        elif 50 <= declive < 70:
             self.inclinacao = "Nível Elevado"
-        elif 0.7 <= declive <= 1:
+        elif 70 <= declive <= 100:
             self.inclinacao = "Nível Muito Elevado" #rua muito inclinada
         else:
             print("Erro! O declive deve tomar valores entre 0 e 1.")
@@ -137,7 +136,6 @@ class ParametrosAcessibilidade(Percurso):
     def to_dict(self):
         # converte dados em dicionarios para o JSON -- mesma coisa para os outros to_dict()
         return {
-            "nome": self.nome,
             "origem": self.origem,
             "destino": self.destino,
             "pavimento": self.pavimento,
@@ -167,8 +165,8 @@ class ParametrosAcessibilidade(Percurso):
 #parâmetros de ambiente
 
 class ParametrosAmbiente(Percurso):
-    def __init__(self,nome, origem, destino):
-        super().__init__(nome, origem, destino)
+    def __init__(self, origem, destino):
+        super().__init__(origem, destino)
         self.temp= None
         self.qualidade_ar= None
         self.poluicao_sonora= None
@@ -213,7 +211,7 @@ class ParametrosAmbiente(Percurso):
             print("Erro! Percentagens assumem valores entre 0 e 100.")
 
 
-    def puluivisu(self, poluicaovisual):
+    def poluivisu(self, poluicaovisual):
         if poluicaovisual<30:
             self.poluicao_visual= "Ideal"
         elif 30<=poluicaovisual<60:
@@ -274,7 +272,6 @@ class ParametrosAmbiente(Percurso):
     
     def to_dict(self):
         return {
-            "nome": self.nome,
             "origem": self.origem,
             "destino": self.destino,
             "temperatura": self.temp,
@@ -303,8 +300,8 @@ class ParametrosAmbiente(Percurso):
 #parâmetros de população
 
 class ParametrosPopulacao(Percurso):
-    def __init__(self, nome, origem, destino):
-        super().__init__(nome, origem, destino)
+    def __init__(self, origem, destino):
+        super().__init__(origem, destino)
         self.transito = None
         self.multidao = None
         
@@ -323,7 +320,6 @@ class ParametrosPopulacao(Percurso):
 
     def to_dict(self):
         return {
-            "nome": self.nome,
             "origem": self.origem,
             "destino": self.destino,
             "transito": self.transito,

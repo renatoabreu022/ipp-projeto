@@ -21,16 +21,24 @@
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from models.user import Preferencias
 from engine.calculo_percurso2 import CalculoPeso
+import math as m
 import json
 import random
 
 class Mapa:
     def __init__(self):
         self.adjacencias = {}
+        self.coordenadas = {}
     
-    def add_local(self, nome):
+    @staticmethod
+    def dist(coord1:tuple,coord2:tuple):
+        x1, y1, x2, y2 = coord1[0], coord1[1], coord2[0], coord2[1]
+        return m.sqrt((x1-x2)**2 + (y1-y2)**2)
+
+    def add_local(self, nome, coord:tuple):
         if nome not in self.adjacencias:
             self.adjacencias[nome] = []
+            self.coordenadas[nome] = coord
             print(f'{nome} foi adicionado ao mapa com sucesso.')
 
         else:
@@ -39,7 +47,7 @@ class Mapa:
     def get_locais(self):
         return list(j for j in self.adjacencias)
 
-    def add_percurso(self, origem, destino, distancia:float, parAcess=None, parAmb=None, parPop=None):
+    def add_percurso(self, origem, destino, rug:float, dec:float, n_passad:int, passeio:float, textura:bool, escad:bool, ar:float, som:float, visual:float, polen:float, post_luz:float, sombra:float, transito:bool, multidao:bool , hora=12, score=0):
         if origem not in self.adjacencias: # verifica se os locais já estão identificados no mapa
             print(f'ERRO: {origem} não existe no mapa.')
             return
@@ -52,13 +60,36 @@ class Mapa:
             if perc['destino'] == destino:
                 print(f'ERRO: Já existe um percurso de {origem} para {destino}.')
                 return
+        
+        distancia = self.dist(self.coordenadas[origem], self.coordenadas[destino])
+
+        acess = ParametrosAcessibilidade(origem, destino)
+        acess.pavimento_(rug)
+        acess.inclinacao_(dec)
+        acess.passadeiras_(n_passad, distancia)
+        acess.passeios_(passeio)
+        acess.textura_(textura)
+        acess.escadas_(escad)
+
+        amb = ParametrosAmbiente(origem, destino)
+        amb.percqualidade_ar(ar)
+        amb.poluison(som)
+        amb.poluivisu(visual)
+        amb.nivelpolen(polen)
+        amb.ilumina(post_luz, hora, distancia)
+        amb.sombra(sombra, distancia)
+
+        pop = ParametrosPopulacao(origem, destino)
+        pop.transito_(transito)
+        pop.multidao_(multidao)
 
         percurso = { # aqui cria-se o percurso caso passe os testes anteriores
             'destino': destino,
             'distancia': distancia,
-            'acessibilidade': parAcess,
-            'ambiente': parAmb,
-            'populacao': parPop
+            'coordenadas': self.coordenadas,
+            'acessibilidade': acess,
+            'ambiente': amb,
+            'populacao': pop
         }
         self.adjacencias[origem].append(percurso) # após estar criado, o percurso é adicionado à sua origem
 
@@ -131,10 +162,11 @@ class Mapa:
                     # extrai parâmetros
                     acess = adj['acessibilidade']
                     amb = adj['ambiente']
+                    pop = adj['populacao']
                     #adicionar população
                     
                     # calcula o 'custo' do caminho atual
-                    score_increm = CalculoPeso.calcular_score(preferencias,acess,amb) if acess and amb else 0
+                    score_increm = CalculoPeso.calcular_score(preferencias,acess,amb,pop) if acess and amb and pop else 0
                     score_new = score_atual + score_increm
 
                     novo_caminho = caminho + [viz]
@@ -183,7 +215,7 @@ class Mapa:
             for perc in percursos:
                 perc_dict = {
                     'destino': perc['destino'],
-                    'distancia':perc['distancia'],
+                    'distancia': perc['distancia'],
                     # to_dict() converte os objetos dos parametros em dicionarios para JSON
                     # estes if ... else None protegem o codigo no caso de os parametros não existirem por alguma razão
                     'acessibilidade': perc['acessibilidade'].to_dict() if perc['acessibilidade'] else None,
@@ -216,6 +248,7 @@ class Mapa:
                     percurso = {
                         'destino': perc_dict['destino'],
                         'distancia': perc_dict['distancia'],
+                        'coordenadas': perc_dict.get('coordenadas'),
                         'acessibilidade': acess,
                         'ambiente': amb,
                         'populacao': pop
@@ -226,7 +259,7 @@ class Mapa:
         except FileNotFoundError:
             print(f'ERRO: Ficheiro "{ficheiro}" não encontrado.')
     
-    def load_locais(self, ficheiro): # ter cuidado, pois isto carrega todos os locais de uma vez sem separar por cidade, depois vemos como queremos implementar cidades
+    def load_locais(self, ficheiro):
         try:
             with open(ficheiro, 'r', encoding= 'utf-8') as f:
                 cidades = json.load(f)

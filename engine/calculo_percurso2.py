@@ -20,7 +20,7 @@ class CalculoPeso:
             case "Pavimento Ligeiramente Irregular":
                 score +=preferencias.peso_pavimento*0.5
             case  "Pavimento Regular":
-                score +=preferencias.peso_pavimento*0.25
+                score += preferencias.peso_pavimento*0.25
 
         match rua.inclinacao:
             case "Nível Muito Elevado" :
@@ -77,7 +77,7 @@ class CalculoPeso:
             case "Risco Elevado":
                 score += preferencias.peso_ar*1
                 
-        match ambiente.poluicaosonora:
+        match ambiente.poluicao_sonora:
             case "Ideal":
                 score += preferencias.peso_ruido*(1/3)
             case "Aceitável":

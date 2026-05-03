@@ -12,70 +12,6 @@ import json
 import hashlib
 #_________________________________#
 
-class Perfil:
-    
-    def __init__(self,tipo,alergias=None,incapacidades=None):
-        self.__tipo = tipo #idoso,adulto,jovem,...
-        self.__alergias = alergias if alergias is not None else []
-        self.__incapacidades = incapacidades if incapacidades is not None else []
-    
-    # ---METODOS GET---
-    
-    def get_tipo(self):
-        return self.__tipo
-    
-    def get_alergias(self):
-        return list(self.__alergias)
-    
-    def get_incapacidades(self):
-        return list(self.__incapacidades)
-    
-    # ---METODOS DE MANIPULAÇÃO---
-
-    def add_alergia(self,alergia):
-        if alergia not in self.__alergias:
-            self.__alergias.append(alergia)
-        
-    def remove_alergia(self,alergia):
-        if alergia in self.__alergias:
-            self.__alergias.remove(alergia)
-    
-    def add_incapacidade(self,incapacidade):
-        if incapacidade not in self.__incapacidades:
-            self.__incapacidades.append(incapacidade)
-    
-    def remove_incapacidade(self,incapacidade):
-        if incapacidade in self.__incapacidades:
-            self.__incapacidades.remove(incapacidade)
-    
-    # ---METODOS DE VERIFICAÇÃO---
-    
-    def has_alergia(self,alergia):
-        return alergia in self.__alergias
-    
-    def has_incapacidade(self,incapacidade):
-        return incapacidade in self.__incapacidades
-    
-    def need_acessibilidade(self):
-        # verifica se a pessoa necessita de meios mais acessiveis
-        return 'mobilidade' in self.__tipo or 'cadeira' in self.__tipo or 'muletas' in self.__tipo
-    
-    def not_ruido(self):
-        # verifica se a pessoa quer evitar ruido
-        return 'hipersensibilidade' in self.__incapacidades
-    
-    # ---REPRESENTAÇÃO---
-    
-    def __str__(self):
-        alergias = ", ".join(self.__alergias) if self.__alergias else "Nenhuma"
-        incapacidades = ", ".join(self.__incapacidades) if self.__incapacidades else "Nenhuma"
-
-        return (
-            f"Perfil do utilizador:\n"
-            f"- Tipo: {self.__tipo}\n"
-            f"- Alergias: {alergias}\n"
-            f"- Incapacidades: {incapacidades}"
-        )
 
 #----------------------------------#~
 def hash_password(password):
@@ -83,10 +19,11 @@ def hash_password(password):
 
 class Utilizador: #--Permite dar login na app, introduz cerednciais e retorna informações---#
 
-    def __init__(self,username,password,perfil: Perfil):
+    def __init__(self,username,password,preferencias=None):
         self.__username=username
         self.__password=hash_password(password)
         self.__perfil=perfil
+        self.__preferencias = preferencias if preferencias else Preferencias()
 
     @property
     def u_username(self):
@@ -158,14 +95,17 @@ class Sistema:
 
         return self._users
 
-    def save_users(self,file):
+    def save_users(self, file):
         save = {}
         for user in self._users:
-            perfil = user.u_perfil
-            save[user.u_username] ={"pass":user.u_password,"perfil":{"tipo":perfil.get_tipo(),"alergias":perfil.get_alergias(),"incapacidades":perfil.get_incapacidades()}}
-        with open(file + ".json","w", encoding="utf-8") as f:
-            json.dump(save,f,indent = 4)
-
+            save[user.u_username] = {
+                "pass": user.u_password,
+                "preferencias": user.u_preferencias.get_dict() #Salva apenas o dicionário de números
+            }
+        with open(file + ".json", "w", encoding="utf-8") as f:
+            json.dump(save, f, indent=4)
+            
+            
     def load_users(self, file):
         try:
             with open(file + ".json", "r", encoding="utf-8") as f:
@@ -173,24 +113,24 @@ class Sistema:
             
             self._users = []
             for username, info in data.items():
-                dados_p = info["perfil"]
+                
                 #Criamos o objeto Perfil com os dados do JSON
-                u_perfil = Perfil(dados_p["tipo"], dados_p["alergias"], dados_p["incapacidades"])
+                u_prefs = Preferencias()
+                if "preferencias" in info:
+                    u_prefs.atualizar_parametros(info["preferencias"])
 
-                #Criamos o Utilizador. 
-                novo_user = Utilizador(username, "_", u_perfil)
-
-                #Substituímos a password placeholder pelo hash real que estava no ficheiro
+                #Criamos o utilizador com as suas preferências carregadas
+                novo_user = Utilizador(username, "_", u_prefs)
+                #Repomos a password encriptada que estava no ficheiro
                 novo_user._Utilizador__password = info["pass"]
-
+                
                 self._users.append(novo_user)
 
-            print(f"Foram carregados {len(self._users)} utilizadores")
+            print(f"Foram carregados {len(self._users)} utilizadores.")
             return self._users
         except FileNotFoundError:
-            print("Ficheiro não encontrado. Começar com a lista vazia")
-            return [] # Retornar lista vazia em vez de dicionário para manter a consistência
-        
+            print("Ficheiro não encontrado. Começar com a lista vazia.")
+            return []
 
     def select_incapacidades(self, user):
         incapacidades = ["respiratória","cego","surdo","mobilidade reduzida","cadeira de rodas","grávida","hipersensibilidade","outro"]
@@ -237,7 +177,7 @@ class Preferencias:
             "poluicao_sonora" : 5,
             "poluicao_visual" : 5,
             "nivel_polen" : 5,
-            "iluminação" : 5,
+            "iluminacao" : 5,
             "sombra" : 5, 
             #parâmetros de população
             "transito" : 5,
@@ -325,5 +265,5 @@ class Preferencias:
                     print("Entrada inválida. Digite um número.")
                     
     def get_dict(self):
-        return self._parametros
+        return self.parametros
         
