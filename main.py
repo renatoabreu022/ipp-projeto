@@ -15,8 +15,19 @@
 from models.grafo import Mapa
 from models.user import Sistema, Utilizador, Preferencias
 import json
+from datetime import datetime
 
+#------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
+def hora(values):
+    if values["-USAR_HORA_ATUAL-"]:  #A ideia é meter 2 botões: Hora atual ou marcar agendameento de previsão de condições
+        hora_calculo=datetime.now().hour  #Seleciona atual
+        print(f"Hora atual selecionada: {hora_calculo}h")
+    else:
+        hora_calculo = int(values["-HORA_SIMULAR-"]) # Transforma o input numa hora que dá para trabalhar
+        print(f"Hora selecionada para simulação: {hora_calculo}h")
+    return hora_calculo
 
+#--------------------#
 
 def help():
     print("\n--- COMANDOS DISPONÍVEIS ---")
