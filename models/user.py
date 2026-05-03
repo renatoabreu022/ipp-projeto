@@ -2,6 +2,7 @@
 
 #----- Dia 29/04/2026---@Claudia
  
+#----- Dia 03/05/2026----- @Cláudia
 #----------------------------------#
 #tipo = string
 #alergias = list
@@ -21,18 +22,22 @@ class Utilizador: #--Permite dar login na app, introduz cerednciais e retorna in
 
     def __init__(self,username,password,preferencias=None):
         self.__username=username
-        self.__password=hash_password(password)
-        self.__perfil=perfil
+        if is_hash:
+            self.__password = password
+        else:
+            self.__password = hash_password(password)
+            
+        self.__preferencias = preferencias if preferencias else Preferencias()
         self.__preferencias = preferencias if preferencias else Preferencias()
 
     @property
     def u_username(self):
         return self.__username # devolve o username
-
-    @property
-    def u_perfil(self): #devolve perfil do utilizador
-        return self.__perfil
     
+    @property
+    def u_preferencias(self):
+        return self.__preferencias
+
     @property
     def u_password(self):
         return self.__password # devolve password encriptada
@@ -40,8 +45,11 @@ class Utilizador: #--Permite dar login na app, introduz cerednciais e retorna in
     def verifica_credenciais(self,In_user,In_pass): #verifica se o input do utilizador coincide com as suas credenciais
         return self.__username == In_user and self.__password == hash_password(In_pass)
     
+    def alterar_password(self, nova_password):
+        self.__password = hash_password(nova_password)
+    
     def __str__(self):
-        return f"O utlizador de username {self.__username} tem o seguinte perfil: {self.__perfil}"
+        return f"O utlizador de username {self.__username}."
 
 
 #--------------------------------------------------------#
@@ -132,33 +140,7 @@ class Sistema:
             print("Ficheiro não encontrado. Começar com a lista vazia.")
             return []
 
-    def select_incapacidades(self, user):
-        incapacidades = ["respiratória","cego","surdo","mobilidade reduzida","cadeira de rodas","grávida","hipersensibilidade","outro"]
-        lista_select={num:inc for num,inc in list(enumerate(incapacidades))}
-        
-        select=input("Selecione as incapacidades do utilizador (separadas por vírgula):\n" + "\n".join([f"{num}: {inc}" for num, inc in lista_select.items()]) + "\n")
-        select = select.split(",")
-        for num in select:
-            num = num.strip()
-            if num.isdigit() and int(num) in lista_select:
-                user.u_perfil.add_incapacidade(lista_select[int(num)])
-            else:
-                print(f"Seleção inválida: {num}")
 
-
-    def select_alergias(self, user):
-        alergias = ["pólen"]
-        lista_selct={num:al for num,al in list(enumerate(alergias))}
-
-        selct=input("Selecione as alergias do utilizador (separadas por vírgula):\n" + "\n".join([f"{num}: {al}" for num, al in lista_selct.items()]) + "\n")
-        selct = selct.split(",")
-        for num in selct:
-            num = num.strip()
-            if num.isdigit() and int(num) in lista_selct:
-                user.u_perfil.add_alergia(lista_selct[int(num)])
-            else:
-                print(f"Seleção inválida: {num}")
-                
 
 #-------- nova maneira de "perfil"----------
 class Preferencias:

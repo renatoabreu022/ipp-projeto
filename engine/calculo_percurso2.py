@@ -4,12 +4,12 @@
 
 #-----Imports---------#
 from models.user import Preferencias
-from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente
+from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente, ParametrosPopulacao
 
 class CalculoPeso:
     @staticmethod
     
-    def calcular_score(preferencias:Preferencias,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente):
+    def calcular_score(preferencias:Preferencias,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente,populacao:ParametrosPopulacao):
         score = 0.0
 
         match rua.pavimento:
@@ -22,6 +22,7 @@ class CalculoPeso:
             case  "Pavimento Regular":
                 score += preferencias.peso_pavimento*0.25
 
+
         match rua.inclinacao:
             case "Nível Muito Elevado" :
                 score += preferencias.peso_inclinacao*1
@@ -32,6 +33,7 @@ class CalculoPeso:
             case "Nível Baixo":
                 score+=preferencias.peso_inclinacao*0.25
 
+
         passadeira=rua.passadeiras.split(".")
         match passadeira[0]:
             case "Baixo":
@@ -41,6 +43,7 @@ class CalculoPeso:
             case "Elevado":
                 score+=preferencias.peso_passadeiras*(1/3)
 
+
         match rua.passeios:
             case "Reduzido. Risco elevado.":
                 score+=preferencias.peso_passeios*1
@@ -49,13 +52,16 @@ class CalculoPeso:
             case "Elevado. Risco reduzido.":
                 score+=preferencias.peso_passeios*(1/3)
 
+
         match rua.textura_cego:
             case "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.":
                 score += preferencias.peso_textura_cego
         
+
         match rua.escadas:
             case "O percurso inclui escadas.":
                 score += preferencias.peso_escadas
+
 
         match ambiente.temp:
             case "Risco Elevado.":
@@ -67,6 +73,7 @@ class CalculoPeso:
             case "Ideal.":
                 score+=preferencias.peso_temperatura*0.25
                 
+
         match ambiente.qualidade_ar:
             case "Excelente":
                 score+=preferencias.peso_ar*0.25
@@ -94,7 +101,7 @@ class CalculoPeso:
                 score += preferencias.peso_visual*1
         
         
-        match ambiente.nivelpolen:
+        match ambiente.nivel_polen:
             case "Ideal. Ar limpo.":
                 score += preferencias.peso_polen*0.25
             case "Risco Ligeiro":
@@ -121,10 +128,20 @@ class CalculoPeso:
                 score += preferencias.peso_sombra*(2/3)
             case "Sombra abrangente":
                 score += preferencias.peso_sombra*(1/3)
-                
-                
-        return score
 
-                
-                
-                
+
+        match populacao.transito:
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.":
+                score += preferencias.peso_transito*(1)
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.":
+                score += preferencias.peso_transito*(1/2)
+        
+
+        match populacao.multidao:
+            case "Zona de elevada afluência de peões.":
+                score += preferencias.peso_multidao*(1)
+            case "Zona de reduzida afluência de peões.":
+                score += preferencias.peso_multidao*(1/2)
+
+
+        return score

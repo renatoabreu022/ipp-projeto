@@ -22,6 +22,7 @@ def help():
     print("\n--- COMANDOS DISPONÍVEIS ---")
     print("ins_utilizador <nome>          -> Regista novo utilizador")
     print("login <nome> <password>        -> Login")
+    print("alterar_password <password atual> <password nova>    -> Alterar a password")
     print("quizz                          -> Altera os parâmetros de preferências")
     print("gravar <arquivo>               -> Salva utilizadores")
     print("ler <arquivo>                  -> Carrega utilizadores")
@@ -59,8 +60,8 @@ def main():
             help()
 
         elif comando == "ins_utilizador":
-            if len(args) != 2:
-                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_utilizador <nome> <perfil>.")
+            if len(args) != 1:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_utilizador <nome>.")
 
             else:
                 nome = args[0]
@@ -93,6 +94,25 @@ def main():
                 else:
                     print("Falha no login. Verifique as credenciais.")
         
+        elif comando == "alterar_password":
+            if user_login is None:
+                print(print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências."))
+            elif len(args) != 2:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: alterar_pass <password atual> <password nova>")
+            else:
+                password_atual, nova_password = args
+                
+                if user_login.verifica_credenciais(user_login.u_username, password_atual):
+                    if nova_password.strip() != "":
+                        user_login.alterar_password(nova_password)
+                        sistema.save_users(arquivo_db)
+                        print("[Sucesso] Password alterada com sucesso!")
+                    else:
+                        print("ERRO: A nova password não pode ser vazia.")
+                else:
+                    print("ERRO: Password atual incorreta.")
+        
+        
         elif comando == "quizz":
             if user_login is None:
                 print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
@@ -115,7 +135,7 @@ def main():
             if not args:
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ler <arquivo.json>.")
             else:
-                mapa.save_mapa(args[0])
+                sistema.load_users(args[0])
                 print("Utilizadores carregados com sucesso.")
         
         elif comando == 'gravar_mapa':

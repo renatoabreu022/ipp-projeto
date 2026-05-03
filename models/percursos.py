@@ -255,11 +255,8 @@ class ParametrosAmbiente(Percurso):
                     self.iluminacao="Fraco (Má visibilidade)"
                 else:
                     print("Erro! Percentagens assumem valores entre 0 e 100.")
-                
     
-    
-    
-    def sombra(self, nsombra, dist):
+    def sombra_(self, nsombra, dist):
         perc_cobertura= (nsombra/dist)*100
         if 0<=perc_cobertura<30:
             self.sombra= " Sombra reduzida"
@@ -315,7 +312,7 @@ class ParametrosPopulacao(Percurso):
     def multidao_(self,res):
         if res == True:
             self.multidao = "Zona de elevada afluência de peões."
-        else:
+        else: 
             self.multidao = "Zona de reduzida afluência de peões."
 
     def to_dict(self):

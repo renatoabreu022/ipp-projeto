@@ -1,0 +1,22 @@
+{
+    "claudia": {
+        "pass": "0ffe1abd1a08215353c233d6e009613e95eec4253832a761af28ff37ac5a150c",
+        "preferencias": {
+            "pavimento": 5,
+            "inclinacao": 5,
+            "passadeiras": 5,
+            "passeios": 5,
+            "textura_cego": 5,
+            "escadas": 5,
+            "temperatura": 5,
+            "qualidade_ar": 5,
+            "poluicao_sonora": 5,
+            "poluicao_visual": 5,
+            "nivel_polen": 5,
+            "iluminacao": 5,
+            "sombra": 5,
+            "transito": 5,
+            "multidao": 5
+        }
+    }
+}

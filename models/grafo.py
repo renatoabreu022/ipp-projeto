@@ -86,7 +86,6 @@ class Mapa:
         percurso = { # aqui cria-se o percurso caso passe os testes anteriores
             'destino': destino,
             'distancia': distancia,
-            'coordenadas': self.coordenadas,
             'acessibilidade': acess,
             'ambiente': amb,
             'populacao': pop
@@ -117,7 +116,7 @@ class Mapa:
     #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO ~~done
 
     # esta procura é uma 'mistura' de Custo Uniforme com Dijkstra
-    def pesquisa_perc(self,origem,destino,preferencias,k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
+    def pesquisa_perc(self, origem, destino, preferencias, k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
         if origem not in self.adjacencias:
             print(f'ERRO: {origem} não existe no mapa.')
             return []
@@ -171,46 +170,17 @@ class Mapa:
 
                     novo_caminho = caminho + [viz]
                     candidatos.append((score_new, novo_caminho))
+                    
         return sorted(encontrados, key=lambda x: x[0]) # devolve os caminhos do melhor para o pior
-
-
-    def recomendar(self, origem, destino, preferencias):
-        percursos_todos = self.pesquisa_perc(origem, destino, preferencias)
-        
-        if not percursos_todos:
-            return None, 0
-        
-        melhor_perc = None
-        melhor_score = float('inf') #começamos com "infinito" para qualquer score ser menor que este
-        
-        for perc in percursos_todos:
-            score_atual = 0
-            #vamos percorrer os percursos entre pontos, ou seja, se quero ir de A a D vou de A-B, B-C, C-D...
-            for i in range(len(perc) - 1):
-                de = perc[i]
-                para = perc[i+1]
-            
-                #no nosso grafo, cada item em self.adjacencias[de] é um dic
-                #procura a ligação certa no grafo
-                for ligacao in self.adjacencias[de]: #percorre todas as ruas que saem do "de" para ver qual delas vai para "para".
-                    if ligacao['destino'] == para:
-                        acess = ligacao['acessibilidade']
-                        amb = ligacao['ambiente']
-                    #chama o motor de pontuação
-                        score_atual += CalculoPeso.calcular_score(preferencias, acess, amb)
-        
-            if score_atual < melhor_score:
-                melhor_score = score_atual #o melhor score é o mais pequeno, certo?
-                melhor_perc = perc
-                
-        return melhor_perc, melhor_score
-
     
     def save_mapa(self, ficheiro):
-        dados = {} # dicionario que vai replicar a estrutura do grafo para algo que o JSON lê
+        dados = {
+            'adjacencias': {},
+            'coordenadas': self.coordenadas
+        } # dicionario que vai replicar a estrutura do grafo para algo que o JSON lê
 
         for origem, percursos in self.adjacencias.items():
-            dados[origem] = []
+            dados['adjacencias'][origem] = []
 
             for perc in percursos:
                 perc_dict = {
@@ -222,7 +192,7 @@ class Mapa:
                     'ambiente': perc['ambiente'].to_dict() if perc['ambiente'] else None,
                     'populacao': perc['populacao'].to_dict() if perc['populacao'] else None
                 }
-                dados[origem].append(perc_dict) # adiciona-se cada percurso à sua origem
+                dados['adjacencias'][origem].append(perc_dict) # adiciona-se cada percurso à sua origem
         
         with open(ficheiro, 'w', encoding= 'utf-8') as f:
             json.dump(dados,f,indent=4,ensure_ascii=False) # foi a AI que me mostrou isto, mas ensure_ascii=False garante que coisas como ç,ã,etc. não se percam
@@ -235,8 +205,10 @@ class Mapa:
                 dados = json.load(f)
 
             self.adjacencias = {} # limpa o mapa atual antes de carregar o novo TER CUIDADO DE GUARDAR ANTES DE IMPORTAR
+            self.coordenadas = dados.get('coordenadas', {})
+            adjacencias_dados = dados.get('adjacencias', dados)
 
-            for origem, percursos in dados.items():
+            for origem, percursos in adjacencias_dados.items():
                 self.adjacencias[origem] = []
 
                 for perc_dict in percursos:
@@ -248,7 +220,6 @@ class Mapa:
                     percurso = {
                         'destino': perc_dict['destino'],
                         'distancia': perc_dict['distancia'],
-                        'coordenadas': perc_dict.get('coordenadas'),
                         'acessibilidade': acess,
                         'ambiente': amb,
                         'populacao': pop
@@ -273,55 +244,3 @@ class Mapa:
         
         except FileNotFoundError:
             print(f'ERRO: Ficheiro "{ficheiro}" não encontrado.')
-
-
-#----- sinto que esta função está meio deslocada 
-
-#função que supostamente une tudo, a geração de percurso e a recomendação
-#aqui reaproveitei aquilo que antes estava no main em "simular" para criar parâmetros aleatórios
-
-def simular_e_recomendar(mapa, perfil, origem, destino):
-    #gerar 4 ou menos opções de percurso entre a origem e o destino
-    #(Isto garante que o grafo tem dados para trabalhar)
-    distancia_base = random.randint(500, 2000) #os percursos podem ser de 500 a 2000 metros
-    
-    for i in range(4):
-        nome_rua = f"Opção {i+1} de {origem} para {destino}"
-        
-        #parâmetros de pavimemto
-        rua = ParametrosAcessibilidade(nome_rua, origem, destino)
-        rua.pavimento_(random.randint(0, 100))
-        rua.inclinacao_(random.random(0, 100))
-        rua.passadeiras_(random.randint(0, 5), distancia_base)
-        rua.passeios_(random.randint(0, 100))
-        rua.textura_(random.choice([True, False]))
-        rua.escadas_(random.choice([True, False]))
-
-        #parâmetros ambientais 
-        amb = ParametrosAmbiente(nome_rua, origem, destino)
-        amb.temp(random.randint(-5, 35)) 
-        amb.percqualidade_ar(random.randint(0, 100))
-        amb.poluison(random.randint(0, 100))
-        amb.puluivisu(random.randint(0, 100))
-        amb.nivelpolen(random.randint(0, 100))
-        amb.sombra2(random.randint(0, 100), distancia_base)
-
-        #parâmetros populacionais
-        pop = ParametrosPopulacao(nome_rua, origem, destino)
-        pop.transito_(random.choice([True, False]))
-        pop.multidao_(random.choice([True, False]))
-
-        #adicionar ao grafo 
-        mapa.add_percurso(origem, destino, distancia_base, rua, amb, pop)
-
-    #pedimos a recomendação
-    percurso, score = mapa.recomendar(origem, destino, perfil)
-
-    if percurso:
-        print(f" De acordo com as suas preferância, sugerimos o seguinte percurso: ")
-        print(f" {' -> '.join(percurso)}")
-        print(f" Índice de Desconforto (IC): {score:.2f}")
-    else:
-        print("ERRO: Não foi possível calcular um percurso.")
-
-
