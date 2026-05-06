@@ -30,18 +30,18 @@ def hora(values):
 #--------------------#
 
 def help():
-    print("\n--- COMANDOS DISPONÍVEIS ---")
-    print("ins_utilizador <nome>          -> Regista novo utilizador")
-    print("login <nome> <password>        -> Login")
-    print("alterar_password <password atual> <password nova>    -> Alterar a password")
-    print("quizz                          -> Altera os parâmetros de preferências")
-    print("gravar <arquivo>               -> Salva utilizadores")
-    print("ler <arquivo>                  -> Carrega utilizadores")
-    print("simular                        -> Calcula a rota ideal entre dois pontos")
-    print("gravar_mapa <ficheiro>         -> Guarda o mapa atual")
-    print("carregar_mapa <ficheiro>       -> Carrega um mapa guardado")
-    print("sair                           -> Encerra a aplicação")
-    print("----------------------------")
+    print("\n--- COMANDOS DISPONÍVEIS --------------------------------------------------------------------")
+    print("signin <nome>                                        -> Regista novo utilizador")
+    print("login <nome> <password>                              -> Login")
+    print("alterar_password <password_atual> <password_nova>    -> Alterar a password")
+    print("quizz                                                -> Altera os parâmetros de preferências")
+    print("gravar <arquivo>                                     -> Salva utilizadores")
+    print("ler <arquivo>                                        -> Carrega utilizadores")
+    print("simular                                              -> Calcula a rota ideal entre dois pontos")
+    print("gravar_mapa <ficheiro>                               -> Guarda o mapa atual")
+    print("carregar_mapa <ficheiro>                             -> Carrega um mapa guardado")
+    print("sair                                                 -> Encerra a aplicação")
+    print("----------------------------------------------------------------------------------------------")
 
 # --- LOOP PRINCIPAL ---
 
@@ -52,7 +52,7 @@ def main():
     arquivo_db = "utilizadores"
     
     #Tenta carregar os utilizadores logo ao iniciar o programa
-    sistema.load_users(arquivo_db)
+    #sistema.load_users(arquivo_db)
     print("Bem-vind@! Digite 'help' para comandos.")
 
     while True:
@@ -70,9 +70,9 @@ def main():
         elif comando == "help":
             help()
 
-        elif comando == "ins_utilizador":
+        elif comando == "signin":
             if len(args) != 1:
-                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_utilizador <nome>.")
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: signin <nome>.")
 
             else:
                 nome = args[0]
