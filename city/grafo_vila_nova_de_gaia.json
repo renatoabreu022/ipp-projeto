@@ -1,0 +1,519 @@
+{
+  "cidade": "Vila Nova de Gaia",
+  "nodes": {
+    "El Corte Inglés": {
+      "x": 0.0,
+      "y": 375.0
+    },
+    "Hospital Eduardo Santos Silva": {
+      "x": -10.35,
+      "y": 289.82
+    },
+    "Cais de Gaia": {
+      "x": -18.55,
+      "y": 259.34
+    },
+    "GaiaShopping": {
+      "x": -29.93,
+      "y": 278.4
+    },
+    "Jardim do Morro": {
+      "x": -51.09,
+      "y": 355.35
+    },
+    "Bebedouro Cais de Gaia": {
+      "x": -47.76,
+      "y": 264.73
+    },
+    "Ciclovia da Orla Marítima": {
+      "x": -78.65,
+      "y": 361.54
+    },
+    "Ecoponto Jardim do Morro": {
+      "x": -71.72,
+      "y": 280.99
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital Eduardo Santos Silva",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 0.0,
+        "y": 375.0
+      },
+      "destino_coord": {
+        "x": -10.35,
+        "y": 289.82
+      }
+    },
+    {
+      "destino": "GaiaShopping",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 0.0,
+        "y": 375.0
+      },
+      "destino_coord": {
+        "x": -29.93,
+        "y": 278.4
+      }
+    },
+    {
+      "destino": "Cais de Gaia",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -10.35,
+        "y": 289.82
+      },
+      "destino_coord": {
+        "x": -18.55,
+        "y": 259.34
+      }
+    },
+    {
+      "destino": "Ciclovia da Orla Marítima",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -10.35,
+        "y": 289.82
+      },
+      "destino_coord": {
+        "x": -78.65,
+        "y": 361.54
+      }
+    },
+    {
+      "destino": "GaiaShopping",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -18.55,
+        "y": 259.34
+      },
+      "destino_coord": {
+        "x": -29.93,
+        "y": 278.4
+      }
+    },
+    {
+      "destino": "Hospital Eduardo Santos Silva",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -18.55,
+        "y": 259.34
+      },
+      "destino_coord": {
+        "x": -10.35,
+        "y": 289.82
+      }
+    },
+    {
+      "destino": "Jardim do Morro",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -29.93,
+        "y": 278.4
+      },
+      "destino_coord": {
+        "x": -51.09,
+        "y": 355.35
+      }
+    },
+    {
+      "destino": "El Corte Inglés",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -29.93,
+        "y": 278.4
+      },
+      "destino_coord": {
+        "x": 0.0,
+        "y": 375.0
+      }
+    },
+    {
+      "destino": "Bebedouro Cais de Gaia",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -51.09,
+        "y": 355.35
+      },
+      "destino_coord": {
+        "x": -47.76,
+        "y": 264.73
+      }
+    },
+    {
+      "destino": "Bebedouro Cais de Gaia",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -51.09,
+        "y": 355.35
+      },
+      "destino_coord": {
+        "x": -47.76,
+        "y": 264.73
+      }
+    },
+    {
+      "destino": "Ciclovia da Orla Marítima",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -47.76,
+        "y": 264.73
+      },
+      "destino_coord": {
+        "x": -78.65,
+        "y": 361.54
+      }
+    },
+    {
+      "destino": "Ciclovia da Orla Marítima",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -47.76,
+        "y": 264.73
+      },
+      "destino_coord": {
+        "x": -78.65,
+        "y": 361.54
+      }
+    },
+    {
+      "destino": "Ecoponto Jardim do Morro",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -78.65,
+        "y": 361.54
+      },
+      "destino_coord": {
+        "x": -71.72,
+        "y": 280.99
+      }
+    },
+    {
+      "destino": "Bebedouro Cais de Gaia",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -78.65,
+        "y": 361.54
+      },
+      "destino_coord": {
+        "x": -47.76,
+        "y": 264.73
+      }
+    },
+    {
+      "destino": "El Corte Inglés",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -71.72,
+        "y": 280.99
+      },
+      "destino_coord": {
+        "x": 0.0,
+        "y": 375.0
+      }
+    }
+  ]
+}

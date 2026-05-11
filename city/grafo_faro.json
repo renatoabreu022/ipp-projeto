@@ -1,0 +1,551 @@
+{
+  "cidade": "Faro",
+  "nodes": {
+    "UAlg - Penha": {
+      "x": 252.35,
+      "y": -74.1
+    },
+    "Hospital de Faro": {
+      "x": 333.31,
+      "y": -85.07
+    },
+    "Fórum Algarve": {
+      "x": 349.82,
+      "y": -76.1
+    },
+    "Doca de Faro": {
+      "x": 338.53,
+      "y": -61.08
+    },
+    "Arco da Vila": {
+      "x": 319.71,
+      "y": -45.97
+    },
+    "Bebedouro Doca": {
+      "x": 354.95,
+      "y": -38.16
+    },
+    "Parque Ribeirinho": {
+      "x": 270.31,
+      "y": -19.33
+    },
+    "Ecoponto Fórum": {
+      "x": 260.83,
+      "y": -9.32
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital de Faro",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 252.35,
+        "y": -74.1
+      },
+      "destino_coord": {
+        "x": 333.31,
+        "y": -85.07
+      }
+    },
+    {
+      "destino": "Arco da Vila",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 252.35,
+        "y": -74.1
+      },
+      "destino_coord": {
+        "x": 319.71,
+        "y": -45.97
+      }
+    },
+    {
+      "destino": "Fórum Algarve",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 333.31,
+        "y": -85.07
+      },
+      "destino_coord": {
+        "x": 349.82,
+        "y": -76.1
+      }
+    },
+    {
+      "destino": "Ecoponto Fórum",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 333.31,
+        "y": -85.07
+      },
+      "destino_coord": {
+        "x": 260.83,
+        "y": -9.32
+      }
+    },
+    {
+      "destino": "Doca de Faro",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 349.82,
+        "y": -76.1
+      },
+      "destino_coord": {
+        "x": 338.53,
+        "y": -61.08
+      }
+    },
+    {
+      "destino": "Bebedouro Doca",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 349.82,
+        "y": -76.1
+      },
+      "destino_coord": {
+        "x": 354.95,
+        "y": -38.16
+      }
+    },
+    {
+      "destino": "Arco da Vila",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 338.53,
+        "y": -61.08
+      },
+      "destino_coord": {
+        "x": 319.71,
+        "y": -45.97
+      }
+    },
+    {
+      "destino": "UAlg - Penha",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 338.53,
+        "y": -61.08
+      },
+      "destino_coord": {
+        "x": 252.35,
+        "y": -74.1
+      }
+    },
+    {
+      "destino": "Bebedouro Doca",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 319.71,
+        "y": -45.97
+      },
+      "destino_coord": {
+        "x": 354.95,
+        "y": -38.16
+      }
+    },
+    {
+      "destino": "Ecoponto Fórum",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 319.71,
+        "y": -45.97
+      },
+      "destino_coord": {
+        "x": 260.83,
+        "y": -9.32
+      }
+    },
+    {
+      "destino": "Parque Ribeirinho",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 354.95,
+        "y": -38.16
+      },
+      "destino_coord": {
+        "x": 270.31,
+        "y": -19.33
+      }
+    },
+    {
+      "destino": "Hospital de Faro",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 354.95,
+        "y": -38.16
+      },
+      "destino_coord": {
+        "x": 333.31,
+        "y": -85.07
+      }
+    },
+    {
+      "destino": "Ecoponto Fórum",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 270.31,
+        "y": -19.33
+      },
+      "destino_coord": {
+        "x": 260.83,
+        "y": -9.32
+      }
+    },
+    {
+      "destino": "Bebedouro Doca",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 270.31,
+        "y": -19.33
+      },
+      "destino_coord": {
+        "x": 354.95,
+        "y": -38.16
+      }
+    },
+    {
+      "destino": "UAlg - Penha",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 260.83,
+        "y": -9.32
+      },
+      "destino_coord": {
+        "x": 252.35,
+        "y": -74.1
+      }
+    },
+    {
+      "destino": "UAlg - Penha",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 260.83,
+        "y": -9.32
+      },
+      "destino_coord": {
+        "x": 252.35,
+        "y": -74.1
+      }
+    }
+  ]
+}

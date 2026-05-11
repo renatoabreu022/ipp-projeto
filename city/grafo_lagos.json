@@ -1,0 +1,487 @@
+{
+  "cidade": "Lagos",
+  "nodes": {
+    "Marina de Lagos": {
+      "x": 220.3,
+      "y": -120.29
+    },
+    "Hospital de Lagos": {
+      "x": 269.16,
+      "y": -134.73
+    },
+    "Mercado Municipal": {
+      "x": -248.37,
+      "y": 17.76
+    },
+    "Ponta da Piedade": {
+      "x": 261.97,
+      "y": -119.64
+    },
+    "Praça Infante Dom Henrique": {
+      "x": 230.05,
+      "y": -95.29
+    },
+    "Bebedouro Marina": {
+      "x": 290.45,
+      "y": -108.33
+    },
+    "Centro de Ciência Viva": {
+      "x": 357.71,
+      "y": -119.06
+    },
+    "WC Público Centro": {
+      "x": -134.24,
+      "y": -179.32
+    }
+  },
+  "edges": [
+    {
+      "destino": "Ponta da Piedade",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -248.37,
+        "y": 17.76
+      },
+      "destino_coord": {
+        "x": 261.97,
+        "y": -119.64
+      }
+    },
+    {
+      "destino": "Ponta da Piedade",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -248.37,
+        "y": 17.76
+      },
+      "destino_coord": {
+        "x": 261.97,
+        "y": -119.64
+      }
+    },
+    {
+      "destino": "Marina de Lagos",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -134.24,
+        "y": -179.32
+      },
+      "destino_coord": {
+        "x": 220.3,
+        "y": -120.29
+      }
+    },
+    {
+      "destino": "Hospital de Lagos",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 220.3,
+        "y": -120.29
+      },
+      "destino_coord": {
+        "x": 269.16,
+        "y": -134.73
+      }
+    },
+    {
+      "destino": "Mercado Municipal",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 269.16,
+        "y": -134.73
+      },
+      "destino_coord": {
+        "x": -248.37,
+        "y": 17.76
+      }
+    },
+    {
+      "destino": "Bebedouro Marina",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 269.16,
+        "y": -134.73
+      },
+      "destino_coord": {
+        "x": 290.45,
+        "y": -108.33
+      }
+    },
+    {
+      "destino": "Praça Infante Dom Henrique",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 261.97,
+        "y": -119.64
+      },
+      "destino_coord": {
+        "x": 230.05,
+        "y": -95.29
+      }
+    },
+    {
+      "destino": "Marina de Lagos",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 261.97,
+        "y": -119.64
+      },
+      "destino_coord": {
+        "x": 220.3,
+        "y": -120.29
+      }
+    },
+    {
+      "destino": "Bebedouro Marina",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 230.05,
+        "y": -95.29
+      },
+      "destino_coord": {
+        "x": 290.45,
+        "y": -108.33
+      }
+    },
+    {
+      "destino": "WC Público Centro",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 230.05,
+        "y": -95.29
+      },
+      "destino_coord": {
+        "x": -134.24,
+        "y": -179.32
+      }
+    },
+    {
+      "destino": "Centro de Ciência Viva",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 290.45,
+        "y": -108.33
+      },
+      "destino_coord": {
+        "x": 357.71,
+        "y": -119.06
+      }
+    },
+    {
+      "destino": "Ponta da Piedade",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 290.45,
+        "y": -108.33
+      },
+      "destino_coord": {
+        "x": 261.97,
+        "y": -119.64
+      }
+    },
+    {
+      "destino": "WC Público Centro",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 357.71,
+        "y": -119.06
+      },
+      "destino_coord": {
+        "x": -134.24,
+        "y": -179.32
+      }
+    },
+    {
+      "destino": "Bebedouro Marina",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 357.71,
+        "y": -119.06
+      },
+      "destino_coord": {
+        "x": 290.45,
+        "y": -108.33
+      }
+    }
+  ]
+}

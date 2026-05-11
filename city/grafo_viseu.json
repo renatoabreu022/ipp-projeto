@@ -1,0 +1,519 @@
+{
+  "cidade": "Viseu",
+  "nodes": {
+    "Sé de Viseu": {
+      "x": -155.13,
+      "y": -223.43
+    },
+    "Palácio do Gelo": {
+      "x": -203.82,
+      "y": -317.15
+    },
+    "Hospital de São Teotónio": {
+      "x": -112.77,
+      "y": -190.06
+    },
+    "Parque do Fontelo": {
+      "x": -113.58,
+      "y": -208.01
+    },
+    "Rossio": {
+      "x": -138.76,
+      "y": -277.21
+    },
+    "Bebedouro Parque do Fontelo": {
+      "x": -127.53,
+      "y": -279.26
+    },
+    "Ecoponto Sé": {
+      "x": -94.52,
+      "y": -228.2
+    },
+    "Posto de Primeiros Socorros": {
+      "x": -162.94,
+      "y": 298.41
+    }
+  },
+  "edges": [
+    {
+      "destino": "Sé de Viseu",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -162.94,
+        "y": 298.41
+      },
+      "destino_coord": {
+        "x": -155.13,
+        "y": -223.43
+      }
+    },
+    {
+      "destino": "Hospital de São Teotónio",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -162.94,
+        "y": 298.41
+      },
+      "destino_coord": {
+        "x": -112.77,
+        "y": -190.06
+      }
+    },
+    {
+      "destino": "Palácio do Gelo",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -155.13,
+        "y": -223.43
+      },
+      "destino_coord": {
+        "x": -203.82,
+        "y": -317.15
+      }
+    },
+    {
+      "destino": "Bebedouro Parque do Fontelo",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -155.13,
+        "y": -223.43
+      },
+      "destino_coord": {
+        "x": -127.53,
+        "y": -279.26
+      }
+    },
+    {
+      "destino": "Hospital de São Teotónio",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -203.82,
+        "y": -317.15
+      },
+      "destino_coord": {
+        "x": -112.77,
+        "y": -190.06
+      }
+    },
+    {
+      "destino": "Sé de Viseu",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -203.82,
+        "y": -317.15
+      },
+      "destino_coord": {
+        "x": -155.13,
+        "y": -223.43
+      }
+    },
+    {
+      "destino": "Parque do Fontelo",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -112.77,
+        "y": -190.06
+      },
+      "destino_coord": {
+        "x": -113.58,
+        "y": -208.01
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -112.77,
+        "y": -190.06
+      },
+      "destino_coord": {
+        "x": -162.94,
+        "y": 298.41
+      }
+    },
+    {
+      "destino": "Rossio",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -113.58,
+        "y": -208.01
+      },
+      "destino_coord": {
+        "x": -138.76,
+        "y": -277.21
+      }
+    },
+    {
+      "destino": "Bebedouro Parque do Fontelo",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -138.76,
+        "y": -277.21
+      },
+      "destino_coord": {
+        "x": -127.53,
+        "y": -279.26
+      }
+    },
+    {
+      "destino": "Ecoponto Sé",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -138.76,
+        "y": -277.21
+      },
+      "destino_coord": {
+        "x": -94.52,
+        "y": -228.2
+      }
+    },
+    {
+      "destino": "Ecoponto Sé",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -127.53,
+        "y": -279.26
+      },
+      "destino_coord": {
+        "x": -94.52,
+        "y": -228.2
+      }
+    },
+    {
+      "destino": "Ecoponto Sé",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -127.53,
+        "y": -279.26
+      },
+      "destino_coord": {
+        "x": -94.52,
+        "y": -228.2
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -94.52,
+        "y": -228.2
+      },
+      "destino_coord": {
+        "x": -162.94,
+        "y": 298.41
+      }
+    },
+    {
+      "destino": "Palácio do Gelo",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -94.52,
+        "y": -228.2
+      },
+      "destino_coord": {
+        "x": -203.82,
+        "y": -317.15
+      }
+    }
+  ]
+}

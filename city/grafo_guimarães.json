@@ -1,0 +1,551 @@
+{
+  "cidade": "Guimarães",
+  "nodes": {
+    "Castelo de Guimarães": {
+      "x": 85.08,
+      "y": 289.77
+    },
+    "Hospital da Senhora da Oliveira": {
+      "x": 59.6,
+      "y": 233.51
+    },
+    "Universidade do Minho (Azurém)": {
+      "x": 79.29,
+      "y": 364.48
+    },
+    "GuimarãeShopping": {
+      "x": 63.03,
+      "y": 349.36
+    },
+    "Largo do Toural": {
+      "x": 49.67,
+      "y": 345.45
+    },
+    "Bebedouro Largo da Oliveira": {
+      "x": 27.79,
+      "y": 258.51
+    },
+    "Parque da Cidade Guimarães": {
+      "x": 15.91,
+      "y": 222.43
+    },
+    "WC Público Toural": {
+      "x": 9.67,
+      "y": 270.83
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital da Senhora da Oliveira",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 85.08,
+        "y": 289.77
+      },
+      "destino_coord": {
+        "x": 59.6,
+        "y": 233.51
+      }
+    },
+    {
+      "destino": "Largo do Toural",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 85.08,
+        "y": 289.77
+      },
+      "destino_coord": {
+        "x": 49.67,
+        "y": 345.45
+      }
+    },
+    {
+      "destino": "Universidade do Minho (Azurém)",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 59.6,
+        "y": 233.51
+      },
+      "destino_coord": {
+        "x": 79.29,
+        "y": 364.48
+      }
+    },
+    {
+      "destino": "Largo do Toural",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 59.6,
+        "y": 233.51
+      },
+      "destino_coord": {
+        "x": 49.67,
+        "y": 345.45
+      }
+    },
+    {
+      "destino": "GuimarãeShopping",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 79.29,
+        "y": 364.48
+      },
+      "destino_coord": {
+        "x": 63.03,
+        "y": 349.36
+      }
+    },
+    {
+      "destino": "Hospital da Senhora da Oliveira",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 79.29,
+        "y": 364.48
+      },
+      "destino_coord": {
+        "x": 59.6,
+        "y": 233.51
+      }
+    },
+    {
+      "destino": "Largo do Toural",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 63.03,
+        "y": 349.36
+      },
+      "destino_coord": {
+        "x": 49.67,
+        "y": 345.45
+      }
+    },
+    {
+      "destino": "Hospital da Senhora da Oliveira",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 63.03,
+        "y": 349.36
+      },
+      "destino_coord": {
+        "x": 59.6,
+        "y": 233.51
+      }
+    },
+    {
+      "destino": "Bebedouro Largo da Oliveira",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 49.67,
+        "y": 345.45
+      },
+      "destino_coord": {
+        "x": 27.79,
+        "y": 258.51
+      }
+    },
+    {
+      "destino": "Hospital da Senhora da Oliveira",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 49.67,
+        "y": 345.45
+      },
+      "destino_coord": {
+        "x": 59.6,
+        "y": 233.51
+      }
+    },
+    {
+      "destino": "Parque da Cidade Guimarães",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 27.79,
+        "y": 258.51
+      },
+      "destino_coord": {
+        "x": 15.91,
+        "y": 222.43
+      }
+    },
+    {
+      "destino": "Parque da Cidade Guimarães",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 27.79,
+        "y": 258.51
+      },
+      "destino_coord": {
+        "x": 15.91,
+        "y": 222.43
+      }
+    },
+    {
+      "destino": "WC Público Toural",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 15.91,
+        "y": 222.43
+      },
+      "destino_coord": {
+        "x": 9.67,
+        "y": 270.83
+      }
+    },
+    {
+      "destino": "GuimarãeShopping",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 15.91,
+        "y": 222.43
+      },
+      "destino_coord": {
+        "x": 63.03,
+        "y": 349.36
+      }
+    },
+    {
+      "destino": "Castelo de Guimarães",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 9.67,
+        "y": 270.83
+      },
+      "destino_coord": {
+        "x": 85.08,
+        "y": 289.77
+      }
+    },
+    {
+      "destino": "Parque da Cidade Guimarães",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 9.67,
+        "y": 270.83
+      },
+      "destino_coord": {
+        "x": 15.91,
+        "y": 222.43
+      }
+    }
+  ]
+}

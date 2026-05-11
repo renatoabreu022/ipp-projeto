@@ -1,0 +1,487 @@
+{
+  "cidade": "Famalicão",
+  "nodes": {
+    "Hospital de Famalicão": {
+      "x": -97.76,
+      "y": 332.94
+    },
+    "Parque da Devesa": {
+      "x": -85.27,
+      "y": 256.18
+    },
+    "Estação de Famalicão": {
+      "x": -88.06,
+      "y": 236.11
+    },
+    "Universidade Lusíada": {
+      "x": -129.35,
+      "y": 312.27
+    },
+    "Praça D. Maria II": {
+      "x": -132.1,
+      "y": 289.26
+    },
+    "Bebedouro Parque da Devesa": {
+      "x": -164.28,
+      "y": 328.18
+    },
+    "Posto de Primeiros Socorros": {
+      "x": -162.94,
+      "y": 298.41
+    },
+    "WC Público Praça D. Maria II": {
+      "x": -157.16,
+      "y": 264.88
+    }
+  },
+  "edges": [
+    {
+      "destino": "Parque da Devesa",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -97.76,
+        "y": 332.94
+      },
+      "destino_coord": {
+        "x": -85.27,
+        "y": 256.18
+      }
+    },
+    {
+      "destino": "Universidade Lusíada",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -97.76,
+        "y": 332.94
+      },
+      "destino_coord": {
+        "x": -129.35,
+        "y": 312.27
+      }
+    },
+    {
+      "destino": "Estação de Famalicão",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -85.27,
+        "y": 256.18
+      },
+      "destino_coord": {
+        "x": -88.06,
+        "y": 236.11
+      }
+    },
+    {
+      "destino": "Universidade Lusíada",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -88.06,
+        "y": 236.11
+      },
+      "destino_coord": {
+        "x": -129.35,
+        "y": 312.27
+      }
+    },
+    {
+      "destino": "Parque da Devesa",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -88.06,
+        "y": 236.11
+      },
+      "destino_coord": {
+        "x": -85.27,
+        "y": 256.18
+      }
+    },
+    {
+      "destino": "Praça D. Maria II",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -129.35,
+        "y": 312.27
+      },
+      "destino_coord": {
+        "x": -132.1,
+        "y": 289.26
+      }
+    },
+    {
+      "destino": "Praça D. Maria II",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -129.35,
+        "y": 312.27
+      },
+      "destino_coord": {
+        "x": -132.1,
+        "y": 289.26
+      }
+    },
+    {
+      "destino": "Bebedouro Parque da Devesa",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -132.1,
+        "y": 289.26
+      },
+      "destino_coord": {
+        "x": -164.28,
+        "y": 328.18
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -132.1,
+        "y": 289.26
+      },
+      "destino_coord": {
+        "x": -162.94,
+        "y": 298.41
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -164.28,
+        "y": 328.18
+      },
+      "destino_coord": {
+        "x": -162.94,
+        "y": 298.41
+      }
+    },
+    {
+      "destino": "Estação de Famalicão",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -164.28,
+        "y": 328.18
+      },
+      "destino_coord": {
+        "x": -88.06,
+        "y": 236.11
+      }
+    },
+    {
+      "destino": "WC Público Praça D. Maria II",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -162.94,
+        "y": 298.41
+      },
+      "destino_coord": {
+        "x": -157.16,
+        "y": 264.88
+      }
+    },
+    {
+      "destino": "Parque da Devesa",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -162.94,
+        "y": 298.41
+      },
+      "destino_coord": {
+        "x": -85.27,
+        "y": 256.18
+      }
+    },
+    {
+      "destino": "Hospital de Famalicão",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -157.16,
+        "y": 264.88
+      },
+      "destino_coord": {
+        "x": -97.76,
+        "y": 332.94
+      }
+    }
+  ]
+}

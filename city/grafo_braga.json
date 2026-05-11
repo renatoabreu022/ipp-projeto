@@ -1,0 +1,555 @@
+{
+  "cidade": "Braga",
+  "nodes": {
+    "Bom Jesus do Monte": {
+      "x": 320.59,
+      "y": 132.79
+    },
+    "Avenida da Liberdade": {
+      "x": 211.94,
+      "y": 96.79
+    },
+    "Hospital de Braga": {
+      "x": 331.76,
+      "y": 166.07
+    },
+    "Universidade do Minho - Gualtar": {
+      "x": 200.11,
+      "y": 109.27
+    },
+    "Braga Parque": {
+      "x": 194.36,
+      "y": 115.32
+    },
+    "Bebedouro Arcada": {
+      "x": 212.84,
+      "y": 136.78
+    },
+    "Ciclovia do Rio Este": {
+      "x": 209.46,
+      "y": 145.43
+    },
+    "Ecoponto Gualtar": {
+      "x": 270.58,
+      "y": 202.56
+    },
+    "WC Público Praça do Município": {
+      "x": 260.84,
+      "y": 210.2
+    }
+  },
+  "edges": [
+    {
+      "destino": "Avenida da Liberdade",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 320.59,
+        "y": 132.79
+      },
+      "destino_coord": {
+        "x": 211.94,
+        "y": 96.79
+      }
+    },
+    {
+      "destino": "Hospital de Braga",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 320.59,
+        "y": 132.79
+      },
+      "destino_coord": {
+        "x": 331.76,
+        "y": 166.07
+      }
+    },
+    {
+      "destino": "Hospital de Braga",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 211.94,
+        "y": 96.79
+      },
+      "destino_coord": {
+        "x": 331.76,
+        "y": 166.07
+      }
+    },
+    {
+      "destino": "Universidade do Minho - Gualtar",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 211.94,
+        "y": 96.79
+      },
+      "destino_coord": {
+        "x": 200.11,
+        "y": 109.27
+      }
+    },
+    {
+      "destino": "Universidade do Minho - Gualtar",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 331.76,
+        "y": 166.07
+      },
+      "destino_coord": {
+        "x": 200.11,
+        "y": 109.27
+      }
+    },
+    {
+      "destino": "Universidade do Minho - Gualtar",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 331.76,
+        "y": 166.07
+      },
+      "destino_coord": {
+        "x": 200.11,
+        "y": 109.27
+      }
+    },
+    {
+      "destino": "Braga Parque",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 200.11,
+        "y": 109.27
+      },
+      "destino_coord": {
+        "x": 194.36,
+        "y": 115.32
+      }
+    },
+    {
+      "destino": "WC Público Praça do Município",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 200.11,
+        "y": 109.27
+      },
+      "destino_coord": {
+        "x": 260.84,
+        "y": 210.2
+      }
+    },
+    {
+      "destino": "Bebedouro Arcada",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 194.36,
+        "y": 115.32
+      },
+      "destino_coord": {
+        "x": 212.84,
+        "y": 136.78
+      }
+    },
+    {
+      "destino": "Ciclovia do Rio Este",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 194.36,
+        "y": 115.32
+      },
+      "destino_coord": {
+        "x": 209.46,
+        "y": 145.43
+      }
+    },
+    {
+      "destino": "Ciclovia do Rio Este",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 212.84,
+        "y": 136.78
+      },
+      "destino_coord": {
+        "x": 209.46,
+        "y": 145.43
+      }
+    },
+    {
+      "destino": "Universidade do Minho - Gualtar",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 212.84,
+        "y": 136.78
+      },
+      "destino_coord": {
+        "x": 200.11,
+        "y": 109.27
+      }
+    },
+    {
+      "destino": "Ecoponto Gualtar",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 209.46,
+        "y": 145.43
+      },
+      "destino_coord": {
+        "x": 270.58,
+        "y": 202.56
+      }
+    },
+    {
+      "destino": "WC Público Praça do Município",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 270.58,
+        "y": 202.56
+      },
+      "destino_coord": {
+        "x": 260.84,
+        "y": 210.2
+      }
+    },
+    {
+      "destino": "Bom Jesus do Monte",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 260.84,
+        "y": 210.2
+      },
+      "destino_coord": {
+        "x": 320.59,
+        "y": 132.79
+      }
+    },
+    {
+      "destino": "Ciclovia do Rio Este",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 260.84,
+        "y": 210.2
+      },
+      "destino_coord": {
+        "x": 209.46,
+        "y": 145.43
+      }
+    }
+  ]
+}

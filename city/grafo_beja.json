@@ -1,0 +1,487 @@
+{
+  "cidade": "Beja",
+  "nodes": {
+    "Castelo de Beja": {
+      "x": 131.14,
+      "y": -221.02
+    },
+    "Hospital José Joaquim Fernandes": {
+      "x": 183.82,
+      "y": -286.03
+    },
+    "Politécnico de Beja": {
+      "x": 158.55,
+      "y": -228.35
+    },
+    "Parque de Feiras": {
+      "x": 180.38,
+      "y": -240.96
+    },
+    "Museu Regional": {
+      "x": 208.32,
+      "y": -258.51
+    },
+    "Bebedouro Castelo": {
+      "x": 171.57,
+      "y": -198.01
+    },
+    "Parque de Merendas": {
+      "x": 230.32,
+      "y": -247.38
+    },
+    "WC Público Parque de Feiras": {
+      "x": 188.8,
+      "y": -188.8
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital José Joaquim Fernandes",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 131.14,
+        "y": -221.02
+      },
+      "destino_coord": {
+        "x": 183.82,
+        "y": -286.03
+      }
+    },
+    {
+      "destino": "Politécnico de Beja",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 183.82,
+        "y": -286.03
+      },
+      "destino_coord": {
+        "x": 158.55,
+        "y": -228.35
+      }
+    },
+    {
+      "destino": "Parque de Merendas",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 183.82,
+        "y": -286.03
+      },
+      "destino_coord": {
+        "x": 230.32,
+        "y": -247.38
+      }
+    },
+    {
+      "destino": "Parque de Feiras",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 158.55,
+        "y": -228.35
+      },
+      "destino_coord": {
+        "x": 180.38,
+        "y": -240.96
+      }
+    },
+    {
+      "destino": "Museu Regional",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 180.38,
+        "y": -240.96
+      },
+      "destino_coord": {
+        "x": 208.32,
+        "y": -258.51
+      }
+    },
+    {
+      "destino": "Castelo de Beja",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 180.38,
+        "y": -240.96
+      },
+      "destino_coord": {
+        "x": 131.14,
+        "y": -221.02
+      }
+    },
+    {
+      "destino": "Bebedouro Castelo",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 208.32,
+        "y": -258.51
+      },
+      "destino_coord": {
+        "x": 171.57,
+        "y": -198.01
+      }
+    },
+    {
+      "destino": "WC Público Parque de Feiras",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 208.32,
+        "y": -258.51
+      },
+      "destino_coord": {
+        "x": 188.8,
+        "y": -188.8
+      }
+    },
+    {
+      "destino": "Parque de Merendas",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 171.57,
+        "y": -198.01
+      },
+      "destino_coord": {
+        "x": 230.32,
+        "y": -247.38
+      }
+    },
+    {
+      "destino": "Parque de Feiras",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 171.57,
+        "y": -198.01
+      },
+      "destino_coord": {
+        "x": 180.38,
+        "y": -240.96
+      }
+    },
+    {
+      "destino": "WC Público Parque de Feiras",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 230.32,
+        "y": -247.38
+      },
+      "destino_coord": {
+        "x": 188.8,
+        "y": -188.8
+      }
+    },
+    {
+      "destino": "Politécnico de Beja",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 230.32,
+        "y": -247.38
+      },
+      "destino_coord": {
+        "x": 158.55,
+        "y": -228.35
+      }
+    },
+    {
+      "destino": "Castelo de Beja",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 188.8,
+        "y": -188.8
+      },
+      "destino_coord": {
+        "x": 131.14,
+        "y": -221.02
+      }
+    },
+    {
+      "destino": "Politécnico de Beja",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 188.8,
+        "y": -188.8
+      },
+      "destino_coord": {
+        "x": 158.55,
+        "y": -228.35
+      }
+    }
+  ]
+}

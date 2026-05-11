@@ -130,7 +130,7 @@ class CalculoPeso:
         
         match amb.sombra:
             case "Sombra reduzida":
-                ajuste = 0.3 if e_noite else 1
+                ajuste = 0 if e_noite else 1
                 score += preferencias.peso_sombra*(1)*ajuste
             case "Sombra moderada":
                 ajuste = 0 if e_noite else 1

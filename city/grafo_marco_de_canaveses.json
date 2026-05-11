@@ -1,0 +1,519 @@
+{
+  "cidade": "Marco de Canaveses",
+  "nodes": {
+    "Igreja de Santa Maria (Siza Vieira)": {
+      "x": 141.65,
+      "y": 220.41
+    },
+    "Hospital Santa Isabel": {
+      "x": 118.89,
+      "y": 200.38
+    },
+    "Estação Ferroviária": {
+      "x": 121.25,
+      "y": 222.05
+    },
+    "Jardim Municipal": {
+      "x": 136.97,
+      "y": 273.63
+    },
+    "Marco Fórum": {
+      "x": 95.96,
+      "y": 210.12
+    },
+    "Bebedouro Jardim Municipal": {
+      "x": 111.74,
+      "y": 269.77
+    },
+    "Posto de Informação Turística": {
+      "x": 97.5,
+      "y": 261.41
+    },
+    "Ecoponto Marco Fórum": {
+      "x": 94.42,
+      "y": 283.7
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital Santa Isabel",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 141.65,
+        "y": 220.41
+      },
+      "destino_coord": {
+        "x": 118.89,
+        "y": 200.38
+      }
+    },
+    {
+      "destino": "Hospital Santa Isabel",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 141.65,
+        "y": 220.41
+      },
+      "destino_coord": {
+        "x": 118.89,
+        "y": 200.38
+      }
+    },
+    {
+      "destino": "Estação Ferroviária",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 118.89,
+        "y": 200.38
+      },
+      "destino_coord": {
+        "x": 121.25,
+        "y": 222.05
+      }
+    },
+    {
+      "destino": "Jardim Municipal",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 121.25,
+        "y": 222.05
+      },
+      "destino_coord": {
+        "x": 136.97,
+        "y": 273.63
+      }
+    },
+    {
+      "destino": "Jardim Municipal",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 121.25,
+        "y": 222.05
+      },
+      "destino_coord": {
+        "x": 136.97,
+        "y": 273.63
+      }
+    },
+    {
+      "destino": "Marco Fórum",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 136.97,
+        "y": 273.63
+      },
+      "destino_coord": {
+        "x": 95.96,
+        "y": 210.12
+      }
+    },
+    {
+      "destino": "Ecoponto Marco Fórum",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 136.97,
+        "y": 273.63
+      },
+      "destino_coord": {
+        "x": 94.42,
+        "y": 283.7
+      }
+    },
+    {
+      "destino": "Bebedouro Jardim Municipal",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 95.96,
+        "y": 210.12
+      },
+      "destino_coord": {
+        "x": 111.74,
+        "y": 269.77
+      }
+    },
+    {
+      "destino": "Ecoponto Marco Fórum",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 95.96,
+        "y": 210.12
+      },
+      "destino_coord": {
+        "x": 94.42,
+        "y": 283.7
+      }
+    },
+    {
+      "destino": "Posto de Informação Turística",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 111.74,
+        "y": 269.77
+      },
+      "destino_coord": {
+        "x": 97.5,
+        "y": 261.41
+      }
+    },
+    {
+      "destino": "Hospital Santa Isabel",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 111.74,
+        "y": 269.77
+      },
+      "destino_coord": {
+        "x": 118.89,
+        "y": 200.38
+      }
+    },
+    {
+      "destino": "Ecoponto Marco Fórum",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 97.5,
+        "y": 261.41
+      },
+      "destino_coord": {
+        "x": 94.42,
+        "y": 283.7
+      }
+    },
+    {
+      "destino": "Estação Ferroviária",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 97.5,
+        "y": 261.41
+      },
+      "destino_coord": {
+        "x": 121.25,
+        "y": 222.05
+      }
+    },
+    {
+      "destino": "Igreja de Santa Maria (Siza Vieira)",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 94.42,
+        "y": 283.7
+      },
+      "destino_coord": {
+        "x": 141.65,
+        "y": 220.41
+      }
+    },
+    {
+      "destino": "Igreja de Santa Maria (Siza Vieira)",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 94.42,
+        "y": 283.7
+      },
+      "destino_coord": {
+        "x": 141.65,
+        "y": 220.41
+      }
+    }
+  ]
+}

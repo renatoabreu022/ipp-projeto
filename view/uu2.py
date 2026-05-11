@@ -1,11 +1,30 @@
-#-------@Cláudia e @Inês------ 03/05/2026
-
 import customtkinter as ctk
 from tkinter import messagebox
+import json
+import hashlib
+import os
 
-# Configurações globais de design
+# --- CONFIGURAÇÕES GLOBAIS ---
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("green")
+DB_FILE = "utilizadores.json"
+
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+def carregar_bd(nome_ficheiro): # <--- Adiciona o parâmetro aqui
+    if os.path.exists(nome_ficheiro):
+        try:
+            with open(nome_ficheiro, "r", encoding="utf-8") as f:
+                conteudo = f.read().strip()
+                return json.loads(conteudo) if conteudo else {}
+        except: return {}
+    return {}
+
+def guardar_bd(dados, nome_ficheiro): # <--- E aqui também
+    with open(nome_ficheiro, "w", encoding="utf-8") as f:
+        json.dump(dados, f, indent=4, ensure_ascii=False)
 
 # --- BASE DE DADOS DE LOCAIS ---
 DADOS_CIDADES = {
@@ -33,21 +52,22 @@ DADOS_CIDADES = {
     "Faro": ["UAlg - Penha", "Hospital de Faro", "Fórum Algarve", "Doca de Faro", "Arco da Vila", "Bebedouro Doca", "Parque Ribeirinho", "Ecoponto Fórum"]
 }
 
-BD_UTILIZADORES = {}
-
 class AppAcessibilidade(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("Sistema de Percursos ")
+        self.title("Sistema de Gestão de Percursos")
         self.geometry("650x850")
         self.configure(fg_color="#F4F1EA")
+        
         self.utilizador_atual = None
+        self.bd = carregar_bd("utilizadores.json")
+        self.bd_locais = carregar_bd("locais.json")
         self.mostrar_login()
 
     def limpar_janela(self):
-        for widget in self.winfo_children():
-            widget.destroy()
+        for widget in self.winfo_children(): widget.destroy()
 
+    
     def mostrar_login(self):
         self.limpar_janela()
         self.geometry("450x500")
@@ -61,11 +81,11 @@ class AppAcessibilidade(ctk.CTk):
 
     def fazer_login(self):
         user, pw = self.ent_user.get(), self.ent_pass.get()
-        if user in BD_UTILIZADORES and BD_UTILIZADORES[user]["pass"] == pw:
+        if user in self.bd and self.bd[user]["pass"] == hash_password(pw):
             self.utilizador_atual = user
             self.mostrar_menu_principal()
         else:
-            messagebox.showerror("Erro", "Credenciais inválidas.")
+            messagebox.showerror("Erro", "Utilizador ou Password incorretos.")
 
     def mostrar_registo(self):
         self.limpar_janela()
@@ -82,111 +102,152 @@ class AppAcessibilidade(ctk.CTk):
 
     def validar_registo(self):
         user, p1, p2 = self.reg_user.get(), self.reg_pass1.get(), self.reg_pass2.get()
-        if not user or not p1: messagebox.showwarning("Aviso", "Preencha tudo."); return
-        if p1 != p2: messagebox.showerror("Erro", "Passwords não coincidem!"); return
-        if user in BD_UTILIZADORES: messagebox.showerror("Erro", "Utilizador já existe."); return
-        self.utilizador_atual, self.temp_pw = user, p1
+        if not user or not p1: messagebox.showwarning("Aviso", "Preencha todos os campos."); return
+        if p1 != p2: messagebox.showerror("Erro", "As passwords não coincidem."); return
+        if user in self.bd: messagebox.showerror("Erro", "Utilizador já existe."); return
+        self.utilizador_atual, self.temp_pw = user, hash_password(p1)
         self.mostrar_preferencias(primeira_vez=True)
 
+    
+    def mostrar_menu_perfil(self):
+        self.limpar_janela()
+        self.geometry("450x500")
+        ctk.CTkLabel(self, text="Definições de Perfil", font=("Helvetica", 22, "bold"), text_color="#2A8569").pack(pady=40)
+        ctk.CTkButton(self, text="Alterar Parâmetros de Percurso", width=300, command=lambda: self.mostrar_preferencias(False)).pack(pady=15)
+        ctk.CTkButton(self, text="Alterar Palavra-passe", width=300, command=self.mostrar_alterar_pass).pack(pady=15)
+        ctk.CTkButton(self, text="Voltar ao Menu Principal", width=300, fg_color="gray", command=self.mostrar_menu_principal).pack(pady=30)
+
+    def mostrar_alterar_pass(self):
+        self.limpar_janela()
+        ctk.CTkLabel(self, text="Alterar Password", font=("Helvetica", 20, "bold"), text_color="#2A8569").pack(pady=30)
+        self.new_p1 = ctk.CTkEntry(self, placeholder_text="Nova Password", show="*", width=250)
+        self.new_p1.pack(pady=10)
+        self.new_p2 = ctk.CTkEntry(self, placeholder_text="Confirmar Nova Password", show="*", width=250)
+        self.new_p2.pack(pady=10)
+        ctk.CTkButton(self, text="Confirmar Alteração", command=self.confirmar_mudanca_pass).pack(pady=20)
+        ctk.CTkButton(self, text="Cancelar", fg_color="gray", command=self.mostrar_menu_perfil).pack()
+
+    def confirmar_mudanca_pass(self):
+        p1, p2 = self.new_p1.get(), self.new_p2.get()
+        if p1 == p2 and p1:
+            self.bd[self.utilizador_atual]["pass"] = hash_password(p1)
+            guardar_bd(self.bd, "utilizadores.json")
+            messagebox.showinfo("Sucesso", "Password alterada com sucesso!")
+            self.mostrar_menu_perfil()
+        else: messagebox.showerror("Erro", "As passwords não coincidem ou estão vazias.")
+
+    
     def mostrar_preferencias(self, primeira_vez=False):
         self.limpar_janela()
         self.geometry("650x850")
-        ctk.CTkLabel(self, text="Parâmetros de Acessibilidade", font=("Helvetica", 18, "bold"), text_color="#2A8569").pack(pady=10)
+        titulo = "Parâmetros de Acessibilidade"
+        ctk.CTkLabel(self, text=titulo, font=("Helvetica", 18, "bold"), text_color="#2A8569").pack(pady=10)
         
         self.scroll = ctk.CTkScrollableFrame(self, fg_color="#F4F1EA", width=600, height=600)
         self.scroll.pack(padx=20, pady=10, fill="both", expand=True)
 
-        # BLOCO 1: FÍSICA
+        self.sliders = {}
+
+        
         self.criar_label_seccao(self.scroll, "Acessibilidade Física")
-        self.s_pav = self.criar_item_slider(self.scroll, "Regularidade pavimento:")
-        self.s_inc = self.criar_item_slider(self.scroll, "Inclinação/Rampas:")
-        self.s_pss = self.criar_item_slider(self.scroll, "Presença de Passeios:")
-        self.s_esc = self.criar_item_slider(self.scroll, "Presença de Escadas:")
+        self.sliders["pavimento"] = self.criar_item_slider(self.scroll, "Regularidade pavimento:")
+        self.sliders["inclinacao"] = self.criar_item_slider(self.scroll, "Inclinação/Rampas:")
+        self.sliders["passeios"] = self.criar_item_slider(self.scroll, "Presença de Passeios:")
+        self.sliders["escadas"] = self.criar_item_slider(self.scroll, "Presença de Escadas:")
         self.c_pod = ctk.CTkCheckBox(self.scroll, text="Piso Podotátil (Textura Cego)", border_color="#3AC098", fg_color="#3AC098")
         self.c_pod.pack(anchor="w", pady=10)
 
         # BLOCO 2: AMBIENTE
         self.criar_label_seccao(self.scroll, "Conforto e Ambiente")
-        self.s_som = self.criar_item_slider(self.scroll, "Sombra:")
-        self.s_ar  = self.criar_item_slider(self.scroll, "Qualidade do Ar:")
-        self.s_pol = self.criar_item_slider(self.scroll, "Presença de Pólen:")
-        self.s_rui = self.criar_item_slider(self.scroll, "Poluição Sonora:")
-        self.s_vis = self.criar_item_slider(self.scroll, "Poluição Visual:")
-        self.s_ilu = self.criar_item_slider(self.scroll, "Iluminação:")
+        self.sliders["sombra"] = self.criar_item_slider(self.scroll, "Sombra:")
+        self.sliders["qualidade_ar"] = self.criar_item_slider(self.scroll, "Qualidade do Ar:")
+        self.sliders["nivel_polen"] = self.criar_item_slider(self.scroll, "Presença de Pólen:")
+        self.sliders["poluicao_sonora"] = self.criar_item_slider(self.scroll, "Poluição Sonora:")
+        self.sliders["poluicao_visual"] = self.criar_item_slider(self.scroll, "Poluição Visual:")
+        self.sliders["iluminacao"] = self.criar_item_slider(self.scroll, "Iluminação:")
 
         # BLOCO 3: MOVIMENTO
         self.criar_label_seccao(self.scroll, "População e Movimento")
-        self.s_tra = self.criar_item_slider(self.scroll, "Evitar Trânsito:")
-        self.s_mul = self.criar_item_slider(self.scroll, "Evitar Multidões:")
+        self.sliders["transito"] = self.criar_item_slider(self.scroll, "Evitar Trânsito:")
+        self.sliders["multidao"] = self.criar_item_slider(self.scroll, "Evitar Multidões:")
 
+        # Carregar valores se não for a primeira vez
         if not primeira_vez:
-            p = BD_UTILIZADORES[self.utilizador_atual]["prefs"]
-            self.s_pav.set(p["pav"]); self.s_inc.set(p["inc"]); self.s_pss.set(p["pss"]); self.s_esc.set(p["esc"])
-            self.s_som.set(p["som"]); self.s_ar.set(p["ar"]); self.s_pol.set(p["pol"]); self.s_rui.set(p["rui"])
-            self.s_vis.set(p["vis"]); self.s_ilu.set(p["ilu"]); self.s_tra.set(p["tra"]); self.s_mul.set(p["mul"])
-            if p["pod"]: self.c_pod.select()
+            p = self.bd[self.utilizador_atual]["preferencias"]
+            for k, v in p.items():
+                if k in self.sliders: self.sliders[k].set(v)
+            if p.get("textura_cego") == 10: self.c_pod.select()
 
-        ctk.CTkButton(self, text="Guardar Perfil", command=lambda: self.guardar_dados(primeira_vez)).pack(pady=20)
+        ctk.CTkButton(self, text="Guardar Perfil", command=lambda: self.finalizar_guardar(primeira_vez)).pack(pady=20)
 
     def criar_label_seccao(self, master, texto):
-        ctk.CTkLabel(master, text=texto, font=("Helvetica", 13, "bold"), text_color="#1F4E3D").pack(anchor="w", pady=(10, 5))
+        ctk.CTkLabel(master, text=texto, font=("Helvetica", 13, "bold"), text_color="#1F4E3D").pack(anchor="w", pady=(15, 5))
 
     def criar_item_slider(self, master, texto):
         f = ctk.CTkFrame(master, fg_color="transparent")
         f.pack(fill="x", pady=2)
         ctk.CTkLabel(f, text=texto, width=190, anchor="w", font=("Helvetica", 11)).grid(row=0, column=0)
         ctk.CTkLabel(f, text="1", font=("Helvetica", 9)).grid(row=0, column=1, padx=2)
-        s = ctk.CTkSlider(f, from_=1, to=10, number_of_steps=9)
+        s = ctk.CTkSlider(f, from_=1, to=10, number_of_steps=9, progress_color="#3AC098", button_color="#2A8569")
         s.set(5); s.grid(row=0, column=2, sticky="ew")
         ctk.CTkLabel(f, text="10", font=("Helvetica", 9)).grid(row=0, column=3, padx=2)
         f.grid_columnconfigure(2, weight=1)
         return s
 
-    def guardar_dados(self, primeira_vez):
-        prefs = {
-            "pav": self.s_pav.get(), "inc": self.s_inc.get(), "pss": self.s_pss.get(), "esc": self.s_esc.get(),
-            "som": self.s_som.get(), "ar": self.s_ar.get(), "pol": self.s_pol.get(), "rui": self.s_rui.get(),
-            "vis": self.s_vis.get(), "ilu": self.s_ilu.get(), "tra": self.s_tra.get(), "mul": self.s_mul.get(),
-            "pod": self.c_pod.get()
-        }
-        if primeira_vez: BD_UTILIZADORES[self.utilizador_atual] = {"pass": self.temp_pw, "prefs": prefs}
-        else: BD_UTILIZADORES[self.utilizador_atual]["prefs"] = prefs
-        self.mostrar_menu_principal()
+    def finalizar_guardar(self, primeira_vez):
+        dict_prefs = {k: int(s.get()) for k, s in self.sliders.items()}
+        dict_prefs["textura_cego"] = 10 if self.c_pod.get() else 0
+        
+        if primeira_vez:
+            self.bd[self.utilizador_atual] = {"pass": self.temp_pw, "preferencias": dict_prefs}
+        else:
+            self.bd[self.utilizador_atual]["preferencias"] = dict_prefs
+        
+        
 
+    # --- MENU PRINCIPAL ---
     def mostrar_menu_principal(self):
         self.limpar_janela()
         self.geometry("600x700")
-        ctk.CTkLabel(self, text=f"Olá, {self.utilizador_atual}", font=("Helvetica", 20, "bold"), text_color="#2A8569").pack(pady=20)
         
-        f_calc = ctk.CTkFrame(self, fg_color="white", corner_radius=15)
-        f_calc.pack(padx=30, pady=10, fill="both", expand=True)
+        header = ctk.CTkFrame(self, fg_color="transparent")
+        header.pack(fill="x", padx=25, pady=25)
+        
+        ctk.CTkLabel(header, text=f"Olá, {self.utilizador_atual}", font=("Helvetica", 22, "bold"), text_color="#2A8569").pack(side="left")
+        ctk.CTkButton(header, text="👤 Perfil", width=90, fg_color="#3AC098", command=self.mostrar_menu_perfil).pack(side="right")
+        
+        f_main = ctk.CTkFrame(self, fg_color="white", corner_radius=20)
+        f_main.pack(padx=30, pady=10, fill="both", expand=True)
 
-        ctk.CTkLabel(f_calc, text="Cidade:").pack(pady=(10, 0))
-        self.cb_cidade = ctk.CTkComboBox(f_calc, values=list(DADOS_CIDADES.keys()), command=self.atualizar_locais, width=300)
-        self.cb_cidade.pack(pady=5)
+        ctk.CTkLabel(f_main, text="Selecione a Cidade:", font=("Helvetica", 12)).pack(pady=(20, 0))
+        self.cb_cidade = ctk.CTkComboBox(f_main, values=list(DADOS_CIDADES.keys()), width=350, command=self.atualizar_locais)
+        self.cb_cidade.pack(pady=10)
 
-        ctk.CTkLabel(f_calc, text="Origem:").pack()
-        self.cb_origem = ctk.CTkComboBox(f_calc, values=[], width=350)
-        self.cb_origem.pack(pady=5)
+        ctk.CTkLabel(f_main, text="Ponto de Origem:", font=("Helvetica", 12)).pack()
+        self.cb_origem = ctk.CTkComboBox(f_main, values=[], width=350)
+        self.cb_origem.pack(pady=10)
 
-        ctk.CTkLabel(f_calc, text="Destino:").pack()
-        self.cb_destino = ctk.CTkComboBox(f_calc, values=[], width=350)
-        self.cb_destino.pack(pady=5)
+        ctk.CTkLabel(f_main, text="Ponto de Destino:", font=("Helvetica", 12)).pack()
+        self.cb_destino = ctk.CTkComboBox(f_main, values=[], width=350)
+        self.cb_destino.pack(pady=10)
 
-        ctk.CTkButton(f_calc, text="CALCULAR ROTA", command=self.calcular, height=50).pack(pady=20)
-        ctk.CTkButton(self, text="Editar Parâmetros", command=lambda: self.mostrar_preferencias(False), fg_color="#5D6D7E").pack(pady=5)
-        ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828").pack(pady=10)
+        # Inicializar os locais da primeira cidade da lista
+        self.atualizar_locais(self.cb_cidade.get())
 
-    def atualizar_locais(self, cidade_escolhida):
-        locais = DADOS_CIDADES[cidade_escolhida]
+        ctk.CTkButton(f_main, text="CALCULAR ROTA IDEAL", command=self.simular_calculo, height=50, font=("Helvetica", 14, "bold")).pack(pady=30)
+        ctk.CTkButton(self, text="Sair do Sistema", command=self.mostrar_login, fg_color="#C62828").pack(pady=20)
+
+    def atualizar_locais(self, cidade):
+        locais = DADOS_CIDADES.get(cidade, [])
         self.cb_origem.configure(values=locais)
         self.cb_destino.configure(values=locais)
-        self.cb_origem.set(locais[0])
-        self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
+        if locais:
+            self.cb_origem.set(locais[0])
+            self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
 
-    def calcular(self):
-        msg = f"Rota em {self.cb_cidade.get()}\nDe: {self.cb_origem.get()}\nPara: {self.cb_destino.get()}\n\nA calcular com base no seu perfil..."
-        messagebox.showinfo("Cálculo", msg)
+    def simular_calculo(self):
+        msg = f"Rota calculada em {self.cb_cidade.get()}!\nOrigem: {self.cb_origem.get()}\nDestino: {self.cb_destino.get()}\n\nO sistema está a priorizar as suas definições de acessibilidade."
+        messagebox.showinfo("Cálculo de Rota", msg)
 
 if __name__ == "__main__":
     app = AppAcessibilidade()

@@ -21,15 +21,15 @@ def hash_password(password):
 
 class Utilizador: #--Permite dar login na app, introduz cerednciais e retorna informações---#
 
-    def __init__(self,username,password,preferencias=None):
+    def __init__(self,username,password,preferencias=None, is_hash = False):
         self.__username=username
-        #if is_hash: # @Renato 3/05 -- não está definido
-            #self.__password = password
-        #else:
-            #self.__password = hash_password(password)
+        if is_hash: 
+            self.__password = password
+        else:
+            self.__password = hash_password(password)
             
         self.__preferencias = preferencias if preferencias else Preferencias()
-        self.__preferencias = preferencias if preferencias else Preferencias()
+        
 
     @property
     def u_username(self):
@@ -115,32 +115,26 @@ class Sistema:
             json.dump(save, f, indent=4)
             
             
-    #def load_users(self, file):
-        #try:
-            #with open(file + ".json", "r", encoding="utf-8") as f:
-                #data = json.load(f)
+    def load_users(self, file):
+        try:
+            with open(file + ".json", "r", encoding="utf-8") as f:
+                data = json.load(f)
             
-            #self._users = []
-            #for username, info in data.items():
-                
-                #Criamos o objeto Perfil com os dados do JSON
-                #u_prefs = Preferencias()
-                #if "preferencias" in info:
-                    #u_prefs.atualizar_parametros(info["preferencias"]) #este método não está nas preferencias @Renato 3/05
+            self._users = []
+            for username, info in data.items():
+                u_prefs = Preferencias()
+                if "preferencias" in info:
+                    u_prefs.atualizar_parametros(info["preferencias"])
 
-                #Criamos o utilizador com as suas preferências carregadas
-                #novo_user = Utilizador(username, "_", u_prefs)
-                #Repomos a password encriptada que estava no ficheiro
-                #novo_user._Utilizador__password = info["pass"]
-                
-                #self._users.append(novo_user)
+                #passamos is_hash=True
+                novo_user = Utilizador(username, info["pass"], u_prefs, is_hash=True)
+                self._users.append(novo_user)
 
-            #print(f"Foram carregados {len(self._users)} utilizadores.")
-            #return self._users
-        #except FileNotFoundError:
-            #print("Ficheiro não encontrado. Começar com a lista vazia.")
-            #return []
-
+            print(f"Foram carregados {len(self._users)} utilizadores.")
+            return self._users
+        except FileNotFoundError:
+            print("Ficheiro não encontrado. Começar com a lista vazia.")
+            return []
 
 
 #-------- nova maneira de "perfil"----------
@@ -246,6 +240,12 @@ class Preferencias:
                     print("Por favor, insira um valor entre 0 e 10.")
                 except ValueError:
                     print("Entrada inválida. Digite um número.")
+                    
+    def atualizar_parametros(self, novos_dados):
+        for chave, valor in novos_dados.items():
+            if chave in self.parametros:
+                self.parametros[chave] = valor
+        
                     
     def get_dict(self):
         return self.parametros

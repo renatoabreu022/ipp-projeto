@@ -1,0 +1,487 @@
+{
+  "cidade": "Évora",
+  "nodes": {
+    "Sé de Évora": {
+      "x": 82.6,
+      "y": -323.63
+    },
+    "Templo Romano": {
+      "x": 102.55,
+      "y": -349.26
+    },
+    "Colégio do Espírito Santo": {
+      "x": 101.06,
+      "y": -303.62
+    },
+    "Hospital do Espírito Santo": {
+      "x": 96.8,
+      "y": -259.54
+    },
+    "Praça do Giraldo": {
+      "x": 102.18,
+      "y": -246.68
+    },
+    "Bebedouro Templo Romano": {
+      "x": 96.38,
+      "y": -211.03
+    },
+    "Jardim Público de Évora": {
+      "x": 125.78,
+      "y": -251.28
+    },
+    "Ecoponto Centro": {
+      "x": 154.32,
+      "y": -282.61
+    }
+  },
+  "edges": [
+    {
+      "destino": "Templo Romano",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 82.6,
+        "y": -323.63
+      },
+      "destino_coord": {
+        "x": 102.55,
+        "y": -349.26
+      }
+    },
+    {
+      "destino": "Bebedouro Templo Romano",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 82.6,
+        "y": -323.63
+      },
+      "destino_coord": {
+        "x": 96.38,
+        "y": -211.03
+      }
+    },
+    {
+      "destino": "Colégio do Espírito Santo",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 102.55,
+        "y": -349.26
+      },
+      "destino_coord": {
+        "x": 101.06,
+        "y": -303.62
+      }
+    },
+    {
+      "destino": "Jardim Público de Évora",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 102.55,
+        "y": -349.26
+      },
+      "destino_coord": {
+        "x": 125.78,
+        "y": -251.28
+      }
+    },
+    {
+      "destino": "Hospital do Espírito Santo",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 101.06,
+        "y": -303.62
+      },
+      "destino_coord": {
+        "x": 96.8,
+        "y": -259.54
+      }
+    },
+    {
+      "destino": "Templo Romano",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 101.06,
+        "y": -303.62
+      },
+      "destino_coord": {
+        "x": 102.55,
+        "y": -349.26
+      }
+    },
+    {
+      "destino": "Praça do Giraldo",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 96.8,
+        "y": -259.54
+      },
+      "destino_coord": {
+        "x": 102.18,
+        "y": -246.68
+      }
+    },
+    {
+      "destino": "Praça do Giraldo",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 96.8,
+        "y": -259.54
+      },
+      "destino_coord": {
+        "x": 102.18,
+        "y": -246.68
+      }
+    },
+    {
+      "destino": "Bebedouro Templo Romano",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 102.18,
+        "y": -246.68
+      },
+      "destino_coord": {
+        "x": 96.38,
+        "y": -211.03
+      }
+    },
+    {
+      "destino": "Jardim Público de Évora",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 96.38,
+        "y": -211.03
+      },
+      "destino_coord": {
+        "x": 125.78,
+        "y": -251.28
+      }
+    },
+    {
+      "destino": "Jardim Público de Évora",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 96.38,
+        "y": -211.03
+      },
+      "destino_coord": {
+        "x": 125.78,
+        "y": -251.28
+      }
+    },
+    {
+      "destino": "Ecoponto Centro",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 125.78,
+        "y": -251.28
+      },
+      "destino_coord": {
+        "x": 154.32,
+        "y": -282.61
+      }
+    },
+    {
+      "destino": "Sé de Évora",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 154.32,
+        "y": -282.61
+      },
+      "destino_coord": {
+        "x": 82.6,
+        "y": -323.63
+      }
+    },
+    {
+      "destino": "Bebedouro Templo Romano",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 154.32,
+        "y": -282.61
+      },
+      "destino_coord": {
+        "x": 96.38,
+        "y": -211.03
+      }
+    }
+  ]
+}

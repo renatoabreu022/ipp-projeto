@@ -1,0 +1,519 @@
+{
+  "cidade": "Coimbra",
+  "nodes": {
+    "Universidade de Coimbra - Polo I": {
+      "x": -221.04,
+      "y": 100.95
+    },
+    "Hospitais da Universidade de Coimbra": {
+      "x": -325.21,
+      "y": 134.7
+    },
+    "Portugal dos Pequenitos": {
+      "x": -311.07,
+      "y": 116.02
+    },
+    "Estação Coimbra-B": {
+      "x": -314.06,
+      "y": 104.53
+    },
+    "Forum Coimbra": {
+      "x": -294.56,
+      "y": 86.49
+    },
+    "Bebedouro Praça da República": {
+      "x": -355.6,
+      "y": 90.76
+    },
+    "Parque Verde do Mondego": {
+      "x": -365.45,
+      "y": 79.5
+    },
+    "WC Público Baixa": {
+      "x": -310.0,
+      "y": 55.93
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospitais da Universidade de Coimbra",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -221.04,
+        "y": 100.95
+      },
+      "destino_coord": {
+        "x": -325.21,
+        "y": 134.7
+      }
+    },
+    {
+      "destino": "Portugal dos Pequenitos",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -221.04,
+        "y": 100.95
+      },
+      "destino_coord": {
+        "x": -311.07,
+        "y": 116.02
+      }
+    },
+    {
+      "destino": "Portugal dos Pequenitos",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -325.21,
+        "y": 134.7
+      },
+      "destino_coord": {
+        "x": -311.07,
+        "y": 116.02
+      }
+    },
+    {
+      "destino": "Estação Coimbra-B",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -325.21,
+        "y": 134.7
+      },
+      "destino_coord": {
+        "x": -314.06,
+        "y": 104.53
+      }
+    },
+    {
+      "destino": "Estação Coimbra-B",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 55,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -311.07,
+        "y": 116.02
+      },
+      "destino_coord": {
+        "x": -314.06,
+        "y": 104.53
+      }
+    },
+    {
+      "destino": "Forum Coimbra",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -314.06,
+        "y": 104.53
+      },
+      "destino_coord": {
+        "x": -294.56,
+        "y": 86.49
+      }
+    },
+    {
+      "destino": "WC Público Baixa",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -314.06,
+        "y": 104.53
+      },
+      "destino_coord": {
+        "x": -310.0,
+        "y": 55.93
+      }
+    },
+    {
+      "destino": "Bebedouro Praça da República",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -294.56,
+        "y": 86.49
+      },
+      "destino_coord": {
+        "x": -355.6,
+        "y": 90.76
+      }
+    },
+    {
+      "destino": "Universidade de Coimbra - Polo I",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -294.56,
+        "y": 86.49
+      },
+      "destino_coord": {
+        "x": -221.04,
+        "y": 100.95
+      }
+    },
+    {
+      "destino": "Parque Verde do Mondego",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -355.6,
+        "y": 90.76
+      },
+      "destino_coord": {
+        "x": -365.45,
+        "y": 79.5
+      }
+    },
+    {
+      "destino": "Hospitais da Universidade de Coimbra",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -355.6,
+        "y": 90.76
+      },
+      "destino_coord": {
+        "x": -325.21,
+        "y": 134.7
+      }
+    },
+    {
+      "destino": "WC Público Baixa",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -365.45,
+        "y": 79.5
+      },
+      "destino_coord": {
+        "x": -310.0,
+        "y": 55.93
+      }
+    },
+    {
+      "destino": "Hospitais da Universidade de Coimbra",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -365.45,
+        "y": 79.5
+      },
+      "destino_coord": {
+        "x": -325.21,
+        "y": 134.7
+      }
+    },
+    {
+      "destino": "Universidade de Coimbra - Polo I",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -310.0,
+        "y": 55.93
+      },
+      "destino_coord": {
+        "x": -221.04,
+        "y": 100.95
+      }
+    },
+    {
+      "destino": "Portugal dos Pequenitos",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -310.0,
+        "y": 55.93
+      },
+      "destino_coord": {
+        "x": -311.07,
+        "y": 116.02
+      }
+    }
+  ]
+}

@@ -1,0 +1,519 @@
+{
+  "cidade": "Figueira da Foz",
+  "nodes": {
+    "Casino Figueira": {
+      "x": -223.7,
+      "y": 32.16
+    },
+    "Hospital Distrital da Figueira da Foz": {
+      "x": -366.89,
+      "y": 39.44
+    },
+    "Mercado Municipal": {
+      "x": -248.37,
+      "y": 17.76
+    },
+    "Torre do Relógio": {
+      "x": -357.77,
+      "y": 12.78
+    },
+    "Parque das Abadias": {
+      "x": -376.0,
+      "y": 0.0
+    },
+    "Bebedouro Marginal": {
+      "x": -246.84,
+      "y": -8.82
+    },
+    "Ciclovia da Marginal": {
+      "x": -222.43,
+      "y": -15.91
+    },
+    "Ecoponto Mercado": {
+      "x": -297.29,
+      "y": -31.96
+    }
+  },
+  "edges": [
+    {
+      "destino": "Hospital Distrital da Figueira da Foz",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -223.7,
+        "y": 32.16
+      },
+      "destino_coord": {
+        "x": -366.89,
+        "y": 39.44
+      }
+    },
+    {
+      "destino": "Mercado Municipal",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -366.89,
+        "y": 39.44
+      },
+      "destino_coord": {
+        "x": -248.37,
+        "y": 17.76
+      }
+    },
+    {
+      "destino": "Ciclovia da Marginal",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -366.89,
+        "y": 39.44
+      },
+      "destino_coord": {
+        "x": -222.43,
+        "y": -15.91
+      }
+    },
+    {
+      "destino": "Torre do Relógio",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -248.37,
+        "y": 17.76
+      },
+      "destino_coord": {
+        "x": -357.77,
+        "y": 12.78
+      }
+    },
+    {
+      "destino": "Ecoponto Mercado",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 40,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 50,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -248.37,
+        "y": 17.76
+      },
+      "destino_coord": {
+        "x": -297.29,
+        "y": -31.96
+      }
+    },
+    {
+      "destino": "Parque das Abadias",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -357.77,
+        "y": 12.78
+      },
+      "destino_coord": {
+        "x": -376.0,
+        "y": 0.0
+      }
+    },
+    {
+      "destino": "Parque das Abadias",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -357.77,
+        "y": 12.78
+      },
+      "destino_coord": {
+        "x": -376.0,
+        "y": 0.0
+      }
+    },
+    {
+      "destino": "Bebedouro Marginal",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -376.0,
+        "y": 0.0
+      },
+      "destino_coord": {
+        "x": -246.84,
+        "y": -8.82
+      }
+    },
+    {
+      "destino": "Ciclovia da Marginal",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -376.0,
+        "y": 0.0
+      },
+      "destino_coord": {
+        "x": -222.43,
+        "y": -15.91
+      }
+    },
+    {
+      "destino": "Ciclovia da Marginal",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -246.84,
+        "y": -8.82
+      },
+      "destino_coord": {
+        "x": -222.43,
+        "y": -15.91
+      }
+    },
+    {
+      "destino": "Ecoponto Mercado",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -246.84,
+        "y": -8.82
+      },
+      "destino_coord": {
+        "x": -297.29,
+        "y": -31.96
+      }
+    },
+    {
+      "destino": "Ecoponto Mercado",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 1,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -222.43,
+        "y": -15.91
+      },
+      "destino_coord": {
+        "x": -297.29,
+        "y": -31.96
+      }
+    },
+    {
+      "destino": "Casino Figueira",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": -222.43,
+        "y": -15.91
+      },
+      "destino_coord": {
+        "x": -223.7,
+        "y": 32.16
+      }
+    },
+    {
+      "destino": "Casino Figueira",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 55,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -297.29,
+        "y": -31.96
+      },
+      "destino_coord": {
+        "x": -223.7,
+        "y": 32.16
+      }
+    },
+    {
+      "destino": "Bebedouro Marginal",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": -297.29,
+        "y": -31.96
+      },
+      "destino_coord": {
+        "x": -246.84,
+        "y": -8.82
+      }
+    }
+  ]
+}

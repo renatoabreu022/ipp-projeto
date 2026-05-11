@@ -1,0 +1,755 @@
+{
+  "cidade": "Porto",
+  "nodes": {
+    "FEUP": {
+      "x": 316.0,
+      "y": 0.0
+    },
+    "Farmácia Barreiros": {
+      "x": 246.84,
+      "y": 8.82
+    },
+    "Jardim do Palácio de Cristal": {
+      "x": 298.24,
+      "y": 21.33
+    },
+    "Estação de São Bento": {
+      "x": 263.48,
+      "y": 28.33
+    },
+    "NorteShopping": {
+      "x": 273.19,
+      "y": 39.28
+    },
+    "Centro Hospitalar Universitário de São João": {
+      "x": 274.57,
+      "y": 49.54
+    },
+    "Bebedouro Jardim do Morro": {
+      "x": 267.74,
+      "y": 58.24
+    },
+    "Posto de Primeiros Socorros Aliados": {
+      "x": 365.29,
+      "y": 93.23
+    },
+    "Ecoponto Asprela": {
+      "x": 290.73,
+      "y": 85.36
+    },
+    "WC Público Cordoaria": {
+      "x": 222.03,
+      "y": 73.9
+    },
+    "Zona de Descanso Aliados": {
+      "x": 354.17,
+      "y": 132.1
+    }
+  },
+  "edges": [
+    {
+      "destino": "Farmácia Barreiros",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 316.0,
+        "y": 0.0
+      },
+      "destino_coord": {
+        "x": 246.84,
+        "y": 8.82
+      }
+    },
+    {
+      "destino": "Farmácia Barreiros",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 316.0,
+        "y": 0.0
+      },
+      "destino_coord": {
+        "x": 246.84,
+        "y": 8.82
+      }
+    },
+    {
+      "destino": "Jardim do Palácio de Cristal",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 80,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 246.84,
+        "y": 8.82
+      },
+      "destino_coord": {
+        "x": 298.24,
+        "y": 21.33
+      }
+    },
+    {
+      "destino": "Ecoponto Asprela",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 246.84,
+        "y": 8.82
+      },
+      "destino_coord": {
+        "x": 290.73,
+        "y": 85.36
+      }
+    },
+    {
+      "destino": "Estação de São Bento",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 298.24,
+        "y": 21.33
+      },
+      "destino_coord": {
+        "x": 263.48,
+        "y": 28.33
+      }
+    },
+    {
+      "destino": "FEUP",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 298.24,
+        "y": 21.33
+      },
+      "destino_coord": {
+        "x": 316.0,
+        "y": 0.0
+      }
+    },
+    {
+      "destino": "NorteShopping",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 263.48,
+        "y": 28.33
+      },
+      "destino_coord": {
+        "x": 273.19,
+        "y": 39.28
+      }
+    },
+    {
+      "destino": "Farmácia Barreiros",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 263.48,
+        "y": 28.33
+      },
+      "destino_coord": {
+        "x": 246.84,
+        "y": 8.82
+      }
+    },
+    {
+      "destino": "Centro Hospitalar Universitário de São João",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 4,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 273.19,
+        "y": 39.28
+      },
+      "destino_coord": {
+        "x": 274.57,
+        "y": 49.54
+      }
+    },
+    {
+      "destino": "Centro Hospitalar Universitário de São João",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 4,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 273.19,
+        "y": 39.28
+      },
+      "destino_coord": {
+        "x": 274.57,
+        "y": 49.54
+      }
+    },
+    {
+      "destino": "Bebedouro Jardim do Morro",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 40,
+        "passadeiras": 8,
+        "passeios": 45,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 274.57,
+        "y": 49.54
+      },
+      "destino_coord": {
+        "x": 267.74,
+        "y": 58.24
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros Aliados",
+      "acessibilidade": {
+        "pavimento": 85,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 274.57,
+        "y": 49.54
+      },
+      "destino_coord": {
+        "x": 365.29,
+        "y": 93.23
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros Aliados",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 30,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 267.74,
+        "y": 58.24
+      },
+      "destino_coord": {
+        "x": 365.29,
+        "y": 93.23
+      }
+    },
+    {
+      "destino": "Posto de Primeiros Socorros Aliados",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 85,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 267.74,
+        "y": 58.24
+      },
+      "destino_coord": {
+        "x": 365.29,
+        "y": 93.23
+      }
+    },
+    {
+      "destino": "Ecoponto Asprela",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 10,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 365.29,
+        "y": 93.23
+      },
+      "destino_coord": {
+        "x": 290.73,
+        "y": 85.36
+      }
+    },
+    {
+      "destino": "FEUP",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 15,
+        "passadeiras": 1,
+        "passeios": 15,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 50,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 365.29,
+        "y": 93.23
+      },
+      "destino_coord": {
+        "x": 316.0,
+        "y": 0.0
+      }
+    },
+    {
+      "destino": "WC Público Cordoaria",
+      "acessibilidade": {
+        "pavimento": 60,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 15,
+        "nivel_polen": 10,
+        "iluminacao": 80,
+        "sombra": 45
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 290.73,
+        "y": 85.36
+      },
+      "destino_coord": {
+        "x": 222.03,
+        "y": 73.9
+      }
+    },
+    {
+      "destino": "WC Público Cordoaria",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 15,
+        "passadeiras": 8,
+        "passeios": 15,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 290.73,
+        "y": 85.36
+      },
+      "destino_coord": {
+        "x": 222.03,
+        "y": 73.9
+      }
+    },
+    {
+      "destino": "Zona de Descanso Aliados",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 20,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 50,
+        "nivel_polen": 85,
+        "iluminacao": 20,
+        "sombra": 80
+      },
+      "populacao": {
+        "transito": false,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 222.03,
+        "y": 73.9
+      },
+      "destino_coord": {
+        "x": 354.17,
+        "y": 132.1
+      }
+    },
+    {
+      "destino": "Centro Hospitalar Universitário de São João",
+      "acessibilidade": {
+        "pavimento": 15,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": true,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 65,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 50,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 222.03,
+        "y": 73.9
+      },
+      "destino_coord": {
+        "x": 274.57,
+        "y": 49.54
+      }
+    },
+    {
+      "destino": "FEUP",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 85,
+        "passadeiras": 8,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": true
+      },
+      "ambiente": {
+        "temperatura": 35,
+        "qualidade_ar": 35,
+        "poluicao_sonora": 85,
+        "poluicao_visual": 15,
+        "nivel_polen": 30,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": true
+      },
+      "origem_coord": {
+        "x": 354.17,
+        "y": 132.1
+      },
+      "destino_coord": {
+        "x": 316.0,
+        "y": 0.0
+      }
+    },
+    {
+      "destino": "NorteShopping",
+      "acessibilidade": {
+        "pavimento": 40,
+        "inclinacao": 60,
+        "passadeiras": 1,
+        "passeios": 80,
+        "textura_cego": false,
+        "escadas": false
+      },
+      "ambiente": {
+        "temperatura": 27,
+        "qualidade_ar": 90,
+        "poluicao_sonora": 15,
+        "poluicao_visual": 85,
+        "nivel_polen": 85,
+        "iluminacao": 45,
+        "sombra": 15
+      },
+      "populacao": {
+        "transito": true,
+        "multidao": false
+      },
+      "origem_coord": {
+        "x": 354.17,
+        "y": 132.1
+      },
+      "destino_coord": {
+        "x": 273.19,
+        "y": 39.28
+      }
+    }
+  ]
+}
