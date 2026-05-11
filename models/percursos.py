@@ -66,51 +66,51 @@ class ParametrosAcessibilidade(Percurso):
             print("Erro. Distância negativa ou número de passadeiras negativo.")
         elif dist < 500:
             if num == 0:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 0 < num <= 2:
-                self.passadeiras = f"Moderado. {num} passadeiras."
+                self.passadeiras = f"Moderado"
             elif 2 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif 500 <= dist < 1000:
             if num <= 2:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 2 < num <= 5:
-                self.passadeiras = f"Moderado. {num} passadeiras."
+                self.passadeiras = f"Moderado"
             elif 5 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif 1000 <= dist < 1500:
             if num <= 4:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 4 < num <= 8:
-                self.passadeiras =f"Moderado. {num} passadeiras."
+                self.passadeiras =f"Moderado"
             elif 8 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif 1500 <= dist < 2000:
             if num <= 6:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 6 < num <= 10:
-                self.passadeiras =f"Moderado. {num} passadeiras."
+                self.passadeiras =f"Moderado"
             elif 10 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif 2000 <= dist < 2500:
             if num <= 8:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 8 < num <= 12:
-                self.passadeiras =f"Moderado. {num} passadeiras."
+                self.passadeiras =f"Moderado"
             elif 12 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif 2500 <= dist < 3000:
             if num <= 10:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif 10 < num <= 14:
-                self.passadeiras =f"Moderado. {num} passadeiras."
+                self.passadeiras =f"Moderado"
             elif 14 < num :
-                self.passadeiras =f"Elevado. {num} passadeiras."
+                self.passadeiras =f"Elevado"
         elif dist >= 3000:
             if num <= 12:
-                self.passadeiras = f"Baixo. {num} passadeiras."
+                self.passadeiras = f"Baixo"
             elif num > 12:
-                self.passadeiras = f"Moderado. {num} passadeiras."
+                self.passadeiras = f"Moderado"
                 
                 
     def passeios_(self, perc):
@@ -219,11 +219,11 @@ class ParametrosAmbiente(Percurso):
 
     def poluivisu(self, poluicaovisual):
         if poluicaovisual<30:
-            self.poluicao_visual= "Ideal"
+            self.poluicaovisual= "Ideal"
         elif 30<=poluicaovisual<60:
-            self.poluicao_visual= "Aceitável"
+            self.poluicaovisual= "Aceitável"
         elif 60<=poluicaovisual<=100:
-            self.poluicao_visual= "Desconfortável"
+            self.poluicaovisual= "Desconfortável"
         else:
             print("Erro! Percentagens assumem valores entre 0 e 100.")
         

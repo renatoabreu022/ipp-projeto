@@ -5,14 +5,14 @@
 #-----Imports---------#
 
 from models.user import Preferencias
-from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente
+from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente,ParametrosPopulacao
 #--------------------------# 
 
 # Diferença: Parãmetros de poluição visual, sombra, temperatura e iluminação agora têm um ajuste baseado na hora do dia, refletindo a percepção de segurança e conforto em ambientes noturnos. Por exemplo, a poluição visual tem um ajuste maior à noite, enquanto a sombra tem um ajuste reduzido, já que a falta de luz natural torna a sombra menos relevante. A temperatura também tem um ajuste para refletir o desconforto adicional que pode ocorrer à noite. A iluminação tem um ajuste significativo para refletir a importância crítica da iluminação adequada durante a noite para a segurança e conforto dos pedestres t~em ajustes dependendo de ser noite ou não
 class CalculoPeso:
     @staticmethod
     
-    def calcular_score(preferencias:Preferencias,acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,hora):
+    def calcular_score(preferencias:Preferencias,acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,pop:ParametrosPopulacao,hora):
         score = 0.0
 
         e_noite = hora >=18 or hora < 7
@@ -105,7 +105,7 @@ class CalculoPeso:
                 score += preferencias.peso_visual*1
         
         
-        match amb.nivelpolen:
+        match amb.nivel_polen:
             case "Ideal. Ar limpo.":
                 score += preferencias.peso_polen*0.25
             case "Risco Ligeiro":
@@ -138,6 +138,19 @@ class CalculoPeso:
             case "Sombra abrangente":
                 ajuste = 0 if e_noite else 1
                 score += preferencias.peso_sombra*(1/3)*ajuste
+
+        match pop.transito:
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.":
+                score += preferencias.peso_transito*(1)
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.":
+                score += preferencias.peso_transito*(1/2)
+        
+
+        match pop.multidao:
+            case "Zona de elevada afluência de peões.":
+                score += preferencias.peso_multidao*(1)
+            case "Zona de reduzida afluência de peões.":
+                score += preferencias.peso_multidao*(1/2)
                 
                 
         return score

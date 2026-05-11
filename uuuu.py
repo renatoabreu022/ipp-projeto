@@ -1,3 +1,8 @@
+
+from engine.calculo_percurso2 import CalculoPeso
+from models.user import Preferencias
+from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
+from models.grafo import Mapa
 import customtkinter as ctk
 from tkinter import messagebox
 import json
@@ -13,7 +18,7 @@ DB_FILE = "utilizadores.json"
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
-def carregar_bd(nome_ficheiro): # <--- Adiciona o parâmetro aqui
+def carregar_bd(nome_ficheiro): 
     if os.path.exists(nome_ficheiro):
         try:
             with open(nome_ficheiro, "r", encoding="utf-8") as f:
@@ -256,10 +261,249 @@ class AppAcessibilidade(ctk.CTk):
             self.cb_origem.set(locais[0])
             self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
 
-    def simular_calculo(self):
-        msg = f"Rota calculada em {self.cb_cidade.get()}!\nOrigem: {self.cb_origem.get()}\nDestino: {self.cb_destino.get()}\n\nO sistema está a priorizar as suas definições de acessibilidade."
-        messagebox.showinfo("Cálculo de Rota", msg)
 
+    # ---------- BOTÃO CALCULAR ROTA ----------
+
+    def simular_calculo(self):
+
+        # --------------------------
+        # 1. Obter dados da interface
+        # --------------------------
+
+        cidade = self.cb_cidade.get()
+        origem = self.cb_origem.get()
+        destino = self.cb_destino.get()
+
+        # --------------------------
+        # 2. Validações
+        # --------------------------
+
+        if not cidade:
+
+            messagebox.showwarning(
+                "Aviso",
+                "Selecione uma cidade."
+            )
+
+            return
+
+        if not origem or not destino:
+
+            messagebox.showwarning(
+                "Aviso",
+                "Selecione origem e destino."
+            )
+
+            return
+
+        if origem == destino:
+
+            messagebox.showwarning(
+                "Aviso",
+                "Origem e destino não podem ser iguais."
+            )
+
+            return
+
+        # --------------------------
+        # 3. Nome do ficheiro JSON
+        # --------------------------
+
+        nome_ficheiro = (
+            f"city/grafo_{cidade.lower().replace(' ', '_')}.json"
+        )
+
+        # --------------------------
+        # 4. Verificar existência
+        # --------------------------
+
+        if not os.path.exists(nome_ficheiro):
+
+            messagebox.showerror(
+                "Erro",
+                f"O ficheiro '{nome_ficheiro}' não existe."
+            )
+
+            return
+
+        # --------------------------
+        # 5. Carregar mapa
+        # --------------------------
+
+        try:
+
+            self.motor_mapa = Mapa()
+
+            self.motor_mapa.load_mapa(nome_ficheiro)
+
+        except Exception as e:
+
+            messagebox.showerror(
+                "Erro",
+                f"Erro ao carregar o mapa:\n{e}"
+            )
+
+            return
+
+        # --------------------------
+        # 6. Buscar preferências
+        # --------------------------
+
+        try:
+
+            p_user = self.bd[self.utilizador_atual]["preferencias"]
+
+        except:
+
+            messagebox.showerror(
+                "Erro",
+                "Não foi possível obter as preferências do utilizador."
+            )
+
+            return
+
+        # --------------------------
+        # 7. Criar perfil
+        # --------------------------
+
+        perfil = Preferencias()
+
+        perfil.peso_pavimento = p_user.get(
+            "pavimento",
+            5
+        )
+
+        perfil.peso_inclinacao = p_user.get(
+            "inclinacao",
+            5
+        )
+
+        perfil.peso_passeios = p_user.get(
+            "passeios",
+            5
+        )
+
+        perfil.peso_escadas = p_user.get(
+            "escadas",
+            5
+        )
+
+        perfil.peso_sombra = p_user.get(
+            "sombra",
+            5
+        )
+
+        perfil.peso_ar = p_user.get(
+            "qualidade_ar",
+            5
+        )
+
+        perfil.peso_polen = p_user.get(
+            "nivel_polen",
+            5
+        )
+
+        perfil.peso_ruido = p_user.get(
+            "poluicao_sonora",
+            5
+        )
+
+        perfil.peso_visual = p_user.get(
+            "poluicao_visual",
+            5
+        )
+
+        perfil.peso_iluminacao = p_user.get(
+            "iluminacao",
+            5
+        )
+
+        perfil.peso_transito = p_user.get(
+            "transito",
+            5
+        )
+
+        perfil.peso_multidao = p_user.get(
+            "multidao",
+            5
+        )
+
+        perfil.peso_textura_cego = p_user.get(
+            "textura_cego",
+            0
+        )
+
+        # --------------------------
+        # 8. Calcular percursos
+        # --------------------------
+
+        try:
+
+            resultados = self.motor_mapa.pesquisa_perc(
+                origem,
+                destino,
+                perfil,
+                k=3
+            )
+
+        except Exception as e:
+
+            messagebox.showerror(
+                "Erro",
+                f"Erro ao calcular percurso:\n{e}"
+            )
+
+            return
+
+        # --------------------------
+        # 9. Verificar resultados
+        # --------------------------
+
+        if not resultados:
+
+            messagebox.showwarning(
+                "Aviso",
+                "Não foi possível encontrar um caminho."
+            )
+
+            return
+
+        # --------------------------
+        # 10. Construir texto
+        # --------------------------
+
+        texto = ""
+
+        for i, resultado in enumerate(resultados):
+
+            try:
+
+                score, caminho = resultado
+
+            except:
+
+                continue
+
+            rota = " → ".join(caminho)
+
+            texto += (
+                f"━━━━━━━━━━━━━━━━━━\n"
+                f"ROTA {i+1}\n\n"
+                f"{rota}\n\n"
+                f"Índice de esforço: {score:.2f}\n"
+                f"━━━━━━━━━━━━━━━━━━\n\n"
+            )
+
+        # --------------------------
+        # 11. Mostrar resultado
+        # --------------------------
+
+        messagebox.showinfo(
+            "Rotas Recomendadas",
+            texto
+        )
+        
+        
 if __name__ == "__main__":
     app = AppAcessibilidade()
     app.mainloop()

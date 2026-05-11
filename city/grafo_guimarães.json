@@ -1,551 +1,90 @@
 {
-  "cidade": "Guimarães",
-  "nodes": {
-    "Castelo de Guimarães": {
-      "x": 85.08,
-      "y": 289.77
-    },
-    "Hospital da Senhora da Oliveira": {
-      "x": 59.6,
-      "y": 233.51
-    },
-    "Universidade do Minho (Azurém)": {
-      "x": 79.29,
-      "y": 364.48
-    },
-    "GuimarãeShopping": {
-      "x": 63.03,
-      "y": 349.36
-    },
-    "Largo do Toural": {
-      "x": 49.67,
-      "y": 345.45
-    },
-    "Bebedouro Largo da Oliveira": {
-      "x": 27.79,
-      "y": 258.51
-    },
-    "Parque da Cidade Guimarães": {
-      "x": 15.91,
-      "y": 222.43
-    },
-    "WC Público Toural": {
-      "x": 9.67,
-      "y": 270.83
-    }
+  "adjacencias": {
+    "Estação CP": [
+      { "destino": "Largo do Toural", "distancia": 0.006, "acessibilidade": { "origem": "Estação CP", "destino": "Largo do Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Moderado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação CP", "destino": "Largo do Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Aceitável", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Moderada" }, "populacao": { "origem": "Estação CP", "destino": "Largo do Toural", "transito": "Sim", "multidao": "Sim" } },
+      { "destino": "GuimarãeShopping", "distancia": 0.005, "acessibilidade": { "origem": "Estação CP", "destino": "GuimarãeShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação CP", "destino": "GuimarãeShopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Reduzida" }, "populacao": { "origem": "Estação CP", "destino": "GuimarãeShopping", "transito": "Sim", "multidao": "Sim" } },
+      { "destino": "Plataforma das Artes", "distancia": 0.007, "acessibilidade": { "origem": "Estação CP", "destino": "Plataforma das Artes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Moderado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação CP", "destino": "Plataforma das Artes", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Moderada" }, "populacao": { "origem": "Estação CP", "destino": "Plataforma das Artes", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Hospital da Senhora da Oliveira", "distancia": 0.012, "acessibilidade": { "origem": "Estação CP", "destino": "Hospital da Senhora da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação CP", "destino": "Hospital da Senhora da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Reduzida" }, "populacao": { "origem": "Estação CP", "destino": "Hospital da Senhora da Oliveira", "transito": "Sim", "multidao": "Sim" } }
+    ],
+    "Largo do Toural": [
+      { "destino": "Praça de Santiago", "distancia": 0.003, "acessibilidade": { "origem": "Largo do Toural", "destino": "Praça de Santiago", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Largo do Toural", "destino": "Praça de Santiago", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Aceitável", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Reduzida" }, "populacao": { "origem": "Largo do Toural", "destino": "Praça de Santiago", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "WC Público Toural", "distancia": 0.001, "acessibilidade": { "origem": "Largo do Toural", "destino": "WC Público Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Largo do Toural", "destino": "WC Público Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Nula" }, "populacao": { "origem": "Largo do Toural", "destino": "WC Público Toural", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Estação CP", "distancia": 0.006, "acessibilidade": { "origem": "Largo do Toural", "destino": "Estação CP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Largo do Toural", "destino": "Estação CP", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Moderada" }, "populacao": { "origem": "Largo do Toural", "destino": "Estação CP", "transito": "Sim", "multidao": "Sim" } },
+      { "destino": "Igreja de S. Gualter", "distancia": 0.009, "acessibilidade": { "origem": "Largo do Toural", "destino": "Igreja de S. Gualter", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Largo do Toural", "destino": "Igreja de S. Gualter", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Moderada" }, "populacao": { "origem": "Largo do Toural", "destino": "Igreja de S. Gualter", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "GuimarãeShopping": [
+      { "destino": "Estação CP", "distancia": 0.005, "acessibilidade": { "origem": "GuimarãeShopping", "destino": "Estação CP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GuimarãeShopping", "destino": "Estação CP", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "GuimarãeShopping", "destino": "Estação CP", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Universidade do Minho (Azurém)", "distancia": 0.015, "acessibilidade": { "origem": "GuimarãeShopping", "destino": "Universidade do Minho (Azurém)", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GuimarãeShopping", "destino": "Universidade do Minho (Azurém)", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "GuimarãeShopping", "destino": "Universidade do Minho (Azurém)", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "WC Público Toural", "distancia": 0.008, "acessibilidade": { "origem": "GuimarãeShopping", "destino": "WC Público Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GuimarãeShopping", "destino": "WC Público Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "GuimarãeShopping", "destino": "WC Público Toural", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Plataforma das Artes", "distancia": 0.007, "acessibilidade": { "origem": "GuimarãeShopping", "destino": "Plataforma das Artes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Moderado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GuimarãeShopping", "destino": "Plataforma das Artes", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "GuimarãeShopping", "destino": "Plataforma das Artes", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Universidade do Minho (Azurém)": [
+      { "destino": "Castelo de Guimarães", "distancia": 0.012, "acessibilidade": { "origem": "Universidade do Minho (Azurém)", "destino": "Castelo de Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho (Azurém)", "destino": "Castelo de Guimarães", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Universidade do Minho (Azurém)", "destino": "Castelo de Guimarães", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Hospital da Senhora da Oliveira", "distancia": 0.008, "acessibilidade": { "origem": "Universidade do Minho (Azurém)", "destino": "Hospital da Senhora da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho (Azurém)", "destino": "Hospital da Senhora da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Universidade do Minho (Azurém)", "destino": "Hospital da Senhora da Oliveira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "GuimarãeShopping", "distancia": 0.015, "acessibilidade": { "origem": "Universidade do Minho (Azurém)", "destino": "GuimarãeShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho (Azurém)", "destino": "GuimarãeShopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Universidade do Minho (Azurém)", "destino": "GuimarãeShopping", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Praça de Santiago", "distancia": 0.010, "acessibilidade": { "origem": "Universidade do Minho (Azurém)", "destino": "Praça de Santiago", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Moderado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho (Azurém)", "destino": "Praça de Santiago", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Universidade do Minho (Azurém)", "destino": "Praça de Santiago", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Castelo de Guimarães": [
+      { "destino": "Universidade do Minho (Azurém)", "distancia": 0.012, "acessibilidade": { "origem": "Castelo de Guimarães", "destino": "Universidade do Minho (Azurém)", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Guimarães", "destino": "Universidade do Minho (Azurém)", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Castelo de Guimarães", "destino": "Universidade do Minho (Azurém)", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Parque da Cidade Guimarães", "distancia": 0.008, "acessibilidade": { "origem": "Castelo de Guimarães", "destino": "Parque da Cidade Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Guimarães", "destino": "Parque da Cidade Guimarães", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Castelo de Guimarães", "destino": "Parque da Cidade Guimarães", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Praça de Santiago", "distancia": 0.005, "acessibilidade": { "origem": "Castelo de Guimarães", "destino": "Praça de Santiago", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Guimarães", "destino": "Praça de Santiago", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de Guimarães", "destino": "Praça de Santiago", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bebedouro Largo da Oliveira", "distancia": 0.007, "acessibilidade": { "origem": "Castelo de Guimarães", "destino": "Bebedouro Largo da Oliveira", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Guimarães", "destino": "Bebedouro Largo da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de Guimarães", "destino": "Bebedouro Largo da Oliveira", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Hospital da Senhora da Oliveira": [
+      { "destino": "Estação CP", "distancia": 0.012, "acessibilidade": { "origem": "Hospital da Senhora da Oliveira", "destino": "Estação CP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Senhora da Oliveira", "destino": "Estação CP", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Senhora da Oliveira", "destino": "Estação CP", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque da Cidade Guimarães", "distancia": 0.005, "acessibilidade": { "origem": "Hospital da Senhora da Oliveira", "destino": "Parque da Cidade Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Senhora da Oliveira", "destino": "Parque da Cidade Guimarães", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital da Senhora da Oliveira", "destino": "Parque da Cidade Guimarães", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Universidade do Minho (Azurém)", "distancia": 0.008, "acessibilidade": { "origem": "Hospital da Senhora da Oliveira", "destino": "Universidade do Minho (Azurém)", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Senhora da Oliveira", "destino": "Universidade do Minho (Azurém)", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital da Senhora da Oliveira", "destino": "Universidade do Minho (Azurém)", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Igreja de S. Gualter", "distancia": 0.006, "acessibilidade": { "origem": "Hospital da Senhora da Oliveira", "destino": "Igreja de S. Gualter", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Senhora da Oliveira", "destino": "Igreja de S. Gualter", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital da Senhora da Oliveira", "destino": "Igreja de S. Gualter", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Parque da Cidade Guimarães": [
+      { "destino": "Castelo de Guimarães", "distancia": 0.008, "acessibilidade": { "origem": "Parque da Cidade Guimarães", "destino": "Castelo de Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade Guimarães", "destino": "Castelo de Guimarães", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque da Cidade Guimarães", "destino": "Castelo de Guimarães", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Hospital da Senhora da Oliveira", "distancia": 0.005, "acessibilidade": { "origem": "Parque da Cidade Guimarães", "destino": "Hospital da Senhora da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade Guimarães", "destino": "Hospital da Senhora da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque da Cidade Guimarães", "destino": "Hospital da Senhora da Oliveira", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Igreja de S. Gualter", "distancia": 0.009, "acessibilidade": { "origem": "Parque da Cidade Guimarães", "destino": "Igreja de S. Gualter", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade Guimarães", "destino": "Igreja de S. Gualter", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Parque da Cidade Guimarães", "destino": "Igreja de S. Gualter", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro Largo da Oliveira", "distancia": 0.015, "acessibilidade": { "origem": "Parque da Cidade Guimarães", "destino": "Bebedouro Largo da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade Guimarães", "destino": "Bebedouro Largo da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Parque da Cidade Guimarães", "destino": "Bebedouro Largo da Oliveira", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Praça de Santiago": [
+      { "destino": "Largo do Toural", "distancia": 0.003, "acessibilidade": { "origem": "Praça de Santiago", "destino": "Largo do Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça de Santiago", "destino": "Largo do Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça de Santiago", "destino": "Largo do Toural", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bebedouro Largo da Oliveira", "distancia": 0.001, "acessibilidade": { "origem": "Praça de Santiago", "destino": "Bebedouro Largo da Oliveira", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça de Santiago", "destino": "Bebedouro Largo da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça de Santiago", "destino": "Bebedouro Largo da Oliveira", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Castelo de Guimarães", "distancia": 0.005, "acessibilidade": { "origem": "Praça de Santiago", "destino": "Castelo de Guimarães", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça de Santiago", "destino": "Castelo de Guimarães", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça de Santiago", "destino": "Castelo de Guimarães", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Universidade do Minho (Azurém)", "distancia": 0.010, "acessibilidade": { "origem": "Praça de Santiago", "destino": "Universidade do Minho (Azurém)", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça de Santiago", "destino": "Universidade do Minho (Azurém)", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça de Santiago", "destino": "Universidade do Minho (Azurém)", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Bebedouro Largo da Oliveira": [
+      { "destino": "Praça de Santiago", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Largo da Oliveira", "destino": "Praça de Santiago", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Largo da Oliveira", "destino": "Praça de Santiago", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Largo da Oliveira", "destino": "Praça de Santiago", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Igreja de S. Gualter", "distancia": 0.006, "acessibilidade": { "origem": "Bebedouro Largo da Oliveira", "destino": "Igreja de S. Gualter", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Largo da Oliveira", "destino": "Igreja de S. Gualter", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Largo da Oliveira", "destino": "Igreja de S. Gualter", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Plataforma das Artes", "distancia": 0.005, "acessibilidade": { "origem": "Bebedouro Largo da Oliveira", "destino": "Plataforma das Artes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Largo da Oliveira", "destino": "Plataforma das Artes", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Largo da Oliveira", "destino": "Plataforma das Artes", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Parque da Cidade Guimarães", "distancia": 0.015, "acessibilidade": { "origem": "Bebedouro Largo da Oliveira", "destino": "Parque da Cidade Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Largo da Oliveira", "destino": "Parque da Cidade Guimarães", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Largo da Oliveira", "destino": "Parque da Cidade Guimarães", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Plataforma das Artes": [
+      { "destino": "Estação CP", "distancia": 0.007, "acessibilidade": { "origem": "Plataforma das Artes", "destino": "Estação CP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Plataforma das Artes", "destino": "Estação CP", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Plataforma das Artes", "destino": "Estação CP", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Largo do Toural", "distancia": 0.004, "acessibilidade": { "origem": "Plataforma das Artes", "destino": "Largo do Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Plataforma das Artes", "destino": "Largo do Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Plataforma das Artes", "destino": "Largo do Toural", "transito": "Não", "multidao": "Média" } },
+      { "destino": "GuimarãeShopping", "distancia": 0.007, "acessibilidade": { "origem": "Plataforma das Artes", "destino": "GuimarãeShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Plataforma das Artes", "destino": "GuimarãeShopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Plataforma das Artes", "destino": "GuimarãeShopping", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro Largo da Oliveira", "distancia": 0.005, "acessibilidade": { "origem": "Plataforma das Artes", "destino": "Bebedouro Largo da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Plataforma das Artes", "destino": "Bebedouro Largo da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Plataforma das Artes", "destino": "Bebedouro Largo da Oliveira", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Igreja de S. Gualter": [
+      { "destino": "Largo do Toural", "distancia": 0.009, "acessibilidade": { "origem": "Igreja de S. Gualter", "destino": "Largo do Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Igreja de S. Gualter", "destino": "Largo do Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Igreja de S. Gualter", "destino": "Largo do Toural", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital da Senhora da Oliveira", "distancia": 0.006, "acessibilidade": { "origem": "Igreja de S. Gualter", "destino": "Hospital da Senhora da Oliveira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Igreja de S. Gualter", "destino": "Hospital da Senhora da Oliveira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Igreja de S. Gualter", "destino": "Hospital da Senhora da Oliveira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque da Cidade Guimarães", "distancia": 0.009, "acessibilidade": { "origem": "Igreja de S. Gualter", "destino": "Parque da Cidade Guimarães", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Igreja de S. Gualter", "destino": "Parque da Cidade Guimarães", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Igreja de S. Gualter", "destino": "Parque da Cidade Guimarães", "transito": "Não", "multidao": "Média" } },
+      { "destino": "WC Público Toural", "distancia": 0.008, "acessibilidade": { "origem": "Igreja de S. Gualter", "destino": "WC Público Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Igreja de S. Gualter", "destino": "WC Público Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Igreja de S. Gualter", "destino": "WC Público Toural", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "WC Público Toural": [
+      { "destino": "Largo do Toural", "distancia": 0.001, "acessibilidade": { "origem": "WC Público Toural", "destino": "Largo do Toural", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Toural", "destino": "Largo do Toural", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Toural", "destino": "Largo do Toural", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "GuimarãeShopping", "distancia": 0.008, "acessibilidade": { "origem": "WC Público Toural", "destino": "GuimarãeShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Toural", "destino": "GuimarãeShopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Toural", "destino": "GuimarãeShopping", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Estação CP", "distancia": 0.007, "acessibilidade": { "origem": "WC Público Toural", "destino": "Estação CP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Toural", "destino": "Estação CP", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Toural", "destino": "Estação CP", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Igreja de S. Gualter", "distancia": 0.008, "acessibilidade": { "origem": "WC Público Toural", "destino": "Igreja de S. Gualter", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Toural", "destino": "Igreja de S. Gualter", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Toural", "destino": "Igreja de S. Gualter", "transito": "Não", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Hospital da Senhora da Oliveira",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 85.08,
-        "y": 289.77
-      },
-      "destino_coord": {
-        "x": 59.6,
-        "y": 233.51
-      }
-    },
-    {
-      "destino": "Largo do Toural",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 85.08,
-        "y": 289.77
-      },
-      "destino_coord": {
-        "x": 49.67,
-        "y": 345.45
-      }
-    },
-    {
-      "destino": "Universidade do Minho (Azurém)",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 59.6,
-        "y": 233.51
-      },
-      "destino_coord": {
-        "x": 79.29,
-        "y": 364.48
-      }
-    },
-    {
-      "destino": "Largo do Toural",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 59.6,
-        "y": 233.51
-      },
-      "destino_coord": {
-        "x": 49.67,
-        "y": 345.45
-      }
-    },
-    {
-      "destino": "GuimarãeShopping",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 79.29,
-        "y": 364.48
-      },
-      "destino_coord": {
-        "x": 63.03,
-        "y": 349.36
-      }
-    },
-    {
-      "destino": "Hospital da Senhora da Oliveira",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 79.29,
-        "y": 364.48
-      },
-      "destino_coord": {
-        "x": 59.6,
-        "y": 233.51
-      }
-    },
-    {
-      "destino": "Largo do Toural",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 63.03,
-        "y": 349.36
-      },
-      "destino_coord": {
-        "x": 49.67,
-        "y": 345.45
-      }
-    },
-    {
-      "destino": "Hospital da Senhora da Oliveira",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 63.03,
-        "y": 349.36
-      },
-      "destino_coord": {
-        "x": 59.6,
-        "y": 233.51
-      }
-    },
-    {
-      "destino": "Bebedouro Largo da Oliveira",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 49.67,
-        "y": 345.45
-      },
-      "destino_coord": {
-        "x": 27.79,
-        "y": 258.51
-      }
-    },
-    {
-      "destino": "Hospital da Senhora da Oliveira",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 49.67,
-        "y": 345.45
-      },
-      "destino_coord": {
-        "x": 59.6,
-        "y": 233.51
-      }
-    },
-    {
-      "destino": "Parque da Cidade Guimarães",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 27.79,
-        "y": 258.51
-      },
-      "destino_coord": {
-        "x": 15.91,
-        "y": 222.43
-      }
-    },
-    {
-      "destino": "Parque da Cidade Guimarães",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 27.79,
-        "y": 258.51
-      },
-      "destino_coord": {
-        "x": 15.91,
-        "y": 222.43
-      }
-    },
-    {
-      "destino": "WC Público Toural",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 15.91,
-        "y": 222.43
-      },
-      "destino_coord": {
-        "x": 9.67,
-        "y": 270.83
-      }
-    },
-    {
-      "destino": "GuimarãeShopping",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 15.91,
-        "y": 222.43
-      },
-      "destino_coord": {
-        "x": 63.03,
-        "y": 349.36
-      }
-    },
-    {
-      "destino": "Castelo de Guimarães",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 9.67,
-        "y": 270.83
-      },
-      "destino_coord": {
-        "x": 85.08,
-        "y": 289.77
-      }
-    },
-    {
-      "destino": "Parque da Cidade Guimarães",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 9.67,
-        "y": 270.83
-      },
-      "destino_coord": {
-        "x": 15.91,
-        "y": 222.43
-      }
-    }
-  ]
+  "coordenadas": {
+    "Estação CP": [41.438, -8.295],
+    "Largo do Toural": [41.442, -8.295],
+    "Praça de Santiago": [41.444, -8.293],
+    "Plataforma das Artes": [41.441, -8.298],
+    "Parque da Cidade Guimarães": [41.447, -8.285],
+    "Igreja de S. Gualter": [41.441, -8.289],
+    "Castelo de Guimarães": [41.448, -8.290],
+    "Hospital da Senhora da Oliveira": [41.440, -8.288],
+    "Universidade do Minho (Azurém)": [41.453, -8.289],
+    "GuimarãeShopping": [41.439, -8.300],
+    "Bebedouro Largo da Oliveira": [41.444, -8.292],
+    "WC Público Toural": [41.442, -8.296]
+  }
 }

@@ -20,10 +20,9 @@
 
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from models.user import Preferencias
-from engine.calculo_percurso2 import CalculoPeso
+from engine.calculo_percurso3 import CalculoPeso
 import math as m
 import json
-import random
 
 class Mapa:
     def __init__(self):
@@ -32,7 +31,8 @@ class Mapa:
     
     @staticmethod
     def dist(coord1:tuple,coord2:tuple):
-        x1, y1, x2, y2 = coord1[0], coord1[1], coord2[0], coord2[1]
+        x1, y1 = coord1
+        x2, y2 = coord2
         return m.sqrt((x1-x2)**2 + (y1-y2)**2)
 
     def add_local(self, nome, coord:tuple):
@@ -64,7 +64,7 @@ class Mapa:
         distancia = self.dist(self.coordenadas[origem], self.coordenadas[destino])
 
         acess = ParametrosAcessibilidade(origem, destino)
-        acess.pavimento_(rug)
+        acess.pavimento_(rug) 
         acess.inclinacao_(dec)
         acess.passadeiras_(n_passad, distancia)
         acess.passeios_(passeio)
@@ -77,7 +77,7 @@ class Mapa:
         amb.poluivisu(visual)
         amb.nivelpolen(polen)
         amb.ilumina(post_luz, hora, distancia)
-        amb.sombra(sombra, distancia)
+        amb.sombra_(sombra, distancia)
 
         pop = ParametrosPopulacao(origem, destino)
         pop.transito_(transito)
@@ -116,7 +116,7 @@ class Mapa:
     #@Renato -- ACHO QUE ESTE TIPO DE PESQUISA É POUCO EFICIENTE, É MELHOR TROCAR POR OUTRO TIPO ~~done
 
     # esta procura é uma 'mistura' de Custo Uniforme com Dijkstra
-    def pesquisa_perc(self, origem, destino, preferencias, k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
+    def pesquisa_perc(self, origem, destino, preferencias,hora=12, k=3): # pesquisa pelos k melhores caminhos entre a origem e o destino
         if origem not in self.adjacencias:
             print(f'ERRO: {origem} não existe no mapa.')
             return []
@@ -165,7 +165,7 @@ class Mapa:
                     #adicionar população
                     
                     # calcula o 'custo' do caminho atual
-                    score_increm = CalculoPeso.calcular_score(preferencias,acess,amb,pop) if acess and amb and pop else 0
+                    score_increm = CalculoPeso.calcular_score(preferencias,acess,amb,pop,hora) if acess and amb and pop else 0
                     score_new = score_atual + score_increm
 
                     novo_caminho = caminho + [viz]

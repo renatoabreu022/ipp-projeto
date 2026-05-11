@@ -1,0 +1,53 @@
+{ 
+    "adjacencias": {
+        "Casa": [
+            {
+                "destino": "Padaria",
+                "distancia": 20.12461179749811,
+                "acessibilidade": {
+                    "origem": "Casa",
+                    "destino": "Padaria",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Baixo",
+                    "passadeiras": "Elevado. 3 passadeiras.",
+                    "passeios": "Reduzido. Risco elevado.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": { 
+                    "origem": "Casa",
+                    "destino": "Padaria",
+                    "temperatura": null,
+                    "qualidade_ar": "Risco Elevado",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": " Sombra reduzida"
+                },
+                "populacao": {
+                    "origem": "Casa",
+                    "destino": "Padaria",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de reduzida afluência de peões."
+                }
+            }
+        ],
+        "Escola": [],
+        "Padaria": []
+    },
+    "coordenadas": {
+        "Casa": [
+            1,
+            2
+        ],
+        "Escola": [
+            7,
+            9
+        ],
+        "Padaria": [
+            19,
+            11
+        ]
+    }
+}

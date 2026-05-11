@@ -175,30 +175,12 @@ def main():
             #mapeamento de ficheiros
                 # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
             cidades_disponiveis = {
-                "Aveiro": "city_graphs/city.grafo_aveiro.json",
-                "Barcelos": "city_graphs/city.grafo_barcelos.json",
-                "Beja": "city_graphs/city.grafo_beja.json",
-                "Braga": "city_graphs/city.grafo_braga.json",
-                "Caldas Da Rainha": "city_graphs/city.grafo_caldas_da_rainha.json",
-                "Coimbra": "city_graphs/city.grafo_coimbra.json",
-                "Covilhã": "city_graphs/city.grafo_covilhã.json",
-                "Évora": "city_graphs/city.grafo_évora.json",
-                "Fafe": "city_graphs/city.grafo_fafe.json",
-                "Famalicao": "city_graphs/city.grafo_famalicao.json",
-                "Faro": "city_graphs/city.grafo_faro.json",
-                "Figueira Da Foz": "city_graphs/city.grafo_figueira_da_foz.json",
-                "Guimarães": "city_graphs/city.grafo_guimarães.json",
-                "Lagos": "city_graphs/city.grafo_lagos.json",
-                "Lisboa": "city_graphs/city.grafo_lisboa.json",
-                "Marco De Canaveses": "city_graphs/city.grafo_marco_de_canaveses.json",
-                "Portimão": "city_graphs/city.grafo_portimão.json",
-                "Porto": "city_graphs/city.grafo_porto.json",
-                "Póvoa De Varzim": "city_graphs/city.grafo_póvoa_de_varzim.json",
-                "Tomar": "city_graphs/city.grafo_tomar.json",
-                "Vila Nova De Gaia": "city_graphs/city.grafo_vila_nova_de_gaia.json",
-                "Viseu": "city_graphs/city.grafo_viseu.json"
+                "Fafe": "city/grafo_fafe.json",
+                "Famalicão": "city/grafo_famalicao.json",
+                "Guimarães" : "city/grafo_guimarães.json"
             }
-            print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys(            selecao = input("Escolha a cidade para a simulação:").strip().title()
+            print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys())}")            
+            selecao = input("Escolha a cidade para a simulação:").strip().title()
 
             if selecao not in cidades_disponiveis:
                 print(f"ERRO: A cidade {selecao} não está carregada no sistema.")
@@ -206,24 +188,14 @@ def main():
             
             try: #carregar o mapa da Cidade
                 mapa.load_mapa(cidades_disponiveis[selecao])
-                gestor_bikes = GestorBicicletas(list(mapa.nodes.keys()))
-
                 print(f"\n-- MAPA DE {selecao.upper()} CARREGADO ---")
-                print(f"Locais detetados: {','.join(list(mapa.nodes.keys()))}")
+                print(f"Locais detetados: {','.join(list(mapa.adjacencias.keys()))}")
 
-                #DEFINIR ROTA
-                origem = input("\nDigite o ponto de Partida:").strip()
-                destino = input("\nDigite o ponto de Chegada:").strip()
-                
-                if origem not in mapa.nodes or destino not in mapa.nodes:
-                    print("ERRO: Um ou ambos os locais não existem nesta cidade.")
-                    continue
-                
                 #DEFINIR A HORA
-                print("\nCoHora Atual Horário:")
-                print("[1] Agendardatual")
-                print("[2] Simular Hora Específica")
-                op_h=input("Opção:")
+                print("\nEscolha do horário para o percurso")
+                print("[1] Horário Atual ")
+                print("[2] Agendar percurso")
+                op_h=input("Opção: ")
 
                 if op_h == "2":
                     h_calculo = int(input("Insira a hora pretendida:"))
@@ -231,25 +203,35 @@ def main():
                     h_calculo = datetime.now().hour
 
                 print(f"Calculando a melhora rota para as {h_calculo}h...")
+
+                #DEFINIR ROTA
+                origem = input("\nDigite o ponto de Partida:").strip()
+                destino = input("\nDigite o ponto de Chegada:").strip()
+                
+                if origem not in mapa.adjacencias or destino not in mapa.adjacencias:
+                    print("ERRO: Um ou ambos os locais não existem nesta cidade.")
+                    continue
+                
+                
                 
                 #EXECUTAR A SIMULAÇÃO
-                resultado = mapa.simular_e_recomendar(user_login.u_preferencias,origem,destino,h_calculo)
-        
+                resultado = mapa.pesquisa_perc(origem, destino, user_login.u_preferencias, hora=h_calculo, k=5)
+
                 if resultado:
                     print("\n" + "="*30)
-                    print("RESULTADO DA SIMULAÇÃO")
-                    print("="*30)
-                    print(f"Caminho Sugerido: {resultado['caminho']}")
-                    print(f"Score de Conforto: {resultado['score']:.2f}")
-                    print("-"*30)
-
+                    print("MELHORES ROTAS ENCONTRADAS")
+                    print("(Nota: Quanto menor o score, mais confortável é o percurso)")
+                    for i in range (len(resultado)):
+                        score_total, caminhos = resultado[i]
+                        print("-"*80)
+                        print(f" {i+1}º caminho sugerido: {' -> '.join(caminhos)}")
+                        print(f"Penalização total (Score): {round(score_total, 0)}")
+                        print("-" * 80)
+                else:
+                    print("ERRO: Não foi possível encontrar um caminho entre esses pontos.")
 
                     # Verifica se há uma bike perto da origem para ajudar no percurso
-                    estacao_proxima, qtd_bikes = gestor_bikes.encontrar_bike_mais_proxima(mapa, origem)
-                    if estacao_proxima:
-                        print(f"DICA: Existe uma estação de bicicletas em '{estacao_proxima}'")
-                        print(f"com {qtd_bikes} unidades disponíveis para a sua partida.")
-                    print("="*30)
+                    
             
             except Exception as e:
                 print(f"ERRO durante a simulação: {e}")

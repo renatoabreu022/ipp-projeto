@@ -1,487 +1,271 @@
 {
-  "cidade": "Famalicão",
-  "nodes": {
-    "Hospital de Famalicão": {
-      "x": -97.76,
-      "y": 332.94
+    "adjacencias": {
+        "Estação Ferroviária": [
+            {
+                "destino": "Praça Dona Maria II",
+                "distancia": 0.005,
+                "acessibilidade": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Praça Dona Maria II",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Baixo",
+                    "passadeiras": "Moderado. 2 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Praça Dona Maria II",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Boa",
+                    "poluicao_sonora": "Aceitável",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra moderada"
+                },
+                "populacao": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Praça Dona Maria II",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+                    "multidao": "Zona de elevada afluência de peões."
+                }
+            },
+            {
+                "destino": "Parque da Devesa",
+                "distancia": 0.012,
+                "acessibilidade": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Parque da Devesa",
+                    "pavimento": "Pavimento Irregular",
+                    "inclinacao": "Nível Moderado",
+                    "passadeiras": "Baixo. 1 passadeiras.",
+                    "passeios": "Reduzido. Risco elevado.",
+                    "textura_cego": "O percurso não inclui pavimento acessível.",
+                    "escadas": "O percurso inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Parque da Devesa",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Excelente",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Risco Moderado",
+                    "iluminacao": "Fraco (Má visibilidade)",
+                    "sombra": "Sombra abragente"
+                },
+                "populacao": {
+                    "origem": "Estação Ferroviária",
+                    "destino": "Parque da Devesa",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de reduzida afluência de peões."
+                }
+            }
+        ],
+        "Praça Dona Maria II": [
+            {
+                "destino": "Câmara Municipal",
+                "distancia": 0.002,
+                "acessibilidade": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Câmara Municipal",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Baixo",
+                    "passadeiras": "Baixo. 1 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Câmara Municipal",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Excelente",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra abragente"
+                },
+                "populacao": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Câmara Municipal",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de elevada afluência de peões."
+                }
+            },
+            {
+                "destino": "Mercado Municipal",
+                "distancia": 0.006,
+                "acessibilidade": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Mercado Municipal",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Moderado",
+                    "passadeiras": "Moderado. 3 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Mercado Municipal",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Boa",
+                    "poluicao_sonora": "Aceitável",
+                    "poluicao_visual": "Aceitável",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra moderada"
+                },
+                "populacao": {
+                    "origem": "Praça Dona Maria II",
+                    "destino": "Mercado Municipal",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+                    "multidao": "Zona de elevada afluência de peões."
+                }
+            }
+        ],
+        "Câmara Municipal": [
+            {
+                "destino": "Biblioteca Municipal",
+                "distancia": 0.003,
+                "acessibilidade": {
+                    "origem": "Câmara Municipal",
+                    "destino": "Biblioteca Municipal",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Baixo",
+                    "passadeiras": "Baixo. 1 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Câmara Municipal",
+                    "destino": "Biblioteca Municipal",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Excelente",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra moderada"
+                },
+                "populacao": {
+                    "origem": "Câmara Municipal",
+                    "destino": "Biblioteca Municipal",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de reduzida afluência de peões."
+                }
+            }
+        ],
+        "Biblioteca Municipal": [
+            {
+                "destino": "Mercado Municipal",
+                "distancia": 0.004,
+                "acessibilidade": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Mercado Municipal",
+                    "pavimento": "Pavimento Ligeiramente Irregular",
+                    "inclinacao": "Nível Moderado",
+                    "passadeiras": "Moderado. 2 passadeiras.",
+                    "passeios": "Moderado. Risco ligeiro.",
+                    "textura_cego": "O percurso não inclui pavimento acessível.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Mercado Municipal",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Boa",
+                    "poluicao_sonora": "Aceitável",
+                    "poluicao_visual": "Aceitável",
+                    "nivel_polen": "Ideal. Ar limpo.",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra moderada"
+                },
+                "populacao": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Mercado Municipal",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+                    "multidao": "Zona de elevada afluência de peões."
+                }
+            },
+            {
+                "destino": "Parque da Devesa",
+                "distancia": 0.008,
+                "acessibilidade": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Parque da Devesa",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Moderado",
+                    "passadeiras": "Moderado. 2 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Parque da Devesa",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Excelente",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Risco Moderado",
+                    "iluminacao": "Iluminação Moderada",
+                    "sombra": "Sombra abragente"
+                },
+                "populacao": {
+                    "origem": "Biblioteca Municipal",
+                    "destino": "Parque da Devesa",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de reduzida afluência de peões."
+                }
+            }
+        ],
+        "Mercado Municipal": [
+            {
+                "destino": "Parque da Devesa",
+                "distancia": 0.005,
+                "acessibilidade": {
+                    "origem": "Mercado Municipal",
+                    "destino": "Parque da Devesa",
+                    "pavimento": "Pavimento Regular",
+                    "inclinacao": "Nível Baixo",
+                    "passadeiras": "Baixo. 1 passadeiras.",
+                    "passeios": "Elevado. Risco reduzido.",
+                    "textura_cego": "O percurso dispõe de pavimento tátil.",
+                    "escadas": "O percurso não inclui escadas."
+                },
+                "ambiente": {
+                    "origem": "Mercado Municipal",
+                    "destino": "Parque da Devesa",
+                    "temperatura": "Ideal.",
+                    "qualidade_ar": "Excelente",
+                    "poluicao_sonora": "Ideal",
+                    "poluicao_visual": "Ideal",
+                    "nivel_polen": "Risco Ligeiro",
+                    "iluminacao": "Ótima",
+                    "sombra": "Sombra abragente"
+                },
+                "populacao": {
+                    "origem": "Mercado Municipal",
+                    "destino": "Parque da Devesa",
+                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+                    "multidao": "Zona de reduzida afluência de peões."
+                }
+            }
+        ],
+        "Parque da Devesa": []
     },
-    "Parque da Devesa": {
-      "x": -85.27,
-      "y": 256.18
-    },
-    "Estação de Famalicão": {
-      "x": -88.06,
-      "y": 236.11
-    },
-    "Universidade Lusíada": {
-      "x": -129.35,
-      "y": 312.27
-    },
-    "Praça D. Maria II": {
-      "x": -132.1,
-      "y": 289.26
-    },
-    "Bebedouro Parque da Devesa": {
-      "x": -164.28,
-      "y": 328.18
-    },
-    "Posto de Primeiros Socorros": {
-      "x": -162.94,
-      "y": 298.41
-    },
-    "WC Público Praça D. Maria II": {
-      "x": -157.16,
-      "y": 264.88
+    "coordenadas": {
+        "Estação Ferroviária": [41.4065, -8.5275],
+        "Praça Dona Maria II": [41.4095, -8.5195],
+        "Câmara Municipal": [41.4080, -8.5190],
+        "Biblioteca Municipal": [41.4070, -8.5170],
+        "Mercado Municipal": [41.4100, -8.5150],
+        "Parque da Devesa": [41.4120, -8.5140]
     }
-  },
-  "edges": [
-    {
-      "destino": "Parque da Devesa",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -97.76,
-        "y": 332.94
-      },
-      "destino_coord": {
-        "x": -85.27,
-        "y": 256.18
-      }
-    },
-    {
-      "destino": "Universidade Lusíada",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -97.76,
-        "y": 332.94
-      },
-      "destino_coord": {
-        "x": -129.35,
-        "y": 312.27
-      }
-    },
-    {
-      "destino": "Estação de Famalicão",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -85.27,
-        "y": 256.18
-      },
-      "destino_coord": {
-        "x": -88.06,
-        "y": 236.11
-      }
-    },
-    {
-      "destino": "Universidade Lusíada",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -88.06,
-        "y": 236.11
-      },
-      "destino_coord": {
-        "x": -129.35,
-        "y": 312.27
-      }
-    },
-    {
-      "destino": "Parque da Devesa",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -88.06,
-        "y": 236.11
-      },
-      "destino_coord": {
-        "x": -85.27,
-        "y": 256.18
-      }
-    },
-    {
-      "destino": "Praça D. Maria II",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -129.35,
-        "y": 312.27
-      },
-      "destino_coord": {
-        "x": -132.1,
-        "y": 289.26
-      }
-    },
-    {
-      "destino": "Praça D. Maria II",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -129.35,
-        "y": 312.27
-      },
-      "destino_coord": {
-        "x": -132.1,
-        "y": 289.26
-      }
-    },
-    {
-      "destino": "Bebedouro Parque da Devesa",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -132.1,
-        "y": 289.26
-      },
-      "destino_coord": {
-        "x": -164.28,
-        "y": 328.18
-      }
-    },
-    {
-      "destino": "Posto de Primeiros Socorros",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -132.1,
-        "y": 289.26
-      },
-      "destino_coord": {
-        "x": -162.94,
-        "y": 298.41
-      }
-    },
-    {
-      "destino": "Posto de Primeiros Socorros",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -164.28,
-        "y": 328.18
-      },
-      "destino_coord": {
-        "x": -162.94,
-        "y": 298.41
-      }
-    },
-    {
-      "destino": "Estação de Famalicão",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -164.28,
-        "y": 328.18
-      },
-      "destino_coord": {
-        "x": -88.06,
-        "y": 236.11
-      }
-    },
-    {
-      "destino": "WC Público Praça D. Maria II",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -162.94,
-        "y": 298.41
-      },
-      "destino_coord": {
-        "x": -157.16,
-        "y": 264.88
-      }
-    },
-    {
-      "destino": "Parque da Devesa",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -162.94,
-        "y": 298.41
-      },
-      "destino_coord": {
-        "x": -85.27,
-        "y": 256.18
-      }
-    },
-    {
-      "destino": "Hospital de Famalicão",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -157.16,
-        "y": 264.88
-      },
-      "destino_coord": {
-        "x": -97.76,
-        "y": 332.94
-      }
-    }
-  ]
 }

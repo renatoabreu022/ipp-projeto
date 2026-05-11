@@ -2,21 +2,19 @@
     "renato": {
         "pass": "c3aba2c5aaffce50be3662ad24ec9694498884a348fe759e98cd1406b1904e82",
         "preferencias": {
-            "pavimento": 3,
-            "inclinacao": 5,
-            "passadeiras": 8,
-            "passeios": 1,
-            "textura_cego": 3,
-            "escadas": 7,
-            "temperatura": 2,
-            "qualidade_ar": 0,
+            "pavimento": 7,
+            "inclinacao": 1,
+            "passeios": 9,
+            "escadas": 4,
+            "sombra": 4,
+            "qualidade_ar": 3,
+            "nivel_polen": 7,
             "poluicao_sonora": 3,
-            "poluicao_visual": 5,
-            "nivel_polen": 8,
-            "iluminacao": 2,
-            "sombra": 6,
+            "poluicao_visual": 7,
+            "iluminacao": 5,
             "transito": 9,
-            "multidao": 1
+            "multidao": 1,
+            "textura_cego": 10
         }
     },
     "claudia": {

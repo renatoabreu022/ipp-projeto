@@ -44,7 +44,7 @@
         "passeios": 15,
         "textura_cego": true,
         "escadas": true
-      },
+      }, 
       "ambiente": {
         "temperatura": 20,
         "qualidade_ar": 35,

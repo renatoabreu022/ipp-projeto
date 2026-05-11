@@ -9,8 +9,8 @@ class GestorBicicletas:
     
     def gerar_estacoes_para_cidade(self, locais_da_cidade):
         self.estacoes = {}
-        
-        num_estacoes = min(len(locais_da_cidade), 6)
+        k_vagas = random.choice([3, 4])
+        num_estacoes = min(len(locais_da_cidade), k_vagas)
         locais_sorteados = random.sample(locais_da_cidade, k = num_estacoes)
         
         
