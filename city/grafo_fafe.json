@@ -1,246 +1,452 @@
 {
-    "adjacencias": {
-        "Praça Mártires de Ferreira de Castro": [
-            {
-                "destino": "Câmara Municipal",
-                "distancia": 0.002,
-                "acessibilidade": {
-                    "origem": "Praça Mártires de Ferreira de Castro",
-                    "destino": "Câmara Municipal",
-                    "pavimento": "Pavimento Regular",
-                    "inclinacao": "Nível Baixo",
-                    "passadeiras": "Moderado. 2 passadeiras.",
-                    "passeios": "Elevado. Risco reduzido.",
-                    "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Praça Mártires de Ferreira de Castro",
-                    "destino": "Câmara Municipal",
-                    "temperatura": "Ideal.",
-                    "qualidade_ar": "Excelente",
-                    "poluicao_sonora": "Aceitável",
-                    "poluicao_visual": "Ideal",
-                    "nivel_polen": "Ideal. Ar limpo.",
-                    "iluminacao": "Ótima",
-                    "sombra": "Sombra moderada"
-                },
-                "populacao": {
-                    "origem": "Praça Mártires de Ferreira de Castro",
-                    "destino": "Câmara Municipal",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-                    "multidao": "Zona de elevada afluência de peões."
-                }
-            }
-        ],
-        "Câmara Municipal": [
-            {
-                "destino": "Teatro Cinema de Fafe",
-                "distancia": 0.003,
-                "acessibilidade": {
-                    "origem": "Câmara Municipal",
-                    "destino": "Teatro Cinema de Fafe",
-                    "pavimento": "Pavimento Regular",
-                    "inclinacao": "Nível Baixo",
-                    "passadeiras": "Baixo. 1 passadeiras.",
-                    "passeios": "Elevado. Risco reduzido.",
-                    "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Câmara Municipal",
-                    "destino": "Teatro Cinema de Fafe",
-                    "temperatura": "Ideal.",
-                    "qualidade_ar": "Excelente",
-                    "poluicao_sonora": "Ideal",
-                    "poluicao_visual": "Ideal",
-                    "nivel_polen": "Ideal. Ar limpo.",
-                    "iluminacao": "Ótima",
-                    "sombra": "Sombra abragente"
-                },
-                "populacao": {
-                    "origem": "Câmara Municipal",
-                    "destino": "Teatro Cinema de Fafe",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-                    "multidao": "Zona de reduzida afluência de peões."
-                }
-            }
-        ],
-        "Teatro Cinema de Fafe": [
-            {
-                "destino": "Jardim do Calvário",
-                "distancia": 0.005,
-                "acessibilidade": {
-                    "origem": "Teatro Cinema de Fafe",
-                    "destino": "Jardim do Calvário",
-                    "pavimento": "Pavimento Ligeiramente Irregular",
-                    "inclinacao": "Nível Moderado",
-                    "passadeiras": "Moderado. 2 passadeiras.",
-                    "passeios": "Moderado. Risco ligeiro.",
-                    "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Teatro Cinema de Fafe",
-                    "destino": "Jardim do Calvário",
-                    "temperatura": "Ideal.",
-                    "qualidade_ar": "Excelente",
-                    "poluicao_sonora": "Aceitável",
-                    "poluicao_visual": "Aceitável",
-                    "nivel_polen": "Risco Moderado",
-                    "iluminacao": "Iluminação Moderada",
-                    "sombra": "Sombra abragente"
-                },
-                "populacao": {
-                    "origem": "Teatro Cinema de Fafe",
-                    "destino": "Jardim do Calvário",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-                    "multidao": "Zona de elevada afluência de peões."
-                }
-            }
-        ],
-        "Jardim do Calvário": [
-            {
-                "destino": "Biblioteca Municipal",
-                "distancia": 0.004,
-                "acessibilidade": {
-                    "origem": "Jardim do Calvário",
-                    "destino": "Biblioteca Municipal",
-                    "pavimento": "Pavimento Regular",
-                    "inclinacao": "Nível Baixo",
-                    "passadeiras": "Baixo. 1 passadeiras.",
-                    "passeios": "Elevado. Risco reduzido.",
-                    "textura_cego": "O percurso dispõe de pavimento tátil.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Jardim do Calvário",
-                    "destino": "Biblioteca Municipal",
-                    "temperatura": "Ideal.",
-                    "qualidade_ar": "Excelente",
-                    "poluicao_sonora": "Ideal",
-                    "poluicao_visual": "Ideal",
-                    "nivel_polen": "Risco Ligeiro",
-                    "iluminacao": "Ótima",
-                    "sombra": "Sombra abragente"
-                },
-                "populacao": {
-                    "origem": "Jardim do Calvário",
-                    "destino": "Biblioteca Municipal",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-                    "multidao": "Zona de reduzida afluência de peões."
-                }
-            }
-        ],
-        "Biblioteca Municipal": [
-            {
-                "destino": "Parque da Cidade",
-                "distancia": 0.008,
-                "acessibilidade": {
-                    "origem": "Biblioteca Municipal",
-                    "destino": "Parque da Cidade",
-                    "pavimento": "Pavimento Irregular",
-                    "inclinacao": "Nível Elevado",
-                    "passadeiras": "Baixo. 0 passadeiras.",
-                    "passeios": "Reduzido. Risco elevado.",
-                    "textura_cego": "O percurso não inclui pavimento acessível.",
-                    "escadas": "O percurso inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Biblioteca Municipal",
-                    "destino": "Parque da Cidade",
-                    "temperatura": "Desconforto Ligeiro.",
-                    "qualidade_ar": "Excelente",
-                    "poluicao_sonora": "Ideal",
-                    "poluicao_visual": "Ideal",
-                    "nivel_polen": "Risco Elevado",
-                    "iluminacao": "Fraco (Má visibilidade)",
-                    "sombra": "Sombra abragente"
-                },
-                "populacao": {
-                    "origem": "Biblioteca Municipal",
-                    "destino": "Parque da Cidade",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-                    "multidao": "Zona de reduzida afluência de peões."
-                }
-            }
-        ],
-        "Parque da Cidade": [
-            {
-                "destino": "Pavilhão Multiusos",
-                "distancia": 0.006,
-                "acessibilidade": {
-                    "origem": "Parque da Cidade",
-                    "destino": "Pavilhão Multiusos",
-                    "pavimento": "Pavimento Regular",
-                    "inclinacao": "Nível Baixo",
-                    "passadeiras": "Moderado. 3 passadeiras.",
-                    "passeios": "Elevado. Risco reduzido.",
-                    "textura_cego": "O percurso dispõe de pavimento tátil.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Parque da Cidade",
-                    "destino": "Pavilhão Multiusos",
-                    "temperatura": "Ideal.",
-                    "qualidade_ar": "Boa",
-                    "poluicao_sonora": "Aceitável",
-                    "poluicao_visual": "Aceitável",
-                    "nivel_polen": "Risco Moderado",
-                    "iluminacao": "Ótima",
-                    "sombra": "Sombra moderada"
-                },
-                "populacao": {
-                    "origem": "Parque da Cidade",
-                    "destino": "Pavilhão Multiusos",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-                    "multidao": "Zona de elevada afluência de peões."
-                }
-            }
-        ],
-        "Pavilhão Multiusos": [
-            {
-                "destino": "Zona Industrial",
-                "distancia": 0.015,
-                "acessibilidade": {
-                    "origem": "Pavilhão Multiusos",
-                    "destino": "Zona Industrial",
-                    "pavimento": "Pavimento Muito Irregular",
-                    "inclinacao": "Nível Moderado",
-                    "passadeiras": "Baixo. 2 passadeiras.",
-                    "passeios": "Reduzido. Risco elevado.",
-                    "textura_cego": "O percurso não inclui pavimento acessível.",
-                    "escadas": "O percurso não inclui escadas."
-                },
-                "ambiente": {
-                    "origem": "Pavilhão Multiusos",
-                    "destino": "Zona Industrial",
-                    "temperatura": "Risco Moderado.",
-                    "qualidade_ar": "Risco Moderado",
-                    "poluicao_sonora": "Desconfortável",
-                    "poluicao_visual": "Desconfortável",
-                    "nivel_polen": "Ideal. Ar limpo.",
-                    "iluminacao": "Iluminação Moderada",
-                    "sombra": " Sombra reduzida"
-                },
-                "populacao": {
-                    "origem": "Pavilhão Multiusos",
-                    "destino": "Zona Industrial",
-                    "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-                    "multidao": "Zona de reduzida afluência de peões."
-                }
-            }
-        ],
-        "Zona Industrial": []
-    },
-    "coordenadas": {
-        "Praça Mártires de Ferreira de Castro": [41.4510, -8.1705],
-        "Câmara Municipal": [41.4505, -8.1715],
-        "Teatro Cinema de Fafe": [41.4498, -8.1725],
-        "Jardim do Calvário": [41.4520, -8.1730],
-        "Biblioteca Municipal": [41.4485, -8.1710],
-        "Parque da Cidade": [41.4550, -8.1650],
-        "Pavilhão Multiusos": [41.4570, -8.1620],
-        "Zona Industrial": [41.4650, -8.1500]
-    }
+  "adjacencias": {
+    "Praça Mártires de Ferreira de Castro": [
+      {
+        "destino": "Câmara Municipal",
+        "distancia": 0.001,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Câmara Municipal",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Câmara Municipal",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Câmara Municipal",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Teatro Cinema de Fafe",
+        "distancia": 0.002,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Teatro Cinema de Fafe",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Teatro Cinema de Fafe",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Boa",
+          "poluicao_sonora": "Aceitável",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Teatro Cinema de Fafe",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Jardim do Calvário",
+        "distancia": 0.003,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Jardim do Calvário",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Jardim do Calvário",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Ligeiro",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra abragente"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Jardim do Calvário",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Biblioteca Municipal",
+        "distancia": 0.003,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Biblioteca Municipal",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Biblioteca Municipal",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Biblioteca Municipal",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Parque da Cidade",
+        "distancia": 0.007,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Parque da Cidade",
+          "pavimento": "Pavimento Ligeiramente Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Elevado",
+          "passeios": "Moderado. Risco ligeiro.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Parque da Cidade",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra abragente"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Parque da Cidade",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Pavilhão Multiusos",
+        "distancia": 0.01,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Pavilhão Multiusos",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Elevado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Pavilhão Multiusos",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Boa",
+          "poluicao_sonora": "Aceitável",
+          "poluicao_visual": "Aceitável",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Pavilhão Multiusos",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Zona Industrial",
+        "distancia": 0.025,
+        "acessibilidade": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Zona Industrial",
+          "pavimento": "Pavimento Muito Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Elevado",
+          "passeios": "Reduzido. Risco elevado.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Zona Industrial",
+          "temperatura": "Risco Moderado.",
+          "qualidade_ar": "Risco Moderado",
+          "poluicao_sonora": "Desconfortável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Iluminação Moderada",
+          "sombra": " Sombra reduzida"
+        },
+        "populacao": {
+          "origem": "Praça Mártires de Ferreira de Castro",
+          "destino": "Zona Industrial",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      }
+    ],
+    "Câmara Municipal": [
+      {
+        "destino": "Praça Mártires de Ferreira de Castro",
+        "distancia": 0.001,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Praça Mártires de Ferreira de Castro",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Praça Mártires de Ferreira de Castro",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Praça Mártires de Ferreira de Castro",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Teatro Cinema de Fafe",
+        "distancia": 0.001,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Teatro Cinema de Fafe",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Teatro Cinema de Fafe",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra abragente"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Teatro Cinema de Fafe",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Jardim do Calvário",
+        "distancia": 0.002,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Jardim do Calvário",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Jardim do Calvário",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Ligeiro",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra abragente"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Jardim do Calvário",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Biblioteca Municipal",
+        "distancia": 0.002,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Biblioteca Municipal",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Biblioteca Municipal",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Biblioteca Municipal",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Parque da Cidade",
+        "distancia": 0.008,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Parque da Cidade",
+          "pavimento": "Pavimento Ligeiramente Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Elevado",
+          "passeios": "Moderado. Risco ligeiro.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Parque da Cidade",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra abragente"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Parque da Cidade",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Pavilhão Multiusos",
+        "distancia": 0.011,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Pavilhão Multiusos",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Elevado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Pavilhão Multiusos",
+          "temperatura": "Ideal.",
+          "qualidade_ar": "Boa",
+          "poluicao_sonora": "Aceitável",
+          "poluicao_visual": "Aceitável",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Pavilhão Multiusos",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Zona Industrial",
+        "distancia": 0.026,
+        "acessibilidade": {
+          "origem": "Câmara Municipal",
+          "destino": "Zona Industrial",
+          "pavimento": "Pavimento Muito Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Elevado",
+          "passeios": "Reduzido. Risco elevado.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Câmara Municipal",
+          "destino": "Zona Industrial",
+          "temperatura": "Risco Moderado.",
+          "qualidade_ar": "Risco Moderado",
+          "poluicao_sonora": "Desconfortável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Iluminação Moderada",
+          "sombra": " Sombra reduzida"
+        },
+        "populacao": {
+          "origem": "Câmara Municipal",
+          "destino": "Zona Industrial",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      }
+    ]
+  },
+  "coordenadas": {
+    "Praça Mártires de Ferreira de Castro": [41.451, -8.1705],
+    "Câmara Municipal": [41.4505, -8.1715],
+    "Teatro Cinema de Fafe": [41.4498, -8.1725],
+    "Jardim do Calvário": [41.452, -8.173],
+    "Biblioteca Municipal": [41.4485, -8.171],
+    "Parque da Cidade": [41.455, -8.165],
+    "Pavilhão Multiusos": [41.457, -8.162],
+    "Zona Industrial": [41.465, -8.15]
+  }
 }

@@ -176,11 +176,30 @@ def main():
                 # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
             cidades_disponiveis = {
                 "Fafe": "city/grafo_fafe.json",
-                "Famalicão": "city/grafo_famalicao.json",
-                "Guimarães" : "city/grafo_guimarães.json"
+                "Famalicão": "city/grafo_famalicão.json",
+                "Guimarães" : "city/grafo_guimarães.json",
+                "Beja" : "city/grafo_beja.json",
+                "Aveiro" : "city/grafo_aveiro.json",
+                "Barcelos" : "city/grafo_barcelos.json",
+                "Braga" : "city/grafo_braga.json",
+                "Lagos" : "city/grafo_lagos.json",
+                "Caldas da Rainha" : "city/grafo_caldas_da_rainha.json",
+                "Coimbra" : "city/grafo_coimbra.json",
+                "Lisboa" : "city/grafo_lisboa.json",
+                "Covilhã" : "city/grafo_covilhã.json",
+                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
+                "Évora" : "city/grafo_évora.json",
+                "Portimão" : "city/grafo_portimão.json",
+                "Viseu" : "city/grafo_viseu.json",
+                "Faro" : "city/grafo_faro.json",
+                "Porto" : "city/grafo_porto.json",
+                "Tomar" : "city/grafo_tomar.json",
+                "Póvoa de Varzim" : "city/grafo_póvoa_de_varzim.json",
+                "Vila Nova de Gaia" : "city/grafo_faro.json",
+                "Figueira da Foz": "city/grafo_figueira_da_foz.json"
             }
             print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys())}")            
-            selecao = input("Escolha a cidade para a simulação:").strip().title()
+            selecao = input("Escolha a cidade para a simulação: ").strip()
 
             if selecao not in cidades_disponiveis:
                 print(f"ERRO: A cidade {selecao} não está carregada no sistema.")

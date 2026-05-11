@@ -1,487 +1,204 @@
 {
-  "cidade": "Tomar",
-  "nodes": {
-    "Convento de Cristo": {
-      "x": -253.84,
-      "y": -204.55
-    },
-    "Praça da República": {
-      "x": -172.31,
-      "y": -149.31
-    },
-    "Hospital de Tomar": {
-      "x": -190.29,
-      "y": -177.17
-    },
-    "Mata dos Sete Montes": {
-      "x": -240.42,
-      "y": -240.42
-    },
-    "Politécnico de Tomar": {
-      "x": -165.58,
-      "y": -177.85
-    },
-    "Bebedouro Mata": {
-      "x": -146.03,
-      "y": -168.53
-    },
-    "Parque do Mouchão": {
-      "x": -161.89,
-      "y": -200.89
-    },
-    "WC Público Centro": {
-      "x": -134.24,
-      "y": -179.32
-    }
+  "adjacencias": {
+    "Convento de Cristo": [
+      {
+        "destino": "Praça da República",
+        "distancia": 98.423,
+        "acessibilidade": {
+          "origem": "Convento de Cristo",
+          "destino": "Praça da República",
+          "pavimento": "Pavimento Irregular",
+          "inclinacao": "Nível Muito Elevado",
+          "passadeiras": "Moderado",
+          "passeios": "Reduzido. Risco elevado.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Convento de Cristo",
+          "destino": "Praça da República",
+          "temperatura": "Risco Moderado.",
+          "qualidade_ar": "Risco Moderado",
+          "poluicao_sonora": "Desconfortável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Convento de Cristo",
+          "destino": "Praça da República",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Hospital de Tomar",
+        "distancia": 69.171,
+        "acessibilidade": {
+          "origem": "Convento de Cristo",
+          "destino": "Hospital de Tomar",
+          "pavimento": "Pavimento Ligeiramente Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Convento de Cristo",
+          "destino": "Hospital de Tomar",
+          "temperatura": "Desconforto Ligeiro.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Convento de Cristo",
+          "destino": "Hospital de Tomar",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      },
+      {
+        "destino": "Mata dos Sete Montes",
+        "distancia": 38.283,
+        "acessibilidade": {
+          "origem": "Convento de Cristo",
+          "destino": "Mata dos Sete Montes",
+          "pavimento": "Pavimento Muito Irregular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Moderado. Risco ligeiro.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Convento de Cristo",
+          "destino": "Mata dos Sete Montes",
+          "temperatura": "Desconforto Ligeiro.",
+          "qualidade_ar": "Risco Moderado",
+          "poluicao_sonora": "Aceitável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Risco Ligeiro",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Convento de Cristo",
+          "destino": "Mata dos Sete Montes",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Politécnico de Tomar",
+        "distancia": 92.222,
+        "acessibilidade": {
+          "origem": "Convento de Cristo",
+          "destino": "Politécnico de Tomar",
+          "pavimento": "Pavimento Ligeiramente Irregular",
+          "inclinacao": "Nível Moderado",
+          "passadeiras": "Moderado",
+          "passeios": "Elevado. Risco reduzido.",
+          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Convento de Cristo",
+          "destino": "Politécnico de Tomar",
+          "temperatura": "Desconforto Ligeiro.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Ideal",
+          "poluicao_visual": "Ideal",
+          "nivel_polen": "Risco Ligeiro",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Convento de Cristo",
+          "destino": "Politécnico de Tomar",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de reduzida afluência de peões."
+        }
+      }
+    ],
+    "Praça da República": [
+      {
+        "destino": "Convento de Cristo",
+        "distancia": 98.423,
+        "acessibilidade": {
+          "origem": "Praça da República",
+          "destino": "Convento de Cristo",
+          "pavimento": "Pavimento Irregular",
+          "inclinacao": "Nível Muito Elevado",
+          "passadeiras": "Moderado",
+          "passeios": "Reduzido. Risco elevado.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça da República",
+          "destino": "Convento de Cristo",
+          "temperatura": "Risco Moderado.",
+          "qualidade_ar": "Risco Moderado",
+          "poluicao_sonora": "Desconfortável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Ideal. Ar limpo.",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça da República",
+          "destino": "Convento de Cristo",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      },
+      {
+        "destino": "Hospital de Tomar",
+        "distancia": 33.204,
+        "acessibilidade": {
+          "origem": "Praça da República",
+          "destino": "Hospital de Tomar",
+          "pavimento": "Pavimento Regular",
+          "inclinacao": "Nível Baixo",
+          "passadeiras": "Moderado",
+          "passeios": "Reduzido. Risco elevado.",
+          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
+          "escadas": "O percurso não inclui escadas."
+        },
+        "ambiente": {
+          "origem": "Praça da República",
+          "destino": "Hospital de Tomar",
+          "temperatura": "Desconforto Ligeiro.",
+          "qualidade_ar": "Excelente",
+          "poluicao_sonora": "Desconfortável",
+          "poluicao_visual": "Desconfortável",
+          "nivel_polen": "Risco Moderado",
+          "iluminacao": "Ótima",
+          "sombra": "Sombra moderada"
+        },
+        "populacao": {
+          "origem": "Praça da República",
+          "destino": "Hospital de Tomar",
+          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
+          "multidao": "Zona de elevada afluência de peões."
+        }
+      }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Praça da República",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -253.84,
-        "y": -204.55
-      },
-      "destino_coord": {
-        "x": -172.31,
-        "y": -149.31
-      }
-    },
-    {
-      "destino": "Mata dos Sete Montes",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -253.84,
-        "y": -204.55
-      },
-      "destino_coord": {
-        "x": -240.42,
-        "y": -240.42
-      }
-    },
-    {
-      "destino": "Hospital de Tomar",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -172.31,
-        "y": -149.31
-      },
-      "destino_coord": {
-        "x": -190.29,
-        "y": -177.17
-      }
-    },
-    {
-      "destino": "WC Público Centro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -172.31,
-        "y": -149.31
-      },
-      "destino_coord": {
-        "x": -134.24,
-        "y": -179.32
-      }
-    },
-    {
-      "destino": "Mata dos Sete Montes",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -190.29,
-        "y": -177.17
-      },
-      "destino_coord": {
-        "x": -240.42,
-        "y": -240.42
-      }
-    },
-    {
-      "destino": "Praça da República",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -190.29,
-        "y": -177.17
-      },
-      "destino_coord": {
-        "x": -172.31,
-        "y": -149.31
-      }
-    },
-    {
-      "destino": "Politécnico de Tomar",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -240.42,
-        "y": -240.42
-      },
-      "destino_coord": {
-        "x": -165.58,
-        "y": -177.85
-      }
-    },
-    {
-      "destino": "Bebedouro Mata",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -165.58,
-        "y": -177.85
-      },
-      "destino_coord": {
-        "x": -146.03,
-        "y": -168.53
-      }
-    },
-    {
-      "destino": "Convento de Cristo",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -165.58,
-        "y": -177.85
-      },
-      "destino_coord": {
-        "x": -253.84,
-        "y": -204.55
-      }
-    },
-    {
-      "destino": "Parque do Mouchão",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -146.03,
-        "y": -168.53
-      },
-      "destino_coord": {
-        "x": -161.89,
-        "y": -200.89
-      }
-    },
-    {
-      "destino": "WC Público Centro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -161.89,
-        "y": -200.89
-      },
-      "destino_coord": {
-        "x": -134.24,
-        "y": -179.32
-      }
-    },
-    {
-      "destino": "Hospital de Tomar",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -161.89,
-        "y": -200.89
-      },
-      "destino_coord": {
-        "x": -190.29,
-        "y": -177.17
-      }
-    },
-    {
-      "destino": "Convento de Cristo",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -134.24,
-        "y": -179.32
-      },
-      "destino_coord": {
-        "x": -253.84,
-        "y": -204.55
-      }
-    },
-    {
-      "destino": "Mata dos Sete Montes",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -134.24,
-        "y": -179.32
-      },
-      "destino_coord": {
-        "x": -240.42,
-        "y": -240.42
-      }
-    }
-  ]
+  "coordenadas": {
+    "Convento de Cristo": [-253.84, -204.55],
+    "Praça da República": [-172.31, -149.31],
+    "Hospital de Tomar": [-190.29, -177.17],
+    "Mata dos Sete Montes": [-240.42, -240.42],
+    "Politécnico de Tomar": [-165.58, -177.85],
+    "Bebedouro Mata": [-146.03, -168.53],
+    "Parque do Mouchão": [-161.89, -200.89],
+    "WC Público Centro": [-134.24, -179.32]
+  }
 }

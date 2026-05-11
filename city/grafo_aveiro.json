@@ -1,551 +1,62 @@
 {
-  "cidade": "Aveiro",
-  "nodes": {
-    "Fórum Aveiro": {
-      "x": -78.98,
-      "y": -211.75
-    },
-    "Universidade de Aveiro": {
-      "x": -72.32,
-      "y": -217.28
-    },
-    "Estação de Aveiro": {
-      "x": -62.26,
-      "y": -212.05
-    },
-    "Hospital Infante D. Pedro": {
-      "x": -72.96,
-      "y": -285.84
-    },
-    "Salinas de Aveiro": {
-      "x": -55.05,
-      "y": -253.08
-    },
-    "Bebedouro Salinas": {
-      "x": -62.14,
-      "y": -344.44
-    },
-    "Parque Infante D. Pedro": {
-      "x": -36.29,
-      "y": -252.4
-    },
-    "WC Público Estação": {
-      "x": -30.68,
-      "y": -285.36
-    }
+  "adjacencias": {
+    "Estação de Aveiro": [
+      { "destino": "Fórum Aveiro", "distancia": 0.012, "acessibilidade": { "origem": "Estação de Aveiro", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Aveiro", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Reduzida" }, "populacao": { "origem": "Estação de Aveiro", "destino": "Fórum Aveiro", "transito": "Sim", "multidao": "Sim" } },
+      { "destino": "WC Público Estação", "distancia": 0.001, "acessibilidade": { "origem": "Estação de Aveiro", "destino": "WC Público Estação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Aveiro", "destino": "WC Público Estação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Nula" }, "populacao": { "origem": "Estação de Aveiro", "destino": "WC Público Estação", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Hospital Infante D. Pedro", "distancia": 0.015, "acessibilidade": { "origem": "Estação de Aveiro", "destino": "Hospital Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Aveiro", "destino": "Hospital Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Moderada" }, "populacao": { "origem": "Estação de Aveiro", "destino": "Hospital Infante D. Pedro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Salinas de Aveiro", "distancia": 0.020, "acessibilidade": { "origem": "Estação de Aveiro", "destino": "Salinas de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Moderado", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Aveiro", "destino": "Salinas de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação de Aveiro", "destino": "Salinas de Aveiro", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Fórum Aveiro": [
+      { "destino": "Estação de Aveiro", "distancia": 0.012, "acessibilidade": { "origem": "Fórum Aveiro", "destino": "Estação de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Fórum Aveiro", "destino": "Estação de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Fórum Aveiro", "destino": "Estação de Aveiro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Salinas de Aveiro", "distancia": 0.008, "acessibilidade": { "origem": "Fórum Aveiro", "destino": "Salinas de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Fórum Aveiro", "destino": "Salinas de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Fórum Aveiro", "destino": "Salinas de Aveiro", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Parque Infante D. Pedro", "distancia": 0.010, "acessibilidade": { "origem": "Fórum Aveiro", "destino": "Parque Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Fórum Aveiro", "destino": "Parque Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Fórum Aveiro", "destino": "Parque Infante D. Pedro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Universidade de Aveiro", "distancia": 0.015, "acessibilidade": { "origem": "Fórum Aveiro", "destino": "Universidade de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Fórum Aveiro", "destino": "Universidade de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Fórum Aveiro", "destino": "Universidade de Aveiro", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Universidade de Aveiro": [
+      { "destino": "Fórum Aveiro", "distancia": 0.015, "acessibilidade": { "origem": "Universidade de Aveiro", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade de Aveiro", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Universidade de Aveiro", "destino": "Fórum Aveiro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital Infante D. Pedro", "distancia": 0.010, "acessibilidade": { "origem": "Universidade de Aveiro", "destino": "Hospital Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade de Aveiro", "destino": "Hospital Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Universidade de Aveiro", "destino": "Hospital Infante D. Pedro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque Infante D. Pedro", "distancia": 0.007, "acessibilidade": { "origem": "Universidade de Aveiro", "destino": "Parque Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade de Aveiro", "destino": "Parque Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Universidade de Aveiro", "destino": "Parque Infante D. Pedro", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro Salinas", "distancia": 0.018, "acessibilidade": { "origem": "Universidade de Aveiro", "destino": "Bebedouro Salinas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade de Aveiro", "destino": "Bebedouro Salinas", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Universidade de Aveiro", "destino": "Bebedouro Salinas", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Hospital Infante D. Pedro": [
+      { "destino": "Estação de Aveiro", "distancia": 0.015, "acessibilidade": { "origem": "Hospital Infante D. Pedro", "destino": "Estação de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Infante D. Pedro", "destino": "Estação de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital Infante D. Pedro", "destino": "Estação de Aveiro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Universidade de Aveiro", "distancia": 0.010, "acessibilidade": { "origem": "Hospital Infante D. Pedro", "destino": "Universidade de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Infante D. Pedro", "destino": "Universidade de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Infante D. Pedro", "destino": "Universidade de Aveiro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque Infante D. Pedro", "distancia": 0.005, "acessibilidade": { "origem": "Hospital Infante D. Pedro", "destino": "Parque Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Infante D. Pedro", "destino": "Parque Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital Infante D. Pedro", "destino": "Parque Infante D. Pedro", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "WC Público Estação", "distancia": 0.014, "acessibilidade": { "origem": "Hospital Infante D. Pedro", "destino": "WC Público Estação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Infante D. Pedro", "destino": "WC Público Estação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Infante D. Pedro", "destino": "WC Público Estação", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Salinas de Aveiro": [
+      { "destino": "Fórum Aveiro", "distancia": 0.008, "acessibilidade": { "origem": "Salinas de Aveiro", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Salinas de Aveiro", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Salinas de Aveiro", "destino": "Fórum Aveiro", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro Salinas", "distancia": 0.002, "acessibilidade": { "origem": "Salinas de Aveiro", "destino": "Bebedouro Salinas", "pavimento": "Pavimento Irregular (Terra)", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Salinas de Aveiro", "destino": "Bebedouro Salinas", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Salinas de Aveiro", "destino": "Bebedouro Salinas", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Estação de Aveiro", "distancia": 0.020, "acessibilidade": { "origem": "Salinas de Aveiro", "destino": "Estação de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Salinas de Aveiro", "destino": "Estação de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Salinas de Aveiro", "destino": "Estação de Aveiro", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Parque Infante D. Pedro", "distancia": 0.015, "acessibilidade": { "origem": "Salinas de Aveiro", "destino": "Parque Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Salinas de Aveiro", "destino": "Parque Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Salinas de Aveiro", "destino": "Parque Infante D. Pedro", "transito": "Não", "multidao": "Moderada" } }
+    ],
+    "Bebedouro Salinas": [
+      { "destino": "Salinas de Aveiro", "distancia": 0.002, "acessibilidade": { "origem": "Bebedouro Salinas", "destino": "Salinas de Aveiro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Salinas", "destino": "Salinas de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Salinas", "destino": "Salinas de Aveiro", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Universidade de Aveiro", "distancia": 0.018, "acessibilidade": { "origem": "Bebedouro Salinas", "destino": "Universidade de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Salinas", "destino": "Universidade de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Salinas", "destino": "Universidade de Aveiro", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Fórum Aveiro", "distancia": 0.009, "acessibilidade": { "origem": "Bebedouro Salinas", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Salinas", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Salinas", "destino": "Fórum Aveiro", "transito": "Não", "multidao": "Média" } },
+      { "destino": "WC Público Estação", "distancia": 0.019, "acessibilidade": { "origem": "Bebedouro Salinas", "destino": "WC Público Estação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Salinas", "destino": "WC Público Estação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Salinas", "destino": "WC Público Estação", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Parque Infante D. Pedro": [
+      { "destino": "Hospital Infante D. Pedro", "distancia": 0.005, "acessibilidade": { "origem": "Parque Infante D. Pedro", "destino": "Hospital Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infante D. Pedro", "destino": "Hospital Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infante D. Pedro", "destino": "Hospital Infante D. Pedro", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Universidade de Aveiro", "distancia": 0.007, "acessibilidade": { "origem": "Parque Infante D. Pedro", "destino": "Universidade de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infante D. Pedro", "destino": "Universidade de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infante D. Pedro", "destino": "Universidade de Aveiro", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Fórum Aveiro", "distancia": 0.010, "acessibilidade": { "origem": "Parque Infante D. Pedro", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infante D. Pedro", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infante D. Pedro", "destino": "Fórum Aveiro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Salinas de Aveiro", "distancia": 0.015, "acessibilidade": { "origem": "Parque Infante D. Pedro", "destino": "Salinas de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infante D. Pedro", "destino": "Salinas de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infante D. Pedro", "destino": "Salinas de Aveiro", "transito": "Não", "multidao": "Moderada" } }
+    ],
+    "WC Público Estação": [
+      { "destino": "Estação de Aveiro", "distancia": 0.001, "acessibilidade": { "origem": "WC Público Estação", "destino": "Estação de Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Estação", "destino": "Estação de Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "WC Público Estação", "destino": "Estação de Aveiro", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital Infante D. Pedro", "distancia": 0.014, "acessibilidade": { "origem": "WC Público Estação", "destino": "Hospital Infante D. Pedro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Estação", "destino": "Hospital Infante D. Pedro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Estação", "destino": "Hospital Infante D. Pedro", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro Salinas", "distancia": 0.019, "acessibilidade": { "origem": "WC Público Estação", "destino": "Bebedouro Salinas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Estação", "destino": "Bebedouro Salinas", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Estação", "destino": "Bebedouro Salinas", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Fórum Aveiro", "distancia": 0.011, "acessibilidade": { "origem": "WC Público Estação", "destino": "Fórum Aveiro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Estação", "destino": "Fórum Aveiro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Estação", "destino": "Fórum Aveiro", "transito": "Sim", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Universidade de Aveiro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      }, 
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -78.98,
-        "y": -211.75
-      },
-      "destino_coord": {
-        "x": -72.32,
-        "y": -217.28
-      }
-    },
-    {
-      "destino": "Salinas de Aveiro",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -78.98,
-        "y": -211.75
-      },
-      "destino_coord": {
-        "x": -55.05,
-        "y": -253.08
-      }
-    },
-    {
-      "destino": "Estação de Aveiro",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -72.32,
-        "y": -217.28
-      },
-      "destino_coord": {
-        "x": -62.26,
-        "y": -212.05
-      }
-    },
-    {
-      "destino": "Estação de Aveiro",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -72.32,
-        "y": -217.28
-      },
-      "destino_coord": {
-        "x": -62.26,
-        "y": -212.05
-      }
-    },
-    {
-      "destino": "Hospital Infante D. Pedro",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -62.26,
-        "y": -212.05
-      },
-      "destino_coord": {
-        "x": -72.96,
-        "y": -285.84
-      }
-    },
-    {
-      "destino": "Universidade de Aveiro",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -62.26,
-        "y": -212.05
-      },
-      "destino_coord": {
-        "x": -72.32,
-        "y": -217.28
-      }
-    },
-    {
-      "destino": "Salinas de Aveiro",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -72.96,
-        "y": -285.84
-      },
-      "destino_coord": {
-        "x": -55.05,
-        "y": -253.08
-      }
-    },
-    {
-      "destino": "Bebedouro Salinas",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -72.96,
-        "y": -285.84
-      },
-      "destino_coord": {
-        "x": -62.14,
-        "y": -344.44
-      }
-    },
-    {
-      "destino": "Bebedouro Salinas",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -55.05,
-        "y": -253.08
-      },
-      "destino_coord": {
-        "x": -62.14,
-        "y": -344.44
-      }
-    },
-    {
-      "destino": "Hospital Infante D. Pedro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -55.05,
-        "y": -253.08
-      },
-      "destino_coord": {
-        "x": -72.96,
-        "y": -285.84
-      }
-    },
-    {
-      "destino": "Parque Infante D. Pedro",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -62.14,
-        "y": -344.44
-      },
-      "destino_coord": {
-        "x": -36.29,
-        "y": -252.4
-      }
-    },
-    {
-      "destino": "Hospital Infante D. Pedro",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -62.14,
-        "y": -344.44
-      },
-      "destino_coord": {
-        "x": -72.96,
-        "y": -285.84
-      }
-    },
-    {
-      "destino": "WC Público Estação",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -36.29,
-        "y": -252.4
-      },
-      "destino_coord": {
-        "x": -30.68,
-        "y": -285.36
-      }
-    },
-    {
-      "destino": "Estação de Aveiro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -36.29,
-        "y": -252.4
-      },
-      "destino_coord": {
-        "x": -62.26,
-        "y": -212.05
-      }
-    },
-    {
-      "destino": "Fórum Aveiro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -30.68,
-        "y": -285.36
-      },
-      "destino_coord": {
-        "x": -78.98,
-        "y": -211.75
-      }
-    },
-    {
-      "destino": "Universidade de Aveiro",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -30.68,
-        "y": -285.36
-      },
-      "destino_coord": {
-        "x": -72.32,
-        "y": -217.28
-      }
-    }
-  ]
+  "coordenadas": {
+    "Estação de Aveiro": [40.643, -8.641],
+    "Fórum Aveiro": [40.641, -8.650],
+    "Universidade de Aveiro": [40.630, -8.657],
+    "Hospital Infante D. Pedro": [40.638, -8.645],
+    "Salinas de Aveiro": [40.644, -8.657],
+    "Bebedouro Salinas": [40.645, -8.658],
+    "Parque Infante D. Pedro": [40.637, -8.650],
+    "WC Público Estação": [40.643, -8.642]
+  }
 }

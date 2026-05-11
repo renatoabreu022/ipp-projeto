@@ -1,487 +1,62 @@
 {
-  "cidade": "Lagos",
-  "nodes": {
-    "Marina de Lagos": {
-      "x": 220.3,
-      "y": -120.29
-    },
-    "Hospital de Lagos": {
-      "x": 269.16,
-      "y": -134.73
-    },
-    "Mercado Municipal": {
-      "x": -248.37,
-      "y": 17.76
-    },
-    "Ponta da Piedade": {
-      "x": 261.97,
-      "y": -119.64
-    },
-    "Praça Infante Dom Henrique": {
-      "x": 230.05,
-      "y": -95.29
-    },
-    "Bebedouro Marina": {
-      "x": 290.45,
-      "y": -108.33
-    },
-    "Centro de Ciência Viva": {
-      "x": 357.71,
-      "y": -119.06
-    },
-    "WC Público Centro": {
-      "x": -134.24,
-      "y": -179.32
-    }
+  "adjacencias": {
+    "Marina de Lagos": [
+      { "destino": "Bebedouro Marina", "distancia": 0.001, "acessibilidade": { "origem": "Marina de Lagos", "destino": "Bebedouro Marina", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Marina de Lagos", "destino": "Bebedouro Marina", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Marina de Lagos", "destino": "Bebedouro Marina", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Mercado Municipal", "distancia": 0.008, "acessibilidade": { "origem": "Marina de Lagos", "destino": "Mercado Municipal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Marina de Lagos", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Marina de Lagos", "destino": "Mercado Municipal", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Centro de Ciência Viva", "distancia": 0.010, "acessibilidade": { "origem": "Marina de Lagos", "destino": "Centro de Ciência Viva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Marina de Lagos", "destino": "Centro de Ciência Viva", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Marina de Lagos", "destino": "Centro de Ciência Viva", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.012, "acessibilidade": { "origem": "Marina de Lagos", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Marina de Lagos", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Marina de Lagos", "destino": "Praça Infante Dom Henrique", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Hospital de Lagos": [
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.005, "acessibilidade": { "origem": "Hospital de Lagos", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Lagos", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Lagos", "destino": "Praça Infante Dom Henrique", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "WC Público Centro", "distancia": 0.004, "acessibilidade": { "origem": "Hospital de Lagos", "destino": "WC Público Centro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Lagos", "destino": "WC Público Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital de Lagos", "destino": "WC Público Centro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Mercado Municipal", "distancia": 0.006, "acessibilidade": { "origem": "Hospital de Lagos", "destino": "Mercado Municipal", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Lagos", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital de Lagos", "destino": "Mercado Municipal", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Centro de Ciência Viva", "distancia": 0.007, "acessibilidade": { "origem": "Hospital de Lagos", "destino": "Centro de Ciência Viva", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Lagos", "destino": "Centro de Ciência Viva", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Lagos", "destino": "Centro de Ciência Viva", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Mercado Municipal": [
+      { "destino": "Marina de Lagos", "distancia": 0.008, "acessibilidade": { "origem": "Mercado Municipal", "destino": "Marina de Lagos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Mercado Municipal", "destino": "Marina de Lagos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Mercado Municipal", "destino": "Marina de Lagos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.003, "acessibilidade": { "origem": "Mercado Municipal", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Mercado Municipal", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Mercado Municipal", "destino": "Praça Infante Dom Henrique", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Hospital de Lagos", "distancia": 0.006, "acessibilidade": { "origem": "Mercado Municipal", "destino": "Hospital de Lagos", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Mercado Municipal", "destino": "Hospital de Lagos", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Mercado Municipal", "destino": "Hospital de Lagos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "WC Público Centro", "distancia": 0.005, "acessibilidade": { "origem": "Mercado Municipal", "destino": "WC Público Centro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Mercado Municipal", "destino": "WC Público Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Mercado Municipal", "destino": "WC Público Centro", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Ponta da Piedade": [
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.025, "acessibilidade": { "origem": "Ponta da Piedade", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Regular/Terra", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Ponta da Piedade", "destino": "Praça Infante Dom Henrique", "temperatura": "Fresco/Vento", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Ponta da Piedade", "destino": "Praça Infante Dom Henrique", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital de Lagos", "distancia": 0.028, "acessibilidade": { "origem": "Ponta da Piedade", "destino": "Hospital de Lagos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponta da Piedade", "destino": "Hospital de Lagos", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ponta da Piedade", "destino": "Hospital de Lagos", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "WC Público Centro", "distancia": 0.027, "acessibilidade": { "origem": "Ponta da Piedade", "destino": "WC Público Centro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponta da Piedade", "destino": "WC Público Centro", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ponta da Piedade", "destino": "WC Público Centro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Mercado Municipal", "distancia": 0.030, "acessibilidade": { "origem": "Ponta da Piedade", "destino": "Mercado Municipal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponta da Piedade", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ponta da Piedade", "destino": "Mercado Municipal", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Praça Infante Dom Henrique": [
+      { "destino": "Mercado Municipal", "distancia": 0.003, "acessibilidade": { "origem": "Praça Infante Dom Henrique", "destino": "Mercado Municipal", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça Infante Dom Henrique", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça Infante Dom Henrique", "destino": "Mercado Municipal", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Hospital de Lagos", "distancia": 0.005, "acessibilidade": { "origem": "Praça Infante Dom Henrique", "destino": "Hospital de Lagos", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça Infante Dom Henrique", "destino": "Hospital de Lagos", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça Infante Dom Henrique", "destino": "Hospital de Lagos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ponta da Piedade", "distancia": 0.025, "acessibilidade": { "origem": "Praça Infante Dom Henrique", "destino": "Ponta da Piedade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça Infante Dom Henrique", "destino": "Ponta da Piedade", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Praça Infante Dom Henrique", "destino": "Ponta da Piedade", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Marina de Lagos", "distancia": 0.012, "acessibilidade": { "origem": "Praça Infante Dom Henrique", "destino": "Marina de Lagos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça Infante Dom Henrique", "destino": "Marina de Lagos", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça Infante Dom Henrique", "destino": "Marina de Lagos", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Bebedouro Marina": [
+      { "destino": "Marina de Lagos", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Marina", "destino": "Marina de Lagos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Marina", "destino": "Marina de Lagos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Marina", "destino": "Marina de Lagos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Mercado Municipal", "distancia": 0.009, "acessibilidade": { "origem": "Bebedouro Marina", "destino": "Mercado Municipal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Marina", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Marina", "destino": "Mercado Municipal", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Centro de Ciência Viva", "distancia": 0.011, "acessibilidade": { "origem": "Bebedouro Marina", "destino": "Centro de Ciência Viva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Marina", "destino": "Centro de Ciência Viva", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Marina", "destino": "Centro de Ciência Viva", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.013, "acessibilidade": { "origem": "Bebedouro Marina", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Marina", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Marina", "destino": "Praça Infante Dom Henrique", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Centro de Ciência Viva": [
+      { "destino": "Marina de Lagos", "distancia": 0.010, "acessibilidade": { "origem": "Centro de Ciência Viva", "destino": "Marina de Lagos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro de Ciência Viva", "destino": "Marina de Lagos", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Centro de Ciência Viva", "destino": "Marina de Lagos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "WC Público Centro", "distancia": 0.003, "acessibilidade": { "origem": "Centro de Ciência Viva", "destino": "WC Público Centro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Centro de Ciência Viva", "destino": "WC Público Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro de Ciência Viva", "destino": "WC Público Centro", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital de Lagos", "distancia": 0.007, "acessibilidade": { "origem": "Centro de Ciência Viva", "destino": "Hospital de Lagos", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Centro de Ciência Viva", "destino": "Hospital de Lagos", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro de Ciência Viva", "destino": "Hospital de Lagos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.004, "acessibilidade": { "origem": "Centro de Ciência Viva", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Centro de Ciência Viva", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Centro de Ciência Viva", "destino": "Praça Infante Dom Henrique", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "WC Público Centro": [
+      { "destino": "Hospital de Lagos", "distancia": 0.004, "acessibilidade": { "origem": "WC Público Centro", "destino": "Hospital de Lagos", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Centro", "destino": "Hospital de Lagos", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Centro", "destino": "Hospital de Lagos", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Centro de Ciência Viva", "distancia": 0.003, "acessibilidade": { "origem": "WC Público Centro", "destino": "Centro de Ciência Viva", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Centro", "destino": "Centro de Ciência Viva", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Centro", "destino": "Centro de Ciência Viva", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Mercado Municipal", "distancia": 0.005, "acessibilidade": { "origem": "WC Público Centro", "destino": "Mercado Municipal", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Centro", "destino": "Mercado Municipal", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Centro", "destino": "Mercado Municipal", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Praça Infante Dom Henrique", "distancia": 0.004, "acessibilidade": { "origem": "WC Público Centro", "destino": "Praça Infante Dom Henrique", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Centro", "destino": "Praça Infante Dom Henrique", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Centro", "destino": "Praça Infante Dom Henrique", "transito": "Não", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Ponta da Piedade",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -248.37,
-        "y": 17.76
-      },
-      "destino_coord": {
-        "x": 261.97,
-        "y": -119.64
-      }
-    },
-    {
-      "destino": "Ponta da Piedade",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -248.37,
-        "y": 17.76
-      },
-      "destino_coord": {
-        "x": 261.97,
-        "y": -119.64
-      }
-    },
-    {
-      "destino": "Marina de Lagos",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -134.24,
-        "y": -179.32
-      },
-      "destino_coord": {
-        "x": 220.3,
-        "y": -120.29
-      }
-    },
-    {
-      "destino": "Hospital de Lagos",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 220.3,
-        "y": -120.29
-      },
-      "destino_coord": {
-        "x": 269.16,
-        "y": -134.73
-      }
-    },
-    {
-      "destino": "Mercado Municipal",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 269.16,
-        "y": -134.73
-      },
-      "destino_coord": {
-        "x": -248.37,
-        "y": 17.76
-      }
-    },
-    {
-      "destino": "Bebedouro Marina",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 269.16,
-        "y": -134.73
-      },
-      "destino_coord": {
-        "x": 290.45,
-        "y": -108.33
-      }
-    },
-    {
-      "destino": "Praça Infante Dom Henrique",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 261.97,
-        "y": -119.64
-      },
-      "destino_coord": {
-        "x": 230.05,
-        "y": -95.29
-      }
-    },
-    {
-      "destino": "Marina de Lagos",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 261.97,
-        "y": -119.64
-      },
-      "destino_coord": {
-        "x": 220.3,
-        "y": -120.29
-      }
-    },
-    {
-      "destino": "Bebedouro Marina",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 230.05,
-        "y": -95.29
-      },
-      "destino_coord": {
-        "x": 290.45,
-        "y": -108.33
-      }
-    },
-    {
-      "destino": "WC Público Centro",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 230.05,
-        "y": -95.29
-      },
-      "destino_coord": {
-        "x": -134.24,
-        "y": -179.32
-      }
-    },
-    {
-      "destino": "Centro de Ciência Viva",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 290.45,
-        "y": -108.33
-      },
-      "destino_coord": {
-        "x": 357.71,
-        "y": -119.06
-      }
-    },
-    {
-      "destino": "Ponta da Piedade",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 290.45,
-        "y": -108.33
-      },
-      "destino_coord": {
-        "x": 261.97,
-        "y": -119.64
-      }
-    },
-    {
-      "destino": "WC Público Centro",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 357.71,
-        "y": -119.06
-      },
-      "destino_coord": {
-        "x": -134.24,
-        "y": -179.32
-      }
-    },
-    {
-      "destino": "Bebedouro Marina",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 357.71,
-        "y": -119.06
-      },
-      "destino_coord": {
-        "x": 290.45,
-        "y": -108.33
-      }
-    }
-  ]
+  "coordenadas": {
+    "Marina de Lagos": [37.108, -8.674],
+    "Hospital de Lagos": [37.101, -8.675],
+    "Mercado Municipal": [37.105, -8.672],
+    "Ponta da Piedade": [37.081, -8.669],
+    "Praça Infante Dom Henrique": [37.101, -8.671],
+    "Bebedouro Marina": [37.109, -8.673],
+    "Centro de Ciência Viva": [37.104, -8.673],
+    "WC Público Centro": [37.103, -8.674]
+  }
 }

@@ -1,419 +1,55 @@
 {
-  "cidade": "Caldas da Rainha",
-  "nodes": {
-    "Praça da Fruta": {
-      "x": -259.25,
-      "y": -118.39
-    },
-    "Hospital Termal": {
-      "x": -253.07,
-      "y": -126.68
-    },
-    "Parque D. Carlos I": {
-      "x": -252.77,
-      "y": -138.02
-    },
-    "Centro Comercial La Vie": {
-      "x": -217.58,
-      "y": -129.1
-    },
-    "ESAD.CR": {
-      "x": -276.77,
-      "y": -177.87
-    },
-    "Bebedouro Parque D. Carlos I": {
-      "x": -197.96,
-      "y": -137.45
-    },
-    "Posto de Informação": {
-      "x": -188.93,
-      "y": -141.43
-    }
+  "adjacencias": {
+    "Praça da Fruta": [
+      { "destino": "Hospital Termal", "distancia": 0.002, "acessibilidade": { "origem": "Praça da Fruta", "destino": "Hospital Termal", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça da Fruta", "destino": "Hospital Termal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça da Fruta", "destino": "Hospital Termal", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Parque D. Carlos I", "distancia": 0.005, "acessibilidade": { "origem": "Praça da Fruta", "destino": "Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça da Fruta", "destino": "Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Praça da Fruta", "destino": "Parque D. Carlos I", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Centro Comercial La Vie", "distancia": 0.008, "acessibilidade": { "origem": "Praça da Fruta", "destino": "Centro Comercial La Vie", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça da Fruta", "destino": "Centro Comercial La Vie", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Média" }, "populacao": { "origem": "Praça da Fruta", "destino": "Centro Comercial La Vie", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Posto de Informação", "distancia": 0.003, "acessibilidade": { "origem": "Praça da Fruta", "destino": "Posto de Informação", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça da Fruta", "destino": "Posto de Informação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça da Fruta", "destino": "Posto de Informação", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Hospital Termal": [
+      { "destino": "Praça da Fruta", "distancia": 0.002, "acessibilidade": { "origem": "Hospital Termal", "destino": "Praça da Fruta", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Hospital Termal", "destino": "Praça da Fruta", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital Termal", "destino": "Praça da Fruta", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Parque D. Carlos I", "distancia": 0.001, "acessibilidade": { "origem": "Hospital Termal", "destino": "Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Termal", "destino": "Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital Termal", "destino": "Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "ESAD.CR", "distancia": 0.015, "acessibilidade": { "origem": "Hospital Termal", "destino": "ESAD.CR", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Termal", "destino": "ESAD.CR", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Termal", "destino": "ESAD.CR", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Posto de Informação", "distancia": 0.002, "acessibilidade": { "origem": "Hospital Termal", "destino": "Posto de Informação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Termal", "destino": "Posto de Informação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Termal", "destino": "Posto de Informação", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Parque D. Carlos I": [
+      { "destino": "Bebedouro Parque D. Carlos I", "distancia": 0.001, "acessibilidade": { "origem": "Parque D. Carlos I", "destino": "Bebedouro Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque D. Carlos I", "destino": "Bebedouro Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque D. Carlos I", "destino": "Bebedouro Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Hospital Termal", "distancia": 0.001, "acessibilidade": { "origem": "Parque D. Carlos I", "destino": "Hospital Termal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque D. Carlos I", "destino": "Hospital Termal", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque D. Carlos I", "destino": "Hospital Termal", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Praça da Fruta", "distancia": 0.005, "acessibilidade": { "origem": "Parque D. Carlos I", "destino": "Praça da Fruta", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque D. Carlos I", "destino": "Praça da Fruta", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Parque D. Carlos I", "destino": "Praça da Fruta", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "ESAD.CR", "distancia": 0.012, "acessibilidade": { "origem": "Parque D. Carlos I", "destino": "ESAD.CR", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque D. Carlos I", "destino": "ESAD.CR", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Parque D. Carlos I", "destino": "ESAD.CR", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Centro Comercial La Vie": [
+      { "destino": "Praça da Fruta", "distancia": 0.008, "acessibilidade": { "origem": "Centro Comercial La Vie", "destino": "Praça da Fruta", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial La Vie", "destino": "Praça da Fruta", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Centro Comercial La Vie", "destino": "Praça da Fruta", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Posto de Informação", "distancia": 0.007, "acessibilidade": { "origem": "Centro Comercial La Vie", "destino": "Posto de Informação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial La Vie", "destino": "Posto de Informação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Comercial La Vie", "destino": "Posto de Informação", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "ESAD.CR", "distancia": 0.010, "acessibilidade": { "origem": "Centro Comercial La Vie", "destino": "ESAD.CR", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial La Vie", "destino": "ESAD.CR", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Comercial La Vie", "destino": "ESAD.CR", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro Parque D. Carlos I", "distancia": 0.009, "acessibilidade": { "origem": "Centro Comercial La Vie", "destino": "Bebedouro Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial La Vie", "destino": "Bebedouro Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Centro Comercial La Vie", "destino": "Bebedouro Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "ESAD.CR": [
+      { "destino": "Parque D. Carlos I", "distancia": 0.012, "acessibilidade": { "origem": "ESAD.CR", "destino": "Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "ESAD.CR", "destino": "Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "ESAD.CR", "destino": "Parque D. Carlos I", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Centro Comercial La Vie", "distancia": 0.010, "acessibilidade": { "origem": "ESAD.CR", "destino": "Centro Comercial La Vie", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "ESAD.CR", "destino": "Centro Comercial La Vie", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "ESAD.CR", "destino": "Centro Comercial La Vie", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital Termal", "distancia": 0.015, "acessibilidade": { "origem": "ESAD.CR", "destino": "Hospital Termal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "ESAD.CR", "destino": "Hospital Termal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "ESAD.CR", "destino": "Hospital Termal", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Bebedouro Parque D. Carlos I", "distancia": 0.013, "acessibilidade": { "origem": "ESAD.CR", "destino": "Bebedouro Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "ESAD.CR", "destino": "Bebedouro Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "ESAD.CR", "destino": "Bebedouro Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Bebedouro Parque D. Carlos I": [
+      { "destino": "Parque D. Carlos I", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "ESAD.CR", "distancia": 0.013, "acessibilidade": { "origem": "Bebedouro Parque D. Carlos I", "destino": "ESAD.CR", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque D. Carlos I", "destino": "ESAD.CR", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Moderada" }, "populacao": { "origem": "Bebedouro Parque D. Carlos I", "destino": "ESAD.CR", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Centro Comercial La Vie", "distancia": 0.009, "acessibilidade": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Centro Comercial La Vie", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Centro Comercial La Vie", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Centro Comercial La Vie", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Posto de Informação", "distancia": 0.004, "acessibilidade": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Posto de Informação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Posto de Informação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Parque D. Carlos I", "destino": "Posto de Informação", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Posto de Informação": [
+      { "destino": "Praça da Fruta", "distancia": 0.003, "acessibilidade": { "origem": "Posto de Informação", "destino": "Praça da Fruta", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Informação", "destino": "Praça da Fruta", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Posto de Informação", "destino": "Praça da Fruta", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Hospital Termal", "distancia": 0.002, "acessibilidade": { "origem": "Posto de Informação", "destino": "Hospital Termal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Informação", "destino": "Hospital Termal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Posto de Informação", "destino": "Hospital Termal", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Centro Comercial La Vie", "distancia": 0.007, "acessibilidade": { "origem": "Posto de Informação", "destino": "Centro Comercial La Vie", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Informação", "destino": "Centro Comercial La Vie", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Informação", "destino": "Centro Comercial La Vie", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Bebedouro Parque D. Carlos I", "distancia": 0.004, "acessibilidade": { "origem": "Posto de Informação", "destino": "Bebedouro Parque D. Carlos I", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Informação", "destino": "Bebedouro Parque D. Carlos I", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Posto de Informação", "destino": "Bebedouro Parque D. Carlos I", "transito": "Não", "multidao": "Baixa" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Hospital Termal",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -259.25,
-        "y": -118.39
-      },
-      "destino_coord": {
-        "x": -253.07,
-        "y": -126.68
-      }
-    },
-    {
-      "destino": "Bebedouro Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -259.25,
-        "y": -118.39
-      },
-      "destino_coord": {
-        "x": -197.96,
-        "y": -137.45
-      }
-    },
-    {
-      "destino": "Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -253.07,
-        "y": -126.68
-      },
-      "destino_coord": {
-        "x": -252.77,
-        "y": -138.02
-      }
-    },
-    {
-      "destino": "Centro Comercial La Vie",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -252.77,
-        "y": -138.02
-      },
-      "destino_coord": {
-        "x": -217.58,
-        "y": -129.1
-      }
-    },
-    {
-      "destino": "Bebedouro Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -252.77,
-        "y": -138.02
-      },
-      "destino_coord": {
-        "x": -197.96,
-        "y": -137.45
-      }
-    },
-    {
-      "destino": "ESAD.CR",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -217.58,
-        "y": -129.1
-      },
-      "destino_coord": {
-        "x": -276.77,
-        "y": -177.87
-      }
-    },
-    {
-      "destino": "Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -217.58,
-        "y": -129.1
-      },
-      "destino_coord": {
-        "x": -252.77,
-        "y": -138.02
-      }
-    },
-    {
-      "destino": "Bebedouro Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -276.77,
-        "y": -177.87
-      },
-      "destino_coord": {
-        "x": -197.96,
-        "y": -137.45
-      }
-    },
-    {
-      "destino": "Bebedouro Parque D. Carlos I",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -276.77,
-        "y": -177.87
-      },
-      "destino_coord": {
-        "x": -197.96,
-        "y": -137.45
-      }
-    },
-    {
-      "destino": "Posto de Informação",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -197.96,
-        "y": -137.45
-      },
-      "destino_coord": {
-        "x": -188.93,
-        "y": -141.43
-      }
-    },
-    {
-      "destino": "Praça da Fruta",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -188.93,
-        "y": -141.43
-      },
-      "destino_coord": {
-        "x": -259.25,
-        "y": -118.39
-      }
-    },
-    {
-      "destino": "Centro Comercial La Vie",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -188.93,
-        "y": -141.43
-      },
-      "destino_coord": {
-        "x": -217.58,
-        "y": -129.1
-      }
-    }
-  ]
+  "coordenadas": {
+    "Praça da Fruta": [39.404, -9.136],
+    "Hospital Termal": [39.402, -9.136],
+    "Parque D. Carlos I": [39.401, -9.135],
+    "Centro Comercial La Vie": [39.406, -9.133],
+    "ESAD.CR": [39.409, -9.131],
+    "Bebedouro Parque D. Carlos I": [39.401, -9.136],
+    "Posto de Informação": [39.403, -9.137]
+  }
 }

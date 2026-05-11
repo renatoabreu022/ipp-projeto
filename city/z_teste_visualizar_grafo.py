@@ -48,5 +48,3 @@ nx.draw_networkx_edges(G, pos, edge_color='gray', arrows=True, arrowsize=10, alp
 plt.axis('off') # Remove os eixos para focar no grafo
 plt.tight_layout()
 plt.show()
-
-#O GRAFO ESTÁ UM POUCO CONFUSO, ESTÁ A UNIR AS CIDADES TODAS

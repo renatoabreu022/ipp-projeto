@@ -1,551 +1,62 @@
 {
-  "cidade": "Barcelos",
-  "nodes": {
-    "IPCA": {
-      "x": -179.49,
-      "y": 279.3
-    },
-    "Campo da Feira": {
-      "x": -171.67,
-      "y": 247.25
-    },
-    "Hospital Santa Maria Maior": {
-      "x": -166.0,
-      "y": 221.75
-    },
-    "Templo do Senhor da Cruz": {
-      "x": -235.93,
-      "y": 292.77
-    },
-    "Estação de Barcelos": {
-      "x": -221.34,
-      "y": 255.44
-    },
-    "Bebedouro IPCA": {
-      "x": -193.52,
-      "y": 207.86
-    },
-    "Parque Infantil de Barcelos": {
-      "x": -263.04,
-      "y": 263.04
-    },
-    "Ecoponto Estação": {
-      "x": -233.47,
-      "y": 217.37
-    }
+  "adjacencias": {
+    "IPCA": [
+      { "destino": "Bebedouro IPCA", "distancia": 0.001, "acessibilidade": { "origem": "IPCA", "destino": "Bebedouro IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "IPCA", "destino": "Bebedouro IPCA", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Moderada" }, "populacao": { "origem": "IPCA", "destino": "Bebedouro IPCA", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Campo da Feira", "distancia": 0.015, "acessibilidade": { "origem": "IPCA", "destino": "Campo da Feira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Moderado", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "IPCA", "destino": "Campo da Feira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Reduzida" }, "populacao": { "origem": "IPCA", "destino": "Campo da Feira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Estação de Barcelos", "distancia": 0.022, "acessibilidade": { "origem": "IPCA", "destino": "Estação de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "IPCA", "destino": "Estação de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "IPCA", "destino": "Estação de Barcelos", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Hospital Santa Maria Maior", "distancia": 0.018, "acessibilidade": { "origem": "IPCA", "destino": "Hospital Santa Maria Maior", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "IPCA", "destino": "Hospital Santa Maria Maior", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "IPCA", "destino": "Hospital Santa Maria Maior", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Campo da Feira": [
+      { "destino": "Templo do Senhor da Cruz", "distancia": 0.003, "acessibilidade": { "origem": "Campo da Feira", "destino": "Templo do Senhor da Cruz", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Campo da Feira", "destino": "Templo do Senhor da Cruz", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Pouca" }, "populacao": { "origem": "Campo da Feira", "destino": "Templo do Senhor da Cruz", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "IPCA", "distancia": 0.015, "acessibilidade": { "origem": "Campo da Feira", "destino": "IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Campo da Feira", "destino": "IPCA", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Campo da Feira", "destino": "IPCA", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque Infantil de Barcelos", "distancia": 0.006, "acessibilidade": { "origem": "Campo da Feira", "destino": "Parque Infantil de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Campo da Feira", "destino": "Parque Infantil de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Campo da Feira", "destino": "Parque Infantil de Barcelos", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Hospital Santa Maria Maior", "distancia": 0.008, "acessibilidade": { "origem": "Campo da Feira", "destino": "Hospital Santa Maria Maior", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Campo da Feira", "destino": "Hospital Santa Maria Maior", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Campo da Feira", "destino": "Hospital Santa Maria Maior", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Hospital Santa Maria Maior": [
+      { "destino": "Estação de Barcelos", "distancia": 0.010, "acessibilidade": { "origem": "Hospital Santa Maria Maior", "destino": "Estação de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Santa Maria Maior", "destino": "Estação de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital Santa Maria Maior", "destino": "Estação de Barcelos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Campo da Feira", "distancia": 0.008, "acessibilidade": { "origem": "Hospital Santa Maria Maior", "destino": "Campo da Feira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Santa Maria Maior", "destino": "Campo da Feira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Santa Maria Maior", "destino": "Campo da Feira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "IPCA", "distancia": 0.018, "acessibilidade": { "origem": "Hospital Santa Maria Maior", "destino": "IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Santa Maria Maior", "destino": "IPCA", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Santa Maria Maior", "destino": "IPCA", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque Infantil de Barcelos", "distancia": 0.005, "acessibilidade": { "origem": "Hospital Santa Maria Maior", "destino": "Parque Infantil de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Santa Maria Maior", "destino": "Parque Infantil de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital Santa Maria Maior", "destino": "Parque Infantil de Barcelos", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Templo do Senhor da Cruz": [
+      { "destino": "Campo da Feira", "distancia": 0.003, "acessibilidade": { "origem": "Templo do Senhor da Cruz", "destino": "Campo da Feira", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Templo do Senhor da Cruz", "destino": "Campo da Feira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Templo do Senhor da Cruz", "destino": "Campo da Feira", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Estação de Barcelos", "distancia": 0.009, "acessibilidade": { "origem": "Templo do Senhor da Cruz", "destino": "Estação de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Templo do Senhor da Cruz", "destino": "Estação de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Templo do Senhor da Cruz", "destino": "Estação de Barcelos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque Infantil de Barcelos", "distancia": 0.004, "acessibilidade": { "origem": "Templo do Senhor da Cruz", "destino": "Parque Infantil de Barcelos", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Templo do Senhor da Cruz", "destino": "Parque Infantil de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Templo do Senhor da Cruz", "destino": "Parque Infantil de Barcelos", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bebedouro IPCA", "distancia": 0.016, "acessibilidade": { "origem": "Templo do Senhor da Cruz", "destino": "Bebedouro IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Templo do Senhor da Cruz", "destino": "Bebedouro IPCA", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Templo do Senhor da Cruz", "destino": "Bebedouro IPCA", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Estação de Barcelos": [
+      { "destino": "Ecoponto Estação", "distancia": 0.001, "acessibilidade": { "origem": "Estação de Barcelos", "destino": "Ecoponto Estação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Barcelos", "destino": "Ecoponto Estação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação de Barcelos", "destino": "Ecoponto Estação", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Templo do Senhor da Cruz", "distancia": 0.009, "acessibilidade": { "origem": "Estação de Barcelos", "destino": "Templo do Senhor da Cruz", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Barcelos", "destino": "Templo do Senhor da Cruz", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Barcelos", "destino": "Templo do Senhor da Cruz", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital Santa Maria Maior", "distancia": 0.010, "acessibilidade": { "origem": "Estação de Barcelos", "destino": "Hospital Santa Maria Maior", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Barcelos", "destino": "Hospital Santa Maria Maior", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Barcelos", "destino": "Hospital Santa Maria Maior", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "IPCA", "distancia": 0.022, "acessibilidade": { "origem": "Estação de Barcelos", "destino": "IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Barcelos", "destino": "IPCA", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Barcelos", "destino": "IPCA", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Bebedouro IPCA": [
+      { "destino": "IPCA", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro IPCA", "destino": "IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro IPCA", "destino": "IPCA", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro IPCA", "destino": "IPCA", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Templo do Senhor da Cruz", "distancia": 0.016, "acessibilidade": { "origem": "Bebedouro IPCA", "destino": "Templo do Senhor da Cruz", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro IPCA", "destino": "Templo do Senhor da Cruz", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro IPCA", "destino": "Templo do Senhor da Cruz", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Ecoponto Estação", "distancia": 0.021, "acessibilidade": { "origem": "Bebedouro IPCA", "destino": "Ecoponto Estação", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro IPCA", "destino": "Ecoponto Estação", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro IPCA", "destino": "Ecoponto Estação", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Parque Infantil de Barcelos", "distancia": 0.017, "acessibilidade": { "origem": "Bebedouro IPCA", "destino": "Parque Infantil de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro IPCA", "destino": "Parque Infantil de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro IPCA", "destino": "Parque Infantil de Barcelos", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Parque Infantil de Barcelos": [
+      { "destino": "Hospital Santa Maria Maior", "distancia": 0.005, "acessibilidade": { "origem": "Parque Infantil de Barcelos", "destino": "Hospital Santa Maria Maior", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil de Barcelos", "destino": "Hospital Santa Maria Maior", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infantil de Barcelos", "destino": "Hospital Santa Maria Maior", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Campo da Feira", "distancia": 0.006, "acessibilidade": { "origem": "Parque Infantil de Barcelos", "destino": "Campo da Feira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil de Barcelos", "destino": "Campo da Feira", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infantil de Barcelos", "destino": "Campo da Feira", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Templo do Senhor da Cruz", "distancia": 0.004, "acessibilidade": { "origem": "Parque Infantil de Barcelos", "destino": "Templo do Senhor da Cruz", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil de Barcelos", "destino": "Templo do Senhor da Cruz", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infantil de Barcelos", "destino": "Templo do Senhor da Cruz", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bebedouro IPCA", "distancia": 0.017, "acessibilidade": { "origem": "Parque Infantil de Barcelos", "destino": "Bebedouro IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil de Barcelos", "destino": "Bebedouro IPCA", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infantil de Barcelos", "destino": "Bebedouro IPCA", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Ecoponto Estação": [
+      { "destino": "Estação de Barcelos", "distancia": 0.001, "acessibilidade": { "origem": "Ecoponto Estação", "destino": "Estação de Barcelos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Estação", "destino": "Estação de Barcelos", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Média", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ecoponto Estação", "destino": "Estação de Barcelos", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro IPCA", "distancia": 0.021, "acessibilidade": { "origem": "Ecoponto Estação", "destino": "Bebedouro IPCA", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Estação", "destino": "Bebedouro IPCA", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Estação", "destino": "Bebedouro IPCA", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Templo do Senhor da Cruz", "distancia": 0.010, "acessibilidade": { "origem": "Ecoponto Estação", "destino": "Templo do Senhor da Cruz", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Estação", "destino": "Templo do Senhor da Cruz", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Estação", "destino": "Templo do Senhor da Cruz", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital Santa Maria Maior", "distancia": 0.011, "acessibilidade": { "origem": "Ecoponto Estação", "destino": "Hospital Santa Maria Maior", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Estação", "destino": "Hospital Santa Maria Maior", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Estação", "destino": "Hospital Santa Maria Maior", "transito": "Sim", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Campo da Feira",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -179.49,
-        "y": 279.3
-      },
-      "destino_coord": {
-        "x": -171.67,
-        "y": 247.25
-      }
-    },
-    {
-      "destino": "Hospital Santa Maria Maior",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -179.49,
-        "y": 279.3
-      },
-      "destino_coord": {
-        "x": -166.0,
-        "y": 221.75
-      }
-    },
-    {
-      "destino": "Hospital Santa Maria Maior",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -171.67,
-        "y": 247.25
-      },
-      "destino_coord": {
-        "x": -166.0,
-        "y": 221.75
-      }
-    },
-    {
-      "destino": "Hospital Santa Maria Maior",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -171.67,
-        "y": 247.25
-      },
-      "destino_coord": {
-        "x": -166.0,
-        "y": 221.75
-      }
-    },
-    {
-      "destino": "Templo do Senhor da Cruz",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -166.0,
-        "y": 221.75
-      },
-      "destino_coord": {
-        "x": -235.93,
-        "y": 292.77
-      }
-    },
-    {
-      "destino": "Templo do Senhor da Cruz",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -166.0,
-        "y": 221.75
-      },
-      "destino_coord": {
-        "x": -235.93,
-        "y": 292.77
-      }
-    },
-    {
-      "destino": "Estação de Barcelos",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -235.93,
-        "y": 292.77
-      },
-      "destino_coord": {
-        "x": -221.34,
-        "y": 255.44
-      }
-    },
-    {
-      "destino": "Hospital Santa Maria Maior",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -235.93,
-        "y": 292.77
-      },
-      "destino_coord": {
-        "x": -166.0,
-        "y": 221.75
-      }
-    },
-    {
-      "destino": "Bebedouro IPCA",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -221.34,
-        "y": 255.44
-      },
-      "destino_coord": {
-        "x": -193.52,
-        "y": 207.86
-      }
-    },
-    {
-      "destino": "Templo do Senhor da Cruz",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -221.34,
-        "y": 255.44
-      },
-      "destino_coord": {
-        "x": -235.93,
-        "y": 292.77
-      }
-    },
-    {
-      "destino": "Parque Infantil de Barcelos",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -193.52,
-        "y": 207.86
-      },
-      "destino_coord": {
-        "x": -263.04,
-        "y": 263.04
-      }
-    },
-    {
-      "destino": "Parque Infantil de Barcelos",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -193.52,
-        "y": 207.86
-      },
-      "destino_coord": {
-        "x": -263.04,
-        "y": 263.04
-      }
-    },
-    {
-      "destino": "Ecoponto Estação",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -263.04,
-        "y": 263.04
-      },
-      "destino_coord": {
-        "x": -233.47,
-        "y": 217.37
-      }
-    },
-    {
-      "destino": "Campo da Feira",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -263.04,
-        "y": 263.04
-      },
-      "destino_coord": {
-        "x": -171.67,
-        "y": 247.25
-      }
-    },
-    {
-      "destino": "IPCA",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -233.47,
-        "y": 217.37
-      },
-      "destino_coord": {
-        "x": -179.49,
-        "y": 279.3
-      }
-    },
-    {
-      "destino": "Templo do Senhor da Cruz",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -233.47,
-        "y": 217.37
-      },
-      "destino_coord": {
-        "x": -235.93,
-        "y": 292.77
-      }
-    }
-  ]
+  "coordenadas": {
+    "IPCA": [41.536, -8.627],
+    "Campo da Feira": [41.531, -8.620],
+    "Hospital Santa Maria Maior": [41.534, -8.614],
+    "Templo do Senhor da Cruz": [41.531, -8.621],
+    "Estação de Barcelos": [41.531, -8.611],
+    "Bebedouro IPCA": [41.537, -8.627],
+    "Parque Infantil de Barcelos": [41.532, -8.623],
+    "Ecoponto Estação": [41.531, -8.612]
+  }
 }

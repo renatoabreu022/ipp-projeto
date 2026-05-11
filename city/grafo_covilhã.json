@@ -1,519 +1,62 @@
 {
-  "cidade": "Covilhã",
-  "nodes": {
-    "UBI": {
-      "x": -333.57,
-      "y": -47.96
-    },
-    "Centro Hospitalar Cova da Beira": {
-      "x": -280.47,
-      "y": -50.6
-    },
-    "Praça do Município": {
-      "x": -359.59,
-      "y": -78.22
-    },
-    "Serra Shopping": {
-      "x": -239.33,
-      "y": -61.08
-    },
-    "Ponte da Carpinteira": {
-      "x": -300.32,
-      "y": -88.18
-    },
-    "Bebedouro UBI": {
-      "x": -220.13,
-      "y": -73.27
-    },
-    "Jardim Público da Covilhã": {
-      "x": -304.51,
-      "y": -113.58
-    },
-    "WC Público Praça": {
-      "x": -300.26,
-      "y": -124.37
-    }
+  "adjacencias": {
+    "UBI": [
+      { "destino": "Bebedouro UBI", "distancia": 0.001, "acessibilidade": { "origem": "UBI", "destino": "Bebedouro UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "UBI", "destino": "Bebedouro UBI", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "UBI", "destino": "Bebedouro UBI", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça do Município", "distancia": 0.008, "acessibilidade": { "origem": "UBI", "destino": "Praça do Município", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "UBI", "destino": "Praça do Município", "temperatura": "Fresco", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "UBI", "destino": "Praça do Município", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Ponte da Carpinteira", "distancia": 0.012, "acessibilidade": { "origem": "UBI", "destino": "Ponte da Carpinteira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "UBI", "destino": "Ponte da Carpinteira", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "UBI", "destino": "Ponte da Carpinteira", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Centro Hospitalar Cova da Beira", "distancia": 0.035, "acessibilidade": { "origem": "UBI", "destino": "Centro Hospitalar Cova da Beira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "UBI", "destino": "Centro Hospitalar Cova da Beira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "UBI", "destino": "Centro Hospitalar Cova da Beira", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Centro Hospitalar Cova da Beira": [
+      { "destino": "Serra Shopping", "distancia": 0.005, "acessibilidade": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Serra Shopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Serra Shopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Serra Shopping", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "UBI", "distancia": 0.035, "acessibilidade": { "origem": "Centro Hospitalar Cova da Beira", "destino": "UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Cova da Beira", "destino": "UBI", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Centro Hospitalar Cova da Beira", "destino": "UBI", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Jardim Público da Covilhã", "distancia": 0.028, "acessibilidade": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Jardim Público da Covilhã", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Jardim Público da Covilhã", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Centro Hospitalar Cova da Beira", "destino": "Jardim Público da Covilhã", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "WC Público Praça", "distancia": 0.032, "acessibilidade": { "origem": "Centro Hospitalar Cova da Beira", "destino": "WC Público Praça", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Cova da Beira", "destino": "WC Público Praça", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Cova da Beira", "destino": "WC Público Praça", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Praça do Município": [
+      { "destino": "WC Público Praça", "distancia": 0.001, "acessibilidade": { "origem": "Praça do Município", "destino": "WC Público Praça", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça do Município", "destino": "WC Público Praça", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça do Município", "destino": "WC Público Praça", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Jardim Público da Covilhã", "distancia": 0.006, "acessibilidade": { "origem": "Praça do Município", "destino": "Jardim Público da Covilhã", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça do Município", "destino": "Jardim Público da Covilhã", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Praça do Município", "destino": "Jardim Público da Covilhã", "transito": "Não", "multidao": "Média" } },
+      { "destino": "UBI", "distancia": 0.008, "acessibilidade": { "origem": "Praça do Município", "destino": "UBI", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça do Município", "destino": "UBI", "temperatura": "Fresco", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça do Município", "destino": "UBI", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Ponte da Carpinteira", "distancia": 0.015, "acessibilidade": { "origem": "Praça do Município", "destino": "Ponte da Carpinteira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça do Município", "destino": "Ponte da Carpinteira", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça do Município", "destino": "Ponte da Carpinteira", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Serra Shopping": [
+      { "destino": "Centro Hospitalar Cova da Beira", "distancia": 0.005, "acessibilidade": { "origem": "Serra Shopping", "destino": "Centro Hospitalar Cova da Beira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Serra Shopping", "destino": "Centro Hospitalar Cova da Beira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Serra Shopping", "destino": "Centro Hospitalar Cova da Beira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Jardim Público da Covilhã", "distancia": 0.030, "acessibilidade": { "origem": "Serra Shopping", "destino": "Jardim Público da Covilhã", "pavimento": "Pavimento Regular", "inclinacao": "Nível Muito Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Serra Shopping", "destino": "Jardim Público da Covilhã", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Serra Shopping", "destino": "Jardim Público da Covilhã", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Ponte da Carpinteira", "distancia": 0.025, "acessibilidade": { "origem": "Serra Shopping", "destino": "Ponte da Carpinteira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Serra Shopping", "destino": "Ponte da Carpinteira", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Serra Shopping", "destino": "Ponte da Carpinteira", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Bebedouro UBI", "distancia": 0.038, "acessibilidade": { "origem": "Serra Shopping", "destino": "Bebedouro UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Muito Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Serra Shopping", "destino": "Bebedouro UBI", "temperatura": "Fresco", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Serra Shopping", "destino": "Bebedouro UBI", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Ponte da Carpinteira": [
+      { "destino": "UBI", "distancia": 0.012, "acessibilidade": { "origem": "Ponte da Carpinteira", "destino": "UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponte da Carpinteira", "destino": "UBI", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Ponte da Carpinteira", "destino": "UBI", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Praça do Município", "distancia": 0.015, "acessibilidade": { "origem": "Ponte da Carpinteira", "destino": "Praça do Município", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponte da Carpinteira", "destino": "Praça do Município", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ponte da Carpinteira", "destino": "Praça do Município", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Serra Shopping", "distancia": 0.025, "acessibilidade": { "origem": "Ponte da Carpinteira", "destino": "Serra Shopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponte da Carpinteira", "destino": "Serra Shopping", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ponte da Carpinteira", "destino": "Serra Shopping", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Jardim Público da Covilhã", "distancia": 0.010, "acessibilidade": { "origem": "Ponte da Carpinteira", "destino": "Jardim Público da Covilhã", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ponte da Carpinteira", "destino": "Jardim Público da Covilhã", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Ponte da Carpinteira", "destino": "Jardim Público da Covilhã", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Bebedouro UBI": [
+      { "destino": "UBI", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro UBI", "destino": "UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro UBI", "destino": "UBI", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro UBI", "destino": "UBI", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça do Município", "distancia": 0.007, "acessibilidade": { "origem": "Bebedouro UBI", "destino": "Praça do Município", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro UBI", "destino": "Praça do Município", "temperatura": "Fresco", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro UBI", "destino": "Praça do Município", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Serra Shopping", "distancia": 0.038, "acessibilidade": { "origem": "Bebedouro UBI", "destino": "Serra Shopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro UBI", "destino": "Serra Shopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro UBI", "destino": "Serra Shopping", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Jardim Público da Covilhã", "distancia": 0.012, "acessibilidade": { "origem": "Bebedouro UBI", "destino": "Jardim Público da Covilhã", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro UBI", "destino": "Jardim Público da Covilhã", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro UBI", "destino": "Jardim Público da Covilhã", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Jardim Público da Covilhã": [
+      { "destino": "Praça do Município", "distancia": 0.006, "acessibilidade": { "origem": "Jardim Público da Covilhã", "destino": "Praça do Município", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público da Covilhã", "destino": "Praça do Município", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Jardim Público da Covilhã", "destino": "Praça do Município", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Ponte da Carpinteira", "distancia": 0.010, "acessibilidade": { "origem": "Jardim Público da Covilhã", "destino": "Ponte da Carpinteira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público da Covilhã", "destino": "Ponte da Carpinteira", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Jardim Público da Covilhã", "destino": "Ponte da Carpinteira", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro UBI", "distancia": 0.012, "acessibilidade": { "origem": "Jardim Público da Covilhã", "destino": "Bebedouro UBI", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público da Covilhã", "destino": "Bebedouro UBI", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Jardim Público da Covilhã", "destino": "Bebedouro UBI", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Serra Shopping", "distancia": 0.030, "acessibilidade": { "origem": "Jardim Público da Covilhã", "destino": "Serra Shopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público da Covilhã", "destino": "Serra Shopping", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim Público da Covilhã", "destino": "Serra Shopping", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "WC Público Praça": [
+      { "destino": "Praça do Município", "distancia": 0.001, "acessibilidade": { "origem": "WC Público Praça", "destino": "Praça do Município", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça", "destino": "Praça do Município", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça", "destino": "Praça do Município", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "UBI", "distancia": 0.009, "acessibilidade": { "origem": "WC Público Praça", "destino": "UBI", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça", "destino": "UBI", "temperatura": "Fresco", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça", "destino": "UBI", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Centro Hospitalar Cova da Beira", "distancia": 0.032, "acessibilidade": { "origem": "WC Público Praça", "destino": "Centro Hospitalar Cova da Beira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça", "destino": "Centro Hospitalar Cova da Beira", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça", "destino": "Centro Hospitalar Cova da Beira", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ponte da Carpinteira", "distancia": 0.016, "acessibilidade": { "origem": "WC Público Praça", "destino": "Ponte da Carpinteira", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça", "destino": "Ponte da Carpinteira", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça", "destino": "Ponte da Carpinteira", "transito": "Não", "multidao": "Média" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Centro Hospitalar Cova da Beira",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -333.57,
-        "y": -47.96
-      },
-      "destino_coord": {
-        "x": -280.47,
-        "y": -50.6
-      }
-    },
-    {
-      "destino": "Jardim Público da Covilhã",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -333.57,
-        "y": -47.96
-      },
-      "destino_coord": {
-        "x": -304.51,
-        "y": -113.58
-      }
-    },
-    {
-      "destino": "Praça do Município",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -280.47,
-        "y": -50.6
-      },
-      "destino_coord": {
-        "x": -359.59,
-        "y": -78.22
-      }
-    },
-    {
-      "destino": "Jardim Público da Covilhã",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -280.47,
-        "y": -50.6
-      },
-      "destino_coord": {
-        "x": -304.51,
-        "y": -113.58
-      }
-    },
-    {
-      "destino": "Serra Shopping",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -359.59,
-        "y": -78.22
-      },
-      "destino_coord": {
-        "x": -239.33,
-        "y": -61.08
-      }
-    },
-    {
-      "destino": "Ponte da Carpinteira",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -239.33,
-        "y": -61.08
-      },
-      "destino_coord": {
-        "x": -300.32,
-        "y": -88.18
-      }
-    },
-    {
-      "destino": "Jardim Público da Covilhã",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -239.33,
-        "y": -61.08
-      },
-      "destino_coord": {
-        "x": -304.51,
-        "y": -113.58
-      }
-    },
-    {
-      "destino": "Bebedouro UBI",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -300.32,
-        "y": -88.18
-      },
-      "destino_coord": {
-        "x": -220.13,
-        "y": -73.27
-      }
-    },
-    {
-      "destino": "UBI",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -300.32,
-        "y": -88.18
-      },
-      "destino_coord": {
-        "x": -333.57,
-        "y": -47.96
-      }
-    },
-    {
-      "destino": "Jardim Público da Covilhã",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -220.13,
-        "y": -73.27
-      },
-      "destino_coord": {
-        "x": -304.51,
-        "y": -113.58
-      }
-    },
-    {
-      "destino": "UBI",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -220.13,
-        "y": -73.27
-      },
-      "destino_coord": {
-        "x": -333.57,
-        "y": -47.96
-      }
-    },
-    {
-      "destino": "WC Público Praça",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -304.51,
-        "y": -113.58
-      },
-      "destino_coord": {
-        "x": -300.26,
-        "y": -124.37
-      }
-    },
-    {
-      "destino": "UBI",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -304.51,
-        "y": -113.58
-      },
-      "destino_coord": {
-        "x": -333.57,
-        "y": -47.96
-      }
-    },
-    {
-      "destino": "UBI",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -300.26,
-        "y": -124.37
-      },
-      "destino_coord": {
-        "x": -333.57,
-        "y": -47.96
-      }
-    },
-    {
-      "destino": "Ponte da Carpinteira",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -300.26,
-        "y": -124.37
-      },
-      "destino_coord": {
-        "x": -300.32,
-        "y": -88.18
-      }
-    }
-  ]
+  "coordenadas": {
+    "UBI": [40.278, -7.509],
+    "Centro Hospitalar Cova da Beira": [40.264, -7.491],
+    "Praça do Município": [40.281, -7.503],
+    "Serra Shopping": [40.268, -7.493],
+    "Ponte da Carpinteira": [40.280, -7.500],
+    "Bebedouro UBI": [40.278, -7.508],
+    "Jardim Público da Covilhã": [40.282, -7.498],
+    "WC Público Praça": [40.281, -7.504]
+  }
 }

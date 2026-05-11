@@ -1,487 +1,62 @@
 {
-  "cidade": "Évora",
-  "nodes": {
-    "Sé de Évora": {
-      "x": 82.6,
-      "y": -323.63
-    },
-    "Templo Romano": {
-      "x": 102.55,
-      "y": -349.26
-    },
-    "Colégio do Espírito Santo": {
-      "x": 101.06,
-      "y": -303.62
-    },
-    "Hospital do Espírito Santo": {
-      "x": 96.8,
-      "y": -259.54
-    },
-    "Praça do Giraldo": {
-      "x": 102.18,
-      "y": -246.68
-    },
-    "Bebedouro Templo Romano": {
-      "x": 96.38,
-      "y": -211.03
-    },
-    "Jardim Público de Évora": {
-      "x": 125.78,
-      "y": -251.28
-    },
-    "Ecoponto Centro": {
-      "x": 154.32,
-      "y": -282.61
-    }
+  "adjacencias": {
+    "Sé de Évora": [
+      { "destino": "Templo Romano", "distancia": 0.001, "acessibilidade": { "origem": "Sé de Évora", "destino": "Templo Romano", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Sé de Évora", "destino": "Templo Romano", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Sé de Évora", "destino": "Templo Romano", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Praça do Giraldo", "distancia": 0.005, "acessibilidade": { "origem": "Sé de Évora", "destino": "Praça do Giraldo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Sé de Évora", "destino": "Praça do Giraldo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Sé de Évora", "destino": "Praça do Giraldo", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Colégio do Espírito Santo", "distancia": 0.006, "acessibilidade": { "origem": "Sé de Évora", "destino": "Colégio do Espírito Santo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Sé de Évora", "destino": "Colégio do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Sé de Évora", "destino": "Colégio do Espírito Santo", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro Templo Romano", "distancia": 0.002, "acessibilidade": { "origem": "Sé de Évora", "destino": "Bebedouro Templo Romano", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Sé de Évora", "destino": "Bebedouro Templo Romano", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Sé de Évora", "destino": "Bebedouro Templo Romano", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Templo Romano": [
+      { "destino": "Sé de Évora", "distancia": 0.001, "acessibilidade": { "origem": "Templo Romano", "destino": "Sé de Évora", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Templo Romano", "destino": "Sé de Évora", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Templo Romano", "destino": "Sé de Évora", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bebedouro Templo Romano", "distancia": 0.001, "acessibilidade": { "origem": "Templo Romano", "destino": "Bebedouro Templo Romano", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Templo Romano", "destino": "Bebedouro Templo Romano", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Templo Romano", "destino": "Bebedouro Templo Romano", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Colégio do Espírito Santo", "distancia": 0.005, "acessibilidade": { "origem": "Templo Romano", "destino": "Colégio do Espírito Santo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Templo Romano", "destino": "Colégio do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Templo Romano", "destino": "Colégio do Espírito Santo", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Hospital do Espírito Santo", "distancia": 0.008, "acessibilidade": { "origem": "Templo Romano", "destino": "Hospital do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Templo Romano", "destino": "Hospital do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Templo Romano", "destino": "Hospital do Espírito Santo", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Colégio do Espírito Santo": [
+      { "destino": "Hospital do Espírito Santo", "distancia": 0.003, "acessibilidade": { "origem": "Colégio do Espírito Santo", "destino": "Hospital do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Colégio do Espírito Santo", "destino": "Hospital do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Colégio do Espírito Santo", "destino": "Hospital do Espírito Santo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ecoponto Centro", "distancia": 0.002, "acessibilidade": { "origem": "Colégio do Espírito Santo", "destino": "Ecoponto Centro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Colégio do Espírito Santo", "destino": "Ecoponto Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Colégio do Espírito Santo", "destino": "Ecoponto Centro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Sé de Évora", "distancia": 0.006, "acessibilidade": { "origem": "Colégio do Espírito Santo", "destino": "Sé de Évora", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Colégio do Espírito Santo", "destino": "Sé de Évora", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Colégio do Espírito Santo", "destino": "Sé de Évora", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Templo Romano", "distancia": 0.005, "acessibilidade": { "origem": "Colégio do Espírito Santo", "destino": "Templo Romano", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Colégio do Espírito Santo", "destino": "Templo Romano", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Colégio do Espírito Santo", "destino": "Templo Romano", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Hospital do Espírito Santo": [
+      { "destino": "Praça do Giraldo", "distancia": 0.007, "acessibilidade": { "origem": "Hospital do Espírito Santo", "destino": "Praça do Giraldo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital do Espírito Santo", "destino": "Praça do Giraldo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital do Espírito Santo", "destino": "Praça do Giraldo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Colégio do Espírito Santo", "distancia": 0.003, "acessibilidade": { "origem": "Hospital do Espírito Santo", "destino": "Colégio do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital do Espírito Santo", "destino": "Colégio do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital do Espírito Santo", "destino": "Colégio do Espírito Santo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Jardim Público de Évora", "distancia": 0.010, "acessibilidade": { "origem": "Hospital do Espírito Santo", "destino": "Jardim Público de Évora", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital do Espírito Santo", "destino": "Jardim Público de Évora", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital do Espírito Santo", "destino": "Jardim Público de Évora", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Ecoponto Centro", "distancia": 0.004, "acessibilidade": { "origem": "Hospital do Espírito Santo", "destino": "Ecoponto Centro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital do Espírito Santo", "destino": "Ecoponto Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital do Espírito Santo", "destino": "Ecoponto Centro", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Praça do Giraldo": [
+      { "destino": "Sé de Évora", "distancia": 0.005, "acessibilidade": { "origem": "Praça do Giraldo", "destino": "Sé de Évora", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça do Giraldo", "destino": "Sé de Évora", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça do Giraldo", "destino": "Sé de Évora", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Jardim Público de Évora", "distancia": 0.006, "acessibilidade": { "origem": "Praça do Giraldo", "destino": "Jardim Público de Évora", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça do Giraldo", "destino": "Jardim Público de Évora", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Praça do Giraldo", "destino": "Jardim Público de Évora", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital do Espírito Santo", "distancia": 0.007, "acessibilidade": { "origem": "Praça do Giraldo", "destino": "Hospital do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça do Giraldo", "destino": "Hospital do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça do Giraldo", "destino": "Hospital do Espírito Santo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ecoponto Centro", "distancia": 0.003, "acessibilidade": { "origem": "Praça do Giraldo", "destino": "Ecoponto Centro", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça do Giraldo", "destino": "Ecoponto Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça do Giraldo", "destino": "Ecoponto Centro", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Bebedouro Templo Romano": [
+      { "destino": "Templo Romano", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Templo Romano", "destino": "Templo Romano", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Templo Romano", "destino": "Templo Romano", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Templo Romano", "destino": "Templo Romano", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Sé de Évora", "distancia": 0.002, "acessibilidade": { "origem": "Bebedouro Templo Romano", "destino": "Sé de Évora", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Templo Romano", "destino": "Sé de Évora", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Templo Romano", "destino": "Sé de Évora", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Colégio do Espírito Santo", "distancia": 0.006, "acessibilidade": { "origem": "Bebedouro Templo Romano", "destino": "Colégio do Espírito Santo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Templo Romano", "destino": "Colégio do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Templo Romano", "destino": "Colégio do Espírito Santo", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Jardim Público de Évora", "distancia": 0.012, "acessibilidade": { "origem": "Bebedouro Templo Romano", "destino": "Jardim Público de Évora", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Templo Romano", "destino": "Jardim Público de Évora", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Templo Romano", "destino": "Jardim Público de Évora", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Jardim Público de Évora": [
+      { "destino": "Praça do Giraldo", "distancia": 0.006, "acessibilidade": { "origem": "Jardim Público de Évora", "destino": "Praça do Giraldo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público de Évora", "destino": "Praça do Giraldo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim Público de Évora", "destino": "Praça do Giraldo", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital do Espírito Santo", "distancia": 0.010, "acessibilidade": { "origem": "Jardim Público de Évora", "destino": "Hospital do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público de Évora", "destino": "Hospital do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim Público de Évora", "destino": "Hospital do Espírito Santo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ecoponto Centro", "distancia": 0.008, "acessibilidade": { "origem": "Jardim Público de Évora", "destino": "Ecoponto Centro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público de Évora", "destino": "Ecoponto Centro", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim Público de Évora", "destino": "Ecoponto Centro", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bebedouro Templo Romano", "distancia": 0.012, "acessibilidade": { "origem": "Jardim Público de Évora", "destino": "Bebedouro Templo Romano", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim Público de Évora", "destino": "Bebedouro Templo Romano", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Jardim Público de Évora", "destino": "Bebedouro Templo Romano", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Ecoponto Centro": [
+      { "destino": "Praça do Giraldo", "distancia": 0.003, "acessibilidade": { "origem": "Ecoponto Centro", "destino": "Praça do Giraldo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Centro", "destino": "Praça do Giraldo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Centro", "destino": "Praça do Giraldo", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Colégio do Espírito Santo", "distancia": 0.002, "acessibilidade": { "origem": "Ecoponto Centro", "destino": "Colégio do Espírito Santo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Centro", "destino": "Colégio do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Centro", "destino": "Colégio do Espírito Santo", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Hospital do Espírito Santo", "distancia": 0.004, "acessibilidade": { "origem": "Ecoponto Centro", "destino": "Hospital do Espírito Santo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Centro", "destino": "Hospital do Espírito Santo", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Centro", "destino": "Hospital do Espírito Santo", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Jardim Público de Évora", "distancia": 0.008, "acessibilidade": { "origem": "Ecoponto Centro", "destino": "Jardim Público de Évora", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Centro", "destino": "Jardim Público de Évora", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Ecoponto Centro", "destino": "Jardim Público de Évora", "transito": "Não", "multidao": "Moderada" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Templo Romano",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 82.6,
-        "y": -323.63
-      },
-      "destino_coord": {
-        "x": 102.55,
-        "y": -349.26
-      }
-    },
-    {
-      "destino": "Bebedouro Templo Romano",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 82.6,
-        "y": -323.63
-      },
-      "destino_coord": {
-        "x": 96.38,
-        "y": -211.03
-      }
-    },
-    {
-      "destino": "Colégio do Espírito Santo",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 102.55,
-        "y": -349.26
-      },
-      "destino_coord": {
-        "x": 101.06,
-        "y": -303.62
-      }
-    },
-    {
-      "destino": "Jardim Público de Évora",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 102.55,
-        "y": -349.26
-      },
-      "destino_coord": {
-        "x": 125.78,
-        "y": -251.28
-      }
-    },
-    {
-      "destino": "Hospital do Espírito Santo",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 101.06,
-        "y": -303.62
-      },
-      "destino_coord": {
-        "x": 96.8,
-        "y": -259.54
-      }
-    },
-    {
-      "destino": "Templo Romano",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 101.06,
-        "y": -303.62
-      },
-      "destino_coord": {
-        "x": 102.55,
-        "y": -349.26
-      }
-    },
-    {
-      "destino": "Praça do Giraldo",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 96.8,
-        "y": -259.54
-      },
-      "destino_coord": {
-        "x": 102.18,
-        "y": -246.68
-      }
-    },
-    {
-      "destino": "Praça do Giraldo",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 96.8,
-        "y": -259.54
-      },
-      "destino_coord": {
-        "x": 102.18,
-        "y": -246.68
-      }
-    },
-    {
-      "destino": "Bebedouro Templo Romano",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 102.18,
-        "y": -246.68
-      },
-      "destino_coord": {
-        "x": 96.38,
-        "y": -211.03
-      }
-    },
-    {
-      "destino": "Jardim Público de Évora",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 96.38,
-        "y": -211.03
-      },
-      "destino_coord": {
-        "x": 125.78,
-        "y": -251.28
-      }
-    },
-    {
-      "destino": "Jardim Público de Évora",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 96.38,
-        "y": -211.03
-      },
-      "destino_coord": {
-        "x": 125.78,
-        "y": -251.28
-      }
-    },
-    {
-      "destino": "Ecoponto Centro",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 125.78,
-        "y": -251.28
-      },
-      "destino_coord": {
-        "x": 154.32,
-        "y": -282.61
-      }
-    },
-    {
-      "destino": "Sé de Évora",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 154.32,
-        "y": -282.61
-      },
-      "destino_coord": {
-        "x": 82.6,
-        "y": -323.63
-      }
-    },
-    {
-      "destino": "Bebedouro Templo Romano",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 154.32,
-        "y": -282.61
-      },
-      "destino_coord": {
-        "x": 96.38,
-        "y": -211.03
-      }
-    }
-  ]
+  "coordenadas": {
+    "Sé de Évora": [38.571, -7.906],
+    "Templo Romano": [38.572, -7.907],
+    "Colégio do Espírito Santo": [38.573, -7.903],
+    "Hospital do Espírito Santo": [38.571, -7.901],
+    "Praça do Giraldo": [38.570, -7.909],
+    "Bebedouro Templo Romano": [38.572, -7.908],
+    "Jardim Público de Évora": [38.567, -7.909],
+    "Ecoponto Centro": [38.573, -7.905]
+  }
 }

@@ -1,555 +1,69 @@
 {
-  "cidade": "Braga",
-  "nodes": {
-    "Bom Jesus do Monte": {
-      "x": 320.59,
-      "y": 132.79
-    },
-    "Avenida da Liberdade": {
-      "x": 211.94,
-      "y": 96.79
-    },
-    "Hospital de Braga": {
-      "x": 331.76,
-      "y": 166.07
-    },
-    "Universidade do Minho - Gualtar": {
-      "x": 200.11,
-      "y": 109.27
-    },
-    "Braga Parque": {
-      "x": 194.36,
-      "y": 115.32
-    },
-    "Bebedouro Arcada": {
-      "x": 212.84,
-      "y": 136.78
-    },
-    "Ciclovia do Rio Este": {
-      "x": 209.46,
-      "y": 145.43
-    },
-    "Ecoponto Gualtar": {
-      "x": 270.58,
-      "y": 202.56
-    },
-    "WC Público Praça do Município": {
-      "x": 260.84,
-      "y": 210.2
-    }
+  "adjacencias": {
+    "Bom Jesus do Monte": [
+      { "destino": "Universidade do Minho - Gualtar", "distancia": 0.025, "acessibilidade": { "origem": "Bom Jesus do Monte", "destino": "Universidade do Minho - Gualtar", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Muito Elevado", "passadeiras": "Sim", "passeios": "Moderado", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Bom Jesus do Monte", "destino": "Universidade do Minho - Gualtar", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Bom Jesus do Monte", "destino": "Universidade do Minho - Gualtar", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Avenida da Liberdade", "distancia": 0.045, "acessibilidade": { "origem": "Bom Jesus do Monte", "destino": "Avenida da Liberdade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bom Jesus do Monte", "destino": "Avenida da Liberdade", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Moderada" }, "populacao": { "origem": "Bom Jesus do Monte", "destino": "Avenida da Liberdade", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro Arcada", "distancia": 0.040, "acessibilidade": { "origem": "Bom Jesus do Monte", "destino": "Bebedouro Arcada", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Bom Jesus do Monte", "destino": "Bebedouro Arcada", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bom Jesus do Monte", "destino": "Bebedouro Arcada", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Braga Parque", "distancia": 0.035, "acessibilidade": { "origem": "Bom Jesus do Monte", "destino": "Braga Parque", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bom Jesus do Monte", "destino": "Braga Parque", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bom Jesus do Monte", "destino": "Braga Parque", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Avenida da Liberdade": [
+      { "destino": "Bebedouro Arcada", "distancia": 0.005, "acessibilidade": { "origem": "Avenida da Liberdade", "destino": "Bebedouro Arcada", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Avenida da Liberdade", "destino": "Bebedouro Arcada", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Média" }, "populacao": { "origem": "Avenida da Liberdade", "destino": "Bebedouro Arcada", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Ciclovia do Rio Este", "distancia": 0.008, "acessibilidade": { "origem": "Avenida da Liberdade", "destino": "Ciclovia do Rio Este", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Avenida da Liberdade", "destino": "Ciclovia do Rio Este", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Moderado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Avenida da Liberdade", "destino": "Ciclovia do Rio Este", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bom Jesus do Monte", "distancia": 0.045, "acessibilidade": { "origem": "Avenida da Liberdade", "destino": "Bom Jesus do Monte", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Avenida da Liberdade", "destino": "Bom Jesus do Monte", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Avenida da Liberdade", "destino": "Bom Jesus do Monte", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "WC Público Praça do Município", "distancia": 0.006, "acessibilidade": { "origem": "Avenida da Liberdade", "destino": "WC Público Praça do Município", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Avenida da Liberdade", "destino": "WC Público Praça do Município", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Avenida da Liberdade", "destino": "WC Público Praça do Município", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Hospital de Braga": [
+      { "destino": "Universidade do Minho - Gualtar", "distancia": 0.010, "acessibilidade": { "origem": "Hospital de Braga", "destino": "Universidade do Minho - Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Braga", "destino": "Universidade do Minho - Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital de Braga", "destino": "Universidade do Minho - Gualtar", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Braga Parque", "distancia": 0.012, "acessibilidade": { "origem": "Hospital de Braga", "destino": "Braga Parque", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Braga", "destino": "Braga Parque", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Braga", "destino": "Braga Parque", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ecoponto Gualtar", "distancia": 0.009, "acessibilidade": { "origem": "Hospital de Braga", "destino": "Ecoponto Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Braga", "destino": "Ecoponto Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Braga", "destino": "Ecoponto Gualtar", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Ciclovia do Rio Este", "distancia": 0.018, "acessibilidade": { "origem": "Hospital de Braga", "destino": "Ciclovia do Rio Este", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Braga", "destino": "Ciclovia do Rio Este", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Moderado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital de Braga", "destino": "Ciclovia do Rio Este", "transito": "Não", "multidao": "Moderada" } }
+    ],
+    "Universidade do Minho - Gualtar": [
+      { "destino": "Hospital de Braga", "distancia": 0.010, "acessibilidade": { "origem": "Universidade do Minho - Gualtar", "destino": "Hospital de Braga", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho - Gualtar", "destino": "Hospital de Braga", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Universidade do Minho - Gualtar", "destino": "Hospital de Braga", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Braga Parque", "distancia": 0.008, "acessibilidade": { "origem": "Universidade do Minho - Gualtar", "destino": "Braga Parque", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho - Gualtar", "destino": "Braga Parque", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Universidade do Minho - Gualtar", "destino": "Braga Parque", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ecoponto Gualtar", "distancia": 0.002, "acessibilidade": { "origem": "Universidade do Minho - Gualtar", "destino": "Ecoponto Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Universidade do Minho - Gualtar", "destino": "Ecoponto Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Universidade do Minho - Gualtar", "destino": "Ecoponto Gualtar", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Bom Jesus do Monte", "distancia": 0.025, "acessibilidade": { "origem": "Universidade do Minho - Gualtar", "destino": "Bom Jesus do Monte", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Muito Elevado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Universidade do Minho - Gualtar", "destino": "Bom Jesus do Monte", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Universidade do Minho - Gualtar", "destino": "Bom Jesus do Monte", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Braga Parque": [
+      { "destino": "Universidade do Minho - Gualtar", "distancia": 0.008, "acessibilidade": { "origem": "Braga Parque", "destino": "Universidade do Minho - Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Braga Parque", "destino": "Universidade do Minho - Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Braga Parque", "destino": "Universidade do Minho - Gualtar", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital de Braga", "distancia": 0.012, "acessibilidade": { "origem": "Braga Parque", "destino": "Hospital de Braga", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Braga Parque", "destino": "Hospital de Braga", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Braga Parque", "destino": "Hospital de Braga", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ciclovia do Rio Este", "distancia": 0.010, "acessibilidade": { "origem": "Braga Parque", "destino": "Ciclovia do Rio Este", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Braga Parque", "destino": "Ciclovia do Rio Este", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Moderado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Braga Parque", "destino": "Ciclovia do Rio Este", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bom Jesus do Monte", "distancia": 0.035, "acessibilidade": { "origem": "Braga Parque", "destino": "Bom Jesus do Monte", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Braga Parque", "destino": "Bom Jesus do Monte", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Braga Parque", "destino": "Bom Jesus do Monte", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Bebedouro Arcada": [
+      { "destino": "Avenida da Liberdade", "distancia": 0.005, "acessibilidade": { "origem": "Bebedouro Arcada", "destino": "Avenida da Liberdade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Elevado", "passeios": "Elevado", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Arcada", "destino": "Avenida da Liberdade", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Ótima", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Arcada", "destino": "Avenida da Liberdade", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "WC Público Praça do Município", "distancia": 0.003, "acessibilidade": { "origem": "Bebedouro Arcada", "destino": "WC Público Praça do Município", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Arcada", "destino": "WC Público Praça do Município", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Arcada", "destino": "WC Público Praça do Município", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bom Jesus do Monte", "distancia": 0.040, "acessibilidade": { "origem": "Bebedouro Arcada", "destino": "Bom Jesus do Monte", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Arcada", "destino": "Bom Jesus do Monte", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Arcada", "destino": "Bom Jesus do Monte", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ciclovia do Rio Este", "distancia": 0.015, "acessibilidade": { "origem": "Bebedouro Arcada", "destino": "Ciclovia do Rio Este", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Arcada", "destino": "Ciclovia do Rio Este", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Moderado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Arcada", "destino": "Ciclovia do Rio Este", "transito": "Não", "multidao": "Moderada" } }
+    ],
+    "Ciclovia do Rio Este": [
+      { "destino": "Avenida da Liberdade", "distancia": 0.008, "acessibilidade": { "origem": "Ciclovia do Rio Este", "destino": "Avenida da Liberdade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia do Rio Este", "destino": "Avenida da Liberdade", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Ciclovia do Rio Este", "destino": "Avenida da Liberdade", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Braga Parque", "distancia": 0.010, "acessibilidade": { "origem": "Ciclovia do Rio Este", "destino": "Braga Parque", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia do Rio Este", "destino": "Braga Parque", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ciclovia do Rio Este", "destino": "Braga Parque", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital de Braga", "distancia": 0.018, "acessibilidade": { "origem": "Ciclovia do Rio Este", "destino": "Hospital de Braga", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia do Rio Este", "destino": "Hospital de Braga", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ciclovia do Rio Este", "destino": "Hospital de Braga", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Bebedouro Arcada", "distancia": 0.015, "acessibilidade": { "origem": "Ciclovia do Rio Este", "destino": "Bebedouro Arcada", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia do Rio Este", "destino": "Bebedouro Arcada", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Ciclovia do Rio Este", "destino": "Bebedouro Arcada", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Ecoponto Gualtar": [
+      { "destino": "Universidade do Minho - Gualtar", "distancia": 0.002, "acessibilidade": { "origem": "Ecoponto Gualtar", "destino": "Universidade do Minho - Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Gualtar", "destino": "Universidade do Minho - Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Gualtar", "destino": "Universidade do Minho - Gualtar", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Hospital de Braga", "distancia": 0.009, "acessibilidade": { "origem": "Ecoponto Gualtar", "destino": "Hospital de Braga", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Gualtar", "destino": "Hospital de Braga", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Gualtar", "destino": "Hospital de Braga", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Braga Parque", "distancia": 0.015, "acessibilidade": { "origem": "Ecoponto Gualtar", "destino": "Braga Parque", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Gualtar", "destino": "Braga Parque", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Gualtar", "destino": "Braga Parque", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "WC Público Praça do Município", "distancia": 0.022, "acessibilidade": { "origem": "Ecoponto Gualtar", "destino": "WC Público Praça do Município", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Gualtar", "destino": "WC Público Praça do Município", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Gualtar", "destino": "WC Público Praça do Município", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "WC Público Praça do Município": [
+      { "destino": "Bebedouro Arcada", "distancia": 0.003, "acessibilidade": { "origem": "WC Público Praça do Município", "destino": "Bebedouro Arcada", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça do Município", "destino": "Bebedouro Arcada", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça do Município", "destino": "Bebedouro Arcada", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Avenida da Liberdade", "distancia": 0.006, "acessibilidade": { "origem": "WC Público Praça do Município", "destino": "Avenida da Liberdade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça do Município", "destino": "Avenida da Liberdade", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Praça do Município", "destino": "Avenida da Liberdade", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Ecoponto Gualtar", "distancia": 0.022, "acessibilidade": { "origem": "WC Público Praça do Município", "destino": "Ecoponto Gualtar", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça do Município", "destino": "Ecoponto Gualtar", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Praça do Município", "destino": "Ecoponto Gualtar", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Ciclovia do Rio Este", "distancia": 0.014, "acessibilidade": { "origem": "WC Público Praça do Município", "destino": "Ciclovia do Rio Este", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Praça do Município", "destino": "Ciclovia do Rio Este", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Moderado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "WC Público Praça do Município", "destino": "Ciclovia do Rio Este", "transito": "Não", "multidao": "Moderada" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Avenida da Liberdade",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 320.59,
-        "y": 132.79
-      },
-      "destino_coord": {
-        "x": 211.94,
-        "y": 96.79
-      }
-    },
-    {
-      "destino": "Hospital de Braga",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 320.59,
-        "y": 132.79
-      },
-      "destino_coord": {
-        "x": 331.76,
-        "y": 166.07
-      }
-    },
-    {
-      "destino": "Hospital de Braga",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 211.94,
-        "y": 96.79
-      },
-      "destino_coord": {
-        "x": 331.76,
-        "y": 166.07
-      }
-    },
-    {
-      "destino": "Universidade do Minho - Gualtar",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 211.94,
-        "y": 96.79
-      },
-      "destino_coord": {
-        "x": 200.11,
-        "y": 109.27
-      }
-    },
-    {
-      "destino": "Universidade do Minho - Gualtar",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 331.76,
-        "y": 166.07
-      },
-      "destino_coord": {
-        "x": 200.11,
-        "y": 109.27
-      }
-    },
-    {
-      "destino": "Universidade do Minho - Gualtar",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 331.76,
-        "y": 166.07
-      },
-      "destino_coord": {
-        "x": 200.11,
-        "y": 109.27
-      }
-    },
-    {
-      "destino": "Braga Parque",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 200.11,
-        "y": 109.27
-      },
-      "destino_coord": {
-        "x": 194.36,
-        "y": 115.32
-      }
-    },
-    {
-      "destino": "WC Público Praça do Município",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 200.11,
-        "y": 109.27
-      },
-      "destino_coord": {
-        "x": 260.84,
-        "y": 210.2
-      }
-    },
-    {
-      "destino": "Bebedouro Arcada",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 194.36,
-        "y": 115.32
-      },
-      "destino_coord": {
-        "x": 212.84,
-        "y": 136.78
-      }
-    },
-    {
-      "destino": "Ciclovia do Rio Este",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 194.36,
-        "y": 115.32
-      },
-      "destino_coord": {
-        "x": 209.46,
-        "y": 145.43
-      }
-    },
-    {
-      "destino": "Ciclovia do Rio Este",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 212.84,
-        "y": 136.78
-      },
-      "destino_coord": {
-        "x": 209.46,
-        "y": 145.43
-      }
-    },
-    {
-      "destino": "Universidade do Minho - Gualtar",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 212.84,
-        "y": 136.78
-      },
-      "destino_coord": {
-        "x": 200.11,
-        "y": 109.27
-      }
-    },
-    {
-      "destino": "Ecoponto Gualtar",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 209.46,
-        "y": 145.43
-      },
-      "destino_coord": {
-        "x": 270.58,
-        "y": 202.56
-      }
-    },
-    {
-      "destino": "WC Público Praça do Município",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 270.58,
-        "y": 202.56
-      },
-      "destino_coord": {
-        "x": 260.84,
-        "y": 210.2
-      }
-    },
-    {
-      "destino": "Bom Jesus do Monte",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 260.84,
-        "y": 210.2
-      },
-      "destino_coord": {
-        "x": 320.59,
-        "y": 132.79
-      }
-    },
-    {
-      "destino": "Ciclovia do Rio Este",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 260.84,
-        "y": 210.2
-      },
-      "destino_coord": {
-        "x": 209.46,
-        "y": 145.43
-      }
-    }
-  ]
+  "coordenadas": {
+    "Bom Jesus do Monte": [41.554, -8.377],
+    "Avenida da Liberdade": [41.548, -8.421],
+    "Hospital de Braga": [41.567, -8.398],
+    "Universidade do Minho - Gualtar": [41.561, -8.397],
+    "Braga Parque": [41.557, -8.406],
+    "Bebedouro Arcada": [41.551, -8.423],
+    "Ciclovia do Rio Este": [41.545, -8.415],
+    "Ecoponto Gualtar": [41.561, -8.398],
+    "WC Público Praça do Município": [41.551, -8.427]
+  }
 }

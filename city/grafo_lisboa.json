@@ -1,619 +1,69 @@
 {
-  "cidade": "Lisboa",
-  "nodes": {
-    "Hospital de Santa Maria": {
-      "x": -25.18,
-      "y": -352.1
-    },
-    "Estação do Oriente": {
-      "x": -11.56,
-      "y": -323.79
-    },
-    "Castelo de São Jorge": {
-      "x": -0.0,
-      "y": -268.0
-    },
-    "Terreiro do Paço": {
-      "x": 13.56,
-      "y": -379.76
-    },
-    "Centro Comercial Colombo": {
-      "x": 23.47,
-      "y": -328.16
-    },
-    "Bebedouro Parque das Nações": {
-      "x": 32.71,
-      "y": -304.25
-    },
-    "Jardim da Estrela": {
-      "x": 41.56,
-      "y": -289.03
-    },
-    "WC Público Rossio": {
-      "x": 65.16,
-      "y": -361.17
-    },
-    "Posto Polícia Baixa": {
-      "x": 57.18,
-      "y": -262.85
-    }
+  "adjacencias": {
+    "Hospital de Santa Maria": [
+      { "destino": "Centro Comercial Colombo", "distancia": 0.035, "acessibilidade": { "origem": "Hospital de Santa Maria", "destino": "Centro Comercial Colombo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Santa Maria", "destino": "Centro Comercial Colombo", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Santa Maria", "destino": "Centro Comercial Colombo", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Jardim da Estrela", "distancia": 0.045, "acessibilidade": { "origem": "Hospital de Santa Maria", "destino": "Jardim da Estrela", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Santa Maria", "destino": "Jardim da Estrela", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital de Santa Maria", "destino": "Jardim da Estrela", "transito": "Alto", "multidao": "Média" } },
+      { "destino": "WC Público Rossio", "distancia": 0.050, "acessibilidade": { "origem": "Hospital de Santa Maria", "destino": "WC Público Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Santa Maria", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de Santa Maria", "destino": "WC Público Rossio", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Estação do Oriente", "distancia": 0.075, "acessibilidade": { "origem": "Hospital de Santa Maria", "destino": "Estação do Oriente", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de Santa Maria", "destino": "Estação do Oriente", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Hospital de Santa Maria", "destino": "Estação do Oriente", "transito": "Muito Alto", "multidao": "Muito Alta" } }
+    ],
+    "Estação do Oriente": [
+      { "destino": "Bebedouro Parque das Nações", "distancia": 0.005, "acessibilidade": { "origem": "Estação do Oriente", "destino": "Bebedouro Parque das Nações", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação do Oriente", "destino": "Bebedouro Parque das Nações", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação do Oriente", "destino": "Bebedouro Parque das Nações", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Terreiro do Paço", "distancia": 0.090, "acessibilidade": { "origem": "Estação do Oriente", "destino": "Terreiro do Paço", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação do Oriente", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação do Oriente", "destino": "Terreiro do Paço", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Centro Comercial Colombo", "distancia": 0.085, "acessibilidade": { "origem": "Estação do Oriente", "destino": "Centro Comercial Colombo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação do Oriente", "destino": "Centro Comercial Colombo", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação do Oriente", "destino": "Centro Comercial Colombo", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Hospital de Santa Maria", "distancia": 0.075, "acessibilidade": { "origem": "Estação do Oriente", "destino": "Hospital de Santa Maria", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação do Oriente", "destino": "Hospital de Santa Maria", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação do Oriente", "destino": "Hospital de Santa Maria", "transito": "Muito Alto", "multidao": "Alta" } }
+    ],
+    "Castelo de São Jorge": [
+      { "destino": "Terreiro do Paço", "distancia": 0.012, "acessibilidade": { "origem": "Castelo de São Jorge", "destino": "Terreiro do Paço", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Castelo de São Jorge", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de São Jorge", "destino": "Terreiro do Paço", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "WC Público Rossio", "distancia": 0.008, "acessibilidade": { "origem": "Castelo de São Jorge", "destino": "WC Público Rossio", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Castelo de São Jorge", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de São Jorge", "destino": "WC Público Rossio", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Posto Polícia Baixa", "distancia": 0.010, "acessibilidade": { "origem": "Castelo de São Jorge", "destino": "Posto Polícia Baixa", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Castelo de São Jorge", "destino": "Posto Polícia Baixa", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de São Jorge", "destino": "Posto Polícia Baixa", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Jardim da Estrela", "distancia": 0.040, "acessibilidade": { "origem": "Castelo de São Jorge", "destino": "Jardim da Estrela", "pavimento": "Misto", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Castelo de São Jorge", "destino": "Jardim da Estrela", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Castelo de São Jorge", "destino": "Jardim da Estrela", "transito": "Médio", "multidao": "Média" } }
+    ],
+    "Terreiro do Paço": [
+      { "destino": "WC Público Rossio", "distancia": 0.007, "acessibilidade": { "origem": "Terreiro do Paço", "destino": "WC Público Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terreiro do Paço", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Terreiro do Paço", "destino": "WC Público Rossio", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Posto Polícia Baixa", "distancia": 0.004, "acessibilidade": { "origem": "Terreiro do Paço", "destino": "Posto Polícia Baixa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terreiro do Paço", "destino": "Posto Polícia Baixa", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Terreiro do Paço", "destino": "Posto Polícia Baixa", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Castelo de São Jorge", "distancia": 0.012, "acessibilidade": { "origem": "Terreiro do Paço", "destino": "Castelo de São Jorge", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Terreiro do Paço", "destino": "Castelo de São Jorge", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Terreiro do Paço", "destino": "Castelo de São Jorge", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Estação do Oriente", "distancia": 0.090, "acessibilidade": { "origem": "Terreiro do Paço", "destino": "Estação do Oriente", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terreiro do Paço", "destino": "Estação do Oriente", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Terreiro do Paço", "destino": "Estação do Oriente", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "Centro Comercial Colombo": [
+      { "destino": "Hospital de Santa Maria", "distancia": 0.035, "acessibilidade": { "origem": "Centro Comercial Colombo", "destino": "Hospital de Santa Maria", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial Colombo", "destino": "Hospital de Santa Maria", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Comercial Colombo", "destino": "Hospital de Santa Maria", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Estação do Oriente", "distancia": 0.085, "acessibilidade": { "origem": "Centro Comercial Colombo", "destino": "Estação do Oriente", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial Colombo", "destino": "Estação do Oriente", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Centro Comercial Colombo", "destino": "Estação do Oriente", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "WC Público Rossio", "distancia": 0.075, "acessibilidade": { "origem": "Centro Comercial Colombo", "destino": "WC Público Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial Colombo", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Centro Comercial Colombo", "destino": "WC Público Rossio", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Jardim da Estrela", "distancia": 0.065, "acessibilidade": { "origem": "Centro Comercial Colombo", "destino": "Jardim da Estrela", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Comercial Colombo", "destino": "Jardim da Estrela", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Centro Comercial Colombo", "destino": "Jardim da Estrela", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "Bebedouro Parque das Nações": [
+      { "destino": "Estação do Oriente", "distancia": 0.005, "acessibilidade": { "origem": "Bebedouro Parque das Nações", "destino": "Estação do Oriente", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque das Nações", "destino": "Estação do Oriente", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque das Nações", "destino": "Estação do Oriente", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Terreiro do Paço", "distancia": 0.095, "acessibilidade": { "origem": "Bebedouro Parque das Nações", "destino": "Terreiro do Paço", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque das Nações", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Parque das Nações", "destino": "Terreiro do Paço", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Hospital de Santa Maria", "distancia": 0.080, "acessibilidade": { "origem": "Bebedouro Parque das Nações", "destino": "Hospital de Santa Maria", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque das Nações", "destino": "Hospital de Santa Maria", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque das Nações", "destino": "Hospital de Santa Maria", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "WC Público Rossio", "distancia": 0.085, "acessibilidade": { "origem": "Bebedouro Parque das Nações", "destino": "WC Público Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque das Nações", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Parque das Nações", "destino": "WC Público Rossio", "transito": "Baixo", "multidao": "Muito Alta" } }
+    ],
+    "Jardim da Estrela": [
+      { "destino": "WC Público Rossio", "distancia": 0.022, "acessibilidade": { "origem": "Jardim da Estrela", "destino": "WC Público Rossio", "pavimento": "Misto (Calçada)", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim da Estrela", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim da Estrela", "destino": "WC Público Rossio", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Posto Polícia Baixa", "distancia": 0.025, "acessibilidade": { "origem": "Jardim da Estrela", "destino": "Posto Polícia Baixa", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim da Estrela", "destino": "Posto Polícia Baixa", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim da Estrela", "destino": "Posto Polícia Baixa", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Hospital de Santa Maria", "distancia": 0.045, "acessibilidade": { "origem": "Jardim da Estrela", "destino": "Hospital de Santa Maria", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim da Estrela", "destino": "Hospital de Santa Maria", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Jardim da Estrela", "destino": "Hospital de Santa Maria", "transito": "Alto", "multidao": "Média" } },
+      { "destino": "Terreiro do Paço", "distancia": 0.028, "acessibilidade": { "origem": "Jardim da Estrela", "destino": "Terreiro do Paço", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim da Estrela", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim da Estrela", "destino": "Terreiro do Paço", "transito": "Médio", "multidao": "Muito Alta" } }
+    ],
+    "WC Público Rossio": [
+      { "destino": "Posto Polícia Baixa", "distancia": 0.003, "acessibilidade": { "origem": "WC Público Rossio", "destino": "Posto Polícia Baixa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Rossio", "destino": "Posto Polícia Baixa", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Rossio", "destino": "Posto Polícia Baixa", "transito": "Médio", "multidao": "Muito Alta" } },
+      { "destino": "Terreiro do Paço", "distancia": 0.007, "acessibilidade": { "origem": "WC Público Rossio", "destino": "Terreiro do Paço", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Rossio", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "WC Público Rossio", "destino": "Terreiro do Paço", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Castelo de São Jorge", "distancia": 0.008, "acessibilidade": { "origem": "WC Público Rossio", "destino": "Castelo de São Jorge", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "WC Público Rossio", "destino": "Castelo de São Jorge", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Rossio", "destino": "Castelo de São Jorge", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Jardim da Estrela", "distancia": 0.022, "acessibilidade": { "origem": "WC Público Rossio", "destino": "Jardim da Estrela", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Rossio", "destino": "Jardim da Estrela", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "WC Público Rossio", "destino": "Jardim da Estrela", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "Posto Polícia Baixa": [
+      { "destino": "Terreiro do Paço", "distancia": 0.004, "acessibilidade": { "origem": "Posto Polícia Baixa", "destino": "Terreiro do Paço", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto Polícia Baixa", "destino": "Terreiro do Paço", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto Polícia Baixa", "destino": "Terreiro do Paço", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "WC Público Rossio", "distancia": 0.003, "acessibilidade": { "origem": "Posto Polícia Baixa", "destino": "WC Público Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto Polícia Baixa", "destino": "WC Público Rossio", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto Polícia Baixa", "destino": "WC Público Rossio", "transito": "Médio", "multidao": "Muito Alta" } },
+      { "destino": "Castelo de São Jorge", "distancia": 0.010, "acessibilidade": { "origem": "Posto Polícia Baixa", "destino": "Castelo de São Jorge", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Não", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Posto Polícia Baixa", "destino": "Castelo de São Jorge", "temperatura": "Quente", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto Polícia Baixa", "destino": "Castelo de São Jorge", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Jardim da Estrela", "distancia": 0.025, "acessibilidade": { "origem": "Posto Polícia Baixa", "destino": "Jardim da Estrela", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto Polícia Baixa", "destino": "Jardim da Estrela", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Posto Polícia Baixa", "destino": "Jardim da Estrela", "transito": "Médio", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Estação do Oriente",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -25.18,
-        "y": -352.1
-      },
-      "destino_coord": {
-        "x": -11.56,
-        "y": -323.79
-      }
-    },
-    {
-      "destino": "Bebedouro Parque das Nações",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": -25.18,
-        "y": -352.1
-      },
-      "destino_coord": {
-        "x": 32.71,
-        "y": -304.25
-      }
-    },
-    {
-      "destino": "Castelo de São Jorge",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -11.56,
-        "y": -323.79
-      },
-      "destino_coord": {
-        "x": -0.0,
-        "y": -268.0
-      }
-    },
-    {
-      "destino": "WC Público Rossio",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -11.56,
-        "y": -323.79
-      },
-      "destino_coord": {
-        "x": 65.16,
-        "y": -361.17
-      }
-    },
-    {
-      "destino": "Terreiro do Paço",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -0.0,
-        "y": -268.0
-      },
-      "destino_coord": {
-        "x": 13.56,
-        "y": -379.76
-      }
-    },
-    {
-      "destino": "Terreiro do Paço",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": -0.0,
-        "y": -268.0
-      },
-      "destino_coord": {
-        "x": 13.56,
-        "y": -379.76
-      }
-    },
-    {
-      "destino": "Centro Comercial Colombo",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 13.56,
-        "y": -379.76
-      },
-      "destino_coord": {
-        "x": 23.47,
-        "y": -328.16
-      }
-    },
-    {
-      "destino": "Bebedouro Parque das Nações",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 13.56,
-        "y": -379.76
-      },
-      "destino_coord": {
-        "x": 32.71,
-        "y": -304.25
-      }
-    },
-    {
-      "destino": "Bebedouro Parque das Nações",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 23.47,
-        "y": -328.16
-      },
-      "destino_coord": {
-        "x": 32.71,
-        "y": -304.25
-      }
-    },
-    {
-      "destino": "WC Público Rossio",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 4,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 23.47,
-        "y": -328.16
-      },
-      "destino_coord": {
-        "x": 65.16,
-        "y": -361.17
-      }
-    },
-    {
-      "destino": "Jardim da Estrela",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 32.71,
-        "y": -304.25
-      },
-      "destino_coord": {
-        "x": 41.56,
-        "y": -289.03
-      }
-    },
-    {
-      "destino": "Jardim da Estrela",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 32.71,
-        "y": -304.25
-      },
-      "destino_coord": {
-        "x": 41.56,
-        "y": -289.03
-      }
-    },
-    {
-      "destino": "WC Público Rossio",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 85,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 41.56,
-        "y": -289.03
-      },
-      "destino_coord": {
-        "x": 65.16,
-        "y": -361.17
-      }
-    },
-    {
-      "destino": "Terreiro do Paço",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 41.56,
-        "y": -289.03
-      },
-      "destino_coord": {
-        "x": 13.56,
-        "y": -379.76
-      }
-    },
-    {
-      "destino": "Posto Polícia Baixa",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 55,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 65.16,
-        "y": -361.17
-      },
-      "destino_coord": {
-        "x": 57.18,
-        "y": -262.85
-      }
-    },
-    {
-      "destino": "Terreiro do Paço",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 40,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 65.16,
-        "y": -361.17
-      },
-      "destino_coord": {
-        "x": 13.56,
-        "y": -379.76
-      }
-    },
-    {
-      "destino": "Hospital de Santa Maria",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 57.18,
-        "y": -262.85
-      },
-      "destino_coord": {
-        "x": -25.18,
-        "y": -352.1
-      }
-    },
-    {
-      "destino": "Castelo de São Jorge",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 57.18,
-        "y": -262.85
-      },
-      "destino_coord": {
-        "x": -0.0,
-        "y": -268.0
-      }
-    }
-  ]
+  "coordenadas": {
+    "Hospital de Santa Maria": [38.748, -9.161],
+    "Estação do Oriente": [38.768, -9.099],
+    "Castelo de São Jorge": [38.713, -9.133],
+    "Terreiro do Paço": [38.707, -9.136],
+    "Centro Comercial Colombo": [38.751, -9.188],
+    "Bebedouro Parque das Nações": [38.764, -9.095],
+    "Jardim da Estrela": [38.715, -9.158],
+    "WC Público Rossio": [38.714, -9.139],
+    "Posto Polícia Baixa": [38.711, -9.137]
+  }
 }

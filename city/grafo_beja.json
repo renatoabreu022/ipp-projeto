@@ -1,487 +1,62 @@
 {
-  "cidade": "Beja",
-  "nodes": {
-    "Castelo de Beja": {
-      "x": 131.14,
-      "y": -221.02
-    },
-    "Hospital José Joaquim Fernandes": {
-      "x": 183.82,
-      "y": -286.03
-    },
-    "Politécnico de Beja": {
-      "x": 158.55,
-      "y": -228.35
-    },
-    "Parque de Feiras": {
-      "x": 180.38,
-      "y": -240.96
-    },
-    "Museu Regional": {
-      "x": 208.32,
-      "y": -258.51
-    },
-    "Bebedouro Castelo": {
-      "x": 171.57,
-      "y": -198.01
-    },
-    "Parque de Merendas": {
-      "x": 230.32,
-      "y": -247.38
-    },
-    "WC Público Parque de Feiras": {
-      "x": 188.8,
-      "y": -188.8
-    }
+  "adjacencias": {
+    "Castelo de Beja": [
+      { "destino": "Bebedouro Castelo", "distancia": 0.001, "acessibilidade": { "origem": "Castelo de Beja", "destino": "Bebedouro Castelo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Moderado", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Castelo de Beja", "destino": "Bebedouro Castelo", "temperatura": "Elevada", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Castelo de Beja", "destino": "Bebedouro Castelo", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Museu Regional", "distancia": 0.005, "acessibilidade": { "origem": "Castelo de Beja", "destino": "Museu Regional", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Beja", "destino": "Museu Regional", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Castelo de Beja", "destino": "Museu Regional", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Hospital José Joaquim Fernandes", "distancia": 0.012, "acessibilidade": { "origem": "Castelo de Beja", "destino": "Hospital José Joaquim Fernandes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Beja", "destino": "Hospital José Joaquim Fernandes", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de Beja", "destino": "Hospital José Joaquim Fernandes", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Politécnico de Beja", "distancia": 0.018, "acessibilidade": { "origem": "Castelo de Beja", "destino": "Politécnico de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Castelo de Beja", "destino": "Politécnico de Beja", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Castelo de Beja", "destino": "Politécnico de Beja", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Hospital José Joaquim Fernandes": [
+      { "destino": "Castelo de Beja", "distancia": 0.012, "acessibilidade": { "origem": "Hospital José Joaquim Fernandes", "destino": "Castelo de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital José Joaquim Fernandes", "destino": "Castelo de Beja", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital José Joaquim Fernandes", "destino": "Castelo de Beja", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Politécnico de Beja", "distancia": 0.008, "acessibilidade": { "origem": "Hospital José Joaquim Fernandes", "destino": "Politécnico de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital José Joaquim Fernandes", "destino": "Politécnico de Beja", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital José Joaquim Fernandes", "destino": "Politécnico de Beja", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque de Merendas", "distancia": 0.006, "acessibilidade": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Merendas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Merendas", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Merendas", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Parque de Feiras", "distancia": 0.015, "acessibilidade": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Feiras", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital José Joaquim Fernandes", "destino": "Parque de Feiras", "transito": "Sim", "multidao": "Alta" } }
+    ],
+    "Politécnico de Beja": [
+      { "destino": "Hospital José Joaquim Fernandes", "distancia": 0.008, "acessibilidade": { "origem": "Politécnico de Beja", "destino": "Hospital José Joaquim Fernandes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Politécnico de Beja", "destino": "Hospital José Joaquim Fernandes", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Politécnico de Beja", "destino": "Hospital José Joaquim Fernandes", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Parque de Feiras", "distancia": 0.010, "acessibilidade": { "origem": "Politécnico de Beja", "destino": "Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Politécnico de Beja", "destino": "Parque de Feiras", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Politécnico de Beja", "destino": "Parque de Feiras", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Parque de Merendas", "distancia": 0.007, "acessibilidade": { "origem": "Politécnico de Beja", "destino": "Parque de Merendas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Politécnico de Beja", "destino": "Parque de Merendas", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Politécnico de Beja", "destino": "Parque de Merendas", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Castelo de Beja", "distancia": 0.018, "acessibilidade": { "origem": "Politécnico de Beja", "destino": "Castelo de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Politécnico de Beja", "destino": "Castelo de Beja", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Politécnico de Beja", "destino": "Castelo de Beja", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Parque de Feiras": [
+      { "destino": "WC Público Parque de Feiras", "distancia": 0.001, "acessibilidade": { "origem": "Parque de Feiras", "destino": "WC Público Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Feiras", "destino": "WC Público Parque de Feiras", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Parque de Feiras", "destino": "WC Público Parque de Feiras", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Politécnico de Beja", "distancia": 0.010, "acessibilidade": { "origem": "Parque de Feiras", "destino": "Politécnico de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Feiras", "destino": "Politécnico de Beja", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque de Feiras", "destino": "Politécnico de Beja", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Hospital José Joaquim Fernandes", "distancia": 0.015, "acessibilidade": { "origem": "Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Museu Regional", "distancia": 0.014, "acessibilidade": { "origem": "Parque de Feiras", "destino": "Museu Regional", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Feiras", "destino": "Museu Regional", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque de Feiras", "destino": "Museu Regional", "transito": "Sim", "multidao": "Moderada" } }
+    ],
+    "Museu Regional": [
+      { "destino": "Castelo de Beja", "distancia": 0.005, "acessibilidade": { "origem": "Museu Regional", "destino": "Castelo de Beja", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Museu Regional", "destino": "Castelo de Beja", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Museu Regional", "destino": "Castelo de Beja", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bebedouro Castelo", "distancia": 0.006, "acessibilidade": { "origem": "Museu Regional", "destino": "Bebedouro Castelo", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Museu Regional", "destino": "Bebedouro Castelo", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Museu Regional", "destino": "Bebedouro Castelo", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Parque de Feiras", "distancia": 0.014, "acessibilidade": { "origem": "Museu Regional", "destino": "Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Museu Regional", "destino": "Parque de Feiras", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Museu Regional", "destino": "Parque de Feiras", "transito": "Sim", "multidao": "Moderada" } },
+      { "destino": "Parque de Merendas", "distancia": 0.011, "acessibilidade": { "origem": "Museu Regional", "destino": "Parque de Merendas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Museu Regional", "destino": "Parque de Merendas", "temperatura": "Elevada", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Museu Regional", "destino": "Parque de Merendas", "transito": "Não", "multidao": "Moderada" } }
+    ],
+    "Bebedouro Castelo": [
+      { "destino": "Castelo de Beja", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Castelo", "destino": "Castelo de Beja", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Castelo", "destino": "Castelo de Beja", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Castelo", "destino": "Castelo de Beja", "transito": "Não", "multidao": "Sim" } },
+      { "destino": "Museu Regional", "distancia": 0.006, "acessibilidade": { "origem": "Bebedouro Castelo", "destino": "Museu Regional", "pavimento": "Pavimento Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Castelo", "destino": "Museu Regional", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Castelo", "destino": "Museu Regional", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "WC Público Parque de Feiras", "distancia": 0.016, "acessibilidade": { "origem": "Bebedouro Castelo", "destino": "WC Público Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Castelo", "destino": "WC Público Parque de Feiras", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Castelo", "destino": "WC Público Parque de Feiras", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Parque de Merendas", "distancia": 0.014, "acessibilidade": { "origem": "Bebedouro Castelo", "destino": "Parque de Merendas", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Castelo", "destino": "Parque de Merendas", "temperatura": "Elevada", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Castelo", "destino": "Parque de Merendas", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "Parque de Merendas": [
+      { "destino": "Hospital José Joaquim Fernandes", "distancia": 0.006, "acessibilidade": { "origem": "Parque de Merendas", "destino": "Hospital José Joaquim Fernandes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Merendas", "destino": "Hospital José Joaquim Fernandes", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque de Merendas", "destino": "Hospital José Joaquim Fernandes", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Politécnico de Beja", "distancia": 0.007, "acessibilidade": { "origem": "Parque de Merendas", "destino": "Politécnico de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Merendas", "destino": "Politécnico de Beja", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Elevado", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque de Merendas", "destino": "Politécnico de Beja", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Museu Regional", "distancia": 0.011, "acessibilidade": { "origem": "Parque de Merendas", "destino": "Museu Regional", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Merendas", "destino": "Museu Regional", "temperatura": "Elevada", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque de Merendas", "destino": "Museu Regional", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bebedouro Castelo", "distancia": 0.014, "acessibilidade": { "origem": "Parque de Merendas", "destino": "Bebedouro Castelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque de Merendas", "destino": "Bebedouro Castelo", "temperatura": "Elevada", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Média", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque de Merendas", "destino": "Bebedouro Castelo", "transito": "Não", "multidao": "Baixa" } }
+    ],
+    "WC Público Parque de Feiras": [
+      { "destino": "Parque de Feiras", "distancia": 0.001, "acessibilidade": { "origem": "WC Público Parque de Feiras", "destino": "Parque de Feiras", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Parque de Feiras", "destino": "Parque de Feiras", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "WC Público Parque de Feiras", "destino": "Parque de Feiras", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Politécnico de Beja", "distancia": 0.011, "acessibilidade": { "origem": "WC Público Parque de Feiras", "destino": "Politécnico de Beja", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Parque de Feiras", "destino": "Politécnico de Beja", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Parque de Feiras", "destino": "Politécnico de Beja", "transito": "Não", "multidao": "Moderada" } },
+      { "destino": "Bebedouro Castelo", "distancia": 0.016, "acessibilidade": { "origem": "WC Público Parque de Feiras", "destino": "Bebedouro Castelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Parque de Feiras", "destino": "Bebedouro Castelo", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Parque de Feiras", "destino": "Bebedouro Castelo", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Hospital José Joaquim Fernandes", "distancia": 0.016, "acessibilidade": { "origem": "WC Público Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "temperatura": "Elevada", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Parque de Feiras", "destino": "Hospital José Joaquim Fernandes", "transito": "Sim", "multidao": "Alta" } }
+    ]
   },
-  "edges": [
-    {
-      "destino": "Hospital José Joaquim Fernandes",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 55,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 131.14,
-        "y": -221.02
-      },
-      "destino_coord": {
-        "x": 183.82,
-        "y": -286.03
-      }
-    },
-    {
-      "destino": "Politécnico de Beja",
-      "acessibilidade": {
-        "pavimento": 60,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 183.82,
-        "y": -286.03
-      },
-      "destino_coord": {
-        "x": 158.55,
-        "y": -228.35
-      }
-    },
-    {
-      "destino": "Parque de Merendas",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 4,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 30,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 183.82,
-        "y": -286.03
-      },
-      "destino_coord": {
-        "x": 230.32,
-        "y": -247.38
-      }
-    },
-    {
-      "destino": "Parque de Feiras",
-      "acessibilidade": {
-        "pavimento": 40,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 80,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 158.55,
-        "y": -228.35
-      },
-      "destino_coord": {
-        "x": 180.38,
-        "y": -240.96
-      }
-    },
-    {
-      "destino": "Museu Regional",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 180.38,
-        "y": -240.96
-      },
-      "destino_coord": {
-        "x": 208.32,
-        "y": -258.51
-      }
-    },
-    {
-      "destino": "Castelo de Beja",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": false,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 30,
-        "iluminacao": 80,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 180.38,
-        "y": -240.96
-      },
-      "destino_coord": {
-        "x": 131.14,
-        "y": -221.02
-      }
-    },
-    {
-      "destino": "Bebedouro Castelo",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 85,
-        "nivel_polen": 85,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 208.32,
-        "y": -258.51
-      },
-      "destino_coord": {
-        "x": 171.57,
-        "y": -198.01
-      }
-    },
-    {
-      "destino": "WC Público Parque de Feiras",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 1,
-        "passeios": 45,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 50,
-        "nivel_polen": 55,
-        "iluminacao": 20,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 208.32,
-        "y": -258.51
-      },
-      "destino_coord": {
-        "x": 188.8,
-        "y": -188.8
-      }
-    },
-    {
-      "destino": "Parque de Merendas",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": false
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 171.57,
-        "y": -198.01
-      },
-      "destino_coord": {
-        "x": 230.32,
-        "y": -247.38
-      }
-    },
-    {
-      "destino": "Parque de Feiras",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 15,
-        "passadeiras": 8,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 35,
-        "qualidade_ar": 35,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 50,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 171.57,
-        "y": -198.01
-      },
-      "destino_coord": {
-        "x": 180.38,
-        "y": -240.96
-      }
-    },
-    {
-      "destino": "WC Público Parque de Feiras",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 60,
-        "passadeiras": 8,
-        "passeios": 45,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 15,
-        "poluicao_visual": 50,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": false
-      },
-      "origem_coord": {
-        "x": 230.32,
-        "y": -247.38
-      },
-      "destino_coord": {
-        "x": 188.8,
-        "y": -188.8
-      }
-    },
-    {
-      "destino": "Politécnico de Beja",
-      "acessibilidade": {
-        "pavimento": 15,
-        "inclinacao": 40,
-        "passadeiras": 4,
-        "passeios": 80,
-        "textura_cego": true,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 10,
-        "poluicao_sonora": 50,
-        "poluicao_visual": 85,
-        "nivel_polen": 10,
-        "iluminacao": 20,
-        "sombra": 45
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 230.32,
-        "y": -247.38
-      },
-      "destino_coord": {
-        "x": 158.55,
-        "y": -228.35
-      }
-    },
-    {
-      "destino": "Castelo de Beja",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 27,
-        "qualidade_ar": 90,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 85,
-        "iluminacao": 45,
-        "sombra": 80
-      },
-      "populacao": {
-        "transito": false,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 188.8,
-        "y": -188.8
-      },
-      "destino_coord": {
-        "x": 131.14,
-        "y": -221.02
-      }
-    },
-    {
-      "destino": "Politécnico de Beja",
-      "acessibilidade": {
-        "pavimento": 85,
-        "inclinacao": 85,
-        "passadeiras": 1,
-        "passeios": 15,
-        "textura_cego": false,
-        "escadas": true
-      },
-      "ambiente": {
-        "temperatura": 20,
-        "qualidade_ar": 65,
-        "poluicao_sonora": 85,
-        "poluicao_visual": 15,
-        "nivel_polen": 10,
-        "iluminacao": 45,
-        "sombra": 15
-      },
-      "populacao": {
-        "transito": true,
-        "multidao": true
-      },
-      "origem_coord": {
-        "x": 188.8,
-        "y": -188.8
-      },
-      "destino_coord": {
-        "x": 158.55,
-        "y": -228.35
-      }
-    }
-  ]
+  "coordenadas": {
+    "Castelo de Beja": [38.017, -7.864],
+    "Hospital José Joaquim Fernandes": [38.012, -7.868],
+    "Politécnico de Beja": [38.009, -7.868],
+    "Parque de Feiras": [38.004, -7.861],
+    "Museu Regional": [38.015, -7.865],
+    "Bebedouro Castelo": [38.017, -7.863],
+    "Parque de Merendas": [38.008, -7.869],
+    "WC Público Parque de Feiras": [38.004, -7.862]
+  }
 }
