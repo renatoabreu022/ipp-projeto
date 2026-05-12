@@ -155,6 +155,8 @@ class AppAcessibilidade(ctk.CTk):
         titulo = "Parâmetros de Acessibilidade"
         ctk.CTkLabel(self, text=titulo, font=("Helvetica", 18, "bold"), text_color="#2A8569").pack(pady=10)
         
+        ctk.CTkButton(self, text="Guardar Perfil", command=lambda: self.finalizar_guardar(primeira_vez)).pack(side="bottom", pady=20) #@Renato --- meti o botão aqui e adicionei o side=bottom porque o botão era 'empurrado' pelo resto da pagina
+
         self.scroll = ctk.CTkScrollableFrame(self, fg_color="#F4F1EA", width=600, height=600)
         self.scroll.pack(padx=20, pady=10, fill="both", expand=True)
 
@@ -189,8 +191,6 @@ class AppAcessibilidade(ctk.CTk):
             for k, v in p.items():
                 if k in self.sliders: self.sliders[k].set(v)
             if p.get("textura_cego") == 10: self.c_pod.select()
-
-        ctk.CTkButton(self, text="Guardar Perfil", command=lambda: self.finalizar_guardar(primeira_vez)).pack(pady=20)
 
     def criar_label_seccao(self, master, texto):
         ctk.CTkLabel(master, text=texto, font=("Helvetica", 13, "bold"), text_color="#1F4E3D").pack(anchor="w", pady=(15, 5))
