@@ -82,14 +82,14 @@ class AppAcessibilidade(ctk.CTk):
     
     def mostrar_login(self):
         self.limpar_janela()
-        self.geometry("450x500")
-        ctk.CTkLabel(self, text="Acesso ao Sistema", font=("Helvetica", 24, "bold"), text_color="#2A8569").pack(pady=40)
+        self.geometry("414x740")
+        ctk.CTkLabel(self, text="Seja Bem-Vind@!", font=("Helvetica", 24, "bold"), text_color="#2A8569").pack(pady=40)
         self.ent_user = ctk.CTkEntry(self, placeholder_text="Utilizador", width=250)
         self.ent_user.pack(pady=10)
         self.ent_pass = ctk.CTkEntry(self, placeholder_text="Password", show="*", width=250)
         self.ent_pass.pack(pady=10)
         ctk.CTkButton(self, text="Entrar", command=self.fazer_login, width=250).pack(pady=20)
-        ctk.CTkButton(self, text="Criar Conta", command=self.mostrar_registo, width=250, fg_color="transparent", text_color="#2A8569", border_width=2, border_color="#3AC098").pack()
+        ctk.CTkButton(self, text="Criar Conta", command=self.mostrar_registo, width=250, fg_color="transparent", hover_color="#D2D0CA", text_color="#2A8569", border_width=2, border_color="#3AC098").pack()
 
     def fazer_login(self):
         user, pw = self.ent_user.get(), self.ent_pass.get()
@@ -101,7 +101,7 @@ class AppAcessibilidade(ctk.CTk):
 
     def mostrar_registo(self):
         self.limpar_janela()
-        self.geometry("450x550")
+        self.geometry("414x740")
         ctk.CTkLabel(self, text="Novo Registo", font=("Helvetica", 20, "bold"), text_color="#2A8569").pack(pady=30)
         self.reg_user = ctk.CTkEntry(self, placeholder_text="Utilizador", width=250)
         self.reg_user.pack(pady=10)
@@ -123,7 +123,7 @@ class AppAcessibilidade(ctk.CTk):
     
     def mostrar_menu_perfil(self):
         self.limpar_janela()
-        self.geometry("450x500")
+        self.geometry("414x740")
         ctk.CTkLabel(self, text="Definições de Perfil", font=("Helvetica", 22, "bold"), text_color="#2A8569").pack(pady=40)
         ctk.CTkButton(self, text="Alterar Parâmetros de Percurso", width=300, command=lambda: self.mostrar_preferencias(False)).pack(pady=15)
         ctk.CTkButton(self, text="Alterar Palavra-passe", width=300, command=self.mostrar_alterar_pass).pack(pady=15)
@@ -151,7 +151,7 @@ class AppAcessibilidade(ctk.CTk):
     
     def mostrar_preferencias(self, primeira_vez=False):
         self.limpar_janela()
-        self.geometry("650x850")
+        self.geometry("414x740")
         titulo = "Parâmetros de Acessibilidade"
         ctk.CTkLabel(self, text=titulo, font=("Helvetica", 18, "bold"), text_color="#2A8569").pack(pady=10)
         
@@ -224,26 +224,26 @@ class AppAcessibilidade(ctk.CTk):
     # --- MENU PRINCIPAL ---
     def mostrar_menu_principal(self):
         self.limpar_janela()
-        self.geometry("600x700")
+        self.geometry("414x740")
         
         header = ctk.CTkFrame(self, fg_color="transparent")
         header.pack(fill="x", padx=25, pady=25)
         
-        ctk.CTkLabel(header, text=f"Olá, {self.utilizador_atual}", font=("Helvetica", 22, "bold"), text_color="#2A8569").pack(side="left")
+        ctk.CTkLabel(header, text=f"Olá, {self.utilizador_atual}!", font=("Helvetica", 22, "bold"), text_color="#2A8569").pack(side="left")
         ctk.CTkButton(header, text="👤 Perfil", width=90, fg_color="#3AC098", command=self.mostrar_menu_perfil).pack(side="right")
         
         f_main = ctk.CTkFrame(self, fg_color="white", corner_radius=20)
-        f_main.pack(padx=30, pady=10, fill="both", expand=True)
+        f_main.pack(padx=22, pady=10, fill="both", expand=True)
 
         ctk.CTkLabel(f_main, text="Selecione a Cidade:", font=("Helvetica", 12)).pack(pady=(20, 0))
         self.cb_cidade = ctk.CTkComboBox(f_main, values=list(DADOS_CIDADES.keys()), width=350, command=self.atualizar_locais)
         self.cb_cidade.pack(pady=10)
 
-        ctk.CTkLabel(f_main, text="Ponto de Origem:", font=("Helvetica", 12)).pack()
+        ctk.CTkLabel(f_main, text="Partida:", font=("Helvetica", 12)).pack()
         self.cb_origem = ctk.CTkComboBox(f_main, values=[], width=350)
         self.cb_origem.pack(pady=10)
 
-        ctk.CTkLabel(f_main, text="Ponto de Destino:", font=("Helvetica", 12)).pack()
+        ctk.CTkLabel(f_main, text="Destino:", font=("Helvetica", 12)).pack()
         self.cb_destino = ctk.CTkComboBox(f_main, values=[], width=350)
         self.cb_destino.pack(pady=10)
 
@@ -251,7 +251,7 @@ class AppAcessibilidade(ctk.CTk):
         self.atualizar_locais(self.cb_cidade.get())
 
         ctk.CTkButton(f_main, text="CALCULAR ROTA IDEAL", command=self.simular_calculo, height=50, font=("Helvetica", 14, "bold")).pack(pady=30)
-        ctk.CTkButton(self, text="Sair do Sistema", command=self.mostrar_login, fg_color="#C62828").pack(pady=20)
+        ctk.CTkButton(self, text="Sair do Sistema", command=self.mostrar_login, fg_color="#C62828", hover_color="#8A1B1B").pack(pady=20)
 
     def atualizar_locais(self, cidade):
         locais = DADOS_CIDADES.get(cidade, [])
