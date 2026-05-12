@@ -1,7 +1,7 @@
 #----------Para criar gráficos----------#
 
 from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente,ParametrosPopulacao
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 
 class AnalisadorVisual:
@@ -42,8 +42,7 @@ class AnalisadorVisual:
                 nota_ilu = 1
 
         nota_pass=3
-        passadeira=acess.passadeiras.split(".")
-        match acess.passadeira[0]:
+        match acess.passadeiras:
             case "Elevado":
                 nota_pass = 5
             case "Baixo":
@@ -60,7 +59,7 @@ class AnalisadorVisual:
 
         return (nota_ilu+nota_pass+nota_passeios)/3
     
-    @static_method
+    @staticmethod
     def mapear_comf_amb(amb:ParametrosAmbiente):
 
         nota_qual_ar=3
@@ -116,7 +115,6 @@ class AnalisadorVisual:
         return (nota_qual_ar+nota_polen+nota_sombra+nota_sombra)/4
     
     @staticmethod
-
     def mapear_sossego(amb:ParametrosAmbiente,pop:ParametrosPopulacao):
 
         nota_polui_visual=3
@@ -170,44 +168,59 @@ class AnalisadorVisual:
         return (nota_multidao+nota_transito)/2
     
     @staticmethod
-    def radar(caminho,mapa_obj):
+    def radar(caminho_atual,caminho_anterior,mapa_obj):
 
-        categorias = ["Pavimento","Sgurança","Ambiente","Afluência e Sossego","Trânsito"]
+        categorias = ["Pavimento","Segurança","Ambiente","Afluência e Sossego","Trânsito"]
+        def calcular_medias(caminho):
+            somas = [0]*5
 
-        somas = [0]*5
+            num_ruas = 0
 
-        num_ruas = len(caminho)-1
+            for i in range(len(caminho)-1):
+                origem,destino=caminho[i],caminho[i+1]  #Encontra a rua entre 2 vértices do percurso
+                for adj in mapa_obj.adjacencias,get(origem,[]):
+                    if adj["destino"] == destino:
+                        num_ruas +=1
 
-        for i in range(num_ruas):
-            p = mapa_obj.get_percurso(caminho[i],caminho[i+1])  #Encontra a rua entre 2 vértices do percurso
+                        n_pav = AnalisadorVisual.mapear_acessibilidade(p["acessibilidade"])
+                        n_seg = AnalisadorVisual.mapear_seguranca_rodoviaria(p["acessibilidade"],p["ambiente"])  #Calculas as notas dos parâmetros
+                        n_amb = AnalisadorVisual.mapear_comf_amb(p["ambiente"])
+                        n_soss = AnalisadorVisual.mapear_sossego(p["ambiente"],p["populacao"])
+                        n_tran = AnalisadorVisual.mapear_transito(p["populacao"])
 
-            n_pav = AnalisadorVisual.mapear_acessibilidade(p["acessibilidade"])
-            n_seg = AnalisadorVisual.mapear_seguranca_rodoviaria(p["acessibilidade"],p["ambiente"])  #Calculas as notas dos parâmetros
-            n_amb = AnalisadorVisual.mapear_comf_amb(p["ambiente"])
-            n_soss = AnalisadorVisual.mapear_sossego(p["ambiente"],p["populacao"])
-            n_tran = AnalisadorVisual.mapear_transito(p["populacao"])
+                        somas[0] += n_pav  # soma as notas
+                        somas[1] += n_seg
+                        somas[2] += n_amb
+                        somas[3] += n_soss
+                        somas[4] += n_tran
+                        break
 
-            somas[0] += n_pav  # soma as notas
-            somas[1] += n_seg
-            somas[2] += n_amb
-            somas[3] += n_soss
-            somas[4] += n_tran
-
-        medias = [s/num_ruas for s in somas]  # lista em compressão que calcula as médias
+                return [s/num_ruas for s in somas] if num_ruas>0 else [0]*5  # lista em compressão que calcula as médias
+            
+            medias_atual = calcular_medias(caminho_atual)
+            medias_prev = calcular_medias(caminho_anterior)
 
 
         # CRIAÇÃO DO GRÁFICO
-
-        angulos = np.linspace(0,2*np.pi, len(categorias),endpoint=False).tolist()
-        medias += medias[:1]
+        angulos = np.linspace(0,2*np.pi,len(categorias),endpoint=False).tolist()
         angulos += angulos[:1]
 
-        fig,ax = plt.subplots(figsize=(6,6),subplot_kw=dict(polar=True))
-        ax.fill(angulos, medias, color='teal', alpha=0.25)
-        ax.plot(angulos, medias, color='teal', linewidth=2)
-        ax.set_yticklabels([])
+        fig,ax = plt.subplots(figsize=(7,7),subplot_kw=dict(polar=True))
+
+        #Desenhar anterior se existir em cinzento
+        if medias_prev:
+            medias_prev += medias_prev[:1]
+            ax.plot(angulos,medias_prev,color="gray",linestyle="--",label="Caminho Anterior",alpha=0.5)
+            ax.fill(angulos,medias_prev,color="gray",alpha=0.1)
+
+        #Desenhar caminho atual em destaque
+        medias_atual += medias_atual[:1]
+        ax.plot(angulos, medias_atual, color='teal',kinewidth=2, label = "Caminho Atual")
+        ax.fill(angulos, medias_atual, color='teal', alpha=0.3)
         ax.set_xticks(angulos[:-1])
         ax.set_xticklabels(categorias)
+        ax.set_ylim(0,5)
+        plt.legend(loc="upper right", bbox_to_anchor=(1.2,1.1))
         
         plt.title("Análise de Conforto da Rota", size=15, y=1.1)
         plt.show()

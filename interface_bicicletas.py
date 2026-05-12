@@ -2,7 +2,6 @@ import customtkinter as ctk
 from tkinter import messagebox
 
 
-# bicicletas2.py
 import random
 
 class GestorBicicletas:

@@ -18,6 +18,7 @@ import json
 from datetime import datetime
 from models.bicicletas import GestorBicicletas
 import city
+import os
 
 #------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
 def hora(values):
@@ -43,8 +44,8 @@ def help():
     print("bicicletas                                           -> Mostra as bicicletas disponiveis")
     print("gravar_mapa <ficheiro>                               -> Guarda o mapa atual")
     print("carregar_mapa <ficheiro>                             -> Carrega um mapa guardado")
-    print("ins_cidade")#A FAZER
-    print("ins_local")#A FAZER
+    print("ins_cidade                                           -> Cria uma cidade nova")#A FAZER
+    print("ins_local                                            -> Adiciona um local a uma cidade")#A FAZER
     print("ins_percurso                                         -> Adiciona um percurso entre dois pontos")
     print("ver                                                  -> Mostra a informação associada a um percurso")
     print("sair                                                 -> Encerra a aplicação")
@@ -239,6 +240,23 @@ def main():
                         print(f" {i+1}º caminho sugerido: {' -> '.join(caminhos)}")
                         print(f"Penalização total (Score): {round(score_total, 0)}")
                         print("-" * 80)
+
+                #___________Spider_Chart_____________________#
+                    print("\n[Opção visual]")
+                    opcao_grafico = input("Deseja ver o gráfico de conforto de algum percurso? (nº do caminho/ N para sair): ")
+                    if opcao_grafico.isdigit():
+                        indice = int(opcao_grafico) - 1
+                        if 0 <= indice <len(resultado):
+                            from engine.visualizador_gráficos import AnalisadorVisual
+                            _,caminho_grafico = resultado[indice]
+
+                            print(f"\nA gerar gráfico para o {indice+1}º caminho...")
+                            AnalisadorVisual.radar(caminho_grafico,mapa)
+                        else:
+                            print("ERRO: Número inválido.")
+                    else:
+                        print("A regressar ao menu...")                #_______________________________________________#
+                    
                 else:
                     print("ERRO: Não foi possível encontrar um caminho entre esses pontos.")
 
@@ -384,6 +402,82 @@ def main():
             print(f"Multidão        : {pop.multidao}")
             print(f"\n{'='*50}")     
 
+        elif comando == "ins_cidade":
+            try:
+                nome = input('Nome da cidade: ')
+                if not nome:
+                    print('ERRO: O nome da cidade não pode ser vazio!')
+                    continue
+                
+                ficheiro = nome.lower().replace(' ','_')
+                diretorio = f'city/grafo_{ficheiro}.json'
+                
+                if os.paths.exists(diretorio):
+                    print(f'ERRO: Já exite um ficheiro para {nome}')
+                    continue
+
+                grafo = {
+                    'adjacencias': {},
+                    'coordenadas': {}
+                }
+
+                with open(diretorio, 'w', encoding='utf-8') as f:
+                    json.dump(grafo,f,indent=2,ensure_ascii=False)
+                
+                try:
+                    with open('locais.json', 'r', encoding='utf-8') as f:
+                        db_locais = json.load(f)
+                except FileNotFoundError:
+                    db_locais = {}
+                
+                if nome not in db_locais:
+                    db_locais[nome] = []
+                    with open('locais.json', 'w', encoding='utf-8') as f:
+                        json.dump(db_locais, f, indent=2, ensure_ascii=False)
+
+                print(f'SUCESSO: Cidade {nome} adicionada em {diretorio}!')
+                print("Usa 'add_local' para adicionar locais e 'ins_percurso' para ligar os locais.")
+            
+            except Exception as e:
+                print(f'ERRO: {e}')                
+
+        elif comando == 'ins_local':
+            if not mapa.adjacencias:
+                print("ERRO: Nenhum mapa carregado. Use 'carregar_mapa' ou 'simular' primeiro.")
+                continue
+
+            try:
+                nome = input('Nome do local: ').strip()
+                if not nome:
+                    print("ERRO: O nome não pode ser vazio.")
+                    continue
+
+                x = float(input('Latitude: '))
+                y = float(input('Longitude: '))
+
+                mapa.add_local(nome, (x,y))
+
+                try:
+                    with open('locais.json', 'r', encoding='utf-8') as f:
+                        db_locais = json.load(f)
+                except FileNotFoundError:
+                    db_locais = {}
+                
+                print(f"Cidades disponíveis: {', '.join(db_locais.keys())}")
+                cidade = input("Em que cidade fica este local? ").strip()
+
+                if cidade not in db_locais:
+                    print(f"ERRO: '{cidade}' não existe no locais.json.")
+
+                else:
+                    if nome not in db_locais[cidade]:
+                        db_locais[cidade].append(nome)
+                        with open('locais.json', 'w', encoding='utf-8') as f:
+                            json.dump(db_locais, f, indent=2, ensure_ascii=False)
+                        
+                        print(f"SUCESSO: {nome} adicionado à cidade '{cidade}' em locais.json.")
+            pass
+
         elif comando == "ins_percurso":
             if not mapa.adjacencias:
                 print("ERRO: Nenhum mapa carregado. \nUse 'carregar_mapa' primeiro.")
@@ -430,12 +524,13 @@ def main():
                     
                 print(f"SUCESSO: Percurso adicionado de '{origem}' para '{destino}'!")
                 print("Use 'gravar_mapa' para guardar as alterações")
+                pass
 
             except ValueError:
                 print("ERRO: Valor inválido. Certifica-te que introduzes números onde pedido.")
             except Exception as e:
-                print(f"ERRO: {e}")
-                pass
+                print(f"ERRO: {e}") 
+            pass
 
         else:
             print("ERRO: Comando não reconhecido.")

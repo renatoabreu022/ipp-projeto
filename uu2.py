@@ -394,8 +394,8 @@ class AppAcessibilidade(ctk.CTk):
 
         try:
             # 4. Carregar o mapa
-            mapa = Mapa()
-            mapa.load_mapa(ficheiro_mapa)
+            self.motor_mapa = Mapa()
+            self.motor_mapa.load_mapa(ficheiro_mapa)
             
             
             print(f"--- SIMULAÇÃO ---")
@@ -409,7 +409,7 @@ class AppAcessibilidade(ctk.CTk):
 
             # 6. Executar o cálculo de percurso
             # Nota: k=3 para dar 3 opções de rota
-            resultados = mapa.pesquisa_perc(origem, destino, perfil, k=5)
+            resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, k=5)
 
             # 7. Mostrar resultados
             if not resultados:
@@ -422,57 +422,57 @@ class AppAcessibilidade(ctk.CTk):
                 texto += " ➔ ".join(caminho) + "\n\n"
             
             messagebox.showinfo("Rotas Recomendadas", texto)
-            self.visualizar_caminhos(cidade, resultados)
+            self.visualizar_caminhos(cidade_selecionada, resultados)
 
         except Exception as e:
             # Se houver um erro (como aquele do 'no setter' ou nome inexistente), aparece aqui
             print(f"ERRO NO CÁLCULO: {e}")
             messagebox.showerror("Erro no Processamento", f"Ocorreu um erro: {e}")
 
-        def visualizar_caminhos(self, cidade_nome, resultados):
-            """ Cria a janela com o mapa e os 5 caminhos destacados """
-            G = nx.Graph()
+    def visualizar_caminhos(self, cidade_nome, resultados):
+        """ Cria a janela com o mapa e os 5 caminhos destacados """
+        G = nx.Graph()
             
             # 1. Carregar todas as ligações do mapa (o fundo cinzento)
-            for origem, vizinhos in self.motor_mapa.adjacencias.items():
-                for ligacao in vizinhos:
-                    G.add_edge(origem, ligacao["destino"])
+        for origem, vizinhos in self.motor_mapa.adjacencias.items():
+            for ligacao in vizinhos:
+                G.add_edge(origem, ligacao["destino"])
 
             # 2. Tentar usar as coordenadas reais do JSON
-            try:
+        try:
                 # O NetworkX usa (Longitude, Latitude) para o eixo X,Y
-                pos = {local: (coord[1], coord[0]) for local, coord in self.motor_mapa.dados["coordenadas"].items()}
-            except:
+            pos = {local: (coord[1], coord[0]) for local, coord in self.motor_mapa.dados["coordenadas"].items()}
+        except:
                 # Se falhar, ele espalha os nós automaticamente
-                pos = nx.spring_layout(G, seed=42)
+            pos = nx.spring_layout(G, seed=42)
 
-            plt.figure(figsize=(10, 8))
-            plt.title(f"Visualização de Percursos: {cidade_nome}")
+        plt.figure(figsize=(10, 8))
+        plt.title(f"Visualização de Percursos: {cidade_nome}")
 
             # 3. Desenhar o grafo base (nós e arestas em cinzento)
-            nx.draw_networkx_nodes(G, pos, node_size=300, node_color="#D3D3D3")
-            nx.draw_networkx_edges(G, pos, edge_color="#E0E0E0", width=1, alpha=0.5)
-            nx.draw_networkx_labels(G, pos, font_size=8)
+        nx.draw_networkx_nodes(G, pos, node_size=300, node_color="#D3D3D3")
+        nx.draw_networkx_edges(G, pos, edge_color="#E0E0E0", width=1, alpha=0.5)
+        nx.draw_networkx_labels(G, pos, font_size=8)
 
             # 4. Desenhar os 5 caminhos calculados com cores diferentes
-            cores = ["#FF0000", "#0000FF", "#008000", "#FFA500", "#800080"] # Vermelho, Azul, Verde, Laranja, Roxo
+        cores = ["#FF0000", "#0000FF", "#008000", "#FFA500", "#800080"] # Vermelho, Azul, Verde, Laranja, Roxo
             
-            for idx, (score, caminho) in enumerate(resultados):
-                if idx >= 5: break # Limite de 5 rotas
+        for idx, (score, caminho) in enumerate(resultados):
+            if idx >= 5: break # Limite de 5 rotas
                 
                 # Converte a lista ['A', 'B', 'C'] em pares [('A','B'), ('B','C')]
-                arestas_caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
+            arestas_caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
                 
-                nx.draw_networkx_edges(
-                    G, pos, 
-                    edgelist=arestas_caminho, 
-                    edge_color=cores[idx], 
-                    width=3, 
-                    label=f"Opção {idx+1} (Peso: {score:.2f})"
-                )
+            nx.draw_networkx_edges(
+                G, pos, 
+                edgelist=arestas_caminho, 
+                edge_color=cores[idx], 
+                width=3, 
+                label=f"Opção {idx+1} (Peso: {score:.2f})"
+            )
 
-            plt.legend()
-            plt.show() # Abre a janela do gráfico
+        plt.legend()
+        plt.show(block=False) # Abre a janela do gráfico
 
 if __name__ == "__main__":
     app = AppAcessibilidade()

@@ -1,8 +1,8 @@
-import random
 
+#------- @Cláudia ----- 11/05
 #o objetivo deste ficheiro é criar uma função extra na app para que o utilizador consiga verfificar, na cidade em que se encontra, onde é que pode encontrar bicicletas publicas
 
-
+import random
 class GestorBicicletas:
     def __init__(self):
         self.estacoes = {}
