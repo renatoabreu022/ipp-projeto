@@ -19,6 +19,7 @@ from datetime import datetime
 from models.bicicletas import GestorBicicletas
 import city
 import os
+from interface_bicicletas import AppBicicletas
 
 #------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
 def hora(values):
@@ -76,7 +77,8 @@ def main():
     sistema.load_users(arquivo_db)
     gestor_bicicletas = GestorBicicletas()
     print("Bem-vind@! Digite 'help' para comandos.")
-    caminho_anterior=None
+    caminho_anterior = None
+    cidade_atual = None
     while True:
         entrada = input("> ").strip().split()
         if not entrada:
@@ -251,7 +253,7 @@ def main():
                                 
                                 print(f"\nA exibir comparação visual...")
                                 # Chamamos a nova função passando o atual E o anterior
-                                AnalisadorVisual.radar (caminho_selecionado, caminho_anterior, mapa)
+                                AnalisadorVisual.radar (caminho_selecionado, caminho_anterior, mapa,hora=h_calculo)
                                 
                                 # Após fechar o gráfico, o atual passa a ser o anterior para a próxima vez
                                 caminho_anterior = caminho_selecionado
@@ -274,6 +276,7 @@ def main():
                 db_cidades = {}
             
             cidades_disponiveis = carregar_cidades_disponiveis()
+            
             
             print(f"Cidades disponíveis: {', '.join(db_cidades.keys())}")
             cidade_escolhida = input("Em que cidade se encontra? ").strip()
@@ -320,7 +323,10 @@ def main():
                         print(f" {i+1}º caminho sugerido: {' -> '.join(opcao['percurso'])}")
                         print(f"Penalização total (Score): {round(opcao['score'], 0)}")
                         print("-" * 80)
-                    
+                        
+                app = AppBicicletas(gestor_bicicletas, db_cidades, mapa, user_login)
+                app.mainloop()  
+
             else:
                 print("Cidade não encontrada na base de dados.")  
 
@@ -377,7 +383,7 @@ def main():
 
         elif comando == "ins_cidade":
             try:
-                nome = input('Nome da cidade: ')
+                nome = input('Nome da cidade: ').strip()
                 if not nome:
                     print('ERRO: O nome da cidade não pode ser vazio!')
                     continue
@@ -386,62 +392,97 @@ def main():
                 diretorio = f'city/grafo_{ficheiro}.json'
                 
                 if os.path.exists(diretorio):
-                    print(f'ERRO: Já exite um ficheiro para {nome}')
+                    print(f'ERRO: Já existe um ficheiro para {nome}.')
                     continue
-
+ 
+                # --- Inserção obrigatória de pelo menos um local ---
+                print(f"\nPara criar a cidade '{nome}' é necessário adicionar pelo menos um local.")
+                print("Podes adicionar mais locais depois com 'ins_local'.\n")
+ 
+                locais_novos = {}   # nome -> (lat, lon)
+ 
+                while True:
+                    nome_local = input('Nome do local: ').strip()
+                    if not nome_local:
+                        print('ERRO: O nome do local não pode ser vazio.')
+                        continue
+ 
+                    if nome_local in locais_novos:
+                        print(f"ERRO: '{nome_local}' já foi adicionado nesta sessão.")
+                        continue
+ 
+                    try:
+                        lat = float(input('Latitude : '))
+                        lon = float(input('Longitude: '))
+                    except ValueError:
+                        print('ERRO: Coordenadas inválidas. Insere números decimais.')
+                        continue
+ 
+                    locais_novos[nome_local] = (lat, lon)
+                    print(f"  ✓ '{nome_local}' adicionado.")
+ 
+                    if len(locais_novos) >= 1:
+                        mais = input('\nQueres adicionar mais um local agora? (s/n): ').strip().lower()
+                        if mais != 's':
+                            break
+ 
+                # Constrói o grafo com os locais recolhidos
                 grafo = {
-                    'adjacencias': {},
-                    'coordenadas': {}
+                    'adjacencias': {nome_local: [] for nome_local in locais_novos},
+                    'coordenadas': {nome_local: list(coord) for nome_local, coord in locais_novos.items()}
                 }
-
+ 
                 with open(diretorio, 'w', encoding='utf-8') as f:
-                    json.dump(grafo,f,indent=2,ensure_ascii=False)
-                
+                    json.dump(grafo, f, indent=2, ensure_ascii=False)
+ 
+                # Atualiza locais.json
                 try:
                     with open('locais.json', 'r', encoding='utf-8') as f:
                         db_locais = json.load(f)
                 except FileNotFoundError:
                     db_locais = {}
-                
-                if nome not in db_locais:
-                    db_locais[nome] = []
-                    with open('locais.json', 'w', encoding='utf-8') as f:
-                        json.dump(db_locais, f, indent=2, ensure_ascii=False)
-
-                print(f'SUCESSO: Cidade {nome} adicionada em {diretorio}!')
-                print("Usa 'ins_local' para adicionar locais e 'ins_percurso' para ligar os locais.")
-            
+ 
+                db_locais[nome] = list(locais_novos.keys())
+                with open('locais.json', 'w', encoding='utf-8') as f:
+                    json.dump(db_locais, f, indent=2, ensure_ascii=False)
+ 
+                # Carrega o novo mapa em memória para estar pronto a usar
+                mapa.load_mapa(diretorio)
+ 
+                print(f'\nSUCESSO: Cidade "{nome}" criada em {diretorio}')
+                print(f'Locais registados: {", ".join(locais_novos.keys())}')
+                print("Usa 'ins_percurso' para ligar os locais e 'ins_local' para adicionar mais.")
+ 
             except Exception as e:
-                print(f'ERRO: {e}')                
+                print(f'ERRO: {e}')  
 
         elif comando == 'ins_local':
             if not mapa.adjacencias:
                 print("ERRO: Nenhum mapa carregado. Use 'carregar_mapa' ou 'simular' primeiro.")
                 continue
-
+ 
             try:
                 nome = input('Nome do local: ').strip()
                 if not nome:
                     print("ERRO: O nome não pode ser vazio.")
                     continue
-
+ 
                 x = float(input('Latitude: '))
                 y = float(input('Longitude: '))
-
+ 
                 mapa.add_local(nome, (x,y))
-
+ 
                 try:
                     with open('locais.json', 'r', encoding='utf-8') as f:
                         db_locais = json.load(f)
                 except FileNotFoundError:
                     db_locais = {}
-                
-                print(f"Cidades disponíveis: {', '.join(db_locais.keys())}")
-                cidade = input("Em que cidade fica este local? ").strip()
-
+ 
+                cidade = cidade_atual
+ 
                 if cidade not in db_locais:
                     print(f"ERRO: '{cidade}' não existe no locais.json.")
-
+ 
                 else:
                     if nome not in db_locais[cidade]:
                         db_locais[cidade].append(nome)
@@ -511,6 +552,7 @@ def main():
                 print("ERRO: Valor inválido. Certifica-te que introduzes números onde pedido.")
             except Exception as e:
                 print(f'ERRO: {e}')
+            pass
 
         else:
             print("ERRO: Comando não reconhecido.")
