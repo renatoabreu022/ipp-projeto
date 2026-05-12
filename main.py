@@ -242,27 +242,32 @@ def main():
                         print("-" * 80)
 
                 #___________Spider_Chart_____________________#
-                    print("\n[Opção visual]")
-                    opcao_grafico = input("Deseja ver o gráfico de conforto de algum percurso? (nº do caminho/ N para sair): ")
-                    if opcao_grafico.isdigit():
-                        indice = int(opcao_grafico) - 1
-                        if 0 <= indice <len(resultado):
-                            from engine.visualizador_gráficos import AnalisadorVisual
-                            _,caminho_grafico = resultado[indice]
+                    while True: # Ciclo para permitir ver vários gráficos
+                        print("\n" + "-"*30)
+                        print("[ OPÇÕES DE VISUALIZAÇÃO ]")
+                        print("Introduza o nº do caminho para ver o gráfico (ou 'N' para voltar ao menu)")
+                        opcao = input("Escolha: ").strip().lower()
 
-                            print(f"\nA gerar gráfico para o {indice+1}º caminho...")
-                            AnalisadorVisual.radar(caminho_grafico,mapa)
+                        if opcao == 'n':
+                            break # Sai do ciclo e volta ao menu principal
+
+                        if opcao.isdigit():
+                            indice = int(opcao) - 1
+                            if 0 <= indice < len(resultado):
+                                from engine.visualizador_gráficos import AnalisadorVisual
+                                
+                                _, caminho_selecionado = resultado[indice]
+                                
+                                print(f"\nA exibir comparação visual...")
+                                # Chamamos a nova função passando o atual E o anterior
+                                AnalisadorVisual.radar (caminho_selecionado, caminho_anterior, mapa)
+                                
+                                # Após fechar o gráfico, o atual passa a ser o anterior para a próxima vez
+                                caminho_anterior = caminho_selecionado
+                            else:
+                                print("Número de caminho inválido.")
                         else:
-                            print("ERRO: Número inválido.")
-                    else:
-                        print("A regressar ao menu...")                #_______________________________________________#
-                    
-                else:
-                    print("ERRO: Não foi possível encontrar um caminho entre esses pontos.")
-
-                    # Verifica se há uma bike perto da origem para ajudar no percurso
-                    
-            
+                            print("Opção inválida. Digite o número ou 'N'.")            
             except Exception as e:
                 print(f"ERRO durante a simulação: {e}")
         
@@ -476,7 +481,16 @@ def main():
                             json.dump(db_locais, f, indent=2, ensure_ascii=False)
                         
                         print(f"SUCESSO: {nome} adicionado à cidade '{cidade}' em locais.json.")
-            pass
+                    else:
+                        print(f"Aviso: '{nome}' já existia em '{cidade}' no locais.json.")
+                
+                guardar = input('Guardar mapa agora? (s/n) ').strip().lower()
+                if guardar == 's':
+                    ficheiro = input("Nome do ficheiro: ").strip()
+                    mapa.save_mapa(ficheiro)
+                    
+            except ValueError:
+                print("ERRO: Coordenadas inválidas. Insere números decimais.")
 
         elif comando == "ins_percurso":
             if not mapa.adjacencias:
@@ -524,13 +538,11 @@ def main():
                     
                 print(f"SUCESSO: Percurso adicionado de '{origem}' para '{destino}'!")
                 print("Use 'gravar_mapa' para guardar as alterações")
-                pass
-
+                
             except ValueError:
                 print("ERRO: Valor inválido. Certifica-te que introduzes números onde pedido.")
             except Exception as e:
-                print(f"ERRO: {e}") 
-            pass
+                print(f'ERRO: {e}')
 
         else:
             print("ERRO: Comando não reconhecido.")
