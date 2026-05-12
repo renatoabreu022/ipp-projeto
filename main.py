@@ -44,14 +44,27 @@ def help():
     print("bicicletas                                           -> Mostra as bicicletas disponiveis")
     print("gravar_mapa <ficheiro>                               -> Guarda o mapa atual")
     print("carregar_mapa <ficheiro>                             -> Carrega um mapa guardado")
-    print("ins_cidade                                           -> Cria uma cidade nova")#A FAZER
-    print("ins_local                                            -> Adiciona um local a uma cidade")#A FAZER
+    print("ins_cidade                                           -> Cria uma cidade nova")
+    print("ins_local                                            -> Adiciona um local a uma cidade")
     print("ins_percurso                                         -> Adiciona um percurso entre dois pontos")
     print("ver                                                  -> Mostra a informação associada a um percurso")
     print("sair                                                 -> Encerra a aplicação")
     print("----------------------------------------------------------------------------------------------------")
 
 # --- LOOP PRINCIPAL ---
+def carregar_cidades_disponiveis():
+    cidades = {}
+    pasta = "city"
+    prefixo = "grafo_"
+    
+    for ficheiro in os.listdir(pasta):
+        if ficheiro.startswith(prefixo) and ficheiro.endswith(".json"):
+            # extrai o nome: "grafo_vila_nova_de_gaia.json" -> "Vila Nova De Gaia"
+            nome_fich = ficheiro[len(prefixo):-len(".json")]  # remove prefixo e extensão
+            nome_cidade = nome_fich.replace("_", " ").title()  # "vila nova de gaia" -> "Vila Nova De Gaia"
+            cidades[nome_cidade] = os.path.join(pasta, ficheiro)
+    
+    return cidades
 
 def main():
     sistema = Sistema()  # cria a base de dados de utilizadores
@@ -63,7 +76,7 @@ def main():
     sistema.load_users(arquivo_db)
     gestor_bicicletas = GestorBicicletas()
     print("Bem-vind@! Digite 'help' para comandos.")
-
+    caminho_anterior=None
     while True:
         entrada = input("> ").strip().split()
         if not entrada:
@@ -168,30 +181,8 @@ def main():
                 continue
             #mapeamento de ficheiros
             # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
-            cidades_disponiveis = {
-                "Aveiro" : "city/grafo_aveiro.json",
-                "Barcelos" : "city/grafo_barcelos.json",
-                "Beja" : "city/grafo_beja.json",
-                "Braga" : "city/grafo_braga.json",
-                "Caldas da Rainha" : "city/grafo_caldas_da_rainha.json",
-                "Coimbra" : "city/grafo_coimbra.json",
-                "Covilhã" : "city/grafo_covilhã.json",
-                "Évora" : "city/grafo_évora.json",
-                "Fafe": "city/grafo_fafe.json",
-                "Famalicão": "city/grafo_famalicão.json",
-                "Faro" : "city/grafo_faro.json",
-                "Figueira da Foz": "city/grafo_figueira_da_foz.json",
-                "Guimarães" : "city/grafo_guimarães.json",
-                "Lagos" : "city/grafo_lagos.json",
-                "Lisboa" : "city/grafo_lisboa.json",
-                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
-                "Portimão" : "city/grafo_portimão.json",
-                "Porto" : "city/grafo_porto.json",
-                "Póvoa de Varzim" : "city/grafo_póvoa_de_varzim.json",
-                "Tomar" : "city/grafo_tomar.json",
-                "Viseu" : "city/grafo_viseu.json",
-                "Vila Nova de Gaia" : "city/grafo_vila_nova_de_gaia.json"
-            }
+            cidades_disponiveis = carregar_cidades_disponiveis()
+
             print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys())}")            
             selecao = input("Escolha a cidade para a simulação: ").strip()
 
@@ -282,30 +273,7 @@ def main():
             except FileNotFoundError:
                 db_cidades = {}
             
-            cidades_disponiveis = {
-                "Aveiro" : "city/grafo_aveiro.json",
-                "Barcelos" : "city/grafo_barcelos.json",
-                "Beja" : "city/grafo_beja.json",
-                "Braga" : "city/grafo_braga.json",
-                "Caldas da Rainha" : "city/grafo_caldas_da_rainha.json",
-                "Coimbra" : "city/grafo_coimbra.json",
-                "Covilhã" : "city/grafo_covilhã.json",
-                "Évora" : "city/grafo_évora.json",
-                "Fafe": "city/grafo_fafe.json",
-                "Famalicão": "city/grafo_famalicão.json",
-                "Faro" : "city/grafo_faro.json",
-                "Figueira da Foz": "city/grafo_figueira_da_foz.json",
-                "Guimarães" : "city/grafo_guimarães.json",
-                "Lagos" : "city/grafo_lagos.json",
-                "Lisboa" : "city/grafo_lisboa.json",
-                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
-                "Portimão" : "city/grafo_portimão.json",
-                "Porto" : "city/grafo_porto.json",
-                "Póvoa de Varzim" : "city/grafo_póvoa_de_varzim.json",
-                "Tomar" : "city/grafo_tomar.json",
-                "Viseu" : "city/grafo_viseu.json",
-                "Vila Nova de Gaia" : "city/grafo_vila_nova_de_gaia.json"
-            }
+            cidades_disponiveis = carregar_cidades_disponiveis()
             
             print(f"Cidades disponíveis: {', '.join(db_cidades.keys())}")
             cidade_escolhida = input("Em que cidade se encontra? ").strip()
@@ -417,7 +385,7 @@ def main():
                 ficheiro = nome.lower().replace(' ','_')
                 diretorio = f'city/grafo_{ficheiro}.json'
                 
-                if os.paths.exists(diretorio):
+                if os.path.exists(diretorio):
                     print(f'ERRO: Já exite um ficheiro para {nome}')
                     continue
 
@@ -441,7 +409,7 @@ def main():
                         json.dump(db_locais, f, indent=2, ensure_ascii=False)
 
                 print(f'SUCESSO: Cidade {nome} adicionada em {diretorio}!')
-                print("Usa 'add_local' para adicionar locais e 'ins_percurso' para ligar os locais.")
+                print("Usa 'ins_local' para adicionar locais e 'ins_percurso' para ligar os locais.")
             
             except Exception as e:
                 print(f'ERRO: {e}')                

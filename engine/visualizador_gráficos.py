@@ -7,6 +7,45 @@ import numpy as np
 class AnalisadorVisual:
 
     @staticmethod
+    def ajustes_horario(hora):
+        ajustes = {
+            "sombra":1,
+            "iluminacao":1,
+            "poluicao_visual":1,
+            "transito":1,
+            "multidao":1,
+            "temperatura":1
+        }
+
+        if hora >=0 or hora <= 6:  #MADRUGADA
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 2
+            ajustes["poluicao_visual"] = 1.5
+            ajustes["transito"] = 0.5
+            ajustes["multidao"]=0.5
+            ajustes["temperatura"] = 0.75
+
+        #MANHÃ NÃO AGRAVA NADA
+        elif hora >11 or hora <= 16:  # PICO CALOR
+            ajustes["sombra"] = 2
+            ajustes["multidao"]=1.25
+            ajustes["temeratura"] = 1.75
+
+        elif hora > 16 or hora <= 19: #FINAL TARDE
+            ajustes["transito"] = 2
+            ajustes["multidao"]= 2
+            ajustes["sombra"] = 0.75
+        
+        elif hora > 19 or hora <= 24: #NOITE
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 1.25
+            ajustes["poluicao_visual"] = 1.25
+            ajustes["transito"] = 0.75
+            ajustes["multidao"]=0.75
+
+        return ajustes
+
+    @staticmethod
 
     def mapear_acessibilidade(acess:ParametrosAcessibilidade):
         nota = 3
@@ -26,7 +65,9 @@ class AnalisadorVisual:
     
     @staticmethod
 
-    def mapear_seguranca_rodoviaria(acess:ParametrosAcessibilidade,amb:ParametrosAmbiente):
+    def mapear_seguranca_rodoviaria(acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,hora):
+        ajustes = AnalisadorVisual.ajustes_horario(hora)
+        
         nota_ilu = 3
 
         match amb.iluminacao:
@@ -57,10 +98,12 @@ class AnalisadorVisual:
             case "Reduzido. Risco elevado.":
                 nota_passeios = 1
 
-        return (nota_ilu+nota_pass+nota_passeios)/3
+        return ((nota_ilu*ajustes["iluminacao"])+nota_pass+nota_passeios)/3
     
     @staticmethod
-    def mapear_comf_amb(amb:ParametrosAmbiente):
+    def mapear_comf_amb(amb:ParametrosAmbiente,hora):
+
+        ajustes = AnalisadorVisual.ajustes_horario(hora)
 
         nota_qual_ar=3
 
@@ -109,13 +152,15 @@ class AnalisadorVisual:
             case "Sombra abragente":
                 nota_sombra = 5
 
-            case " Sombra reduzida":
+            case "Sombra reduzida":
                 nota_sombra = 1
 
-        return (nota_qual_ar+nota_polen+nota_sombra+nota_sombra)/4
+        return (nota_qual_ar+nota_polen+(nota_temp*ajustes["temperatura"])+(nota_sombra*ajustes["sombra"]))/4
     
     @staticmethod
-    def mapear_sossego(amb:ParametrosAmbiente,pop:ParametrosPopulacao):
+    def mapear_sossego(amb:ParametrosAmbiente,pop:ParametrosPopulacao,hora):
+
+        ajustes = AnalisadorVisual.ajustes_horario(hora)
 
         nota_polui_visual=3
 
@@ -143,10 +188,13 @@ class AnalisadorVisual:
             case "Zona de reduzida afluência de peões.":
                 nota_multidao = 5
 
-        return (nota_multidao+nota_polui_visual+nota_ruido)/3
+        return ((nota_multidao*ajustes["multidao"]) + (nota_polui_visual*ajustes["poluicao_visual"]) + nota_ruido)/3
     
     @staticmethod
-    def mapear_transito(pop:ParametrosPopulacao):
+    def mapear_transito(pop:ParametrosPopulacao,hora):
+
+        ajustes = AnalisadorVisual.ajustes_horario(hora)
+
         nota_transito = 3
 
         match pop.transito:
@@ -165,62 +213,73 @@ class AnalisadorVisual:
             case "Zona de reduzida afluência de peões.":
                 nota_multidao = 5
 
-        return (nota_multidao+nota_transito)/2
+        return ((nota_multidao*ajustes["multidao"])+(nota_transito*ajustes["transito"]))/2
     
     @staticmethod
-    def radar(caminho_atual,caminho_anterior,mapa_obj):
-
-        categorias = ["Pavimento","Segurança","Ambiente","Afluência e Sossego","Trânsito"]
-        def calcular_medias(caminho):
-            somas = [0]*5
-
-            num_ruas = 0
-
-            for i in range(len(caminho)-1):
-                origem,destino=caminho[i],caminho[i+1]  #Encontra a rua entre 2 vértices do percurso
-                for adj in mapa_obj.adjacencias,get(origem,[]):
-                    if adj["destino"] == destino:
-                        num_ruas +=1
-
-                        n_pav = AnalisadorVisual.mapear_acessibilidade(p["acessibilidade"])
-                        n_seg = AnalisadorVisual.mapear_seguranca_rodoviaria(p["acessibilidade"],p["ambiente"])  #Calculas as notas dos parâmetros
-                        n_amb = AnalisadorVisual.mapear_comf_amb(p["ambiente"])
-                        n_soss = AnalisadorVisual.mapear_sossego(p["ambiente"],p["populacao"])
-                        n_tran = AnalisadorVisual.mapear_transito(p["populacao"])
-
-                        somas[0] += n_pav  # soma as notas
-                        somas[1] += n_seg
-                        somas[2] += n_amb
-                        somas[3] += n_soss
-                        somas[4] += n_tran
-                        break
-
-                return [s/num_ruas for s in somas] if num_ruas>0 else [0]*5  # lista em compressão que calcula as médias
+    def calcular_medias(caminho, mapa_obj,hora):
+        """Função auxiliar para calcular as médias de um caminho."""
+        if not caminho:
+            return None
             
-            medias_atual = calcular_medias(caminho_atual)
-            medias_prev = calcular_medias(caminho_anterior)
+        somas = [0] * 5
+        ruas_encontradas = 0
+        
+        for i in range(len(caminho) - 1):
+            origem, destino = caminho[i], caminho[i+1]
+            if origem in mapa_obj.adjacencias:
+                for adj in mapa_obj.adjacencias[origem]:
+                    if adj['destino'] == destino:
+                        ruas_encontradas += 1
+                        # Mapeamento (Ajusta os índices conforme a tua preferência)
+                        somas[0] += AnalisadorVisual.mapear_acessibilidade(adj['acessibilidade'])
+                        somas[1] += AnalisadorVisual.mapear_seguranca_rodoviaria(adj["acessibilidade"],adj["ambiente"],hora)
+                        somas[2] += AnalisadorVisual.mapear_comf_amb(adj["ambiente"],hora)
+                        somas[3] += AnalisadorVisual.mapear_sossego(adj["ambiente"],adj["populacao"],hora)
+                        somas[4] += AnalisadorVisual.mapear_transito(adj['populacao'],hora)
+                        break
+        
+        return [s / ruas_encontradas for s in somas] if ruas_encontradas > 0 else [0]*5
 
+    @staticmethod
+    def radar(caminho_atual, caminho_anterior, mapa_obj,hora):
+        """Gera o radar comparando o percurso atual com o anterior."""
+        
+        # 1. INICIALIZAÇÃO OBRIGATÓRIA (Evita o erro de "não definido")
+        medias_prev = None 
+        medias_atual = None
+        categorias = ['Pavimento', 'Segurança', 'Ambiente', 'Multidão', 'Trânsito']
+        
+        # 2. CÁLCULO DOS DADOS
+        medias_atual = AnalisadorVisual.calcular_medias(caminho_atual, mapa_obj,hora)
+        
+        if caminho_anterior is not None:
+            medias_prev = AnalisadorVisual.calcular_medias(caminho_anterior, mapa_obj,hora)
 
-        # CRIAÇÃO DO GRÁFICO
-        angulos = np.linspace(0,2*np.pi,len(categorias),endpoint=False).tolist()
-        angulos += angulos[:1]
+        # 3. CONFIGURAÇÃO DO GRÁFICO
+        N = len(categorias)
+        angulos = np.linspace(0, 2 * np.pi, N, endpoint=False).tolist()
+        angulos += angulos[:1] # Fechar o círculo
 
-        fig,ax = plt.subplots(figsize=(7,7),subplot_kw=dict(polar=True))
+        fig, ax = plt.subplots(figsize=(8, 10), subplot_kw=dict(polar=True))
 
-        #Desenhar anterior se existir em cinzento
-        if medias_prev:
-            medias_prev += medias_prev[:1]
-            ax.plot(angulos,medias_prev,color="gray",linestyle="--",label="Caminho Anterior",alpha=0.5)
-            ax.fill(angulos,medias_prev,color="gray",alpha=0.1)
+        # 4. DESENHO DO GRÁFICO ANTERIOR (A "Sombra")
+        # Só desenha se medias_prev tiver valores (não for None)
+        if medias_prev is not None:
+            v_prev = medias_prev + medias_prev[:1]
+            ax.plot(angulos, v_prev, color='black', linestyle='--', alpha=0.5, label='Caminho Anterior')
+            ax.fill(angulos, v_prev, color='black', alpha=0.1)
 
-        #Desenhar caminho atual em destaque
-        medias_atual += medias_atual[:1]
-        ax.plot(angulos, medias_atual, color='teal',kinewidth=2, label = "Caminho Atual")
-        ax.fill(angulos, medias_atual, color='teal', alpha=0.3)
+        # 5. DESENHO DO GRÁFICO ATUAL (O Destaque)
+        if medias_atual is not None:
+            v_atual = medias_atual + medias_atual[:1]
+            ax.plot(angulos, v_atual, color='teal', linewidth=2, label='Caminho Atual')
+            ax.fill(angulos, v_atual, color='teal', alpha=0.3)
+
+        # Ajustes Visuais
         ax.set_xticks(angulos[:-1])
         ax.set_xticklabels(categorias)
-        ax.set_ylim(0,5)
-        plt.legend(loc="upper right", bbox_to_anchor=(1.2,1.1))
+        ax.set_ylim(0, 5)
+        plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1))
+        plt.title("Comparação Visual de Conforto", size=15, y=1.1)
         
-        plt.title("Análise de Conforto da Rota", size=15, y=1.1)
         plt.show()

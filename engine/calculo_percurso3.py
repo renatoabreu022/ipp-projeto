@@ -15,13 +15,6 @@ class CalculoPeso:
     def calcular_score(preferencias:Preferencias,acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,pop:ParametrosPopulacao,hora):
         score = 0.0
 
-        e_madrugada = hora >=0 or hora <= 6
-        e_manha = hora > 6 or hora <=11
-        e_pico_calor = hora > 11 or hora <= 16
-        e_tarde = hora > 16 or hora <= 19
-        e_noite = hora >19 or hora <= 24
-
-
         ajustes = {
             "sombra":1,
             "iluminacao":1,
