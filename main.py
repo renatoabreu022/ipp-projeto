@@ -16,7 +16,7 @@ from models.grafo import Mapa
 from models.user import Sistema, Utilizador, Preferencias
 import json
 from datetime import datetime
-from models.bicicletas2 import GestorBicicletas
+from models.bicicletas import GestorBicicletas
 import city
 
 #------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
@@ -32,19 +32,23 @@ def hora(values):
 #--------------------#
 
 def help():
-    print("\n--- COMANDOS DISPONÍVEIS --------------------------------------------------------------------")
+    print("\n--- COMANDOS DISPONÍVEIS --------------------------------------------------------------------------")
     print("signin <nome>                                        -> Regista novo utilizador")
     print("login <nome> <password>                              -> Login")
     print("alterar_password <password_atual> <password_nova>    -> Alterar a password")
-    print("quizz                                                -> Altera os parâmetros de preferências")
-    print("gravar <arquivo>                                     -> Salva utilizadores")
-    print("ler <arquivo>                                        -> Carrega utilizadores")
-    print("simular                                              -> Calcula a rota ideal entre dois pontos")
+    print("preferencias                                         -> Altera os parâmetros de preferências")
+    print("simular                                              -> Calcula as melhores rotas entre dois pontos")
+    print("gravar <ficheiro>                                    -> Salva utilizadores")
+    print("ler <ficheiro>                                       -> Carrega utilizadores")
     print("bicicletas                                           -> Mostra as bicicletas disponiveis")
     print("gravar_mapa <ficheiro>                               -> Guarda o mapa atual")
     print("carregar_mapa <ficheiro>                             -> Carrega um mapa guardado")
+    print("ins_cidade")#A FAZER
+    print("ins_local")#A FAZER
+    print("ins_percurso                                         -> Adiciona um percurso entre dois pontos")
+    print("ver                                                  -> Mostra a informação associada a um percurso")
     print("sair                                                 -> Encerra a aplicação")
-    print("----------------------------------------------------------------------------------------------")
+    print("----------------------------------------------------------------------------------------------------")
 
 # --- LOOP PRINCIPAL ---
 
@@ -90,8 +94,6 @@ def main():
                     
                     print(f"Utilizador {nome} criado com sucesso!")
                     print("Note que lhe foi atribuída a password 0000. Por favor, modifique-a assim que puder.")
-                else:
-                    print("ERRO: Não foi possível criar o utilizador.")
         
         elif comando == 'login':
             if len(args) != 2:
@@ -104,10 +106,7 @@ def main():
                         if u.u_username == nome:
                             user_login = u
                             break
-                    print(f"Login realizado com sucesso. Bem-vindo, {nome}!")
-
-                else:
-                    print("Falha no login. Verifique as credenciais.")
+                    print(f"Login realizado com sucesso. Bem-vind@, {nome}!")
         
         elif comando == "alterar_password":
             if user_login is None:
@@ -128,7 +127,7 @@ def main():
                     print("ERRO: Password atual incorreta.")
         
         
-        elif comando == "quizz":
+        elif comando == "preferencias":
             if user_login is None:
                 print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
             else:
@@ -138,34 +137,28 @@ def main():
                 sistema.save_users(arquivo_db)
                 print("\n[Sucesso] As suas preferências foram atualizadas na base de dados!")
         
-        
         elif comando == 'gravar':
             nome_arquivo = args[0] if args else arquivo_db
             sistema.save_users(nome_arquivo)
             print(f"Utilizadores gravados com sucesso em '{nome_arquivo}.json'.")
-
-
 
         elif comando == 'ler':
             if not args:
                 print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ler <arquivo.json>.")
             else:
                 sistema.load_users(args[0])
-                print("Utilizadores carregados com sucesso.")
         
         elif comando == 'gravar_mapa':
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar_mapa <ficheiro>.')
             else:
-                mapa.save_mapa(args[0])
-                print("Mapa guardado com sucesso.")
+                mapa.save_mapa(f"city/{args[0]}")
         
         elif comando == 'carregar_mapa':
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: carregar_mapa <ficheiro>.')
             else:
-                mapa.load_mapa(args[0])
-                print("Mapa carregado com sucesso.")
+                mapa.load_mapa(f"city/{args[0]}")
                 
         #novo comando simular com a nova função que está nos grafos
         elif comando == "simular":
@@ -173,30 +166,30 @@ def main():
                 print("ERRO: O processo de login não foi efetuado.")
                 continue
             #mapeamento de ficheiros
-                # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
+            # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
             cidades_disponiveis = {
-                "Fafe": "city/grafo_fafe.json",
-                "Famalicão": "city/grafo_famalicão.json",
-                "Guimarães" : "city/grafo_guimarães.json",
-                "Beja" : "city/grafo_beja.json",
                 "Aveiro" : "city/grafo_aveiro.json",
                 "Barcelos" : "city/grafo_barcelos.json",
+                "Beja" : "city/grafo_beja.json",
                 "Braga" : "city/grafo_braga.json",
-                "Lagos" : "city/grafo_lagos.json",
                 "Caldas da Rainha" : "city/grafo_caldas_da_rainha.json",
                 "Coimbra" : "city/grafo_coimbra.json",
-                "Lisboa" : "city/grafo_lisboa.json",
                 "Covilhã" : "city/grafo_covilhã.json",
-                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
                 "Évora" : "city/grafo_évora.json",
-                "Portimão" : "city/grafo_portimão.json",
-                "Viseu" : "city/grafo_viseu.json",
+                "Fafe": "city/grafo_fafe.json",
+                "Famalicão": "city/grafo_famalicão.json",
                 "Faro" : "city/grafo_faro.json",
+                "Figueira da Foz": "city/grafo_figueira_da_foz.json",
+                "Guimarães" : "city/grafo_guimarães.json",
+                "Lagos" : "city/grafo_lagos.json",
+                "Lisboa" : "city/grafo_lisboa.json",
+                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
+                "Portimão" : "city/grafo_portimão.json",
                 "Porto" : "city/grafo_porto.json",
-                "Tomar" : "city/grafo_tomar.json",
                 "Póvoa de Varzim" : "city/grafo_póvoa_de_varzim.json",
-                "Vila Nova de Gaia" : "city/grafo_faro.json",
-                "Figueira da Foz": "city/grafo_figueira_da_foz.json"
+                "Tomar" : "city/grafo_tomar.json",
+                "Viseu" : "city/grafo_viseu.json",
+                "Vila Nova de Gaia" : "city/grafo_vila_nova_de_gaia.json"
             }
             print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys())}")            
             selecao = input("Escolha a cidade para a simulação: ").strip()
@@ -257,27 +250,192 @@ def main():
         
         
         elif comando == "bicicletas":
+            if user_login is None:
+                print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
+                continue
             try:
                 with open("locais.json", "r", encoding="utf-8") as f:
                     db_cidades = json.load(f)
             except FileNotFoundError:
                 db_cidades = {}
             
+            cidades_disponiveis = {
+                "Aveiro" : "city/grafo_aveiro.json",
+                "Barcelos" : "city/grafo_barcelos.json",
+                "Beja" : "city/grafo_beja.json",
+                "Braga" : "city/grafo_braga.json",
+                "Caldas da Rainha" : "city/grafo_caldas_da_rainha.json",
+                "Coimbra" : "city/grafo_coimbra.json",
+                "Covilhã" : "city/grafo_covilhã.json",
+                "Évora" : "city/grafo_évora.json",
+                "Fafe": "city/grafo_fafe.json",
+                "Famalicão": "city/grafo_famalicão.json",
+                "Faro" : "city/grafo_faro.json",
+                "Figueira da Foz": "city/grafo_figueira_da_foz.json",
+                "Guimarães" : "city/grafo_guimarães.json",
+                "Lagos" : "city/grafo_lagos.json",
+                "Lisboa" : "city/grafo_lisboa.json",
+                "Marco de Canaveses" : "city/grafo_marco_de_canaveses.json",
+                "Portimão" : "city/grafo_portimão.json",
+                "Porto" : "city/grafo_porto.json",
+                "Póvoa de Varzim" : "city/grafo_póvoa_de_varzim.json",
+                "Tomar" : "city/grafo_tomar.json",
+                "Viseu" : "city/grafo_viseu.json",
+                "Vila Nova de Gaia" : "city/grafo_vila_nova_de_gaia.json"
+            }
+            
             print(f"Cidades disponíveis: {', '.join(db_cidades.keys())}")
             cidade_escolhida = input("Em que cidade se encontra? ").strip()
             
-            if cidade_escolhida in db_cidades:
+            if cidade_escolhida in db_cidades and cidade_escolhida in cidades_disponiveis:
                 locais = db_cidades[cidade_escolhida]
-                
+                mapa.load_mapa(cidades_disponiveis[cidade_escolhida])
                 gestor_bicicletas.gerar_estacoes_para_cidade(locais)
+                estacoes_bicicletas = list(gestor_bicicletas.estacoes.keys())
+                
                 
                 print(f"Estações de Bicicletas em {cidade_escolhida}")
                 for local, info in gestor_bicicletas.estacoes.items():
                     print(f"{local}: {info['disponiveis']} bicicletas disponíveis")
+                
+                print("""Se pretende que calculemos o melhor percurso até chegar a uma bicicleta, insira o número 1. Se quiser regressar ao menu, insira o número 2""")
+                quer = input("Insira a sua opção: ")
+                if quer == "1":
+                    print(f"{locais}")
+                    origem = input("Em que local se encontra? ").strip()
+                    
+                    if origem not in mapa.adjacencias:
+                        print("ERRO: Local de origem não reconhecido no mapa.")
+                        continue
+                    
+                    print("\nA calcular os melhores percursos até uma bicicleta...")
+                    ranking_bicicletas = []
+                    
+                    hora_atual = datetime.now().hour
 
-            else:
-                print("Cidade não encontrada na base de dados.")              
+                    for destino_bicicleta in estacoes_bicicletas:
+                        resultado_grafo = mapa.pesquisa_perc(origem, destino_bicicleta, user_login.u_preferencias, hora = hora_atual, k=1)
+
+                        if resultado_grafo:
+                            score, caminho = resultado_grafo[0]
+                            ranking_bicicletas.append({'local' : destino_bicicleta, 'score':score, 'percurso':caminho, 'quantidade' : gestor_bicicletas.estacoes[destino_bicicleta]['disponiveis']})
             
+                    ranking_bicicletas.sort(key=lambda x: x['score'])
+                    k = ranking_bicicletas[:5]
+                    print(f"Os 5 melhores percursos para alcançar uma bicicleta desde {origem} são:")
+            
+                    for i, opcao in enumerate(k):
+                        print("-"*80)
+                        print(f" {i+1}º caminho sugerido: {' -> '.join(opcao['percurso'])}")
+                        print(f"Penalização total (Score): {round(opcao['score'], 0)}")
+                        print("-" * 80)
+                    
+            else:
+                print("Cidade não encontrada na base de dados.")  
+
+        elif comando == "ver":
+            if not mapa.adjacencias:
+                print("ERRO: Nenhum mapa carregado. \nUse 'carregar_mapa' primeiro.")
+                continue
+
+            print(f"\nLocais disponíveis: {','.join(mapa.get_locais())}")
+
+            origem = input("Origem: ")
+            if origem not in list(mapa.adjacencias):
+                print("ERRO: A origem não existe nesta cidade.")
+                continue
+
+            destino = input("Destino: ")
+            if destino not in list(mapa.adjacencias):
+                print("ERRO: O destino não existe nesta cidade.")
+                continue
+            
+            perc = mapa.get_percurso(origem,destino)
+            if perc is None:
+                continue
+
+            acess = perc['acessibilidade']
+            amb = perc['ambiente']
+            pop = perc['populacao']
+
+            print(f"\n{'='*50}")
+            print(f"PERCURSO: {origem} -> {destino}")
+            print(f"DISTÂNCIA: {round(perc['distancia'], 1)}")
+            print(f"\n{'='*50}")
+
+            print("\nACESSIBILIDADE")
+            print(f"Pavimento       : {acess.pavimento}")
+            print(f"Inclinação      : {acess.inclinacao}")
+            print(f"Passadeiras     : {acess.passadeiras}")
+            print(f"Passeios        : {acess.passeios}")
+            print(f"Textura         : {acess.textura_cego}")
+            print(f"Escadas         : {acess.escadas}")
+
+            print("\nAMBIENTE")
+            print(f"Qualidade do ar : {amb.qualidade_ar}")
+            print(f"Poluição sonora : {amb.poluicao_sonora}")
+            print(f"Poluição visual : {amb.poluicao_visual}")
+            print(f"Nível de pólen  : {amb.nivel_polen}")
+            print(f"Iluminação      : {amb.iluminacao}")
+            print(f"Sombra          : {amb.sombra}")
+            
+            print("\nPOPULAÇÃO")
+            print(f"Trânsito        : {pop.transito}")
+            print(f"Multidão        : {pop.multidao}")
+            print(f"\n{'='*50}")     
+
+        elif comando == "ins_percurso":
+            if not mapa.adjacencias:
+                print("ERRO: Nenhum mapa carregado. \nUse 'carregar_mapa' primeiro.")
+
+            print(f"\nLocais disponíveis: {','.join(mapa.get_locais())}")
+
+            origem = input("Origem: ")
+            if origem not in list(mapa.adjacencias):
+                print("ERRO: A origem não existe nesta cidade.")
+                continue
+
+            destino = input("Destino: ")
+            if destino not in list(mapa.adjacencias):
+                print("ERRO: O destino não existe nesta cidade.")
+                continue
+
+            try:
+                print("\n -- ACESSIBILIDADE --")
+                rug      = float(input("Rugosidade do pavimento (0-100): "))
+                dec      = float(input("Inclinação/declive (0-100): "))
+                n_passad = int(input("Nº de passadeiras: "))
+                passeio  = float(input("Percentagem do percurso com passeio (0-100): "))
+                textura  = input("Tem textura tátil para cegos? (s/n): ").strip().lower() == 's'
+                escad    = input("Tem escadas? (s/n): ").strip().lower() == 's'
+
+                print("\n -- AMBIENTE --")
+                ar     = float(input("Qualidade do ar (0-100, 100=puro): "))
+                som    = float(input("Poluição sonora (0-100): "))
+                visual = float(input("Poluição visual (0-100): "))
+                polen  = float(input("Nível de pólen (0-100): "))
+                postes = float(input("Nº de postes de luz: "))
+                sombra = float(input("Metros de sombra no percurso: "))
+
+                print("\n -- POPULAÇÃO --")
+                transito = input("Tem trânsito intenso? (s/n): ").strip().lower() == 's'
+                multidao = input("Tem muita afluência de pessoas? (s/n): ").strip().lower() == 's'
+
+                mapa.add_percurso(
+                    origem, destino,
+                    rug, dec, n_passad, passeio, textura, escad,
+                    ar, som, visual, polen, postes, sombra,
+                    transito, multidao
+                )
+                    
+                print(f"SUCESSO: Percurso adicionado de '{origem}' para '{destino}'!")
+                print("Use 'gravar_mapa' para guardar as alterações")
+
+            except ValueError:
+                print("ERRO: Valor inválido. Certifica-te que introduzes números onde pedido.")
+            except Exception as e:
+                print(f"ERRO: {e}")
+                pass
 
         else:
             print("ERRO: Comando não reconhecido.")

@@ -1,114 +1,83 @@
 {
   "adjacencias": {
     "FEUP": [
-      {
-        "destino": "Farmácia Barreiros",
-        "distancia": 70.0,
-        "acessibilidade": {
-          "origem": "FEUP",
-          "destino": "Farmácia Barreiros",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "FEUP",
-          "destino": "Farmácia Barreiros",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "FEUP",
-          "destino": "Farmácia Barreiros",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Estação de São Bento",
-        "distancia": 59.764,
-        "acessibilidade": {
-          "origem": "FEUP",
-          "destino": "Estação de São Bento",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "FEUP",
-          "destino": "Estação de São Bento",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "FEUP",
-          "destino": "Estação de São Bento",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      }
+      { "destino": "Centro Hospitalar Universitário de São João", "distancia": 0.005, "acessibilidade": { "origem": "FEUP", "destino": "Centro Hospitalar Universitário de São João", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "FEUP", "destino": "Centro Hospitalar Universitário de São João", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "FEUP", "destino": "Centro Hospitalar Universitário de São João", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Ecoponto Asprela", "distancia": 0.002, "acessibilidade": { "origem": "FEUP", "destino": "Ecoponto Asprela", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "FEUP", "destino": "Ecoponto Asprela", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "FEUP", "destino": "Ecoponto Asprela", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Farmácia Barreiros", "distancia": 0.012, "acessibilidade": { "origem": "FEUP", "destino": "Farmácia Barreiros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "FEUP", "destino": "Farmácia Barreiros", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "FEUP", "destino": "Farmácia Barreiros", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "NorteShopping", "distancia": 0.045, "acessibilidade": { "origem": "FEUP", "destino": "NorteShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "FEUP", "destino": "NorteShopping", "temperatura": "Quente", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "FEUP", "destino": "NorteShopping", "transito": "Muito Alto", "multidao": "Muito Alta" } }
+    ],
+    "Farmácia Barreiros": [
+      { "destino": "FEUP", "distancia": 0.012, "acessibilidade": { "origem": "Farmácia Barreiros", "destino": "FEUP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Farmácia Barreiros", "destino": "FEUP", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Farmácia Barreiros", "destino": "FEUP", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Centro Hospitalar Universitário de São João", "distancia": 0.015, "acessibilidade": { "origem": "Farmácia Barreiros", "destino": "Centro Hospitalar Universitário de São João", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Farmácia Barreiros", "destino": "Centro Hospitalar Universitário de São João", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Farmácia Barreiros", "destino": "Centro Hospitalar Universitário de São João", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.035, "acessibilidade": { "origem": "Farmácia Barreiros", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Farmácia Barreiros", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Farmácia Barreiros", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Ecoponto Asprela", "distancia": 0.010, "acessibilidade": { "origem": "Farmácia Barreiros", "destino": "Ecoponto Asprela", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Farmácia Barreiros", "destino": "Ecoponto Asprela", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Farmácia Barreiros", "destino": "Ecoponto Asprela", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Jardim do Palácio de Cristal": [
+      { "destino": "WC Público Cordoaria", "distancia": 0.010, "acessibilidade": { "origem": "Jardim do Palácio de Cristal", "destino": "WC Público Cordoaria", "pavimento": "Misto (Calçada)", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Palácio de Cristal", "destino": "WC Público Cordoaria", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Jardim do Palácio de Cristal", "destino": "WC Público Cordoaria", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.018, "acessibilidade": { "origem": "Jardim do Palácio de Cristal", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Palácio de Cristal", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim do Palácio de Cristal", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Zona de Descanso Aliados", "distancia": 0.020, "acessibilidade": { "origem": "Jardim do Palácio de Cristal", "destino": "Zona de Descanso Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Palácio de Cristal", "destino": "Zona de Descanso Aliados", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim do Palácio de Cristal", "destino": "Zona de Descanso Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Estação de São Bento", "distancia": 0.022, "acessibilidade": { "origem": "Jardim do Palácio de Cristal", "destino": "Estação de São Bento", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Jardim do Palácio de Cristal", "destino": "Estação de São Bento", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim do Palácio de Cristal", "destino": "Estação de São Bento", "transito": "Médio", "multidao": "Muito Alta" } }
     ],
     "Estação de São Bento": [
-      {
-        "destino": "NorteShopping",
-        "distancia": 14.618,
-        "acessibilidade": {
-          "origem": "Estação de São Bento",
-          "destino": "NorteShopping",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Estação de São Bento",
-          "destino": "NorteShopping",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Risco Elevado",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Ligeiro",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Estação de São Bento",
-          "destino": "NorteShopping",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      }
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.005, "acessibilidade": { "origem": "Estação de São Bento", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de São Bento", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de São Bento", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "WC Público Cordoaria", "distancia": 0.008, "acessibilidade": { "origem": "Estação de São Bento", "destino": "WC Público Cordoaria", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Estação de São Bento", "destino": "WC Público Cordoaria", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de São Bento", "destino": "WC Público Cordoaria", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Bebedouro Jardim do Morro", "distancia": 0.015, "acessibilidade": { "origem": "Estação de São Bento", "destino": "Bebedouro Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo (Ponte)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de São Bento", "destino": "Bebedouro Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Estação de São Bento", "destino": "Bebedouro Jardim do Morro", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Zona de Descanso Aliados", "distancia": 0.006, "acessibilidade": { "origem": "Estação de São Bento", "destino": "Zona de Descanso Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de São Bento", "destino": "Zona de Descanso Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de São Bento", "destino": "Zona de Descanso Aliados", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "NorteShopping": [
+      { "destino": "FEUP", "distancia": 0.045, "acessibilidade": { "origem": "NorteShopping", "destino": "FEUP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "NorteShopping", "destino": "FEUP", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "NorteShopping", "destino": "FEUP", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Centro Hospitalar Universitário de São João", "distancia": 0.048, "acessibilidade": { "origem": "NorteShopping", "destino": "Centro Hospitalar Universitário de São João", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "NorteShopping", "destino": "Centro Hospitalar Universitário de São João", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "NorteShopping", "destino": "Centro Hospitalar Universitário de São João", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Farmácia Barreiros", "distancia": 0.038, "acessibilidade": { "origem": "NorteShopping", "destino": "Farmácia Barreiros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "NorteShopping", "destino": "Farmácia Barreiros", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "NorteShopping", "destino": "Farmácia Barreiros", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Jardim do Palácio de Cristal", "distancia": 0.055, "acessibilidade": { "origem": "NorteShopping", "destino": "Jardim do Palácio de Cristal", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "NorteShopping", "destino": "Jardim do Palácio de Cristal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "NorteShopping", "destino": "Jardim do Palácio de Cristal", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "Centro Hospitalar Universitário de São João": [
+      { "destino": "FEUP", "distancia": 0.005, "acessibilidade": { "origem": "Centro Hospitalar Universitário de São João", "destino": "FEUP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Universitário de São João", "destino": "FEUP", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Universitário de São João", "destino": "FEUP", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Ecoponto Asprela", "distancia": 0.006, "acessibilidade": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Ecoponto Asprela", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Ecoponto Asprela", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Ecoponto Asprela", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Farmácia Barreiros", "distancia": 0.015, "acessibilidade": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Farmácia Barreiros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Farmácia Barreiros", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Farmácia Barreiros", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.040, "acessibilidade": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Centro Hospitalar Universitário de São João", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "Bebedouro Jardim do Morro": [
+      { "destino": "Estação de São Bento", "distancia": 0.015, "acessibilidade": { "origem": "Bebedouro Jardim do Morro", "destino": "Estação de São Bento", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Jardim do Morro", "destino": "Estação de São Bento", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Jardim do Morro", "destino": "Estação de São Bento", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.020, "acessibilidade": { "origem": "Bebedouro Jardim do Morro", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Pavimento Regular/Calçada", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Jardim do Morro", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Jardim do Morro", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "WC Público Cordoaria", "distancia": 0.022, "acessibilidade": { "origem": "Bebedouro Jardim do Morro", "destino": "WC Público Cordoaria", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Elevado", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Jardim do Morro", "destino": "WC Público Cordoaria", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Jardim do Morro", "destino": "WC Público Cordoaria", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Zona de Descanso Aliados", "distancia": 0.021, "acessibilidade": { "origem": "Bebedouro Jardim do Morro", "destino": "Zona de Descanso Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Jardim do Morro", "destino": "Zona de Descanso Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Jardim do Morro", "destino": "Zona de Descanso Aliados", "transito": "Baixo", "multidao": "Muito Alta" } }
+    ],
+    "Posto de Primeiros Socorros Aliados": [
+      { "destino": "Zona de Descanso Aliados", "distancia": 0.002, "acessibilidade": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Zona de Descanso Aliados", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Zona de Descanso Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Zona de Descanso Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Estação de São Bento", "distancia": 0.005, "acessibilidade": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Estação de São Bento", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Estação de São Bento", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Estação de São Bento", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "WC Público Cordoaria", "distancia": 0.007, "acessibilidade": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "WC Público Cordoaria", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "WC Público Cordoaria", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "WC Público Cordoaria", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Jardim do Palácio de Cristal", "distancia": 0.018, "acessibilidade": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Jardim do Palácio de Cristal", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Jardim do Palácio de Cristal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros Aliados", "destino": "Jardim do Palácio de Cristal", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "Ecoponto Asprela": [
+      { "destino": "FEUP", "distancia": 0.002, "acessibilidade": { "origem": "Ecoponto Asprela", "destino": "FEUP", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Asprela", "destino": "FEUP", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Asprela", "destino": "FEUP", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Centro Hospitalar Universitário de São João", "distancia": 0.006, "acessibilidade": { "origem": "Ecoponto Asprela", "destino": "Centro Hospitalar Universitário de São João", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Asprela", "destino": "Centro Hospitalar Universitário de São João", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Asprela", "destino": "Centro Hospitalar Universitário de São João", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Farmácia Barreiros", "distancia": 0.010, "acessibilidade": { "origem": "Ecoponto Asprela", "destino": "Farmácia Barreiros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Asprela", "destino": "Farmácia Barreiros", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Asprela", "destino": "Farmácia Barreiros", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.038, "acessibilidade": { "origem": "Ecoponto Asprela", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Asprela", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Asprela", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "WC Público Cordoaria": [
+      { "destino": "Jardim do Palácio de Cristal", "distancia": 0.010, "acessibilidade": { "origem": "WC Público Cordoaria", "destino": "Jardim do Palácio de Cristal", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Cordoaria", "destino": "Jardim do Palácio de Cristal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "WC Público Cordoaria", "destino": "Jardim do Palácio de Cristal", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.007, "acessibilidade": { "origem": "WC Público Cordoaria", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Cordoaria", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Cordoaria", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Estação de São Bento", "distancia": 0.008, "acessibilidade": { "origem": "WC Público Cordoaria", "destino": "Estação de São Bento", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Cordoaria", "destino": "Estação de São Bento", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Cordoaria", "destino": "Estação de São Bento", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Zona de Descanso Aliados", "distancia": 0.009, "acessibilidade": { "origem": "WC Público Cordoaria", "destino": "Zona de Descanso Aliados", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "WC Público Cordoaria", "destino": "Zona de Descanso Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Cordoaria", "destino": "Zona de Descanso Aliados", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "Zona de Descanso Aliados": [
+      { "destino": "Posto de Primeiros Socorros Aliados", "distancia": 0.002, "acessibilidade": { "origem": "Zona de Descanso Aliados", "destino": "Posto de Primeiros Socorros Aliados", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Zona de Descanso Aliados", "destino": "Posto de Primeiros Socorros Aliados", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Zona de Descanso Aliados", "destino": "Posto de Primeiros Socorros Aliados", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Estação de São Bento", "distancia": 0.006, "acessibilidade": { "origem": "Zona de Descanso Aliados", "destino": "Estação de São Bento", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Zona de Descanso Aliados", "destino": "Estação de São Bento", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Zona de Descanso Aliados", "destino": "Estação de São Bento", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "WC Público Cordoaria", "distancia": 0.009, "acessibilidade": { "origem": "Zona de Descanso Aliados", "destino": "WC Público Cordoaria", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Zona de Descanso Aliados", "destino": "WC Público Cordoaria", "temperatura": "Fresco", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Zona de Descanso Aliados", "destino": "WC Público Cordoaria", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Jardim do Palácio de Cristal", "distancia": 0.020, "acessibilidade": { "origem": "Zona de Descanso Aliados", "destino": "Jardim do Palácio de Cristal", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Zona de Descanso Aliados", "destino": "Jardim do Palácio de Cristal", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Zona de Descanso Aliados", "destino": "Jardim do Palácio de Cristal", "transito": "Alto", "multidao": "Muito Alta" } }
     ]
   },
   "coordenadas": {
-    "FEUP": [316.0, 0.0],
-    "Farmácia Barreiros": [246.84, 8.82],
-    "Jardim do Palácio de Cristal": [298.24, 21.33],
-    "Estação de São Bento": [263.48, 28.33],
-    "NorteShopping": [273.19, 39.28],
-    "Centro Hospitalar Universitário de São João": [274.57, 49.54],
-    "Bebedouro Jardim do Morro": [267.74, 58.24],
-    "Posto de Primeiros Socorros Aliados": [365.29, 93.23],
-    "Ecoponto Asprela": [290.73, 85.36],
-    "WC Público Cordoaria": [222.03, 73.9],
-    "Zona de Descanso Aliados": [354.17, 132.1]
+    "FEUP": [41.178, -8.595],
+    "Farmácia Barreiros": [41.174, -8.601],
+    "Jardim do Palácio de Cristal": [41.146, -8.625],
+    "Estação de São Bento": [41.145, -8.610],
+    "NorteShopping": [41.180, -8.654],
+    "Centro Hospitalar Universitário de São João": [41.181, -8.598],
+    "Bebedouro Jardim do Morro": [41.138, -8.609],
+    "Posto de Primeiros Socorros Aliados": [41.149, -8.611],
+    "Ecoponto Asprela": [41.177, -8.597],
+    "WC Público Cordoaria": [41.146, -8.615],
+    "Zona de Descanso Aliados": [41.148, -8.611]
   }
 }

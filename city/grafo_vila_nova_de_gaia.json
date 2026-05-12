@@ -1,204 +1,62 @@
 {
   "adjacencias": {
     "El Corte Inglés": [
-      {
-        "destino": "Hospital Eduardo Santos Silva",
-        "distancia": 85.806,
-        "acessibilidade": {
-          "origem": "El Corte Inglés",
-          "destino": "Hospital Eduardo Santos Silva",
-          "pavimento": "Pavimento Muito Irregular",
-          "inclinacao": "Nível Muito Elevado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "El Corte Inglés",
-          "destino": "Hospital Eduardo Santos Silva",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Risco Elevado",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Elevado",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "El Corte Inglés",
-          "destino": "Hospital Eduardo Santos Silva",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "GaiaShopping",
-        "distancia": 101.13,
-        "acessibilidade": {
-          "origem": "El Corte Inglés",
-          "destino": "GaiaShopping",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "El Corte Inglés",
-          "destino": "GaiaShopping",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "El Corte Inglés",
-          "destino": "GaiaShopping",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Cais de Gaia",
-        "distancia": 117.138,
-        "acessibilidade": {
-          "origem": "El Corte Inglés",
-          "destino": "Cais de Gaia",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "El Corte Inglés",
-          "destino": "Cais de Gaia",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Ligeiro",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "El Corte Inglés",
-          "destino": "Cais de Gaia",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Jardim do Morro",
-        "distancia": 54.739,
-        "acessibilidade": {
-          "origem": "El Corte Inglés",
-          "destino": "Jardim do Morro",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "El Corte Inglés",
-          "destino": "Jardim do Morro",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Ligeiro",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "El Corte Inglés",
-          "destino": "Jardim do Morro",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      }
+      { "destino": "Jardim do Morro", "distancia": 0.015, "acessibilidade": { "origem": "El Corte Inglés", "destino": "Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "El Corte Inglés", "destino": "Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "El Corte Inglés", "destino": "Jardim do Morro", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "GaiaShopping", "distancia": 0.025, "acessibilidade": { "origem": "El Corte Inglés", "destino": "GaiaShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "El Corte Inglés", "destino": "GaiaShopping", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "El Corte Inglés", "destino": "GaiaShopping", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Hospital Eduardo Santos Silva", "distancia": 0.035, "acessibilidade": { "origem": "El Corte Inglés", "destino": "Hospital Eduardo Santos Silva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "El Corte Inglés", "destino": "Hospital Eduardo Santos Silva", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Moderada", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "El Corte Inglés", "destino": "Hospital Eduardo Santos Silva", "transito": "Alto", "multidao": "Média" } },
+      { "destino": "Cais de Gaia", "distancia": 0.022, "acessibilidade": { "origem": "El Corte Inglés", "destino": "Cais de Gaia", "pavimento": "Calçada/Asfalto", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Opcional" }, "ambiente": { "origem": "El Corte Inglés", "destino": "Cais de Gaia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "El Corte Inglés", "destino": "Cais de Gaia", "transito": "Médio", "multidao": "Muito Alta" } }
     ],
     "Hospital Eduardo Santos Silva": [
-      {
-        "destino": "Cais de Gaia",
-        "distancia": 31.564,
-        "acessibilidade": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Cais de Gaia",
-          "pavimento": "Pavimento Muito Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Cais de Gaia",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Elevado",
-          "iluminacao": "Fraco (Má visibilidade)",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Cais de Gaia",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Ciclovia da Orla Marítima",
-        "distancia": 99.039,
-        "acessibilidade": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Ciclovia da Orla Marítima",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Muito Elevado",
-          "passadeiras": "Moderado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Ciclovia da Orla Marítima",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Fraco (Má visibilidade)",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Hospital Eduardo Santos Silva",
-          "destino": "Ciclovia da Orla Marítima",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      }
+      { "destino": "El Corte Inglés", "distancia": 0.035, "acessibilidade": { "origem": "Hospital Eduardo Santos Silva", "destino": "El Corte Inglés", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Eduardo Santos Silva", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Hospital Eduardo Santos Silva", "destino": "El Corte Inglés", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "GaiaShopping", "distancia": 0.040, "acessibilidade": { "origem": "Hospital Eduardo Santos Silva", "destino": "GaiaShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Eduardo Santos Silva", "destino": "GaiaShopping", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Hospital Eduardo Santos Silva", "destino": "GaiaShopping", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Jardim do Morro", "distancia": 0.045, "acessibilidade": { "origem": "Hospital Eduardo Santos Silva", "destino": "Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Eduardo Santos Silva", "destino": "Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital Eduardo Santos Silva", "destino": "Jardim do Morro", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Ecoponto Jardim do Morro", "distancia": 0.046, "acessibilidade": { "origem": "Hospital Eduardo Santos Silva", "destino": "Ecoponto Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital Eduardo Santos Silva", "destino": "Ecoponto Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital Eduardo Santos Silva", "destino": "Ecoponto Jardim do Morro", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Cais de Gaia": [
+      { "destino": "Bebedouro Cais de Gaia", "distancia": 0.002, "acessibilidade": { "origem": "Cais de Gaia", "destino": "Bebedouro Cais de Gaia", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Cais de Gaia", "destino": "Bebedouro Cais de Gaia", "temperatura": "Fresco/Rio", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Cais de Gaia", "destino": "Bebedouro Cais de Gaia", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Jardim do Morro", "distancia": 0.010, "acessibilidade": { "origem": "Cais de Gaia", "destino": "Jardim do Morro", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Cais de Gaia", "destino": "Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Cais de Gaia", "destino": "Jardim do Morro", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Ciclovia da Orla Marítima", "distancia": 0.050, "acessibilidade": { "origem": "Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "pavimento": "Asfalto/Passadiço", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "transito": "Baixo", "multidao": "Média" } },
+      { "destino": "El Corte Inglés", "distancia": 0.022, "acessibilidade": { "origem": "Cais de Gaia", "destino": "El Corte Inglés", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Cais de Gaia", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Cais de Gaia", "destino": "El Corte Inglés", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "GaiaShopping": [
+      { "destino": "El Corte Inglés", "distancia": 0.025, "acessibilidade": { "origem": "GaiaShopping", "destino": "El Corte Inglés", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GaiaShopping", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "GaiaShopping", "destino": "El Corte Inglés", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Hospital Eduardo Santos Silva", "distancia": 0.040, "acessibilidade": { "origem": "GaiaShopping", "destino": "Hospital Eduardo Santos Silva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GaiaShopping", "destino": "Hospital Eduardo Santos Silva", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "GaiaShopping", "destino": "Hospital Eduardo Santos Silva", "transito": "Muito Alto", "multidao": "Média" } },
+      { "destino": "Cais de Gaia", "distancia": 0.035, "acessibilidade": { "origem": "GaiaShopping", "destino": "Cais de Gaia", "pavimento": "Misto", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "GaiaShopping", "destino": "Cais de Gaia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "GaiaShopping", "destino": "Cais de Gaia", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Ciclovia da Orla Marítima", "distancia": 0.045, "acessibilidade": { "origem": "GaiaShopping", "destino": "Ciclovia da Orla Marítima", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "GaiaShopping", "destino": "Ciclovia da Orla Marítima", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "GaiaShopping", "destino": "Ciclovia da Orla Marítima", "transito": "Médio", "multidao": "Baixa" } }
+    ],
+    "Jardim do Morro": [
+      { "destino": "Ecoponto Jardim do Morro", "distancia": 0.001, "acessibilidade": { "origem": "Jardim do Morro", "destino": "Ecoponto Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Morro", "destino": "Ecoponto Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Jardim do Morro", "destino": "Ecoponto Jardim do Morro", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "El Corte Inglés", "distancia": 0.015, "acessibilidade": { "origem": "Jardim do Morro", "destino": "El Corte Inglés", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Morro", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "Jardim do Morro", "destino": "El Corte Inglés", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Cais de Gaia", "distancia": 0.010, "acessibilidade": { "origem": "Jardim do Morro", "destino": "Cais de Gaia", "pavimento": "Calçada/Escadas", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Jardim do Morro", "destino": "Cais de Gaia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim do Morro", "destino": "Cais de Gaia", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Hospital Eduardo Santos Silva", "distancia": 0.045, "acessibilidade": { "origem": "Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "transito": "Alto", "multidao": "Média" } }
+    ],
+    "Bebedouro Cais de Gaia": [
+      { "destino": "Cais de Gaia", "distancia": 0.002, "acessibilidade": { "origem": "Bebedouro Cais de Gaia", "destino": "Cais de Gaia", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Cais de Gaia", "destino": "Cais de Gaia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Cais de Gaia", "destino": "Cais de Gaia", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Jardim do Morro", "distancia": 0.011, "acessibilidade": { "origem": "Bebedouro Cais de Gaia", "destino": "Jardim do Morro", "pavimento": "Calçada/Escadas", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Bebedouro Cais de Gaia", "destino": "Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Cais de Gaia", "destino": "Jardim do Morro", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Ciclovia da Orla Marítima", "distancia": 0.048, "acessibilidade": { "origem": "Bebedouro Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "pavimento": "Asfalto/Passadiço", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Média", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Cais de Gaia", "destino": "Ciclovia da Orla Marítima", "transito": "Baixo", "multidao": "Média" } },
+      { "destino": "El Corte Inglés", "distancia": 0.024, "acessibilidade": { "origem": "Bebedouro Cais de Gaia", "destino": "El Corte Inglés", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Cais de Gaia", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Cais de Gaia", "destino": "El Corte Inglés", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "Ciclovia da Orla Marítima": [
+      { "destino": "Cais de Gaia", "distancia": 0.050, "acessibilidade": { "origem": "Ciclovia da Orla Marítima", "destino": "Cais de Gaia", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia da Orla Marítima", "destino": "Cais de Gaia", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ciclovia da Orla Marítima", "destino": "Cais de Gaia", "transito": "Médio", "multidao": "Muito Alta" } },
+      { "destino": "GaiaShopping", "distancia": 0.045, "acessibilidade": { "origem": "Ciclovia da Orla Marítima", "destino": "GaiaShopping", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia da Orla Marítima", "destino": "GaiaShopping", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ciclovia da Orla Marítima", "destino": "GaiaShopping", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Bebedouro Cais de Gaia", "distancia": 0.048, "acessibilidade": { "origem": "Ciclovia da Orla Marítima", "destino": "Bebedouro Cais de Gaia", "pavimento": "Asfalto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia da Orla Marítima", "destino": "Bebedouro Cais de Gaia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ciclovia da Orla Marítima", "destino": "Bebedouro Cais de Gaia", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "El Corte Inglés", "distancia": 0.060, "acessibilidade": { "origem": "Ciclovia da Orla Marítima", "destino": "El Corte Inglés", "pavimento": "Pavimento Regular", "inclinacao": "Nível Elevado (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ciclovia da Orla Marítima", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ciclovia da Orla Marítima", "destino": "El Corte Inglés", "transito": "Alto", "multidao": "Alta" } }
+    ],
+    "Ecoponto Jardim do Morro": [
+      { "destino": "Jardim do Morro", "distancia": 0.001, "acessibilidade": { "origem": "Ecoponto Jardim do Morro", "destino": "Jardim do Morro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Jardim do Morro", "destino": "Jardim do Morro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Ecoponto Jardim do Morro", "destino": "Jardim do Morro", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "El Corte Inglés", "distancia": 0.016, "acessibilidade": { "origem": "Ecoponto Jardim do Morro", "destino": "El Corte Inglés", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Jardim do Morro", "destino": "El Corte Inglés", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "Ecoponto Jardim do Morro", "destino": "El Corte Inglés", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Cais de Gaia", "distancia": 0.011, "acessibilidade": { "origem": "Ecoponto Jardim do Morro", "destino": "Cais de Gaia", "pavimento": "Calçada/Escadas", "inclinacao": "Nível Elevado (Descida)", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Sim" }, "ambiente": { "origem": "Ecoponto Jardim do Morro", "destino": "Cais de Gaia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Jardim do Morro", "destino": "Cais de Gaia", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Hospital Eduardo Santos Silva", "distancia": 0.046, "acessibilidade": { "origem": "Ecoponto Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Jardim do Morro", "destino": "Hospital Eduardo Santos Silva", "transito": "Alto", "multidao": "Média" } }
     ]
   },
   "coordenadas": {
-    "El Corte Inglés": [0.0, 375.0],
-    "Hospital Eduardo Santos Silva": [-10.35, 289.82],
-    "Cais de Gaia": [-18.55, 259.34],
-    "GaiaShopping": [-29.93, 278.4],
-    "Jardim do Morro": [-51.09, 355.35],
-    "Bebedouro Cais de Gaia": [-47.76, 264.73],
-    "Ciclovia da Orla Marítima": [-78.65, 361.54],
-    "Ecoponto Jardim do Morro": [-71.72, 280.99]
+    "El Corte Inglés": [41.125, -8.605],
+    "Hospital Eduardo Santos Silva": [41.112, -8.591],
+    "Cais de Gaia": [41.137, -8.616],
+    "GaiaShopping": [41.114, -8.623],
+    "Jardim do Morro": [41.137, -8.608],
+    "Bebedouro Cais de Gaia": [41.138, -8.614],
+    "Ciclovia da Orla Marítima": [41.103, -8.657],
+    "Ecoponto Jardim do Morro": [41.137, -8.609]
   }
 }

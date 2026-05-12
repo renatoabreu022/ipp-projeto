@@ -1,173 +1,62 @@
 {
   "adjacencias": {
     "Sé de Viseu": [
-      {
-        "destino": "Palácio do Gelo",
-        "distancia": 105.795,
-        "acessibilidade": {
-          "origem": "Sé de Viseu",
-          "destino": "Palácio do Gelo",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Sé de Viseu",
-          "destino": "Palácio do Gelo",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Sé de Viseu",
-          "destino": "Palácio do Gelo",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Hospital de São Teotónio",
-        "distancia": 54.404,
-        "acessibilidade": {
-          "origem": "Sé de Viseu",
-          "destino": "Hospital de São Teotónio",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Elevado",
-          "passadeiras": "Moderado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Sé de Viseu",
-          "destino": "Hospital de São Teotónio",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Sé de Viseu",
-          "destino": "Hospital de São Teotónio",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Parque do Fontelo",
-        "distancia": 44.382,
-        "acessibilidade": {
-          "origem": "Sé de Viseu",
-          "destino": "Parque do Fontelo",
-          "pavimento": "Pavimento Irregular",
-          "inclinacao": "Nível Muito Elevado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Sé de Viseu",
-          "destino": "Parque do Fontelo",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Sé de Viseu",
-          "destino": "Parque do Fontelo",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Rossio",
-        "distancia": 56.233,
-        "acessibilidade": {
-          "origem": "Sé de Viseu",
-          "destino": "Rossio",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Moderado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Sé de Viseu",
-          "destino": "Rossio",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Fraco (Má visibilidade)",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Sé de Viseu",
-          "destino": "Rossio",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      }
+      { "destino": "Ecoponto Sé", "distancia": 0.001, "acessibilidade": { "origem": "Sé de Viseu", "destino": "Ecoponto Sé", "pavimento": "Granito Irregular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Sé de Viseu", "destino": "Ecoponto Sé", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Sé de Viseu", "destino": "Ecoponto Sé", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Rossio", "distancia": 0.006, "acessibilidade": { "origem": "Sé de Viseu", "destino": "Rossio", "pavimento": "Calçada de Granito", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Sé de Viseu", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Sé de Viseu", "destino": "Rossio", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Parque do Fontelo", "distancia": 0.015, "acessibilidade": { "origem": "Sé de Viseu", "destino": "Parque do Fontelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Sé de Viseu", "destino": "Parque do Fontelo", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Alto", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Sé de Viseu", "destino": "Parque do Fontelo", "transito": "Médio", "multidao": "Média" } },
+      { "destino": "Hospital de São Teotónio", "distancia": 0.018, "acessibilidade": { "origem": "Sé de Viseu", "destino": "Hospital de São Teotónio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Sé de Viseu", "destino": "Hospital de São Teotónio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Sé de Viseu", "destino": "Hospital de São Teotónio", "transito": "Alto", "multidao": "Média" } }
+    ],
+    "Palácio do Gelo": [
+      { "destino": "Hospital de São Teotónio", "distancia": 0.012, "acessibilidade": { "origem": "Palácio do Gelo", "destino": "Hospital de São Teotónio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Palácio do Gelo", "destino": "Hospital de São Teotónio", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Palácio do Gelo", "destino": "Hospital de São Teotónio", "transito": "Muito Alto", "multidao": "Média" } },
+      { "destino": "Rossio", "distancia": 0.025, "acessibilidade": { "origem": "Palácio do Gelo", "destino": "Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Palácio do Gelo", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "Palácio do Gelo", "destino": "Rossio", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Primeiros Socorros", "distancia": 0.002, "acessibilidade": { "origem": "Palácio do Gelo", "destino": "Posto de Primeiros Socorros", "pavimento": "Pavimento Interior/Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Palácio do Gelo", "destino": "Posto de Primeiros Socorros", "temperatura": "Controlada", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Alta", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Total" }, "populacao": { "origem": "Palácio do Gelo", "destino": "Posto de Primeiros Socorros", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Parque do Fontelo", "distancia": 0.035, "acessibilidade": { "origem": "Palácio do Gelo", "destino": "Parque do Fontelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Palácio do Gelo", "destino": "Parque do Fontelo", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Alto", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Palácio do Gelo", "destino": "Parque do Fontelo", "transito": "Médio", "multidao": "Baixa" } }
+    ],
+    "Hospital de São Teotónio": [
+      { "destino": "Palácio do Gelo", "distancia": 0.012, "acessibilidade": { "origem": "Hospital de São Teotónio", "destino": "Palácio do Gelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de São Teotónio", "destino": "Palácio do Gelo", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Hospital de São Teotónio", "destino": "Palácio do Gelo", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Rossio", "distancia": 0.010, "acessibilidade": { "origem": "Hospital de São Teotónio", "destino": "Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de São Teotónio", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de São Teotónio", "destino": "Rossio", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Sé de Viseu", "distancia": 0.018, "acessibilidade": { "origem": "Hospital de São Teotónio", "destino": "Sé de Viseu", "pavimento": "Calçada de Granito", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de São Teotónio", "destino": "Sé de Viseu", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital de São Teotónio", "destino": "Sé de Viseu", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Posto de Primeiros Socorros", "distancia": 0.011, "acessibilidade": { "origem": "Hospital de São Teotónio", "destino": "Posto de Primeiros Socorros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital de São Teotónio", "destino": "Posto de Primeiros Socorros", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital de São Teotónio", "destino": "Posto de Primeiros Socorros", "transito": "Médio", "multidao": "Média" } }
+    ],
+    "Parque do Fontelo": [
+      { "destino": "Bebedouro Parque do Fontelo", "distancia": 0.003, "acessibilidade": { "origem": "Parque do Fontelo", "destino": "Bebedouro Parque do Fontelo", "pavimento": "Terra Batida/Pavimento", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque do Fontelo", "destino": "Bebedouro Parque do Fontelo", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Muito Alto", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Parque do Fontelo", "destino": "Bebedouro Parque do Fontelo", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Sé de Viseu", "distancia": 0.015, "acessibilidade": { "origem": "Parque do Fontelo", "destino": "Sé de Viseu", "pavimento": "Calçada de Granito", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque do Fontelo", "destino": "Sé de Viseu", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque do Fontelo", "destino": "Sé de Viseu", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Rossio", "distancia": 0.012, "acessibilidade": { "origem": "Parque do Fontelo", "destino": "Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque do Fontelo", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Parque do Fontelo", "destino": "Rossio", "transito": "Médio", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Primeiros Socorros", "distancia": 0.014, "acessibilidade": { "origem": "Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Rossio": [
+      { "destino": "Sé de Viseu", "distancia": 0.006, "acessibilidade": { "origem": "Rossio", "destino": "Sé de Viseu", "pavimento": "Calçada de Granito", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Rossio", "destino": "Sé de Viseu", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Rossio", "destino": "Sé de Viseu", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Parque do Fontelo", "distancia": 0.012, "acessibilidade": { "origem": "Rossio", "destino": "Parque do Fontelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Rossio", "destino": "Parque do Fontelo", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Alto", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Rossio", "destino": "Parque do Fontelo", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Hospital de São Teotónio", "distancia": 0.010, "acessibilidade": { "origem": "Rossio", "destino": "Hospital de São Teotónio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Rossio", "destino": "Hospital de São Teotónio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Rossio", "destino": "Hospital de São Teotónio", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Palácio do Gelo", "distancia": 0.025, "acessibilidade": { "origem": "Rossio", "destino": "Palácio do Gelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Rossio", "destino": "Palácio do Gelo", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "Rossio", "destino": "Palácio do Gelo", "transito": "Muito Alto", "multidao": "Alta" } }
+    ],
+    "Bebedouro Parque do Fontelo": [
+      { "destino": "Parque do Fontelo", "distancia": 0.003, "acessibilidade": { "origem": "Bebedouro Parque do Fontelo", "destino": "Parque do Fontelo", "pavimento": "Terra Batida", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque do Fontelo", "destino": "Parque do Fontelo", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Muito Alto", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Parque do Fontelo", "destino": "Parque do Fontelo", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Rossio", "distancia": 0.013, "acessibilidade": { "origem": "Bebedouro Parque do Fontelo", "destino": "Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque do Fontelo", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque do Fontelo", "destino": "Rossio", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Sé de Viseu", "distancia": 0.016, "acessibilidade": { "origem": "Bebedouro Parque do Fontelo", "destino": "Sé de Viseu", "pavimento": "Misto", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque do Fontelo", "destino": "Sé de Viseu", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Parque do Fontelo", "destino": "Sé de Viseu", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Posto de Primeiros Socorros", "distancia": 0.015, "acessibilidade": { "origem": "Bebedouro Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque do Fontelo", "destino": "Posto de Primeiros Socorros", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Ecoponto Sé": [
+      { "destino": "Sé de Viseu", "distancia": 0.001, "acessibilidade": { "origem": "Ecoponto Sé", "destino": "Sé de Viseu", "pavimento": "Granito", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Sé", "destino": "Sé de Viseu", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Ecoponto Sé", "destino": "Sé de Viseu", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Rossio", "distancia": 0.007, "acessibilidade": { "origem": "Ecoponto Sé", "destino": "Rossio", "pavimento": "Calçada de Granito", "inclinacao": "Nível Médio (Descida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Sé", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Sé", "destino": "Rossio", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Hospital de São Teotónio", "distancia": 0.017, "acessibilidade": { "origem": "Ecoponto Sé", "destino": "Hospital de São Teotónio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Sé", "destino": "Hospital de São Teotónio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Sé", "destino": "Hospital de São Teotónio", "transito": "Médio", "multidao": "Média" } },
+      { "destino": "Parque do Fontelo", "distancia": 0.016, "acessibilidade": { "origem": "Ecoponto Sé", "destino": "Parque do Fontelo", "pavimento": "Misto", "inclinacao": "Nível Médio", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Sé", "destino": "Parque do Fontelo", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Ecoponto Sé", "destino": "Parque do Fontelo", "transito": "Não", "multidao": "Média" } }
     ],
     "Posto de Primeiros Socorros": [
-      {
-        "destino": "Sé de Viseu",
-        "distancia": 521.899,
-        "acessibilidade": {
-          "origem": "Posto de Primeiros Socorros",
-          "destino": "Sé de Viseu",
-          "pavimento": "Pavimento Irregular",
-          "inclinacao": "Nível Muito Elevado",
-          "passadeiras": "Baixo",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Posto de Primeiros Socorros",
-          "destino": "Sé de Viseu",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Risco Elevado",
-          "iluminacao": "Fraco (Má visibilidade)",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Posto de Primeiros Socorros",
-          "destino": "Sé de Viseu",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      }
+      { "destino": "Rossio", "distancia": 0.005, "acessibilidade": { "origem": "Posto de Primeiros Socorros", "destino": "Rossio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros", "destino": "Rossio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros", "destino": "Rossio", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Hospital de São Teotónio", "distancia": 0.011, "acessibilidade": { "origem": "Posto de Primeiros Socorros", "destino": "Hospital de São Teotónio", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros", "destino": "Hospital de São Teotónio", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Primeiros Socorros", "destino": "Hospital de São Teotónio", "transito": "Médio", "multidao": "Média" } },
+      { "destino": "Palácio do Gelo", "distancia": 0.026, "acessibilidade": { "origem": "Posto de Primeiros Socorros", "destino": "Palácio do Gelo", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros", "destino": "Palácio do Gelo", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Nula" }, "populacao": { "origem": "Posto de Primeiros Socorros", "destino": "Palácio do Gelo", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Parque do Fontelo", "distancia": 0.014, "acessibilidade": { "origem": "Posto de Primeiros Socorros", "destino": "Parque do Fontelo", "pavimento": "Misto", "inclinacao": "Nível Médio (Subida)", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Primeiros Socorros", "destino": "Parque do Fontelo", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Posto de Primeiros Socorros", "destino": "Parque do Fontelo", "transito": "Baixo", "multidao": "Alta" } }
     ]
   },
   "coordenadas": {
-    "Sé de Viseu": [-155.13, -223.43],
-    "Palácio do Gelo": [-203.82, -317.15],
-    "Hospital de São Teotónio": [-112.77, -190.06],
-    "Parque do Fontelo": [-113.58, -208.01],
-    "Rossio": [-138.76, -277.21],
-    "Bebedouro Parque do Fontelo": [-127.53, -279.26],
-    "Ecoponto Sé": [-94.52, -228.2],
-    "Posto de Primeiros Socorros": [-162.94, 298.41]
+    "Sé de Viseu": [40.659, -7.911],
+    "Palácio do Gelo": [40.642, -7.915],
+    "Hospital de São Teotónio": [40.652, -7.917],
+    "Parque do Fontelo": [40.661, -7.902],
+    "Rossio": [40.657, -7.914],
+    "Bebedouro Parque do Fontelo": [40.662, -7.901],
+    "Ecoponto Sé": [40.659, -7.911],
+    "Posto de Primeiros Socorros": [40.657, -7.915]
   }
 }

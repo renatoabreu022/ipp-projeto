@@ -1,452 +1,62 @@
 {
   "adjacencias": {
-    "Praça Mártires de Ferreira de Castro": [
-      {
-        "destino": "Câmara Municipal",
-        "distancia": 0.001,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Câmara Municipal",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Câmara Municipal",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Câmara Municipal",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Teatro Cinema de Fafe",
-        "distancia": 0.002,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Teatro Cinema de Fafe",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Teatro Cinema de Fafe",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Teatro Cinema de Fafe",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Jardim do Calvário",
-        "distancia": 0.003,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Jardim do Calvário",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Jardim do Calvário",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Ligeiro",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Jardim do Calvário",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Biblioteca Municipal",
-        "distancia": 0.003,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Biblioteca Municipal",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Biblioteca Municipal",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Biblioteca Municipal",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Parque da Cidade",
-        "distancia": 0.007,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Parque da Cidade",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Parque da Cidade",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Parque da Cidade",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Pavilhão Multiusos",
-        "distancia": 0.01,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Pavilhão Multiusos",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Elevado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Pavilhão Multiusos",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Pavilhão Multiusos",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Zona Industrial",
-        "distancia": 0.025,
-        "acessibilidade": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Zona Industrial",
-          "pavimento": "Pavimento Muito Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Reduzido. Risco elevado.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Zona Industrial",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Praça Mártires de Ferreira de Castro",
-          "destino": "Zona Industrial",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      }
+    "Praça Mártires de Ferreira do Amaral": [
+      { "destino": "Hospital da Misericórdia", "distancia": 0.005, "acessibilidade": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Hospital da Misericórdia", "pavimento": "Calçada Portuguesa/Asfalto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Hospital da Misericórdia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Hospital da Misericórdia", "transito": "Muito Alto", "multidao": "Alta" } },
+      { "destino": "Terminal Rodoviário", "distancia": 0.008, "acessibilidade": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Terminal Rodoviário", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Terminal Rodoviário", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Terminal Rodoviário", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Parque Infantil do Centro", "distancia": 0.003, "acessibilidade": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque Infantil do Centro", "pavimento": "Calçada Portuguesa", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque Infantil do Centro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque Infantil do Centro", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Parque da Cidade", "distancia": 0.012, "acessibilidade": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque da Cidade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque da Cidade", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Praça Mártires de Ferreira do Amaral", "destino": "Parque da Cidade", "transito": "Médio", "multidao": "Alta" } }
     ],
-    "Câmara Municipal": [
-      {
-        "destino": "Praça Mártires de Ferreira de Castro",
-        "distancia": 0.001,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Praça Mártires de Ferreira de Castro",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Praça Mártires de Ferreira de Castro",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Praça Mártires de Ferreira de Castro",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Teatro Cinema de Fafe",
-        "distancia": 0.001,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Teatro Cinema de Fafe",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Teatro Cinema de Fafe",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Teatro Cinema de Fafe",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Jardim do Calvário",
-        "distancia": 0.002,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Jardim do Calvário",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Jardim do Calvário",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Ligeiro",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Jardim do Calvário",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Biblioteca Municipal",
-        "distancia": 0.002,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Biblioteca Municipal",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Biblioteca Municipal",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Biblioteca Municipal",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Parque da Cidade",
-        "distancia": 0.008,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Parque da Cidade",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Moderado. Risco ligeiro.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Parque da Cidade",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Ideal",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Parque da Cidade",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Pavilhão Multiusos",
-        "distancia": 0.011,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Pavilhão Multiusos",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Elevado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Pavilhão Multiusos",
-          "temperatura": "Ideal.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": "Sombra moderada"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Pavilhão Multiusos",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Zona Industrial",
-        "distancia": 0.026,
-        "acessibilidade": {
-          "origem": "Câmara Municipal",
-          "destino": "Zona Industrial",
-          "pavimento": "Pavimento Muito Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Elevado",
-          "passeios": "Reduzido. Risco elevado.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Câmara Municipal",
-          "destino": "Zona Industrial",
-          "temperatura": "Risco Moderado.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Câmara Municipal",
-          "destino": "Zona Industrial",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      }
+    "Hospital da Misericórdia": [
+      { "destino": "Praça Mártires de Ferreira do Amaral", "distancia": 0.005, "acessibilidade": { "origem": "Hospital da Misericórdia", "destino": "Praça Mártires de Ferreira do Amaral", "pavimento": "Calçada/Asfalto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Misericórdia", "destino": "Praça Mártires de Ferreira do Amaral", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Misericórdia", "destino": "Praça Mártires de Ferreira do Amaral", "transito": "Muito Alto", "multidao": "Muito Alta" } },
+      { "destino": "Pavilhão Multiusos", "distancia": 0.015, "acessibilidade": { "origem": "Hospital da Misericórdia", "destino": "Pavilhão Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Misericórdia", "destino": "Pavilhão Multiusos", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Hospital da Misericórdia", "destino": "Pavilhão Multiusos", "transito": "Alto", "multidao": "Média" } },
+      { "destino": "Terminal Rodoviário", "distancia": 0.010, "acessibilidade": { "origem": "Hospital da Misericórdia", "destino": "Terminal Rodoviário", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Misericórdia", "destino": "Terminal Rodoviário", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Misericórdia", "destino": "Terminal Rodoviário", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Parque Infantil do Centro", "distancia": 0.007, "acessibilidade": { "origem": "Hospital da Misericórdia", "destino": "Parque Infantil do Centro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Misericórdia", "destino": "Parque Infantil do Centro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital da Misericórdia", "destino": "Parque Infantil do Centro", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Parque da Cidade": [
+      { "destino": "Bebedouro Parque da Cidade", "distancia": 0.002, "acessibilidade": { "origem": "Parque da Cidade", "destino": "Bebedouro Parque da Cidade", "pavimento": "Terra Batida/Pavimento", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade", "destino": "Bebedouro Parque da Cidade", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Muito Alto", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Parque da Cidade", "destino": "Bebedouro Parque da Cidade", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Pavilhão Multiusos", "distancia": 0.005, "acessibilidade": { "origem": "Parque da Cidade", "destino": "Pavilhão Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade", "destino": "Pavilhão Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque da Cidade", "destino": "Pavilhão Multiusos", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Praça Mártires de Ferreira do Amaral", "distancia": 0.012, "acessibilidade": { "origem": "Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Moderada", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Média" }, "populacao": { "origem": "Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "transito": "Médio", "multidao": "Muito Alta" } },
+      { "destino": "Ecoponto Multiusos", "distancia": 0.006, "acessibilidade": { "origem": "Parque da Cidade", "destino": "Ecoponto Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque da Cidade", "destino": "Ecoponto Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Parque da Cidade", "destino": "Ecoponto Multiusos", "transito": "Baixo", "multidao": "Média" } }
+    ],
+    "Pavilhão Multiusos": [
+      { "destino": "Ecoponto Multiusos", "distancia": 0.001, "acessibilidade": { "origem": "Pavilhão Multiusos", "destino": "Ecoponto Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Pavilhão Multiusos", "destino": "Ecoponto Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Pavilhão Multiusos", "destino": "Ecoponto Multiusos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Parque da Cidade", "distancia": 0.005, "acessibilidade": { "origem": "Pavilhão Multiusos", "destino": "Parque da Cidade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Pavilhão Multiusos", "destino": "Parque da Cidade", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Pavilhão Multiusos", "destino": "Parque da Cidade", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Hospital da Misericórdia", "distancia": 0.015, "acessibilidade": { "origem": "Pavilhão Multiusos", "destino": "Hospital da Misericórdia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Pavilhão Multiusos", "destino": "Hospital da Misericórdia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Moderada", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Pavilhão Multiusos", "destino": "Hospital da Misericórdia", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Terminal Rodoviário", "distancia": 0.018, "acessibilidade": { "origem": "Pavilhão Multiusos", "destino": "Terminal Rodoviário", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Pavilhão Multiusos", "destino": "Terminal Rodoviário", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Pavilhão Multiusos", "destino": "Terminal Rodoviário", "transito": "Alto", "multidao": "Muito Alta" } }
+    ],
+    "Terminal Rodoviário": [
+      { "destino": "Praça Mártires de Ferreira do Amaral", "distancia": 0.008, "acessibilidade": { "origem": "Terminal Rodoviário", "destino": "Praça Mártires de Ferreira do Amaral", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terminal Rodoviário", "destino": "Praça Mártires de Ferreira do Amaral", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Terminal Rodoviário", "destino": "Praça Mártires de Ferreira do Amaral", "transito": "Alto", "multidao": "Muito Alta" } },
+      { "destino": "Hospital da Misericórdia", "distancia": 0.010, "acessibilidade": { "origem": "Terminal Rodoviário", "destino": "Hospital da Misericórdia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terminal Rodoviário", "destino": "Hospital da Misericórdia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Terminal Rodoviário", "destino": "Hospital da Misericórdia", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Pavilhão Multiusos", "distancia": 0.018, "acessibilidade": { "origem": "Terminal Rodoviário", "destino": "Pavilhão Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terminal Rodoviário", "destino": "Pavilhão Multiusos", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Terminal Rodoviário", "destino": "Pavilhão Multiusos", "transito": "Alto", "multidao": "Média" } },
+      { "destino": "Parque Infantil do Centro", "distancia": 0.009, "acessibilidade": { "origem": "Terminal Rodoviário", "destino": "Parque Infantil do Centro", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Terminal Rodoviário", "destino": "Parque Infantil do Centro", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Terminal Rodoviário", "destino": "Parque Infantil do Centro", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Bebedouro Parque da Cidade": [
+      { "destino": "Parque da Cidade", "distancia": 0.002, "acessibilidade": { "origem": "Bebedouro Parque da Cidade", "destino": "Parque da Cidade", "pavimento": "Terra Batida", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Não", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque da Cidade", "destino": "Parque da Cidade", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Muito Alto", "iluminacao": "Média", "sombra": "Muita" }, "populacao": { "origem": "Bebedouro Parque da Cidade", "destino": "Parque da Cidade", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Pavilhão Multiusos", "distancia": 0.006, "acessibilidade": { "origem": "Bebedouro Parque da Cidade", "destino": "Pavilhão Multiusos", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque da Cidade", "destino": "Pavilhão Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Parque da Cidade", "destino": "Pavilhão Multiusos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Ecoponto Multiusos", "distancia": 0.007, "acessibilidade": { "origem": "Bebedouro Parque da Cidade", "destino": "Ecoponto Multiusos", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque da Cidade", "destino": "Ecoponto Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Parque da Cidade", "destino": "Ecoponto Multiusos", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Praça Mártires de Ferreira do Amaral", "distancia": 0.013, "acessibilidade": { "origem": "Bebedouro Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Bebedouro Parque da Cidade", "destino": "Praça Mártires de Ferreira do Amaral", "transito": "Não", "multidao": "Alta" } }
+    ],
+    "Parque Infantil do Centro": [
+      { "destino": "Praça Mártires de Ferreira do Amaral", "distancia": 0.003, "acessibilidade": { "origem": "Parque Infantil do Centro", "destino": "Praça Mártires de Ferreira do Amaral", "pavimento": "Calçada", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil do Centro", "destino": "Praça Mártires de Ferreira do Amaral", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Moderada", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Parque Infantil do Centro", "destino": "Praça Mártires de Ferreira do Amaral", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Terminal Rodoviário", "distancia": 0.009, "acessibilidade": { "origem": "Parque Infantil do Centro", "destino": "Terminal Rodoviário", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil do Centro", "destino": "Terminal Rodoviário", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Alta", "poluicao_visual": "Moderada", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque Infantil do Centro", "destino": "Terminal Rodoviário", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Hospital da Misericórdia", "distancia": 0.007, "acessibilidade": { "origem": "Parque Infantil do Centro", "destino": "Hospital da Misericórdia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil do Centro", "destino": "Hospital da Misericórdia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Moderada", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Parque Infantil do Centro", "destino": "Hospital da Misericórdia", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Parque da Cidade", "distancia": 0.015, "acessibilidade": { "origem": "Parque Infantil do Centro", "destino": "Parque da Cidade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Parque Infantil do Centro", "destino": "Parque da Cidade", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Parque Infantil do Centro", "destino": "Parque da Cidade", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Ecoponto Multiusos": [
+      { "destino": "Pavilhão Multiusos", "distancia": 0.001, "acessibilidade": { "origem": "Ecoponto Multiusos", "destino": "Pavilhão Multiusos", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Multiusos", "destino": "Pavilhão Multiusos", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Ecoponto Multiusos", "destino": "Pavilhão Multiusos", "transito": "Não", "multidao": "Média" } },
+      { "destino": "Parque da Cidade", "distancia": 0.006, "acessibilidade": { "origem": "Ecoponto Multiusos", "destino": "Parque da Cidade", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Multiusos", "destino": "Parque da Cidade", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Médio", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Multiusos", "destino": "Parque da Cidade", "transito": "Baixo", "multidao": "Média" } },
+      { "destino": "Hospital da Misericórdia", "distancia": 0.016, "acessibilidade": { "origem": "Ecoponto Multiusos", "destino": "Hospital da Misericórdia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Multiusos", "destino": "Hospital da Misericórdia", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Ecoponto Multiusos", "destino": "Hospital da Misericórdia", "transito": "Médio", "multidao": "Média" } },
+      { "destino": "Bebedouro Parque da Cidade", "distancia": 0.007, "acessibilidade": { "origem": "Ecoponto Multiusos", "destino": "Bebedouro Parque da Cidade", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Ecoponto Multiusos", "destino": "Bebedouro Parque da Cidade", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Ecoponto Multiusos", "destino": "Bebedouro Parque da Cidade", "transito": "Não", "multidao": "Baixa" } }
     ]
   },
   "coordenadas": {
-    "Praça Mártires de Ferreira de Castro": [41.451, -8.1705],
-    "Câmara Municipal": [41.4505, -8.1715],
-    "Teatro Cinema de Fafe": [41.4498, -8.1725],
-    "Jardim do Calvário": [41.452, -8.173],
-    "Biblioteca Municipal": [41.4485, -8.171],
-    "Parque da Cidade": [41.455, -8.165],
-    "Pavilhão Multiusos": [41.457, -8.162],
-    "Zona Industrial": [41.465, -8.15]
+    "Praça Mártires de Ferreira do Amaral": [41.451, -8.172],
+    "Hospital da Misericórdia": [41.455, -8.172],
+    "Parque da Cidade": [41.450, -8.162],
+    "Pavilhão Multiusos": [41.454, -8.160],
+    "Terminal Rodoviário": [41.448, -8.175],
+    "Bebedouro Parque da Cidade": [41.451, -8.161],
+    "Parque Infantil do Centro": [41.451, -8.173],
+    "Ecoponto Multiusos": [41.454, -8.159]
   }
 }

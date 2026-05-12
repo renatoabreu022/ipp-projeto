@@ -15,7 +15,48 @@ class CalculoPeso:
     def calcular_score(preferencias:Preferencias,acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,pop:ParametrosPopulacao,hora):
         score = 0.0
 
-        e_noite = hora >=18 or hora < 7
+        e_madrugada = hora >=0 or hora <= 6
+        e_manha = hora > 6 or hora <=11
+        e_pico_calor = hora > 11 or hora <= 16
+        e_tarde = hora > 16 or hora <= 19
+        e_noite = hora >19 or hora <= 24
+
+
+        ajustes = {
+            "sombra":1,
+            "iluminacao":1,
+            "poluicao_visual":1,
+            "transito":1,
+            "multidao":1,
+            "temperatura":1
+        }
+
+        if hora >=0 or hora <= 6:  #MADRUGADA
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 2
+            ajustes["poluicao_visual"] = 1.5
+            ajustes["transito"] = 0.5
+            ajustes["multidao"]=0.5
+            ajustes["temperatura"] = 0.75
+
+        #MANHÃ NÃO AGRAVA NADA
+        elif hora >11 or hora <= 16:  # PICO CALOR
+            ajustes["sombra"] = 2
+            ajustes["multidao"]=1.25
+            ajustes["temeratura"] = 1.75
+
+        elif hora > 16 or hora <= 19: #FINAL TARDE
+            ajustes["transito"] = 2
+            ajustes["multidao"]= 2
+            ajustes["sombra"] = 0.75
+        
+        elif hora > 19 or hora <= 24: #NOITE
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 1.25
+            ajustes["poluicao_visual"] = 1.25
+            ajustes["transito"] = 0.75
+            ajustes["multidao"]=0.75
+
 
         match acess.pavimento:
             case "Pavimento Muito Irregular":
@@ -64,17 +105,13 @@ class CalculoPeso:
 
         match amb.temp:
             case "Risco Elevado.":
-                ajuste = 0.8 if e_noite else 1
-                score += preferencias.peso_temperatura*1*ajuste
+                score += preferencias.peso_temperatura*1*ajustes["temperatura"]
             case "Risco Moderado.":
-                ajuste = 0.7 if e_noite else 1
-                score+=preferencias.peso_temperatura*0.75*ajuste
+                score+=preferencias.peso_temperatura*0.75*ajustes["temperatura"]
             case "Desconforto Ligeiro.":
-                ajuste = 0.65 if e_noite else 1
-                score+=preferencias.peso_temperatura*0.5*ajuste
+                score+=preferencias.peso_temperatura*0.5*ajustes["temperatura"]
             case "Ideal.":
-                ajuste = 0.5 if e_noite else 1
-                score+=preferencias.peso_temperatura*0.25*ajuste
+                score+=preferencias.peso_temperatura*0.25*ajustes["temperatura"]
                 
         match amb.qualidade_ar:
             case "Excelente":
@@ -96,13 +133,11 @@ class CalculoPeso:
         
         match amb.poluicao_visual:
             case "Ideal":
-                ajuste = 1.5 if e_noite else 1
-                score += preferencias.peso_visual*(1/3)*ajuste
+                score += preferencias.peso_visual*(1/3)*ajustes["poluicao_visual"]
             case "Aceitável":
-                ajuste = 1.25 if e_noite else 1
-                score += preferencias.peso_visual*(2/3)*ajuste
+                score += preferencias.peso_visual*(2/3)*ajustes["poluicao_visual"]
             case "Desconfortável":
-                score += preferencias.peso_visual*1
+                score += preferencias.peso_visual*1*ajustes["poluicao_visual"]
         
         
         match amb.nivel_polen:
@@ -118,43 +153,38 @@ class CalculoPeso:
                 
         match amb.iluminacao:
             case "Iluminação Elevada":
-                ajuste = 1.25 if e_noite else 1
-                score += preferencias.peso_iluminacao*(1/3) * ajuste
+                score += preferencias.peso_iluminacao*(1/3) * ajustes["iluminacao"]
             case "Iluminação Moderada":
-                ajuste = 1.5 if e_noite else 1
-                score += preferencias.peso_iluminacao*(2/3)*ajuste
+                score += preferencias.peso_iluminacao*(2/3)*ajustes["iluminacao"]
             case "Fraco (Má visibilidade)":
                 ajuste = 2 if e_noite else 1
-                score += preferencias.peso_iluminacao*(1)*ajuste
+                score += preferencias.peso_iluminacao*(1)*ajustes["iluminacao"]
                 
         
         match amb.sombra:
             case "Sombra reduzida":
-                ajuste = 0 if e_noite else 1
-                score += preferencias.peso_sombra*(1)*ajuste
+                score += preferencias.peso_sombra*(1)*ajustes["sombra"]
             case "Sombra moderada":
-                ajuste = 0 if e_noite else 1
-                score += preferencias.peso_sombra*(2/3)*ajuste
+                score += preferencias.peso_sombra*(2/3)*ajustes["sombra"]
             case "Sombra abrangente":
-                ajuste = 0 if e_noite else 1
-                score += preferencias.peso_sombra*(1/3)*ajuste
+                score += preferencias.peso_sombra*(1/3)*ajustes["sombra"]
 
         match pop.transito:
             case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.":
-                score += preferencias.peso_transito*(1)
+                score += preferencias.peso_transito*(1)*ajustes["transito"]
             case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.":
-                score += preferencias.peso_transito*(1/2)
+                score += preferencias.peso_transito*(1/2)*ajustes["transito"]
         
 
         match pop.multidao:
             case "Zona de elevada afluência de peões.":
-                score += preferencias.peso_multidao*(1)
+                score += preferencias.peso_multidao*(1)*ajustes["multidao"]
             case "Zona de reduzida afluência de peões.":
-                score += preferencias.peso_multidao*(1/2)
+                score += preferencias.peso_multidao*(1/2)*ajustes["multidao"]
                 
                 
         return score
 
-                
+
                 
                 

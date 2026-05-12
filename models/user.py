@@ -64,7 +64,7 @@ class Sistema:
         i = 0
         while valido and i < len(self._users):
             if self._users[i].u_username == new_username:
-                print("Username já existente. Por favor, crie um novo.")
+                print("Username já existente. Por favor, use um diferente.")
                 valido = False                                          # Se já existir um username igual, retorna falso
             i +=1
         if valido:

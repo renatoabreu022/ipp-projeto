@@ -1,142 +1,62 @@
 {
   "adjacencias": {
     "Casino da Póvoa": [
-      {
-        "destino": "Hospital da Luz Póvoa de Varzim",
-        "distancia": 116.142,
-        "acessibilidade": {
-          "origem": "Casino da Póvoa",
-          "destino": "Hospital da Luz Póvoa de Varzim",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Muito Elevado",
-          "passadeiras": "Moderado",
-          "passeios": "Reduzido. Risco elevado.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Casino da Póvoa",
-          "destino": "Hospital da Luz Póvoa de Varzim",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Excelente",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Casino da Póvoa",
-          "destino": "Hospital da Luz Póvoa de Varzim",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      },
-      {
-        "destino": "Estação de Metro da Póvoa",
-        "distancia": 131.157,
-        "acessibilidade": {
-          "origem": "Casino da Póvoa",
-          "destino": "Estação de Metro da Póvoa",
-          "pavimento": "Pavimento Irregular",
-          "inclinacao": "Nível Moderado",
-          "passadeiras": "Moderado",
-          "passeios": "Elevado. Risco reduzido.",
-          "textura_cego": "O percurso dispõe de pavimento tátil, garantindo a orientação e segurança de pessoas com deficiência visual que utilizam bengala.",
-          "escadas": "O percurso inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Casino da Póvoa",
-          "destino": "Estação de Metro da Póvoa",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Ideal",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Fraco (Má visibilidade)",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Casino da Póvoa",
-          "destino": "Estação de Metro da Póvoa",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de reduzida afluência de peões."
-        }
-      },
-      {
-        "destino": "Passeio Alegre",
-        "distancia": 99.117,
-        "acessibilidade": {
-          "origem": "Casino da Póvoa",
-          "destino": "Passeio Alegre",
-          "pavimento": "Pavimento Ligeiramente Irregular",
-          "inclinacao": "Nível Baixo",
-          "passadeiras": "Moderado",
-          "passeios": "Reduzido. Risco elevado.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Casino da Póvoa",
-          "destino": "Passeio Alegre",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Boa",
-          "poluicao_sonora": "Aceitável",
-          "poluicao_visual": "Aceitável",
-          "nivel_polen": "Risco Moderado",
-          "iluminacao": "Ótima",
-          "sombra": " Sombra reduzida"
-        },
-        "populacao": {
-          "origem": "Casino da Póvoa",
-          "destino": "Passeio Alegre",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      }
+      { "destino": "Passeio Alegre", "distancia": 0.002, "acessibilidade": { "origem": "Casino da Póvoa", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Casino da Póvoa", "destino": "Passeio Alegre", "temperatura": "Fresco/Marítimo", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Casino da Póvoa", "destino": "Passeio Alegre", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Bebedouro Passeio Alegre", "distancia": 0.003, "acessibilidade": { "origem": "Casino da Póvoa", "destino": "Bebedouro Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Casino da Póvoa", "destino": "Bebedouro Passeio Alegre", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Casino da Póvoa", "destino": "Bebedouro Passeio Alegre", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Posto de Socorros da Praia", "distancia": 0.005, "acessibilidade": { "origem": "Casino da Póvoa", "destino": "Posto de Socorros da Praia", "pavimento": "Misto (Cimento/Areia)", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Casino da Póvoa", "destino": "Posto de Socorros da Praia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Casino da Póvoa", "destino": "Posto de Socorros da Praia", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital da Luz Póvoa de Varzim", "distancia": 0.015, "acessibilidade": { "origem": "Casino da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Casino da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Casino da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "transito": "Médio", "multidao": "Média" } }
+    ],
+    "Hospital da Luz Póvoa de Varzim": [
+      { "destino": "Biblioteca Municipal Rocha Peixoto", "distancia": 0.008, "acessibilidade": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Biblioteca Municipal Rocha Peixoto", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Biblioteca Municipal Rocha Peixoto", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Biblioteca Municipal Rocha Peixoto", "transito": "Médio", "multidao": "Média" } },
+      { "destino": "Estação de Metro da Póvoa", "distancia": 0.012, "acessibilidade": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Estação de Metro da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Estação de Metro da Póvoa", "temperatura": "Ideal", "qualidade_ar": "Média", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Estação de Metro da Póvoa", "transito": "Médio", "multidao": "Alta" } },
+      { "destino": "Casino da Póvoa", "distancia": 0.015, "acessibilidade": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Casino da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Casino da Póvoa", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Casino da Póvoa", "transito": "Alto", "multidao": "Alta" } },
+      { "destino": "Passeio Alegre", "distancia": 0.014, "acessibilidade": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Passeio Alegre", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Hospital da Luz Póvoa de Varzim", "destino": "Passeio Alegre", "transito": "Médio", "multidao": "Alta" } }
+    ],
+    "Passeio Alegre": [
+      { "destino": "Bebedouro Passeio Alegre", "distancia": 0.001, "acessibilidade": { "origem": "Passeio Alegre", "destino": "Bebedouro Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Passeio Alegre", "destino": "Bebedouro Passeio Alegre", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Passeio Alegre", "destino": "Bebedouro Passeio Alegre", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Socorros da Praia", "distancia": 0.004, "acessibilidade": { "origem": "Passeio Alegre", "destino": "Posto de Socorros da Praia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Passeio Alegre", "destino": "Posto de Socorros da Praia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Passeio Alegre", "destino": "Posto de Socorros da Praia", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Casino da Póvoa", "distancia": 0.002, "acessibilidade": { "origem": "Passeio Alegre", "destino": "Casino da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Passeio Alegre", "destino": "Casino da Póvoa", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Passeio Alegre", "destino": "Casino da Póvoa", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Biblioteca Municipal Rocha Peixoto", "distancia": 0.009, "acessibilidade": { "origem": "Passeio Alegre", "destino": "Biblioteca Municipal Rocha Peixoto", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Passeio Alegre", "destino": "Biblioteca Municipal Rocha Peixoto", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Passeio Alegre", "destino": "Biblioteca Municipal Rocha Peixoto", "transito": "Baixo", "multidao": "Média" } }
     ],
     "Biblioteca Municipal Rocha Peixoto": [
-      {
-        "destino": "Estação de Metro da Póvoa",
-        "distancia": 15.0,
-        "acessibilidade": {
-          "origem": "Biblioteca Municipal Rocha Peixoto",
-          "destino": "Estação de Metro da Póvoa",
-          "pavimento": "Pavimento Regular",
-          "inclinacao": "Nível Elevado",
-          "passadeiras": "Moderado",
-          "passeios": "Reduzido. Risco elevado.",
-          "textura_cego": "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.",
-          "escadas": "O percurso não inclui escadas."
-        },
-        "ambiente": {
-          "origem": "Biblioteca Municipal Rocha Peixoto",
-          "destino": "Estação de Metro da Póvoa",
-          "temperatura": "Desconforto Ligeiro.",
-          "qualidade_ar": "Risco Moderado",
-          "poluicao_sonora": "Desconfortável",
-          "poluicao_visual": "Desconfortável",
-          "nivel_polen": "Ideal. Ar limpo.",
-          "iluminacao": "Iluminação Moderada",
-          "sombra": "Sombra abragente"
-        },
-        "populacao": {
-          "origem": "Biblioteca Municipal Rocha Peixoto",
-          "destino": "Estação de Metro da Póvoa",
-          "transito": "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.",
-          "multidao": "Zona de elevada afluência de peões."
-        }
-      }
+      { "destino": "WC Público Biblioteca", "distancia": 0.001, "acessibilidade": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "WC Público Biblioteca", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "WC Público Biblioteca", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Nula", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "WC Público Biblioteca", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Estação de Metro da Póvoa", "distancia": 0.005, "acessibilidade": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Estação de Metro da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Estação de Metro da Póvoa", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Estação de Metro da Póvoa", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital da Luz Póvoa de Varzim", "distancia": 0.008, "acessibilidade": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Hospital da Luz Póvoa de Varzim", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Hospital da Luz Póvoa de Varzim", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Hospital da Luz Póvoa de Varzim", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Passeio Alegre", "distancia": 0.009, "acessibilidade": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Passeio Alegre", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Biblioteca Municipal Rocha Peixoto", "destino": "Passeio Alegre", "transito": "Baixo", "multidao": "Alta" } }
+    ],
+    "Estação de Metro da Póvoa": [
+      { "destino": "Biblioteca Municipal Rocha Peixoto", "distancia": 0.005, "acessibilidade": { "origem": "Estação de Metro da Póvoa", "destino": "Biblioteca Municipal Rocha Peixoto", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Metro da Póvoa", "destino": "Biblioteca Municipal Rocha Peixoto", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Estação de Metro da Póvoa", "destino": "Biblioteca Municipal Rocha Peixoto", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Hospital da Luz Póvoa de Varzim", "distancia": 0.012, "acessibilidade": { "origem": "Estação de Metro da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Metro da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Metro da Póvoa", "destino": "Hospital da Luz Póvoa de Varzim", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Passeio Alegre", "distancia": 0.011, "acessibilidade": { "origem": "Estação de Metro da Póvoa", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Metro da Póvoa", "destino": "Passeio Alegre", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Metro da Póvoa", "destino": "Passeio Alegre", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "WC Público Biblioteca", "distancia": 0.006, "acessibilidade": { "origem": "Estação de Metro da Póvoa", "destino": "WC Público Biblioteca", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Estação de Metro da Póvoa", "destino": "WC Público Biblioteca", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Estação de Metro da Póvoa", "destino": "WC Público Biblioteca", "transito": "Não", "multidao": "Média" } }
+    ],
+    "Bebedouro Passeio Alegre": [
+      { "destino": "Passeio Alegre", "distancia": 0.001, "acessibilidade": { "origem": "Bebedouro Passeio Alegre", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Passeio Alegre", "destino": "Passeio Alegre", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Passeio Alegre", "destino": "Passeio Alegre", "transito": "Não", "multidao": "Muito Alta" } },
+      { "destino": "Casino da Póvoa", "distancia": 0.003, "acessibilidade": { "origem": "Bebedouro Passeio Alegre", "destino": "Casino da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Passeio Alegre", "destino": "Casino da Póvoa", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Passeio Alegre", "destino": "Casino da Póvoa", "transito": "Baixo", "multidao": "Muito Alta" } },
+      { "destino": "Posto de Socorros da Praia", "distancia": 0.005, "acessibilidade": { "origem": "Bebedouro Passeio Alegre", "destino": "Posto de Socorros da Praia", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Passeio Alegre", "destino": "Posto de Socorros da Praia", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Bebedouro Passeio Alegre", "destino": "Posto de Socorros da Praia", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Hospital da Luz Póvoa de Varzim", "distancia": 0.014, "acessibilidade": { "origem": "Bebedouro Passeio Alegre", "destino": "Hospital da Luz Póvoa de Varzim", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Bebedouro Passeio Alegre", "destino": "Hospital da Luz Póvoa de Varzim", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Bebedouro Passeio Alegre", "destino": "Hospital da Luz Póvoa de Varzim", "transito": "Sim", "multidao": "Média" } }
+    ],
+    "Posto de Socorros da Praia": [
+      { "destino": "Passeio Alegre", "distancia": 0.004, "acessibilidade": { "origem": "Posto de Socorros da Praia", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Socorros da Praia", "destino": "Passeio Alegre", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Socorros da Praia", "destino": "Passeio Alegre", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Bebedouro Passeio Alegre", "distancia": 0.005, "acessibilidade": { "origem": "Posto de Socorros da Praia", "destino": "Bebedouro Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Não", "escadas": "Não" }, "ambiente": { "origem": "Posto de Socorros da Praia", "destino": "Bebedouro Passeio Alegre", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Nula" }, "populacao": { "origem": "Posto de Socorros da Praia", "destino": "Bebedouro Passeio Alegre", "transito": "Não", "multidao": "Alta" } },
+      { "destino": "Casino da Póvoa", "distancia": 0.005, "acessibilidade": { "origem": "Posto de Socorros da Praia", "destino": "Casino da Póvoa", "pavimento": "Misto", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Socorros da Praia", "destino": "Casino da Póvoa", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Alta", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Excelente", "sombra": "Pouca" }, "populacao": { "origem": "Posto de Socorros da Praia", "destino": "Casino da Póvoa", "transito": "Baixo", "multidao": "Alta" } },
+      { "destino": "Biblioteca Municipal Rocha Peixoto", "distancia": 0.012, "acessibilidade": { "origem": "Posto de Socorros da Praia", "destino": "Biblioteca Municipal Rocha Peixoto", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "Posto de Socorros da Praia", "destino": "Biblioteca Municipal Rocha Peixoto", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "Posto de Socorros da Praia", "destino": "Biblioteca Municipal Rocha Peixoto", "transito": "Baixo", "multidao": "Média" } }
+    ],
+    "WC Público Biblioteca": [
+      { "destino": "Biblioteca Municipal Rocha Peixoto", "distancia": 0.001, "acessibilidade": { "origem": "WC Público Biblioteca", "destino": "Biblioteca Municipal Rocha Peixoto", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Não", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Biblioteca", "destino": "Biblioteca Municipal Rocha Peixoto", "temperatura": "Fresco", "qualidade_ar": "Excelente", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Muita" }, "populacao": { "origem": "WC Público Biblioteca", "destino": "Biblioteca Municipal Rocha Peixoto", "transito": "Não", "multidao": "Baixa" } },
+      { "destino": "Estação de Metro da Póvoa", "distancia": 0.006, "acessibilidade": { "origem": "WC Público Biblioteca", "destino": "Estação de Metro da Póvoa", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Biblioteca", "destino": "Estação de Metro da Póvoa", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Biblioteca", "destino": "Estação de Metro da Póvoa", "transito": "Sim", "multidao": "Alta" } },
+      { "destino": "Hospital da Luz Póvoa de Varzim", "distancia": 0.009, "acessibilidade": { "origem": "WC Público Biblioteca", "destino": "Hospital da Luz Póvoa de Varzim", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Biblioteca", "destino": "Hospital da Luz Póvoa de Varzim", "temperatura": "Ideal", "qualidade_ar": "Boa", "poluicao_sonora": "Baixa", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Média" }, "populacao": { "origem": "WC Público Biblioteca", "destino": "Hospital da Luz Póvoa de Varzim", "transito": "Sim", "multidao": "Média" } },
+      { "destino": "Passeio Alegre", "distancia": 0.010, "acessibilidade": { "origem": "WC Público Biblioteca", "destino": "Passeio Alegre", "pavimento": "Pavimento Regular", "inclinacao": "Nível Baixo", "passadeiras": "Sim", "passeios": "Sim", "textura_cego": "Sim", "escadas": "Não" }, "ambiente": { "origem": "WC Público Biblioteca", "destino": "Passeio Alegre", "temperatura": "Ideal", "qualidade_ar": "Excelente", "poluicao_sonora": "Média", "poluicao_visual": "Ideal", "nivel_polen": "Baixo", "iluminacao": "Boa", "sombra": "Pouca" }, "populacao": { "origem": "WC Público Biblioteca", "destino": "Passeio Alegre", "transito": "Baixo", "multidao": "Alta" } }
     ]
   },
   "coordenadas": {
-    "Casino da Póvoa": [-184.4, 159.79],
-    "Hospital da Luz Póvoa de Varzim": [-280.31, 225.89],
-    "Passeio Alegre": [-272.98, 204.35],
-    "Biblioteca Municipal Rocha Peixoto": [-308.03, 213.87],
-    "Estação de Metro da Póvoa": [-309.58, 198.96],
-    "Bebedouro Passeio Alegre": [-245.96, 145.94],
-    "Posto de Socorros da Praia": [-271.2, 148.09],
-    "WC Público Biblioteca": [-281.68, 141.0]
+    "Casino da Póvoa": [41.378, -8.766],
+    "Hospital da Luz Póvoa de Varzim": [41.383, -8.756],
+    "Passeio Alegre": [41.378, -8.765],
+    "Biblioteca Municipal Rocha Peixoto": [41.381, -8.759],
+    "Estação de Metro da Póvoa": [41.379, -8.755],
+    "Bebedouro Passeio Alegre": [41.378, -8.765],
+    "Posto de Socorros da Praia": [41.381, -8.768],
+    "WC Público Biblioteca": [41.381, -8.759]
   }
 }
