@@ -197,7 +197,7 @@ class Mapa:
         with open(ficheiro, 'w', encoding= 'utf-8') as f:
             json.dump(dados,f,indent=4,ensure_ascii=False) # foi a AI que me mostrou isto, mas ensure_ascii=False garante que coisas como ç,ã,etc. não se percam
         
-        print(f'Mapa gravado com sucesso em "{ficheiro}.json".')
+        print(f'Mapa gravado com sucesso em "{ficheiro}".')
     
     def load_mapa(self, ficheiro):
         try:

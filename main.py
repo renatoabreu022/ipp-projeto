@@ -174,7 +174,18 @@ def main():
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: carregar_mapa <ficheiro>.')
             else:
-                mapa.load_mapa(f"city/{args[0]}")
+                caminho = f"city/{args[0]}"
+                mapa.load_mapa(caminho)
+                caminho_mapa_atual = caminho  # <-- guarda o caminho completo
+
+                # Deriva o nome da cidade a partir do ficheiro
+                # ex: "grafo_setúbal.json" -> "Setúbal"
+                nome_fich = args[0]
+                if nome_fich.endswith(".json"):
+                    nome_fich = nome_fich[:-5]
+                if nome_fich.startswith("grafo_"):
+                    nome_fich = nome_fich[len("grafo_"):]
+                cidade_atual = nome_fich.replace("_", " ").title()
                 
         #novo comando simular com a nova função que está nos grafos
         elif comando == "simular":
@@ -448,6 +459,7 @@ def main():
  
                 # Carrega o novo mapa em memória para estar pronto a usar
                 mapa.load_mapa(diretorio)
+                caminho_mapa_atual = diretorio
  
                 print(f'\nSUCESSO: Cidade "{nome}" criada em {diretorio}')
                 print(f'Locais registados: {", ".join(locais_novos.keys())}')
@@ -458,48 +470,71 @@ def main():
 
         elif comando == 'ins_local':
             if not mapa.adjacencias:
-                print("ERRO: Nenhum mapa carregado. Use 'carregar_mapa' ou 'simular' primeiro.")
+                print("ERRO: Nenhum mapa carregado. Use 'carregar_mapa' ou 'ins_cidade' primeiro.")
                 continue
- 
+
             try:
                 nome = input('Nome do local: ').strip()
                 if not nome:
                     print("ERRO: O nome não pode ser vazio.")
                     continue
- 
-                x = float(input('Latitude: '))
-                y = float(input('Longitude: '))
- 
-                mapa.add_local(nome, (x,y))
- 
+
+                if nome in mapa.adjacencias:
+                    print(f"ERRO: '{nome}' já existe no mapa.")
+                    continue
+
+                try:
+                    x = float(input('Latitude: '))
+                    y = float(input('Longitude: '))
+                except ValueError:
+                    print("ERRO: Coordenadas inválidas. Insere números decimais.")
+                    continue
+
+                mapa.add_local(nome, (x, y))
+                print(f"{nome} foi adicionado ao mapa com sucesso.")
+
+                # --- Atualiza locais.json ---
                 try:
                     with open('locais.json', 'r', encoding='utf-8') as f:
                         db_locais = json.load(f)
                 except FileNotFoundError:
                     db_locais = {}
- 
-                cidade = cidade_atual
- 
-                if cidade not in db_locais:
-                    print(f"ERRO: '{cidade}' não existe no locais.json.")
- 
+
+                if cidade_atual is None:
+                    print("Aviso: cidade atual desconhecida, locais.json não foi atualizado.")
+                elif cidade_atual not in db_locais:
+                    print(f"Aviso: '{cidade_atual}' não existe no locais.json. A criar entrada...")
+                    db_locais[cidade_atual] = [nome]
+                    with open('locais.json', 'w', encoding='utf-8') as f:
+                        json.dump(db_locais, f, indent=2, ensure_ascii=False)
                 else:
-                    if nome not in db_locais[cidade]:
-                        db_locais[cidade].append(nome)
+                    if nome not in db_locais[cidade_atual]:
+                        db_locais[cidade_atual].append(nome)
                         with open('locais.json', 'w', encoding='utf-8') as f:
                             json.dump(db_locais, f, indent=2, ensure_ascii=False)
-                        
-                        print(f"SUCESSO: {nome} adicionado à cidade '{cidade}' em locais.json.")
+                        print(f"'{nome}' adicionado a '{cidade_atual}' em locais.json.")
                     else:
-                        print(f"Aviso: '{nome}' já existia em '{cidade}' no locais.json.")
-                
+                        print(f"Aviso: '{nome}' já existia em '{cidade_atual}' no locais.json.")
+
+                # --- Guardar mapa: reutiliza o caminho já carregado ---
                 guardar = input('Guardar mapa agora? (s/n) ').strip().lower()
                 if guardar == 's':
-                    ficheiro = input("Nome do ficheiro: ").strip()
-                    mapa.save_mapa(ficheiro)
-                    
-            except ValueError:
-                print("ERRO: Coordenadas inválidas. Insere números decimais.")
+                    if caminho_mapa_atual:
+                        mapa.save_mapa(caminho_mapa_atual)
+                        
+                    else:
+                        # fallback: só acontece se o mapa foi criado de raiz sem carregar
+                        ficheiro = input("Nome do ficheiro (sem extensão): ").strip()
+                        if not ficheiro.endswith(".json"):
+                            ficheiro += ".json"
+                        if not ficheiro.startswith("city/"):
+                            ficheiro = f"city/{ficheiro}"
+                        mapa.save_mapa(ficheiro)
+                        caminho_mapa_atual = ficheiro
+                        print(f'Mapa gravado com sucesso em "{ficheiro}".')
+
+            except Exception as e:
+                print(f"ERRO: {e}")
 
         elif comando == "ins_percurso":
             if not mapa.adjacencias:
