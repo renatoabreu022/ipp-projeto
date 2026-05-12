@@ -88,6 +88,10 @@ def main():
         args = entrada[1:]
 
         if comando == "sair":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: sair")
+                continue
+
             print("A encerrar...")
             break
 
@@ -144,6 +148,10 @@ def main():
         
         
         elif comando == "preferencias":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: preferencias")
+                continue
+
             if user_login is None:
                 print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
             else:
@@ -189,6 +197,10 @@ def main():
                 
         #novo comando simular com a nova função que está nos grafos
         elif comando == "simular":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: simular")
+                continue
+
             if user_login is None:
                 print("ERRO: O processo de login não foi efetuado.")
                 continue
@@ -277,6 +289,10 @@ def main():
         
         
         elif comando == "bicicletas":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: bicicletas")
+                continue
+
             if user_login is None:
                 print("ERRO: Precisa de fazer login primeiro para alterar as suas preferências.")
                 continue
@@ -342,6 +358,10 @@ def main():
                 print("Cidade não encontrada na base de dados.")  
 
         elif comando == "ver":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ver")
+                continue
+
             if not mapa.adjacencias:
                 print("ERRO: Nenhum mapa carregado. \nUse 'carregar_mapa' primeiro.")
                 continue
@@ -393,6 +413,10 @@ def main():
             print(f"\n{'='*50}")     
 
         elif comando == "ins_cidade":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_cidade")
+                continue
+
             try:
                 nome = input('Nome da cidade: ').strip()
                 if not nome:
@@ -469,6 +493,10 @@ def main():
                 print(f'ERRO: {e}')  
 
         elif comando == 'ins_local':
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_local")
+                continue
+
             if not mapa.adjacencias:
                 print("ERRO: Nenhum mapa carregado. Use 'carregar_mapa' ou 'ins_cidade' primeiro.")
                 continue
@@ -537,6 +565,10 @@ def main():
                 print(f"ERRO: {e}")
 
         elif comando == "ins_percurso":
+            if args:
+                print("ERRO: Uso indevido do comando.\nDeverá seguir este modelo: ins_percurso")
+                continue
+
             if not mapa.adjacencias:
                 print("ERRO: Nenhum mapa carregado. \nUse 'carregar_mapa' primeiro.")
 
