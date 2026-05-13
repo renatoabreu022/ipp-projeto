@@ -36,23 +36,5 @@
             "transito": 5,
             "multidao": 5
         }
-    },
-    "josé": {
-        "pass": "213fc33d8f2dbde3207734e3097ea72a69fb8b009f2878468cdd9e74b70a1e59",
-        "preferencias": {
-            "pavimento": 2,
-            "inclinacao": 4,
-            "passeios": 8,
-            "escadas": 3,
-            "sombra": 4,
-            "qualidade_ar": 8,
-            "nivel_polen": 6,
-            "poluicao_sonora": 3,
-            "poluicao_visual": 7,
-            "iluminacao": 3,
-            "transito": 6,
-            "multidao": 2,
-            "textura_cego": 0
-        }
     }
 }

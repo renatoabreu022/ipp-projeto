@@ -289,7 +289,7 @@ class AppAcessibilidade(ctk.CTk):
         self.ent_pass = ctk.CTkEntry(self, placeholder_text="Password", show="*", width=250)
         self.ent_pass.pack(pady=10)
         ctk.CTkButton(self, text="Entrar", command=self.fazer_login, width=250).pack(pady=20)
-        ctk.CTkButton(self, text="Criar Conta", command=self.mostrar_registo, width=250, fg_color="transparent", text_color="#2A8569", border_width=2, border_color="#3AC098").pack()
+        ctk.CTkButton(self, text="Criar Conta", command=self.mostrar_registo, width=250, fg_color="transparent", hover_color="#DDD9D3", text_color="#2A8569", border_width=2, border_color="#3AC098").pack()
 
     def fazer_login(self):
         user, pw = self.ent_user.get(), self.ent_pass.get()

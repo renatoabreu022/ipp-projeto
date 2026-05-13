@@ -36,7 +36,7 @@ class CalculoPeso:
         elif hora >11 and hora <= 16:  # PICO CALOR
             ajustes["sombra"] = 2
             ajustes["multidao"]=1.25
-            ajustes["temeratura"] = 1.75
+            ajustes["temperatura"] = 1.75
 
         elif hora > 16 and hora <= 19: #FINAL TARDE
             ajustes["transito"] = 2
@@ -145,7 +145,7 @@ class CalculoPeso:
                 
         match amb.iluminacao:
             case "Iluminação Elevada":
-                score += preferencias.peso_iluminacao*(1/3) * ajustes["iluminacao"]
+                score += preferencias.peso_iluminacao*(1/3)*ajustes["iluminacao"]
             case "Iluminação Moderada":
                 score += preferencias.peso_iluminacao*(2/3)*ajustes["iluminacao"]
             case "Fraco (Má visibilidade)":
