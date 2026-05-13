@@ -54,7 +54,6 @@ class AppAcessibilidade(ctk.CTk):
         
         self.utilizador_atual = None
         self.bd = carregar_bd("utilizadores.json")
-        self.motor_mapa = Mapa()
         self.mostrar_login()
 
     def limpar_janela(self):
@@ -239,80 +238,70 @@ class AppAcessibilidade(ctk.CTk):
         btn_calc = ctk.CTkButton(f_bottom, text='CALCULAR ROTA', command=self.simular_calculo, fg_color="#2A8569", hover_color="#1F4E3D", height=65, font=("Helvetica", 13, "bold"))
         btn_calc.grid(row=0, column=1, sticky='nsew')
 
-        ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", hover_color="#C62828", width=100).pack(pady=5)
+        ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", width=100).pack(pady=5)
 
         self.ao_mudar_cidade(self.cb_cidade.get())
 
     def atualizar_locais(self, cidade):
-    # Mapeamento para os ficheiros reais
-        caminhos_cidades = carregar_cidades_disponiveis()
-        
-        ficheiro = caminhos_cidades.get(cidade)
-        
-        if ficheiro and os.path.exists(ficheiro):
-            # 1. Carrega o grafo real para a memória
-            self.motor_mapa.load_mapa(ficheiro)
-            
-            # 2. Extrai as chaves do dicionário de adjacências (que são os NOMES/Strings)
-            # No teu models/grafo.py, self.adjacencias é um dict onde as chaves são os nomes
-            locais_reais = sorted(list(self.motor_mapa.adjacencias.keys()))
-            
-            # 3. Atualiza os menus com os nomes reais do ficheiro
-            self.cb_origem.configure(values=locais_reais)
-            self.cb_destino.configure(values=locais_reais)
-            
-            if locais_reais:
-                self.cb_origem.set(locais_reais)
-                self.cb_destino.set(locais_reais if len(locais_reais) > 1 else locais_reais)
-        else:
-            # Se o ficheiro não existir, limpa ou usa os dados manuais
-            self.cb_origem.configure(values=[])
-            self.cb_destino.configure(values=[])
+        locais = DADOS_CIDADES.get(cidade, [])
+        self.cb_origem.configure(values=locais)
+        self.cb_destino.configure(values=locais)
+        if locais:
+            self.cb_origem.set(locais[0])
+            self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
     
     def ao_mudar_cidade(self, cidade):
-        """Atualiza o motor do mapa, os dropdowns e redesenha o mapa base da nova cidade"""
-        # 1. Mapeamento de nomes para ficheiros (Garanta que os nomes batem com o ComboBox)
+        self.atualizar_locais(cidade)
+
         cidades_disponiveis = carregar_cidades_disponiveis()
+
         ficheiro = cidades_disponiveis.get(cidade)
-        
         if ficheiro and os.path.exists(ficheiro):
-            # 2. Reinicializar o motor do mapa com o novo ficheiro
             self.motor_mapa = Mapa()
             self.motor_mapa.load_mapa(ficheiro)
-            
-            # 3. Atualizar as listas de Origem e Destino nos ComboBoxes
-            locais = sorted(list(self.motor_mapa.adjacencias.keys()))
-            self.cb_origem.configure(values=locais)
-            self.cb_destino.configure(values=locais)
-            
-            if locais:
-                self.cb_origem.set(locais)
-                self.cb_destino.set(locais[-1])
-
-            # 4. Desenhar o novo mapa (Limpando o anterior)
             self.visualizar_caminhos(cidade, [])
-            print(f"Sucesso: Cidade alterada para {cidade}")
-        else:
-            print(f"Erro: Ficheiro para {cidade} não encontrado em {ficheiro}")
 
     def simular_calculo(self):
+        # 1. Obter os dados selecionados na interface
         cidade_selecionada = self.cb_cidade.get()
         origem = self.cb_origem.get()
         destino = self.cb_destino.get()
         
-        # Verifica se temos um mapa carregado
-        if not self.motor_mapa.adjacencias:
-            messagebox.showerror("Erro", "O mapa da cidade não foi carregado corretamente.")
+        # Obter a hora (opcional)
+        try:
+            hora_txt = self.cb_hora.get().split(":")[0]
+            h_calculo = int(hora_txt)
+        except:
+            h_calculo = datetime.now().hour
+
+        
+        cidades_disponiveis = carregar_cidades_disponiveis()
+
+        # 3. Procurar o ficheiro correspondente
+        ficheiro_mapa = cidades_disponiveis.get(cidade_selecionada)
+
+        if not ficheiro_mapa or not os.path.exists(ficheiro_mapa):
+            messagebox.showerror("Erro", f"O mapa de {cidade_selecionada} não foi encontrado.\nCaminho: {ficheiro_mapa}")
             return
 
         try:
-            # Usa as preferências do utilizador
+            # 4. Carregar o mapa
+            self.motor_mapa = Mapa()
+            self.motor_mapa.load_mapa(ficheiro_mapa)
+            
+            
+            print(f"--- SIMULAÇÃO ---")
+            print(f"Cidade: {cidade_selecionada} | Ficheiro: {ficheiro_mapa}")
+            print(f"Rota: {origem} -> {destino}")
+
+            # 5. Configurar as preferências do utilizador (Carregadas do JSON)
             p_user = self.bd[self.utilizador_atual]["preferencias"]
             perfil = Preferencias()
             perfil.atualizar_parametros(p_user)
 
-            # CHAMA A PESQUISA NO motor_mapa QUE JÁ TEM OS DADOS
-            resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, k=5)
+            # 6. Executar o cálculo de percurso
+            # Nota: k=3 para dar 3 opções de rota
+            resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, hora=h_calculo, k=5)
 
             # 7. Mostrar resultados
             if not resultados:
@@ -348,23 +337,10 @@ class AppAcessibilidade(ctk.CTk):
                 G.add_edge(origem, ligacao["destino"])
 
         # Tentar obter as coordenadas GPS
-        # 2. Tentar usar as coordenadas reais do JSON
-        pos = {}
-        try:
-            # Garantir que extraímos apenas (x, y) de forma limpa
-            for local, coord in self.motor_mapa.coordenadas.items():
-                # coord é Longitude (X), coord é Latitude (Y)
-                # Convertemos explicitamente para float para evitar formatos complexos
-                pos[local] = (float(coord), float(coord))
-            
-            # Verificar se todos os nós do grafo têm coordenadas
-            for node in G.nodes():
-                if node not in pos:
-                    # Se faltar algum nó, usamos o layout automático para o mapa não quebrar
-                    pos = nx.spring_layout(G, seed=42)
-                    break
-        except Exception as e:
-            print(f"Erro nas coordenadas: {e}. A usar layout automático.")
+        if hasattr(self, 'motor_mapa') and self.motor_mapa.coordenadas:
+        # Assegura que passamos o tuplo (x, y) diretamente
+            pos = {local: coord for local, coord in self.motor_mapa.coordenadas.items()}
+        else:
             pos = nx.spring_layout(G, seed=42)
 
         # Configuração da Figura Matplotlib

@@ -24,7 +24,7 @@ class CalculoPeso:
             "temperatura":1
         }
 
-        if hora >=0 or hora <= 6:  #MADRUGADA
+        if hora >=0 and hora <= 6:  #MADRUGADA
             ajustes["sombra"] = 0
             ajustes["iluminacao"] = 2
             ajustes["poluicao_visual"] = 1.5
@@ -33,17 +33,17 @@ class CalculoPeso:
             ajustes["temperatura"] = 0.75
 
         #MANHÃ NÃO AGRAVA NADA
-        elif hora >11 or hora <= 16:  # PICO CALOR
+        elif hora >11 and hora <= 16:  # PICO CALOR
             ajustes["sombra"] = 2
             ajustes["multidao"]=1.25
             ajustes["temeratura"] = 1.75
 
-        elif hora > 16 or hora <= 19: #FINAL TARDE
+        elif hora > 16 and hora <= 19: #FINAL TARDE
             ajustes["transito"] = 2
             ajustes["multidao"]= 2
             ajustes["sombra"] = 0.75
         
-        elif hora > 19 or hora <= 24: #NOITE
+        elif hora > 19 and hora <= 24: #NOITE
             ajustes["sombra"] = 0
             ajustes["iluminacao"] = 1.25
             ajustes["poluicao_visual"] = 1.25
@@ -58,7 +58,7 @@ class CalculoPeso:
                 score += preferencias.peso_pavimento*0.75
             case "Pavimento Ligeiramente Irregular":
                 score +=preferencias.peso_pavimento*0.5
-            case  "Pavimento Regular":
+            case "Pavimento Regular":
                 score += preferencias.peso_pavimento*0.25
 
         match acess.inclinacao:
@@ -71,8 +71,7 @@ class CalculoPeso:
             case "Nível Baixo":
                 score+=preferencias.peso_inclinacao*0.25
 
-        passadeira=acess.passadeiras.split(".")
-        match passadeira[0]:
+        match acess.passadeiras:
             case "Baixo":
                 score+=preferencias.peso_passadeiras*1
             case "Moderado":
@@ -150,7 +149,6 @@ class CalculoPeso:
             case "Iluminação Moderada":
                 score += preferencias.peso_iluminacao*(2/3)*ajustes["iluminacao"]
             case "Fraco (Má visibilidade)":
-                ajuste = 2 if e_noite else 1
                 score += preferencias.peso_iluminacao*(1)*ajustes["iluminacao"]
                 
         

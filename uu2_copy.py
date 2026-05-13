@@ -235,7 +235,7 @@ class AppAcessibilidade(ctk.CTk):
         self.cb_destino = ctk.CTkComboBox(f_inputs, values=[], button_color="#2A8569", border_color="#3AC098")
         self.cb_destino.pack(pady=2, fill='x')
 
-        btn_calc = ctk.CTkButton(f_bottom, text='CALCULAR ROTA', command=self.simular_calculo, fg_color="#2A8569", hover_color="#1F4E3D", height=65, font=("Helvetica", 13, "bold"))
+        btn_calc = ctk.CTkButton(f_bottom, text='🚶', command=self.simular_calculo, fg_color="#2A8569", hover_color="#1F4E3D", height=65, font=("Helvetica", 13, "bold"))
         btn_calc.grid(row=0, column=1, sticky='nsew')
 
         ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", width=100).pack(pady=5)
@@ -301,7 +301,7 @@ class AppAcessibilidade(ctk.CTk):
 
             # 6. Executar o cálculo de percurso
             # Nota: k=3 para dar 3 opções de rota
-            resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, k=5)
+            resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, hora=h_calculo, k=5)
 
             # 7. Mostrar resultados
             if not resultados:
@@ -337,11 +337,10 @@ class AppAcessibilidade(ctk.CTk):
                 G.add_edge(origem, ligacao["destino"])
 
         # Tentar obter as coordenadas GPS
-        try:
-            # Usa self.motor_mapa.coordenadas que é o atributo correto da classe Mapa
-            pos = {local: (coord, coord) for local, coord in self.motor_mapa.coordenadas.items()}
-        except Exception as e:
-            print(f"Erro nas coordenadas: {e}. A usar layout automático.")
+        if hasattr(self, 'motor_mapa') and self.motor_mapa.coordenadas:
+        # Assegura que passamos o tuplo (x, y) diretamente
+            pos = {local: coord for local, coord in self.motor_mapa.coordenadas.items()}
+        else:
             pos = nx.spring_layout(G, seed=42)
 
         # Configuração da Figura Matplotlib
