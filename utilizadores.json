@@ -2,7 +2,7 @@
     "renato": {
         "pass": "c3aba2c5aaffce50be3662ad24ec9694498884a348fe759e98cd1406b1904e82",
         "preferencias": {
-            "pavimento": 7,
+            "pavimento": 4,
             "inclinacao": 1,
             "passeios": 9,
             "escadas": 4,
@@ -35,6 +35,24 @@
             "sombra": 5,
             "transito": 5,
             "multidao": 5
+        }
+    },
+    "josé": {
+        "pass": "213fc33d8f2dbde3207734e3097ea72a69fb8b009f2878468cdd9e74b70a1e59",
+        "preferencias": {
+            "pavimento": 2,
+            "inclinacao": 4,
+            "passeios": 8,
+            "escadas": 3,
+            "sombra": 4,
+            "qualidade_ar": 8,
+            "nivel_polen": 6,
+            "poluicao_sonora": 3,
+            "poluicao_visual": 7,
+            "iluminacao": 3,
+            "transito": 6,
+            "multidao": 2,
+            "textura_cego": 0
         }
     }
 }

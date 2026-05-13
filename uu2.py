@@ -1,3 +1,6 @@
+# INTERFACE
+
+# IMPORTS
 import customtkinter as ctk
 from tkinter import messagebox
 import json
@@ -12,7 +15,9 @@ from engine.calculo_percurso3 import CalculoPeso
 from models.user import Preferencias
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from models.grafo import Mapa
+from models.bicicletas import GestorBicicletas
 
+#------------------------------------------------------------------------------------------------------------------
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("green")
@@ -36,121 +41,331 @@ def guardar_bd(dados, nome_ficheiro):
     except Exception as e:
         messagebox.showerror("Erro", f"Erro ao guardar base de dados: {e}")
 
-# --- BASE DE DADOS DE LOCAIS ---
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+#BASE DE DADOS DE LOCAIS ---
+
 DADOS_CIDADES = {
     "Porto": [
     "FEUP", "Farmácia Barreiros", "Jardim do Palácio de Cristal", "Estação de São Bento", 
     "NorteShopping", "Centro Hospitalar Universitário de São João", "Bebedouro Jardim do Morro", 
-    "Posto de Primeiros Socorros Aliados", "Ecoponto Asprela", "WC Público Cordoaria", "Zona de Descanso Aliados"
-  ],
+    "Posto de Primeiros Socorros Aliados", "Ecoponto Asprela", "WC Público Cordoaria", "Zona de Descanso Aliados"],
 
-  "Braga": [
+    "Braga": [
     "Bom Jesus do Monte", "Avenida da Liberdade", "Hospital de Braga", "Universidade do Minho - Gualtar", 
-    "Braga Parque", "Bebedouro Arcada", "Ciclovia do Rio Este", "Ecoponto Gualtar", "WC Público Praça do Município"
-  ],
+    "Braga Parque", "Bebedouro Arcada", "Ciclovia do Rio Este", "Ecoponto Gualtar", "WC Público Praça do Município"],
 
-  "Fafe": [
+    "Fafe": [
     "Praça Mártires de Ferreira do Amaral", "Hospital da Misericórdia", "Parque da Cidade", "Pavilhão Multiusos", 
-    "Terminal Rodoviário", "Bebedouro Parque da Cidade", "Parque Infantil do Centro", "Ecoponto Multiusos"
-  ],
+    "Terminal Rodoviário", "Bebedouro Parque da Cidade", "Parque Infantil do Centro", "Ecoponto Multiusos"],
 
-  "Marco de Canaveses": [
+    "Marco de Canaveses": [
     "Igreja de Santa Maria (Siza Vieira)", "Hospital Santa Isabel", "Estação Ferroviária", "Jardim Municipal", 
-    "Marco Fórum", "Bebedouro Jardim Municipal", "Posto de Informação Turística", "Ecoponto Marco Fórum"
-  ],
+    "Marco Fórum", "Bebedouro Jardim Municipal", "Posto de Informação Turística", "Ecoponto Marco Fórum"],
 
-  "Guimarães": [
+    "Guimarães": [
     "Castelo de Guimarães", "Hospital da Senhora da Oliveira", "Universidade do Minho (Azurém)", 
-    "GuimarãeShopping", "Largo do Toural", "Bebedouro Largo da Oliveira", "Parque da Cidade Guimarães", "WC Público Toural"
-  ],
+    "GuimarãeShopping", "Largo do Toural", "Bebedouro Largo da Oliveira", "Parque da Cidade Guimarães", "WC Público Toural"],
 
-  "Vila Nova de Gaia": [
+    "Vila Nova de Gaia": [
     "El Corte Inglés", "Hospital Eduardo Santos Silva", "Cais de Gaia", "GaiaShopping", "Jardim do Morro", 
-    "Bebedouro Cais de Gaia", "Ciclovia da Orla Marítima", "Ecoponto Jardim do Morro"
-  ],
+    "Bebedouro Cais de Gaia", "Ciclovia da Orla Marítima", "Ecoponto Jardim do Morro"],
 
-  "Famalicão": [
+    "Famalicão": [
     "Hospital de Famalicão", "Parque da Devesa", "Estação de Famalicão", "Universidade Lusíada", 
-    "Praça D. Maria II", "Bebedouro Parque da Devesa", "Posto de Primeiros Socorros", "WC Público Praça D. Maria II"
-  ],
+    "Praça D. Maria II", "Bebedouro Parque da Devesa", "Posto de Primeiros Socorros", "WC Público Praça D. Maria II"],
 
-  "Barcelos": [
+    "Barcelos": [
     "IPCA", "Campo da Feira", "Hospital Santa Maria Maior", "Templo do Senhor da Cruz", 
-    "Estação de Barcelos", "Bebedouro IPCA", "Parque Infantil de Barcelos", "Ecoponto Estação"
-  ],
+    "Estação de Barcelos", "Bebedouro IPCA", "Parque Infantil de Barcelos", "Ecoponto Estação"],
 
-  "Póvoa de Varzim": [
+    "Póvoa de Varzim": [
     "Casino da Póvoa", "Hospital da Luz Póvoa de Varzim", "Passeio Alegre", "Biblioteca Municipal Rocha Peixoto", 
-    "Estação de Metro da Póvoa", "Bebedouro Passeio Alegre", "Posto de Socorros da Praia", "WC Público Biblioteca"
-  ],
+    "Estação de Metro da Póvoa", "Bebedouro Passeio Alegre", "Posto de Socorros da Praia", "WC Público Biblioteca"],
 
-  "Coimbra": [
+    "Coimbra": [
     "Universidade de Coimbra - Polo I", "Hospitais da Universidade de Coimbra", "Portugal dos Pequenitos", 
-    "Estação Coimbra-B", "Forum Coimbra", "Bebedouro Praça da República", "Parque Verde do Mondego", "WC Público Baixa"
-  ],
+    "Estação Coimbra-B", "Forum Coimbra", "Bebedouro Praça da República", "Parque Verde do Mondego", "WC Público Baixa"],
 
-  "Figueira da Foz": [
+    "Figueira da Foz": [
     "Casino Figueira", "Hospital Distrital da Figueira da Foz", "Mercado Municipal", "Torre do Relógio", 
-    "Parque das Abadias", "Bebedouro Marginal", "Ciclovia da Marginal", "Ecoponto Mercado"
-  ],
+    "Parque das Abadias", "Bebedouro Marginal", "Ciclovia da Marginal", "Ecoponto Mercado"],
 
-  "Covilhã": [
+    "Covilhã": [
     "UBI", "Centro Hospitalar Cova da Beira", "Praça do Município", "Serra Shopping", 
-    "Ponte da Carpinteira", "Bebedouro UBI", "Jardim Público da Covilhã", "WC Público Praça"
-  ],
+    "Ponte da Carpinteira", "Bebedouro UBI", "Jardim Público da Covilhã", "WC Público Praça"],
 
-  "Caldas da Rainha": [
+    "Caldas da Rainha": [
     "Praça da Fruta", "Hospital Termal", "Parque D. Carlos I", "Centro Comercial La Vie", 
-    "ESAD.CR", "Bebedouro Parque D. Carlos I", "Posto de Informação"
-  ],
+    "ESAD.CR", "Bebedouro Parque D. Carlos I", "Posto de Informação"],
 
-  "Tomar": [
+    "Tomar": [
     "Convento de Cristo", "Praça da República", "Hospital de Tomar", "Mata dos Sete Montes", 
-    "Politécnico de Tomar", "Bebedouro Mata", "Parque do Mouchão", "WC Público Centro"
-  ],
+    "Politécnico de Tomar", "Bebedouro Mata", "Parque do Mouchão", "WC Público Centro"],
 
-  "Viseu": [
+    "Viseu": [
     "Sé de Viseu", "Palácio do Gelo", "Hospital de São Teotónio", "Parque do Fontelo", 
-    "Rossio", "Bebedouro Parque do Fontelo", "Ecoponto Sé", "Posto de Primeiros Socorros"
-  ],
+    "Rossio", "Bebedouro Parque do Fontelo", "Ecoponto Sé", "Posto de Primeiros Socorros"],
 
-  "Aveiro": [
+    "Aveiro": [
     "Fórum Aveiro", "Universidade de Aveiro", "Estação de Aveiro", "Hospital Infante D. Pedro", 
-    "Salinas de Aveiro", "Bebedouro Salinas", "Parque Infante D. Pedro", "WC Público Estação"
-  ],
+    "Salinas de Aveiro", "Bebedouro Salinas", "Parque Infante D. Pedro", "WC Público Estação"],
 
-  "Lisboa": [
+    "Lisboa": [
     "Hospital de Santa Maria", "Estação do Oriente", "Castelo de São Jorge", "Terreiro do Paço", 
-    "Centro Comercial Colombo", "Bebedouro Parque das Nações", "Jardim da Estrela", "WC Público Rossio", "Posto Polícia Baixa"
-  ],
+    "Centro Comercial Colombo", "Bebedouro Parque das Nações", "Jardim da Estrela", "WC Público Rossio", "Posto Polícia Baixa"],
 
-  "Évora": [
+    "Évora": [
     "Sé de Évora", "Templo Romano", "Colégio do Espírito Santo", "Hospital do Espírito Santo", 
-    "Praça do Giraldo", "Bebedouro Templo Romano", "Jardim Público de Évora", "Ecoponto Centro"
-  ],
+    "Praça do Giraldo", "Bebedouro Templo Romano", "Jardim Público de Évora", "Ecoponto Centro"],
 
-  "Beja": [
+    "Beja": [
     "Castelo de Beja", "Hospital José Joaquim Fernandes", "Politécnico de Beja", "Parque de Feiras", 
-    "Museu Regional", "Bebedouro Castelo", "Parque de Merendas", "WC Público Parque de Feiras"
-  ],
+    "Museu Regional", "Bebedouro Castelo", "Parque de Merendas", "WC Público Parque de Feiras"],
 
-  "Portimão": [
+    "Portimão": [
     "Portimão Arena", "Hospital Particular", "Praia da Rocha", "Aqua Portimão", 
-    "Museu de Portimão", "Bebedouro Praia da Rocha", "Posto de Socorros Marítimo", "WC Público Centro"
-  ],
+    "Museu de Portimão", "Bebedouro Praia da Rocha", "Posto de Socorros Marítimo", "WC Público Centro"],
 
-  "Lagos": [
+    "Lagos": [
     "Marina de Lagos", "Hospital de Lagos", "Mercado Municipal", "Ponta da Piedade", 
-    "Praça Infante Dom Henrique", "Bebedouro Marina", "Centro de Ciência Viva", "WC Público Centro"
-  ],
+    "Praça Infante Dom Henrique", "Bebedouro Marina", "Centro de Ciência Viva", "WC Público Centro"],
 
-  "Faro": [
+    "Faro": [
     "UAlg - Penha", "Hospital de Faro", "Fórum Algarve", "Doca de Faro", "Arco da Vila", 
-    "Bebedouro Doca", "Parque Ribeirinho", "Ecoponto Fórum"
-  ]
-    
+    "Bebedouro Doca", "Parque Ribeirinho", "Ecoponto Fórum"]
     
 }
+
+#-------------------------------------------------------------------------------------------------------
+# BICICLETAS
+
+class JanelaBicicletas(ctk.CTkToplevel):
+    def __init__(self, master, gestor, db_cidades, mapa, utilizador_nome, bd_utilizadores):
+        super().__init__(master)
+        
+        self.gestor = gestor
+        self.db_cidades = db_cidades
+        self.mapa = mapa
+        self.utilizador_nome = utilizador_nome
+        self.bd_utilizadores = bd_utilizadores
+    
+        self.title("Mobilidade Urbana - Bicicletas")
+        self.geometry("414x740")
+        self.configure(fg_color="#F4F1EA")
+        self.resizable(False, False)
+        
+        self.grab_set() 
+        
+        self.master_app = master # Guarda a referência da janela principal
+        self.gestor = gestor
+        
+        self.cor_fundo = "#F4F1EA"
+        self.cor_verde_forte = "#299480"
+        self.cor_texto = "#000000"  
+        
+        self.main_container = ctk.CTkFrame(self, fg_color="transparent")
+        self.main_container.pack(fill="both", expand=True, padx=20, pady=20)
+        
+        self.protocol("WM_DELETE_WINDOW", self.voltar_ao_menu_principal)
+        
+        self.mostrar_tela_selecao()
+
+    def limpar_ecra(self):
+        for widget in self.main_container.winfo_children():
+            widget.destroy()
+
+    def mostrar_tela_selecao(self):
+        self.limpar_ecra()
+        
+        ctk.CTkLabel(self.main_container, text="🚲 SISTEMA DE BICICLETAS", 
+                    font=("Helvetica", 24, "bold"), text_color=self.cor_verde_forte).pack(pady=20)
+        
+        #Seleção de Cidade
+        ctk.CTkLabel(self.main_container, text="Selecione a cidade:", font=("Helvetica", 14, "bold"), text_color=self.cor_texto).pack(pady=5)
+        self.combo_cidades = ctk.CTkComboBox(
+            self.main_container, 
+            values=sorted(list(self.db_cidades.keys())), 
+            width=300,
+            command=self.atualizar_origens,
+            state="readonly",
+            fg_color="white",            
+            border_color="#1F634E",     
+            button_color="#1F634E",      
+            button_hover_color="#2A8569", 
+            text_color="black",           
+            dropdown_fg_color="white",     
+            dropdown_text_color="black"    
+        )
+        self.combo_cidades.pack(pady=10)
+        self.combo_cidades.set("Escolha a cidade...")
+
+        #Seleção de Origem
+        ctk.CTkLabel(self.main_container, text="Onde se encontra agora?", font=("Helvetica", 14, "bold"), text_color=self.cor_texto).pack(pady=5)
+        self.combo_origem = ctk.CTkComboBox(
+            self.main_container, 
+            values=[], 
+            width=300,
+            state="readonly",
+            fg_color="white",             
+            border_color="#1F634E",
+            button_color="#1F634E",
+            text_color="black",            
+            dropdown_fg_color="white",
+            dropdown_text_color="black"
+        )
+        self.combo_origem.pack(pady=10)
+        self.combo_origem.set("Selecione a cidade primeiro")
+
+        ctk.CTkButton(self.main_container, text="PESQUISAR ESTAÇÕES", fg_color="#2A8569", hover_color="#1F634E", height=45, width=250, command=self.ir_para_listagem).pack(pady=30)
+        ctk.CTkButton(self.main_container, text="VOLTAR AO MENU PRINCIPAL", fg_color="gray", command=self.voltar_ao_menu_principal).pack(pady=10)
+        
+    def voltar_ao_menu_principal(self):
+        self.master_app.deiconify() # Mostra a janela principal de volta
+        self.destroy()
+    
+    def atualizar_origens(self, cidade):
+        if hasattr(self, 'cidades_ficheiros') and cidade in self.cidades_ficheiros:
+            ficheiro = self.cidades_ficheiros[cidade]
+            if os.path.exists(ficheiro):
+                self.mapa.load_mapa(ficheiro)
+        
+        locais = self.db_cidades.get(cidade, [])
+        self.combo_origem.configure(values=locais)
+        if locais: self.combo_origem.set(locais[0])
+
+    def ir_para_listagem(self):
+        cidade = self.combo_cidades.get()
+        origem = self.combo_origem.get()
+        if "Escolha" in cidade or not origem:
+            messagebox.showwarning("Aviso", "Selecione a cidade e localização.")
+            return
+        self.mostrar_tela_estacoes(cidade, origem)
+
+    def mostrar_tela_estacoes(self, cidade, origem):
+        self.limpar_ecra()
+        self.gestor.gerar_estacoes_para_cidade(self.db_cidades[cidade])
+        
+        ctk.CTkLabel(self.main_container, text=f"Estações em {cidade}", font=("Helvetica", 20, "bold"), text_color=self.cor_verde_forte).pack(pady=10)
+
+        scroll = ctk.CTkScrollableFrame(self.main_container, fg_color="white", corner_radius=10, height=350)
+        scroll.pack(fill="both", expand=True, padx=10, pady=10)
+
+        for local, info in self.gestor.estacoes.items():
+            f = ctk.CTkFrame(scroll, fg_color="transparent")
+            f.pack(fill="x", pady=5)
+            ctk.CTkLabel(f, text=f"📍 {local}", font=("Helvetica", 12), text_color=self.cor_texto).pack(side="left", padx=10)
+            ctk.CTkLabel(f, text=f"{info['disponiveis']} 🚲 disponíveis", text_color=self.cor_verde_forte, font=("Helvetica", 14, "bold")).pack(side="right", padx=10)
+
+        btn_box = ctk.CTkFrame(self.main_container, fg_color="transparent")
+        btn_box.pack(pady=15)
+        ctk.CTkButton(btn_box, text="CALCULAR PERCURSOS", fg_color="#299480", command=lambda: self.abrir_popup_resultados(origem)).pack(side="left", padx=5)
+        ctk.CTkButton(btn_box, text="VOLTAR", fg_color="#757575", command=self.mostrar_tela_selecao).pack(side="left", padx=5)
+
+    def abrir_popup_resultados(self, origem):
+        hora_atual = datetime.now().hour
+        ranking = []
+        
+        #preferências reais do utilizador da BD da interface principal
+        prefs_raw = self.bd_utilizadores[self.utilizador_nome]["preferencias"]
+        perfil = Preferencias()
+        perfil.atualizar_parametros(prefs_raw)
+
+        for estacao in self.gestor.estacoes.keys():
+            res = self.mapa.pesquisa_perc(origem, estacao, perfil, hora=hora_atual, k=1)
+            if res:
+                score, caminho = res[0]
+                ranking.append({'local': estacao, 'score': score, 'percurso': caminho})
+
+        if not ranking:
+            messagebox.showerror("Erro", "Não foi possível traçar rotas.")
+            return
+
+        ranking.sort(key=lambda x: x['score'])
+        top_opcoes = ranking[:5]  
+
+        self.withdraw()
+
+        popup = ctk.CTkToplevel(self)
+        popup.title("Melhores Opções Encontradas")
+        popup.geometry("414x740")
+        popup.configure(fg_color=self.cor_fundo)
+        popup.grab_set() 
+
+        popup.protocol("WM_DELETE_WINDOW", lambda: self.fechar_popup(popup))
+    
+        ctk.CTkLabel(popup, text="SUGESTÕES DE PERCURSO", font=("Helvetica", 18, "bold"), text_color=self.cor_verde_forte).pack(pady=15)
+
+        ctk.CTkButton(popup, text="VOLTAR", fg_color=self.cor_verde_forte, command=lambda: self.fechar_popup(popup)).pack(pady=15)
+        
+        def fechar_popup(self, popup_window):
+            popup_window.destroy()
+            self.deiconify()
+        
+        scroll_res = ctk.CTkScrollableFrame(popup, fg_color="white", corner_radius=12)
+        scroll_res.pack(fill="both", expand=True, padx=20, pady=10)
+
+        for i, opcao in enumerate(top_opcoes):
+            card = ctk.CTkFrame(scroll_res, fg_color="#F9F9F9", corner_radius=8, border_width=1, border_color="#E0E0E0")
+            card.pack(fill="x", pady=8, padx=5)
+
+            
+            header = ctk.CTkFrame(card, fg_color="transparent")
+            header.pack(fill="x", padx=10, pady=5)
+            
+            ctk.CTkLabel(header, text=f"{i+1}ª OPÇÃO: {opcao['local']}", font=("Helvetica", 13, "bold"), text_color=self.cor_verde_forte).pack(side="left")
+            
+            ctk.CTkLabel(header, text=f"Score: {round(opcao['score'], 1)}", font=("Helvetica", 12, "bold"), text_color="#299480").pack(side="right")
+
+            scroll_rota = ctk.CTkScrollableFrame(
+                card, 
+                orientation="horizontal", 
+                fg_color="transparent", 
+                height=60, 
+                scrollbar_button_color=self.cor_verde_forte, 
+                scrollbar_button_hover_color="#2A8569"
+            )
+            scroll_rota.pack(fill="x", padx=10, pady=(0, 5))
+            
+            rota_texto = " -> ".join(opcao['percurso'])
+            lbl_rota = ctk.CTkLabel(
+                scroll_rota, 
+                text=rota_texto, 
+                font=("Helvetica", 11), 
+                text_color=self.cor_texto
+            )
+            lbl_rota.pack(side="left", padx=5)
+
+        ctk.CTkButton(popup, text="FECHAR", fg_color=self.cor_verde_forte, command=popup.destroy).pack(pady=15)
+        
+    def calcular_rota(self, origem):
+        hora_atual = datetime.now().hour
+        ranking = []
+
+        for estacao in self.gestor.estacoes.keys():
+            res = self.mapa.pesquisa_perc(origem, estacao, self.user_login.u_preferencias, hora=hora_atual, k=1)
+            if res:
+                score, caminho = res[0]
+                ranking.append({'local': estacao, 'score': score, 'percurso': caminho})
+
+        if ranking:
+            ranking.sort(key=lambda x: x['score'])
+            melhor = ranking[0]
+            
+            msg = f"MELHOR OPÇÃO: {melhor['local']}\n"
+            msg += f"Score de Conforto: {round(melhor['score'], 1)}\n\n"
+            msg += f"Caminho: {' -> '.join(melhor['percurso'])}"
+            messagebox.showinfo("Rota Sugerida", msg)
+        else:
+            messagebox.showerror("Erro", "Não foi possível traçar rota para as estações.")
+            
+    def voltar_atras(self):
+        self.pop_listagem.destroy()
+        self.pop_cidade.deiconify()
+
+#-------------------------------------------------------------------------------------------------------------------------------------
+#APP TODA 
 
 class AppAcessibilidade(ctk.CTk):
     def __init__(self):
@@ -158,6 +373,10 @@ class AppAcessibilidade(ctk.CTk):
         self.title("Sistema de Gestão de Percursos")
         self.geometry("414x740")
         self.configure(fg_color="#F4F1EA")
+        
+        self.motor_mapa = Mapa() 
+        self.gestor_bike = GestorBicicletas() 
+        self.utilizador_atual = None
         
         self.utilizador_atual = None
         self.bd = carregar_bd("utilizadores.json")
@@ -233,7 +452,6 @@ class AppAcessibilidade(ctk.CTk):
             self.mostrar_menu_perfil()
         else: messagebox.showerror("Erro", "As passwords não coincidem.")
 
-    
 
     def mostrar_preferencias(self, primeira_vez=False):
         self.limpar_janela()
@@ -248,7 +466,7 @@ class AppAcessibilidade(ctk.CTk):
 
         self.sliders = {}
 
-        # ACESSIBILIDADE
+        #ACESSIBILIDADE
         self.criar_label_seccao(self.scroll, "Acessibilidade Física")
         self.sliders["pavimento"] = self.criar_item_slider(self.scroll, "Regularidade pavimento:")
         self.sliders["inclinacao"] = self.criar_item_slider(self.scroll, "Inclinação/Rampas:")
@@ -257,7 +475,7 @@ class AppAcessibilidade(ctk.CTk):
         self.c_pod = ctk.CTkCheckBox(self.scroll, text="Piso Podotátil (Textura Cego)", border_color="#3AC098", fg_color="#3AC098")
         self.c_pod.pack(anchor="w", pady=10)
 
-        # AMBIENTE
+        #AMBIENTE
         self.criar_label_seccao(self.scroll, "Conforto e Ambiente")
         self.sliders["sombra"] = self.criar_item_slider(self.scroll, "Sombra:")
         self.sliders["qualidade_ar"] = self.criar_item_slider(self.scroll, "Qualidade do Ar:")
@@ -266,7 +484,7 @@ class AppAcessibilidade(ctk.CTk):
         self.sliders["poluicao_visual"] = self.criar_item_slider(self.scroll, "Poluição Visual:")
         self.sliders["iluminacao"] = self.criar_item_slider(self.scroll, "Iluminação:")
 
-        # MOVIMENTO
+        #MOVIMENTO
         self.criar_label_seccao(self.scroll, "População e Movimento")
         self.sliders["transito"] = self.criar_item_slider(self.scroll, "Evitar Trânsito:")
         self.sliders["multidao"] = self.criar_item_slider(self.scroll, "Evitar Multidões:")
@@ -302,7 +520,8 @@ class AppAcessibilidade(ctk.CTk):
         messagebox.showinfo("Sucesso", "Perfil atualizado!")
         self.mostrar_menu_principal()
 
-    # --- MENU PRINCIPAL ---
+
+    #MENU PRINCIPAL 
 
     def mostrar_menu_principal(self):
         self.limpar_janela()
@@ -316,6 +535,21 @@ class AppAcessibilidade(ctk.CTk):
         f_main = ctk.CTkFrame(self, fg_color="white", corner_radius=15)
         f_main.pack(padx=20, pady=10, fill="both", expand=True)
 
+        self.btn_bike = ctk.CTkButton(
+            f_main, 
+            text="🚲", 
+            width=60, 
+            height=60, 
+            corner_radius=30, 
+            fg_color="#299480", 
+            hover_color="#247F6E", 
+            font=("Helvetica", 33),
+            anchor = "center",
+            command=self.abrir_interface_bicicletas
+        )
+        
+        self.btn_bike.place(relx=0.5, rely=0.9, anchor="center")
+        
         ctk.CTkLabel(f_main, text="Cidade:", font=("Helvetica", 12)).pack(pady=(15, 0))
         self.cb_cidade = ctk.CTkComboBox(f_main, values=list(DADOS_CIDADES.keys()), width=300, command=self.atualizar_locais)
         self.cb_cidade.pack(pady=5)
@@ -338,6 +572,47 @@ class AppAcessibilidade(ctk.CTk):
         ctk.CTkButton(f_main, text="CALCULAR ROTA IDEAL", command=self.simular_calculo, height=45, font=("Helvetica", 13, "bold")).pack(pady=25)
         ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", width=100).pack(pady=10)
 
+
+    def abrir_interface_bicicletas(self):
+        cidades_disponiveis = {
+            "Aveiro": "city/grafo_aveiro.json",
+            "Barcelos": "city/grafo_barcelos.json",
+            "Beja": "city/grafo_beja.json",
+            "Braga": "city/grafo_braga.json",
+            "Caldas da Rainha": "city/grafo_caldas_da_rainha.json",
+            "Coimbra": "city/grafo_coimbra.json",
+            "Covilhã": "city/grafo_covilhã.json",
+            "Évora": "city/grafo_évora.json",
+            "Fafe": "city/grafo_fafe.json",
+            "Famalicão": "city/grafo_famalicão.json",
+            "Faro": "city/grafo_faro.json",
+            "Figueira da Foz": "city/grafo_figueira_da_foz.json",
+            "Guimarães": "city/grafo_guimarães.json",
+            "Lagos": "city/grafo_lagos.json",
+            "Lisboa": "city/grafo_lisboa.json",
+            "Marco de Canaveses": "city/grafo_marco_de_canaveses.json",
+            "Portimão": "city/grafo_portimão.json",
+            "Porto": "city/grafo_porto.json",
+            "Póvoa de Varzim": "city/grafo_póvoa_de_varzim.json",
+            "Tomar": "city/grafo_tomar.json",
+            "Viseu": "city/grafo_viseu.json",
+            "Vila Nova de Gaia": "city/grafo_vila_nova_de_gaia.json"
+        }
+        
+        
+        self.withdraw()
+        
+        janela = JanelaBicicletas(
+            self, 
+            gestor=self.gestor_bike, 
+            db_cidades=DADOS_CIDADES, 
+            mapa=self.motor_mapa, 
+            utilizador_nome=self.utilizador_atual,
+            bd_utilizadores=self.bd
+        )
+
+        janela.cidades_ficheiros = cidades_disponiveis
+
     def atualizar_locais(self, cidade):
         locais = DADOS_CIDADES.get(cidade, [])
         self.cb_origem.configure(values=locais)
@@ -359,7 +634,7 @@ class AppAcessibilidade(ctk.CTk):
         except:
             h_calculo = datetime.now().hour
 
-        
+
         cidades_disponiveis = {
             "Aveiro": "city/grafo_aveiro.json",
             "Barcelos": "city/grafo_barcelos.json",
@@ -385,7 +660,6 @@ class AppAcessibilidade(ctk.CTk):
             "Vila Nova de Gaia": "city/grafo_vila_nova_de_gaia.json"
         }
 
-        # 3. Procurar o ficheiro correspondente
         ficheiro_mapa = cidades_disponiveis.get(cidade_selecionada)
 
         if not ficheiro_mapa or not os.path.exists(ficheiro_mapa):
@@ -393,7 +667,7 @@ class AppAcessibilidade(ctk.CTk):
             return
 
         try:
-            # 4. Carregar o mapa
+            #carregar o mapa
             self.motor_mapa = Mapa()
             self.motor_mapa.load_mapa(ficheiro_mapa)
             
@@ -402,16 +676,15 @@ class AppAcessibilidade(ctk.CTk):
             print(f"Cidade: {cidade_selecionada} | Ficheiro: {ficheiro_mapa}")
             print(f"Rota: {origem} -> {destino}")
 
-            # 5. Configurar as preferências do utilizador (Carregadas do JSON)
+            #configurar as preferências do utilizador (Carregadas do JSON)
             p_user = self.bd[self.utilizador_atual]["preferencias"]
             perfil = Preferencias()
             perfil.atualizar_parametros(p_user)
 
-            # 6. Executar o cálculo de percurso
-            # Nota: k=3 para dar 3 opções de rota
+            #executar o cálculo de percurso
+            #Nota: k=5 para dar 5 opções de rota
             resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, k=5)
 
-            # 7. Mostrar resultados
             if not resultados:
                 messagebox.showwarning("Aviso", "Não foi possível encontrar um caminho entre esses pontos.")
                 return
@@ -425,40 +698,39 @@ class AppAcessibilidade(ctk.CTk):
             self.visualizar_caminhos(cidade_selecionada, resultados)
 
         except Exception as e:
-            # Se houver um erro (como aquele do 'no setter' ou nome inexistente), aparece aqui
             print(f"ERRO NO CÁLCULO: {e}")
             messagebox.showerror("Erro no Processamento", f"Ocorreu um erro: {e}")
 
     def visualizar_caminhos(self, cidade_nome, resultados):
-        """ Cria a janela com o mapa e os 5 caminhos destacados """
+        #cria a janela com o mapa e os 5 caminhos destacados
         G = nx.Graph()
             
-            # 1. Carregar todas as ligações do mapa (o fundo cinzento)
+            #carregar todas as ligações do mapa (o fundo cinzento)
         for origem, vizinhos in self.motor_mapa.adjacencias.items():
             for ligacao in vizinhos:
                 G.add_edge(origem, ligacao["destino"])
 
-            # 2. Tentar usar as coordenadas reais do JSON
+            #tentar usar as coordenadas reais do JSON
         try:
-                # O NetworkX usa (Longitude, Latitude) para o eixo X,Y
+                #NetworkX usa (Longitude, Latitude) para o eixo X,Y
             pos = {local: (coord[1], coord[0]) for local, coord in self.motor_mapa.dados["coordenadas"].items()}
         except:
-                # Se falhar, ele espalha os nós automaticamente
+                #se falhar, ele espalha os nós automaticamente
             pos = nx.spring_layout(G, seed=42)
 
         plt.figure(figsize=(10, 8))
         plt.title(f"Visualização de Percursos: {cidade_nome}")
 
-            # 3. Desenhar o grafo base (nós e arestas em cinzento)
+            #desenhar o grafo base (nós e arestas em cinzento)
         nx.draw_networkx_nodes(G, pos, node_size=300, node_color="#D3D3D3")
         nx.draw_networkx_edges(G, pos, edge_color="#E0E0E0", width=1, alpha=0.5)
         nx.draw_networkx_labels(G, pos, font_size=8)
 
-            # 4. Desenhar os 5 caminhos calculados com cores diferentes
-        cores = ["#FF0000", "#0000FF", "#008000", "#FFA500", "#800080"] # Vermelho, Azul, Verde, Laranja, Roxo
+            #desenhar os 5 caminhos calculados com cores diferentes
+        cores = ["#FF0000", "#0000FF", "#008000", "#FFA500", "#800080"]
             
         for idx, (score, caminho) in enumerate(resultados):
-            if idx >= 5: break # Limite de 5 rotas
+            if idx >= 5: break
                 
                 # Converte a lista ['A', 'B', 'C'] em pares [('A','B'), ('B','C')]
             arestas_caminho = [(caminho[i], caminho[i+1]) for i in range(len(caminho)-1)]
@@ -472,7 +744,7 @@ class AppAcessibilidade(ctk.CTk):
             )
 
         plt.legend()
-        plt.show(block=False) # Abre a janela do gráfico
+        plt.show(block=False)
 
 if __name__ == "__main__":
     app = AppAcessibilidade()
