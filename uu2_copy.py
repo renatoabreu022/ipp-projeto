@@ -238,7 +238,7 @@ class AppAcessibilidade(ctk.CTk):
         btn_calc = ctk.CTkButton(f_bottom, text='CALCULAR ROTA', command=self.simular_calculo, fg_color="#2A8569", hover_color="#1F4E3D", height=65, font=("Helvetica", 13, "bold"))
         btn_calc.grid(row=0, column=1, sticky='nsew')
 
-        ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", hover_color="#C62828", width=100).pack(pady=5)
+        ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", width=100).pack(pady=5)
 
         self.ao_mudar_cidade(self.cb_cidade.get())
 
@@ -251,30 +251,15 @@ class AppAcessibilidade(ctk.CTk):
             self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
     
     def ao_mudar_cidade(self, cidade):
-        """Atualiza o motor do mapa, os dropdowns e redesenha o mapa base da nova cidade"""
-        # 1. Mapeamento de nomes para ficheiros (Garanta que os nomes batem com o ComboBox)
+        self.atualizar_locais(cidade)
+
         cidades_disponiveis = carregar_cidades_disponiveis()
+
         ficheiro = cidades_disponiveis.get(cidade)
-        
         if ficheiro and os.path.exists(ficheiro):
-            # 2. Reinicializar o motor do mapa com o novo ficheiro
             self.motor_mapa = Mapa()
             self.motor_mapa.load_mapa(ficheiro)
-            
-            # 3. Atualizar as listas de Origem e Destino nos ComboBoxes
-            locais = sorted(list(self.motor_mapa.adjacencias.keys()))
-            self.cb_origem.configure(values=locais)
-            self.cb_destino.configure(values=locais)
-            
-            if locais:
-                self.cb_origem.set(locais)
-                self.cb_destino.set(locais[-1])
-
-            # 4. Desenhar o novo mapa (Limpando o anterior)
             self.visualizar_caminhos(cidade, [])
-            print(f"Sucesso: Cidade alterada para {cidade}")
-        else:
-            print(f"Erro: Ficheiro para {cidade} não encontrado em {ficheiro}")
 
     def simular_calculo(self):
         # 1. Obter os dados selecionados na interface
@@ -352,21 +337,9 @@ class AppAcessibilidade(ctk.CTk):
                 G.add_edge(origem, ligacao["destino"])
 
         # Tentar obter as coordenadas GPS
-        # 2. Tentar usar as coordenadas reais do JSON
-        pos = {}
         try:
-            # Garantir que extraímos apenas (x, y) de forma limpa
-            for local, coord in self.motor_mapa.coordenadas.items():
-                # coord é Longitude (X), coord é Latitude (Y)
-                # Convertemos explicitamente para float para evitar formatos complexos
-                pos[local] = (float(coord), float(coord))
-            
-            # Verificar se todos os nós do grafo têm coordenadas
-            for node in G.nodes():
-                if node not in pos:
-                    # Se faltar algum nó, usamos o layout automático para o mapa não quebrar
-                    pos = nx.spring_layout(G, seed=42)
-                    break
+            # Usa self.motor_mapa.coordenadas que é o atributo correto da classe Mapa
+            pos = {local: (coord, coord) for local, coord in self.motor_mapa.coordenadas.items()}
         except Exception as e:
             print(f"Erro nas coordenadas: {e}. A usar layout automático.")
             pos = nx.spring_layout(G, seed=42)
