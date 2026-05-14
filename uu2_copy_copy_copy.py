@@ -14,7 +14,7 @@ from models.user import Preferencias
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from models.grafo import Mapa
 from models.bicicletas import GestorBicicletas
-from engine.visualizador_gráficos import AnalisadorVisual
+
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("green")
@@ -45,106 +45,6 @@ def carregar_cidades():
 
 # --- BASE DE DADOS DE LOCAIS ---
 DADOS_CIDADES = carregar_cidades()
-
-class JanelaResultadosBike(ctk.CTkToplevel):
-    def __init__(self, master, ranking, cidade_nome):
-        super().__init__(master)
-        self.master_app = master
-        
-        self.title(f"Estações Sugeridas - {cidade_nome}")
-        self.geometry("414x740")
-        self.configure(fg_color="#F4F1EA")
-        self.grab_set()
-
-        self.cor_verde_forte = "#2A8569"
-
-        ctk.CTkLabel(self, text="MELHORES OPÇÕES DE BICICLETA", 
-                    font=("Helvetica", 18, "bold"), text_color=self.cor_verde_forte).pack(pady=20)
-
-        self.scroll = ctk.CTkScrollableFrame(self, fg_color="white", corner_radius=12)
-        self.scroll.pack(fill="both", expand=True, padx=20, pady=10)
-
-        for i, opcao in enumerate(ranking[:5]):
-            self.criar_card(i, opcao)
-
-        ctk.CTkButton(self, text="VOLTAR", fg_color="#757575", hover_color="#3E3E3E", 
-                     command=self.voltar).pack(pady=20)
-
-    def criar_card(self, indice, opcao):
-        card = ctk.CTkFrame(self.scroll, fg_color="#F9F9F9", corner_radius=8, border_width=1, border_color="#E0E0E0")
-        card.pack(fill="x", pady=8, padx=5)
-
-        header = ctk.CTkFrame(card, fg_color="transparent")
-        header.pack(fill="x", padx=10, pady=5)
-        
-        ctk.CTkLabel(header, text=f"{indice+1}ª: {opcao['local']}", font=("Helvetica", 13, "bold"), text_color=self.cor_verde_forte).pack(side="left")
-        ctk.CTkLabel(header, text=f"Score: {round(opcao['score'], 1)}", font=("Helvetica", 11)).pack(side="right")
-
-        # Texto do caminho (sem botão de gráfico abaixo)
-        rota_texto = " → ".join(opcao['percurso'])
-        ctk.CTkLabel(card, text=rota_texto, font=("Helvetica", 11), text_color="black", wraplength=300).pack(pady=10, padx=10)
-
-    def voltar(self):
-        self.master_app.deiconify()
-        self.destroy()
-
-class JanelaPercursos(ctk.CTkToplevel):
-    def __init__(self, master, resultados, mapa, cidade_nome, hora):
-        super().__init__(master)
-        self.master_app = master
-        self.resultados = resultados
-        self.mapa = mapa
-        self.cidade_nome = cidade_nome
-        self.hora = hora
-        self.caminho_anterior = None
-
-        self.title(f'Sugestões de Percurso – {cidade_nome}')
-        self.geometry('414x740')
-        self.configure(fg_color="#F4F1EA")
-
-        self.grab_set()
-
-        self.cor_verde_forte = "#2A8569"
-        self.cor_texto = "#2A8569"
-
-        ctk.CTkLabel(self, text=f"ROTAS EM {cidade_nome.upper()}",font=("Helvetica", 20, "bold"), text_color=self.cor_verde_forte).pack(pady=20)
-
-        self.scroll = ctk.CTkScrollableFrame(self, fg_color="white", corner_radius=12)
-        self.scroll.pack(fill="both", expand=True, padx=20, pady=10)
-
-        for i, (score, caminho) in enumerate(self.resultados[:5]):
-            self.criar_card_rota(i, score, caminho)
-        
-        ctk.CTkButton(self, text="VOLTAR", fg_color="#757575", hover_color="#3E3E3E", command=self.voltar).pack(pady=20)
-
-    def criar_card_rota(self, indice, score, caminho):
-        card = ctk.CTkFrame(self.scroll, fg_color="#F9F9F9", corner_radius=8, border_width=1, border_color="#E0E0E0")
-        card.pack(fill="x", pady=8, padx=5)
-
-        header = ctk.CTkFrame(card, fg_color="transparent")
-        header.pack(fill="x", padx=10, pady=5)
-        
-        ctk.CTkLabel(header, text=f"{indice+1}ª OPÇÃO", font=("Helvetica", 13, "bold"), text_color=self.cor_verde_forte).pack(side="left")
-        ctk.CTkLabel(header, text=f"Esforço: {round(score, 1)}", font=("Helvetica", 12), text_color="#555").pack(side="right")
-
-        # Texto do caminho
-        rota_texto = " → ".join(caminho)
-        lbl_rota = ctk.CTkLabel(card, text=rota_texto, font=("Helvetica", 11), text_color="black", wraplength=300)
-        lbl_rota.pack(fill="x", padx=10, pady=5)
-
-        # Botão para ver Gráfico
-        ctk.CTkButton(card, text="Ver Análise Gráfica", height=30, fg_color="#3AC098", 
-                     command=lambda c=caminho: self.mostrar_grafico(c)).pack(pady=10)
-
-    def mostrar_grafico(self, caminho_selecionado):
-        # Utiliza o AnalisadorVisual já existente no teu projeto
-        AnalisadorVisual.radar(caminho_selecionado, self.caminho_anterior, self.mapa, self.hora)
-        self.caminho_anterior = caminho_selecionado
-
-    def voltar(self):
-        self.master_app.deiconify()
-        self.destroy()
-
 class JanelaBicicletas(ctk.CTkToplevel):
     def __init__(self, master, gestor, db_cidades, mapa, utilizador_nome, bd_utilizadores):
         super().__init__(master)
@@ -287,10 +187,6 @@ class JanelaBicicletas(ctk.CTkToplevel):
             return
 
         ranking.sort(key=lambda x: x['score'])
-
-        self.withdraw() # Esconde a janela de seleção de estações
-        JanelaResultadosBike(self, ranking, self.combo_cidades.get())
-        
         top_opcoes = ranking[:5]  
 
         popup = ctk.CTkToplevel(self)
@@ -319,24 +215,10 @@ class JanelaBicicletas(ctk.CTkToplevel):
             header = ctk.CTkFrame(card, fg_color="transparent")
             header.pack(fill="x", padx=10, pady=5)
             
-            lbl_titulo = ctk.CTkLabel(
-                header, 
-                text=f"{i+1}ª OPÇÃO: {opcao['local']}", 
-                font=("Helvetica", 13, "bold"), 
-                text_color="#2A8569",
-                wraplength=300,
-                justify="left")
-            lbl_titulo.pack(side="top", anchor="w")
+            ctk.CTkLabel(header, text=f"{i+1}ª OPÇÃO: {opcao['local']}", font=("Helvetica", 13, "bold"), text_color=self.cor_verde_forte).pack(side="left")
             
-            
-            lbl_score = ctk.CTkLabel(
-                header, 
-                text=f"Score: {round(opcao['score'], 1)}", 
-                font=("Helvetica", 11, "italic"), 
-                text_color="#2A8569")
-            lbl_score.pack(side="top", anchor="w", pady=(0, 5))
-            
-            
+            ctk.CTkLabel(header, text=f"Score: {round(opcao['score'], 1)}", font=("Helvetica", 12, "bold"), text_color="#299480").pack(side="right")
+
             scroll_rota = ctk.CTkScrollableFrame(
                 card, 
                 orientation="horizontal", 
@@ -551,8 +433,19 @@ class AppAcessibilidade(ctk.CTk):
         f_top.pack(fill='x', padx=20)
         f_top.grid_columnconfigure((0,1), weight=1)
 
-        self.cb_cidade = ctk.CTkComboBox(f_top, values=list(DADOS_CIDADES.keys()), width=300, command=self.ao_mudar_cidade, button_color="#2A8569", border_color="#3AC098")
+        self.cb_cidade = ctk.CTkComboBox(
+            f_top,
+            values=list(DADOS_CIDADES.keys()),
+            width=300,
+            command=self.ao_mudar_cidade,
+            button_color="#2A8569",
+            border_color="#3AC098",
+            state="readonly"
+            )
+
         self.cb_cidade.grid(row=0, column=0, padx=(0,5), sticky='ew')
+
+        self.cb_cidade.set("Selecione a cidade")
 
         self.cb_hora = ctk.CTkComboBox(f_top, values=[f"{str(i).zfill(2)}:00" for i in range(24)], button_color="#2A8569", border_color="#3AC098")
         self.cb_hora.set(f"{str(datetime.now().hour).zfill(2)}:00")
@@ -570,11 +463,30 @@ class AppAcessibilidade(ctk.CTk):
         f_inputs = ctk.CTkFrame(f_bottom, fg_color='transparent')
         f_inputs.grid(row=0, column=0, sticky='ew', padx=(0,10))
 
-        self.cb_origem = ctk.CTkComboBox(f_inputs, values=[], button_color="#2A8569", border_color="#3AC098")
+
+        self.cb_origem = ctk.CTkComboBox(
+            f_inputs,
+            values=[],
+            button_color="#2A8569",
+            border_color="#3AC098",
+            state="readonly"
+            )
+
         self.cb_origem.pack(pady=2, fill='x')
 
-        self.cb_destino = ctk.CTkComboBox(f_inputs, values=[], button_color="#2A8569", border_color="#3AC098")
+        self.cb_origem.set("Origem")
+
+        self.cb_destino = ctk.CTkComboBox(
+            f_inputs,
+            values=[],
+            button_color="#2A8569",
+            border_color="#3AC098",
+            state="readonly"
+            )
+
         self.cb_destino.pack(pady=2, fill='x')
+
+        self.cb_destino.set("Destino")
 
         btn_calc = ctk.CTkButton(f_bottom, text='🚶', command=self.simular_calculo, fg_color="#2A8569", hover_color="#1F4E3D", width=60, height=65, font=("Helvetica", 24))
         btn_calc.grid(row=0, column=1, sticky='nsew')
@@ -583,7 +495,8 @@ class AppAcessibilidade(ctk.CTk):
 
         ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", hover_color="#761616", width=100).pack(pady=5)
 
-        self.ao_mudar_cidade(self.cb_cidade.get())
+        
+
     def abrir_interface_bicicletas(self):
         # Dicionário de ficheiros igual ao encontrado no uu2.py
         cidades_disponiveis = carregar_cidades_disponiveis() 
@@ -601,18 +514,28 @@ class AppAcessibilidade(ctk.CTk):
 
     def atualizar_locais(self, cidade):
         locais = DADOS_CIDADES.get(cidade, [])
+    
         self.cb_origem.configure(values=locais)
         self.cb_destino.configure(values=locais)
-        if locais:
-            self.cb_origem.set(locais[0])
-            self.cb_destino.set(locais[1] if len(locais) > 1 else locais[0])
+    
+    # Em vez de pegar no locais[0], forçamos o convite
+        self.cb_origem.set("Selecione a origem")
+        self.cb_destino.set("Selecione o destino")
     
     def ao_mudar_cidade(self, cidade):
+        # Se o valor for o placeholder, não fazemos nada ou limpamos os campos
+        if cidade == "Selecione a cidade":
+            self.cb_origem.configure(values=[])
+            self.cb_origem.set("Selecione a origem")
+            self.cb_destino.set("Selecione o destino")
+            return
+
+    # Se for uma cidade real, segue com a lógica normal
         self.atualizar_locais(cidade)
 
         cidades_disponiveis = carregar_cidades_disponiveis()
-
         ficheiro = cidades_disponiveis.get(cidade)
+    
         if ficheiro and os.path.exists(ficheiro):
             self.motor_mapa = Mapa()
             self.motor_mapa.load_mapa(ficheiro)
@@ -622,42 +545,74 @@ class AppAcessibilidade(ctk.CTk):
         cidade_selecionada = self.cb_cidade.get()
         origem = self.cb_origem.get()
         destino = self.cb_destino.get()
+        # 1. Obter os dados selecionados na interface
+        if cidade_selecionada == "Selecione a cidade":
+            messagebox.showwarning("Aviso", "Selecione uma cidade.")
+            return
+
+        if origem == "Selecione a origem":
+            messagebox.showwarning("Aviso", "Selecione a origem.")
+            return
+
+        if destino == "Selecione o destino":
+            messagebox.showwarning("Aviso", "Selecione o destino.")
+            return
+
         
+        # Obter a hora (opcional)
         try:
-            hora_txt = self.cb_hora.get().split(":")
+            hora_txt = self.cb_hora.get().split(":")[0]
             h_calculo = int(hora_txt)
         except:
             h_calculo = datetime.now().hour
 
+        
         cidades_disponiveis = carregar_cidades_disponiveis()
+
+        # 3. Procurar o ficheiro correspondente
         ficheiro_mapa = cidades_disponiveis.get(cidade_selecionada)
 
         if not ficheiro_mapa or not os.path.exists(ficheiro_mapa):
-            messagebox.showerror("Erro", "Mapa não encontrado.")
+            messagebox.showerror("Erro", f"O mapa de {cidade_selecionada} não foi encontrado.\nCaminho: {ficheiro_mapa}")
             return
 
         try:
+            # 4. Carregar o mapa
+            self.motor_mapa = Mapa()
             self.motor_mapa.load_mapa(ficheiro_mapa)
             
+            
+            print(f"--- SIMULAÇÃO ---")
+            print(f"Cidade: {cidade_selecionada} | Ficheiro: {ficheiro_mapa}")
+            print(f"Rota: {origem} -> {destino}")
+
+            # 5. Configurar as preferências do utilizador (Carregadas do JSON)
             p_user = self.bd[self.utilizador_atual]["preferencias"]
             perfil = Preferencias()
             perfil.atualizar_parametros(p_user)
 
+            # 6. Executar o cálculo de percurso
+            # Nota: k=3 para dar 3 opções de rota
             resultados = self.motor_mapa.pesquisa_perc(origem, destino, perfil, hora=h_calculo, k=5)
 
+            # 7. Mostrar resultados
             if not resultados:
-                messagebox.showwarning("Aviso", "Não foi possível encontrar um caminho.")
+                messagebox.showwarning("Aviso", "Não foi possível encontrar um caminho entre esses pontos.")
                 return
             
-            # ATUALIZAÇÃO: Em vez de messagebox, abre a nova Janela
-            self.withdraw() # Esconde a janela principal
-            JanelaPercursos(self, resultados, self.motor_mapa, cidade_selecionada, h_calculo)
-            
-            # Atualiza o mapa visual na janela principal (opcional, para quando voltar)
             self.visualizar_caminhos(cidade_selecionada, resultados)
 
+            texto = f"Sugestões para {cidade_selecionada} ({h_calculo}h):\n\n"
+            for i, (score, caminho) in enumerate(resultados):
+                texto += f"OPÇÃO {i+1} (Esforço: {score:.2f})\n"
+                texto += " ➔ ".join(caminho) + "\n\n"
+            
+            messagebox.showinfo("Rotas Recomendadas", texto)
+            
         except Exception as e:
-            messagebox.showerror("Erro", f"Ocorreu um erro: {e}")
+            # Se houver um erro (como aquele do 'no setter' ou nome inexistente), aparece aqui
+            print(f"ERRO NO CÁLCULO: {e}")
+            messagebox.showerror("Erro no Processamento", f"Ocorreu um erro: {e}")
 
     def visualizar_caminhos(self, cidade_nome, resultados):
         # Limpar o frame do mapa antes de desenhar
