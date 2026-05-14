@@ -1,4 +1,4 @@
-eAplicação base com locais e percursos em que cada percurso tem parâmetros de:
+Aplicação base com locais e percursos em que cada percurso tem parâmetros de:
 -pavimento
 -inclinação
 -qualidade do ambiente e do ar (poluição sonora, visual, indice de carbono, polen/alergias...)

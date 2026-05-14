@@ -17,7 +17,7 @@ from models.user import Sistema, Utilizador, Preferencias
 import json
 from datetime import datetime
 from models.bicicletas import GestorBicicletas
-import city
+import cidades
 import os
 
 #------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
@@ -54,7 +54,7 @@ def help():
 # --- LOOP PRINCIPAL ---
 def carregar_cidades_disponiveis():
     cidades = {}
-    pasta = "city"
+    pasta = "cidades"
     prefixo = "grafo_"
     
     for ficheiro in os.listdir(pasta):
@@ -175,13 +175,13 @@ def main():
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: gravar_mapa <ficheiro>.')
             else:
-                mapa.save_mapa(f"city/{args[0]}")
+                mapa.save_mapa(f"cidades/{args[0]}")
         
         elif comando == 'carregar_mapa':
             if not args:
                 print('ERRO: Uso indevido do comando.\nDeverá seguir este modelo: carregar_mapa <ficheiro>.')
             else:
-                caminho = f"city/{args[0]}"
+                caminho = f"cidades/{args[0]}"
                 mapa.load_mapa(caminho)
                 caminho_mapa_atual = caminho  # <-- guarda o caminho completo
 
@@ -204,7 +204,7 @@ def main():
                 print("ERRO: O processo de login não foi efetuado.")
                 continue
             #mapeamento de ficheiros
-            # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
+            #adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
             try:
                 with open("locais.json", "r", encoding="utf-8") as f:
                     db_cidades = json.load(f)
@@ -427,7 +427,7 @@ def main():
                     continue
                 
                 ficheiro = nome.lower().replace(' ','_')
-                diretorio = f'city/grafo_{ficheiro}.json'
+                diretorio = f'cidades/grafo_{ficheiro}.json'
                 
                 if os.path.exists(diretorio):
                     print(f'ERRO: Já existe um ficheiro para {nome}.')
@@ -558,8 +558,8 @@ def main():
                         ficheiro = input("Nome do ficheiro (sem extensão): ").strip()
                         if not ficheiro.endswith(".json"):
                             ficheiro += ".json"
-                        if not ficheiro.startswith("city/"):
-                            ficheiro = f"city/{ficheiro}"
+                        if not ficheiro.startswith("cidades/"):
+                            ficheiro = f"cidades/{ficheiro}"
                         mapa.save_mapa(ficheiro)
                         caminho_mapa_atual = ficheiro
                         print(f'Mapa gravado com sucesso em "{ficheiro}".')

@@ -557,12 +557,12 @@ class AppAcessibilidade(ctk.CTk):
 
         ctk.CTkButton(self, text="Sair", command=self.mostrar_login, fg_color="#C62828", hover_color="#761616", width=100).pack(pady=5)
 
-        self.ao_mudar_cidade(self.cb_cidade.get())
+        
     def abrir_interface_bicicletas(self):
-        #Dicionário de ficheiros igual ao encontrado no uu2.py
+        
         cidades_disponiveis = carregar_cidades_disponiveis() 
         self.withdraw()
-        #Cria a janela de bicicletas (deves copiar a classe JanelaBicicletas do uu2.py para o seu ficheiro ou importá-la)
+        #Cria a janela de bicicletas 
         janela = JanelaBicicletas(
             self, 
             gestor=self.gestor_bike, 
@@ -579,7 +579,6 @@ class AppAcessibilidade(ctk.CTk):
         self.cb_origem.configure(values=locais)
         self.cb_destino.configure(values=locais)
     
-    #Em vez de pegar no locais[0], forçamos o convite
         self.cb_origem.set("Selecione a origem")
         self.cb_destino.set("Selecione o destino")
     
@@ -619,10 +618,12 @@ class AppAcessibilidade(ctk.CTk):
             messagebox.showwarning("Aviso", "Selecione o destino.")
             return
 
+        # Correção sugerida para o app.py
+        
         try:
-            hora_txt = self.cb_hora.get().split(":")
-            h_calculo = int(hora_txt)
-        except:
+            hora_selecionada = self.cb_hora.get() # Obtém "14:00"
+            h_calculo = int(hora_selecionada.split(":")[0]) # Pega apenas na parte das horas "14" e converte
+        except Exception:
             h_calculo = datetime.now().hour
 
         cidades_disponiveis = carregar_cidades_disponiveis()
