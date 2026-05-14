@@ -51,7 +51,7 @@ class JanelaResultadosBike(ctk.CTkToplevel):
         super().__init__(master)
         self.master_app = master
         
-        self.title(f"Estações Sugeridas - {cidade_nome}")
+        self.title(f"Sugestões de Bicicleta - {cidade_nome}")
         self.geometry("414x740")
         self.configure(fg_color="#F4F1EA")
         self.grab_set()
@@ -80,7 +80,6 @@ class JanelaResultadosBike(ctk.CTkToplevel):
         ctk.CTkLabel(header, text=f"{indice+1}ª: {opcao['local']}", font=("Helvetica", 13, "bold"), text_color=self.cor_verde_forte).pack(side="left")
         ctk.CTkLabel(header, text=f"Score: {round(opcao['score'], 1)}", font=("Helvetica", 11)).pack(side="right")
 
-        # Texto do caminho (sem botão de gráfico abaixo)
         rota_texto = " → ".join(opcao['percurso'])
         ctk.CTkLabel(card, text=rota_texto, font=("Helvetica", 11), text_color="black", wraplength=300).pack(pady=10, padx=10)
 
@@ -271,15 +270,19 @@ class JanelaBicicletas(ctk.CTkToplevel):
         hora_atual = datetime.now().hour
         ranking = []
         
-        #preferências reais do utilizador da BD da interface principal
+        # Preferências reais do utilizador da BD
         prefs_raw = self.bd_utilizadores[self.utilizador_nome]["preferencias"]
         perfil = Preferencias()
         perfil.atualizar_parametros(prefs_raw)
 
         for estacao in self.gestor.estacoes.keys():
             res = self.mapa.pesquisa_perc(origem, estacao, perfil, hora=hora_atual, k=1)
-            if res:
-                score, caminho = res[0]
+            
+            # A função pesquisa_perc devolve uma LISTA de tuplos: [(score, caminho)]
+            # Precisamos de verificar se a lista não está vazia e aceder ao índice
+            if res and isinstance(res, list) and len(res) > 0:
+                # O ERRO ESTÁ AQUI: Tens de usar res para desempacotar
+                score, caminho = res 
                 ranking.append({'local': estacao, 'score': score, 'percurso': caminho})
 
         if not ranking:
@@ -287,77 +290,11 @@ class JanelaBicicletas(ctk.CTkToplevel):
             return
 
         ranking.sort(key=lambda x: x['score'])
-
-        self.withdraw() # Esconde a janela de seleção de estações
+        
+        # Chamar a nova interface (JanelaResultadosBike) e esconder a atual
+        self.withdraw() 
         JanelaResultadosBike(self, ranking, self.combo_cidades.get())
-        
-        top_opcoes = ranking[:5]  
 
-        popup = ctk.CTkToplevel(self)
-        popup.title("Melhores Opções Encontradas")
-        popup.geometry("414x740")
-        popup.configure(fg_color=self.cor_fundo)
-        popup.grab_set() 
-
-        popup.protocol("WM_DELETE_WINDOW", lambda: self.fechar_popup(popup))
-    
-        ctk.CTkLabel(popup, text="SUGESTÕES DE PERCURSO", font=("Helvetica", 18, "bold"), text_color=self.cor_verde_forte).pack(pady=15)
-
-        def fechar_popup(self, popup_window):
-            popup_window.destroy()
-            self.deiconify()
-    
-        
-        scroll_res = ctk.CTkScrollableFrame(popup, fg_color="white", corner_radius=12)
-        scroll_res.pack(fill="both", expand=True, padx=20, pady=10)
-
-        for i, opcao in enumerate(top_opcoes):
-            card = ctk.CTkFrame(scroll_res, fg_color="#F9F9F9", corner_radius=8, border_width=1, border_color="#E0E0E0")
-            card.pack(fill="x", pady=8, padx=5)
-
-            
-            header = ctk.CTkFrame(card, fg_color="transparent")
-            header.pack(fill="x", padx=10, pady=5)
-            
-            lbl_titulo = ctk.CTkLabel(
-                header, 
-                text=f"{i+1}ª OPÇÃO: {opcao['local']}", 
-                font=("Helvetica", 13, "bold"), 
-                text_color="#2A8569",
-                wraplength=300,
-                justify="left")
-            lbl_titulo.pack(side="top", anchor="w")
-            
-            
-            lbl_score = ctk.CTkLabel(
-                header, 
-                text=f"Score: {round(opcao['score'], 1)}", 
-                font=("Helvetica", 11, "italic"), 
-                text_color="#2A8569")
-            lbl_score.pack(side="top", anchor="w", pady=(0, 5))
-            
-            
-            scroll_rota = ctk.CTkScrollableFrame(
-                card, 
-                orientation="horizontal", 
-                fg_color="transparent", 
-                height=60, 
-                scrollbar_button_color=self.cor_verde_forte, 
-                scrollbar_button_hover_color="#2A8569"
-            )
-            scroll_rota.pack(fill="x", padx=10, pady=(0, 5))
-            
-            rota_texto = " -> ".join(opcao['percurso'])
-            lbl_rota = ctk.CTkLabel(
-                scroll_rota, 
-                text=rota_texto, 
-                font=("Helvetica", 11), 
-                text_color=self.cor_texto
-            )
-            lbl_rota.pack(side="left", padx=5)
-
-        ctk.CTkButton(popup, text="FECHAR", fg_color=self.cor_verde_forte, hover_color='#1F4E3D', command=popup.destroy).pack(pady=15)
-        
     def calcular_rota(self, origem):
         hora_atual = datetime.now().hour
         ranking = []
