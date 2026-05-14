@@ -1,255 +1,181 @@
-#------------31/03/2026-------@Lucas@Inês------------------#
+#---02/05/2026----------------#
+#--- @Lucas  ------#
+#_____Reformulação do cálculo de percurso com hora do dia_____#
 
-#____________imports______________#
-from models.user import Perfil
-from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente
+#-----Imports---------#
 
-class MotorCalculo:
+from models.user import Preferencias
+from models.percursos import ParametrosAcessibilidade,ParametrosAmbiente,ParametrosPopulacao
+#--------------------------# 
 
+# Diferença: Parãmetros de poluição visual, sombra, temperatura e iluminação agora têm um ajuste baseado na hora do dia, refletindo a percepção de segurança e conforto em ambientes noturnos. Por exemplo, a poluição visual tem um ajuste maior à noite, enquanto a sombra tem um ajuste reduzido, já que a falta de luz natural torna a sombra menos relevante. A temperatura também tem um ajuste para refletir o desconforto adicional que pode ocorrer à noite. A iluminação tem um ajuste significativo para refletir a importância crítica da iluminação adequada durante a noite para a segurança e conforto dos pedestres t~em ajustes dependendo de ser noite ou não
+class CalculoPeso:
     @staticmethod
-    def calcular_IC(perfil:Perfil,rua:ParametrosAcessibilidade,ambiente:ParametrosAmbiente): #IC-> Indice de conforto, serve para calcular o conforto do percurso, quanto maior pior o percurso, maior o IC, ou seja, mais stressante é o percurso
-        score = 0
-        tipo_user=perfil.get_tipo().lower()
-#__________________________________________Penalização de acessibilidade__________________________________________________#
-
-#---Inclinação---#
-        if perfil.need_acessibilidade() and "inclui_escadas" in rua.escadas:
-            score+=40
-
-        if perfil.need_acessibilidade() and "Nível Muito Elevado" in rua.inclinacao:
-            score+=30
-        
-        elif perfil.need_acessibilidade() and "Nível Elevado" in rua.inclinacao:
-            score+=20
-
-        elif perfil.need_acessibilidade() and "Nível Moderado" in rua.inclinacao:
-            score+=5
-
-#-----Passeioss-----#
-
-        match rua.passeios:
-            case "Reduzido. Risco elevado":
-                score +=20
-            case "Moderado. Risco ligeiro":
-                score+=10
-
-#-----Passadeiras---#
-        passadeira=rua.passadeiras.split(".")
-        match passadeira[0]:
-            case "Baixo":
-                score+=15
-
-            case "Moderado":
-                score+=5
-                            
-#_____________________________________Classificação especial- Cegos____________________________________________________________#
-        if "cego" in [inc.lower() for inc in perfil.get_incapacidades()]:
-            if "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala." in rua.textura_cego:
-                score+=50
-                
-        
-        
-#_________________Alergias I guess____________________________________________________________#
-        if perfil.has_alergia("pólen"):
-            if "Risco Elevado" in ambiente.nivel_polen:
-                score+=30
-
-            elif "Risco Moderado" in ambiente.nivel_polen:
-                score+=15
-
-            elif "Risco Ligeiro" in ambiente.nivel_polen:
-                score+=5
-
-
-#_________________Penalização de Parametros do ambiente???????____________________________________________________________#
-
-
-#_______________Temperatura____________#
-        
-        pvulneraveis=["idoso","criança"]
-
-        if ambiente.temp=="Risco Elevado.":
-            if tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=40
-            elif tipo_user in pvulneraveis:
-                score+=25
-            elif perfil.need_acessibilidade():
-                score+=15
-            else:
-                score+=10
-            
-        elif ambiente.temp=="Risco Moderado.":
-            if tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=20
-            elif tipo_user in pvulneraveis:
-                score+=15
-            elif perfil.need_acessibilidade():
-                score+=5
-            else:
-                score-=0
-                
-        elif ambiente.temp=="Risco Ligeiro.":
-            if tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=15
-            elif tipo_user in pvulneraveis:
-                score+=10
-            elif perfil.need_acessibilidade():
-                score+=5
-            else:
-                score-=0
-
-
-#____________Qualidade Ar____________________#
-
-        if ambiente.qualidade_ar=="Risco Elevado":
-            if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=30
-            elif tipo_user in pvulneraveis:
-                score+=20
-            elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=25
-            else:
-                score+=10
-                
-        elif ambiente.qualidade_ar=="Risco Moderado":
-            if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=20
-            elif tipo_user in pvulneraveis:
-                score+=10
-            elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=15
-            else:
-                score+=5
-                
-        elif ambiente.qualidade_ar=="Boa":
-            if tipo_user in pvulneraveis  and "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=10
-            elif tipo_user in pvulneraveis:
-                score-=0
-            elif "problemas respiratórios" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=5
-            else:
-                score-=0
-
-#-------poluicao sonora---------------#
-        if tipo_user in pvulneraveis and"Desconfortável" in ambiente.poluicao_sonora:
-            score+=10
-
-        elif "Desconfortàvel" in ambiente.poluicao_sonora:
-            score+=5
-
-        elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_sonora:
-            score+=5
-
-        #Assumi que se o ambiente for aceitável e a pessoa for um adulto, não há stress
-        
     
-#------poluicao visual--------------#
-        if "cego" in [inc.lower() for inc in perfil.get_incapacidades()] and ("Desconfortável" in ambiente.poluicao_visual or "Aceitável" in ambiente.poluicao_visual):
-            pass # os cegos não se importam com poluição visual
+    def calcular_score(preferencias:Preferencias,acess:ParametrosAcessibilidade,amb:ParametrosAmbiente,pop:ParametrosPopulacao,hora):
+        score = 0.0
 
-        elif tipo_user in pvulneraveis and "Desconfortável" in ambiente.poluicao_visual:
-            score+=10
-        elif "Desconfortável" in ambiente.poluicao_visual:
-            score+=5
-        elif tipo_user in pvulneraveis and "Aceitável" in ambiente.poluicao_visual:
-            score+=5
-            #mesma coisa que na pol sonora
+        ajustes = {
+            "sombra":1,
+            "iluminacao":1,
+            "poluicao_visual":1,
+            "transito":1,
+            "multidao":1,
+            "temperatura":1
+        }
 
-        
-#----------Iluminação------------
+        if hora >=0 and hora <= 6:  #MADRUGADA
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 2
+            ajustes["poluicao_visual"] = 1.5
+            ajustes["transito"] = 0.5
+            ajustes["multidao"]=0.5
+            ajustes["temperatura"] = 0.75
 
-        if ambiente.iluminacao=="Sem iluminação.":
-            if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=20
-            elif tipo_user in pvulneraveis:
-                score+=15
-            elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=15
-            else:
-                score+=10
+        #MANHÃ NÃO AGRAVA NADA
+        elif hora >11 and hora <= 16:  # PICO CALOR
+            ajustes["sombra"] = 2
+            ajustes["multidao"]=1.25
+            ajustes["temperatura"] = 1.75
+
+        elif hora > 16 and hora <= 19: #FINAL TARDE
+            ajustes["transito"] = 2
+            ajustes["multidao"]= 2
+            ajustes["sombra"] = 0.75
+        
+        elif hora > 19 and hora <= 24: #NOITE
+            ajustes["sombra"] = 0
+            ajustes["iluminacao"] = 1.25
+            ajustes["poluicao_visual"] = 1.25
+            ajustes["transito"] = 0.75
+            ajustes["multidao"]=0.75
+
+
+        match acess.pavimento:
+            case "Pavimento Muito Irregular":
+                score += preferencias.peso_pavimento*1
+            case "Pavimento Irregular":
+                score += preferencias.peso_pavimento*0.75
+            case "Pavimento Ligeiramente Irregular":
+                score +=preferencias.peso_pavimento*0.5
+            case "Pavimento Regular":
+                score += preferencias.peso_pavimento*0.25
+
+        match acess.inclinacao:
+            case "Nível Muito Elevado" :
+                score += preferencias.peso_inclinacao*1
+            case "Nível Elevado":
+                score+=preferencias.peso_inclinacao*0.75
+            case "Nível Moderado":
+                score+=preferencias.peso_inclinacao*0.5
+            case "Nível Baixo":
+                score+=preferencias.peso_inclinacao*0.25
+
+        match acess.passadeiras:
+            case "Baixo":
+                score+=preferencias.peso_passadeiras*1
+            case "Moderado":
+                score += preferencias.peso_passadeiras*(2/3)
+            case "Elevado":
+                score+=preferencias.peso_passadeiras*(1/3)
+
+        match acess.passeios:
+            case "Reduzido. Risco elevado.":
+                score+=preferencias.peso_passeios*1
+            case "Moderado. Risco ligeiro.":
+                score +=preferencias.peso_passeios*(2/3)
+            case "Elevado. Risco reduzido.":
+                score+=preferencias.peso_passeios*(1/3)
+
+        match acess.textura_cego:
+            case "O percurso não inclui pavimento acessível a pessoas com incapacidade visual que usam bengala.":
+                score += preferencias.peso_textura_cego
+        
+        match acess.escadas:
+            case "O percurso inclui escadas.":
+                score += preferencias.peso_escadas
+
+        match amb.temp:
+            case "Risco Elevado.":
+                score += preferencias.peso_temperatura*1*ajustes["temperatura"]
+            case "Risco Moderado.":
+                score+=preferencias.peso_temperatura*0.75*ajustes["temperatura"]
+            case "Desconforto Ligeiro.":
+                score+=preferencias.peso_temperatura*0.5*ajustes["temperatura"]
+            case "Ideal.":
+                score+=preferencias.peso_temperatura*0.25*ajustes["temperatura"]
                 
-        elif ambiente.iluminacao=="Fraco (Má visibilidade)":
-            if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=15
-            elif tipo_user in pvulneraveis:
-                score+=10
-            elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=10
-            else:
-                score+=5
+        match amb.qualidade_ar:
+            case "Excelente":
+                score+=preferencias.peso_ar*0.25
+            case "Boa":
+                score += preferencias.peso_ar*0.5
+            case "Risco Moderado":
+                score += preferencias.peso_ar*0.75
+            case "Risco Elevado":
+                score += preferencias.peso_ar*1
+                
+        match amb.poluicao_sonora:
+            case "Ideal":
+                score += preferencias.peso_ruido*(1/3)
+            case "Aceitável":
+                score += preferencias.peso_ruido*(2/3)
+            case "Desconfortável":
+                score += preferencias.peso_ruido*1
+        
+        match amb.poluicao_visual:
+            case "Ideal":
+                score += preferencias.peso_visual*(1/3)*ajustes["poluicao_visual"]
+            case "Aceitável":
+                score += preferencias.peso_visual*(2/3)*ajustes["poluicao_visual"]
+            case "Desconfortável":
+                score += preferencias.peso_visual*1*ajustes["poluicao_visual"]
+        
+        
+        match amb.nivel_polen:
+            case "Ideal. Ar limpo.":
+                score += preferencias.peso_polen*0.25
+            case "Risco Ligeiro":
+                score += preferencias.peso_polen*0.50
+            case "Risco Moderado":
+                score += preferencias.peso_polen*0.75
+            case "Risco Elevado":
+                score += preferencias.peso_polen*1
+                
+                
+        match amb.iluminacao:
+            case "Iluminação Elevada":
+                score += preferencias.peso_iluminacao*(1/3)*ajustes["iluminacao"]
+            case "Iluminação Moderada":
+                score += preferencias.peso_iluminacao*(2/3)*ajustes["iluminacao"]
+            case "Fraco (Má visibilidade)":
+                score += preferencias.peso_iluminacao*(1)*ajustes["iluminacao"]
+                
+        
+        match amb.sombra:
+            case "Sombra reduzida":
+                score += preferencias.peso_sombra*(1)*ajustes["sombra"]
+            case "Sombra moderada":
+                score += preferencias.peso_sombra*(2/3)*ajustes["sombra"]
+            case "Sombra abrangente":
+                score += preferencias.peso_sombra*(1/3)*ajustes["sombra"]
+
+        match pop.transito:
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é elevada.":
+                score += preferencias.peso_transito*(1)*ajustes["transito"]
+            case "No percurso selecionado, a probabilidade de interseção com tráfego automóvel é reduzida.":
+                score += preferencias.peso_transito*(1/2)*ajustes["transito"]
+        
+
+        match pop.multidao:
+            case "Zona de elevada afluência de peões.":
+                score += preferencias.peso_multidao*(1)*ajustes["multidao"]
+            case "Zona de reduzida afluência de peões.":
+                score += preferencias.peso_multidao*(1/2)*ajustes["multidao"]
+                
+                
+        return score
+
 
                 
-        elif ambiente.iluminacao=="Iluminação Moderada":
-            if tipo_user in pvulneraveis  and "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=10
-            elif tipo_user in pvulneraveis:
-                score+=5
-            elif "cegos" in [inc.lower() for inc in perfil.get_incapacidades()]:
-                score+=5
-            else:
-                score-=0
                 
-        
-        
-#------------sombra---------------#
-#IMPORTANTE!!!!!!!
-#@Renato
-#não quero estar a mexer muito no que não fui eu a fazer, mas aqui vocês usaram coisas como ambiente.sombra1
-#como se fossem variaveis, mas isso são métodos
-#isto também está em outras partes do ficheiro, mas notei mais aqui
-
-        if ambiente.sombra=="Sombra Reduzida":
-            if ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=35
-            elif ambiente.temp=="Risco Elevado." and perfil.need_acessibilidade():
-                score+=20 
-            elif ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis :
-                score+=25 
-                
-            elif ambiente.temp=="Risco Moderado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=25
-            elif ambiente.temp=="Risco Moderado." and perfil.need_acessibilidade():
-                score+=15
-            elif ambiente.temp=="Risco Moderado." and tipo_user in pvulneraveis:
-                score+=20
-                 
-            elif ambiente.temp=="Risco Ligeiro." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=15
-            elif ambiente.temp=="Risco Ligeiro." and perfil.need_acessibilidade():
-                score+=10   
-            elif ambiente.temp=="Risco Ligeiro." and tipo_user in pvulneraveis:
-                score+=15
-                
-            else:
-                score+=10
-         
-            
-        
-        elif ambiente.sombra=="Sombra Moderada":
-            if ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=25 
-            elif ambiente.temp=="Risco Elevado." and perfil.need_acessibilidade():
-                score+=15
-            elif ambiente.temp=="Risco Elevado." and tipo_user in pvulneraveis :
-                score+=20 
-                
-            elif ambiente.temp=="Risco Moderado." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=20
-            elif ambiente.temp=="Risco Moderado." and perfil.need_acessibilidade():
-                score+=10
-            elif ambiente.temp=="Risco Moderado." and tipo_user in pvulneraveis:
-                score+=15
-                 
-            elif ambiente.temp=="Risco Ligeiro." and tipo_user in pvulneraveis and perfil.need_acessibilidade():
-                score+=15
-            elif ambiente.temp=="Risco Ligeiro." and perfil.need_acessibilidade():
-                score+=5    
-            elif ambiente.temp=="Risco Ligeiro." and tipo_user in pvulneraveis:
-                score+=10
-                
-            else:
-                score+=5
-        
-        
-        return score 

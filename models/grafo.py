@@ -20,7 +20,7 @@
 
 from models.percursos import ParametrosAcessibilidade, ParametrosAmbiente, ParametrosPopulacao
 from models.user import Preferencias
-from engine.calculo_percurso3 import CalculoPeso
+from engine.calculo_percurso import CalculoPeso
 import math as m
 import json
 

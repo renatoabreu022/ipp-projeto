@@ -19,7 +19,6 @@ from datetime import datetime
 from models.bicicletas import GestorBicicletas
 import city
 import os
-from interface_bicicletas import AppBicicletas
 
 #------Meti aqui (@Lucas) porque esta seleção deve ser feita durante a execução da app..#
 def hora(values):
@@ -206,9 +205,16 @@ def main():
                 continue
             #mapeamento de ficheiros
             # Adicionei o prefixo da pasta 'city_graphs/' antes de cada nome
+            try:
+                with open("locais.json", "r", encoding="utf-8") as f:
+                    db_cidades = json.load(f)
+            except FileNotFoundError:
+                db_cidades = {}
+            
             cidades_disponiveis = carregar_cidades_disponiveis()
-
-            print(f"\nCidades disponíveis:{list(cidades_disponiveis.keys())}")            
+            
+            
+            print(f"Cidades disponíveis: {', '.join(db_cidades.keys())}")
             selecao = input("Escolha a cidade para a simulação: ").strip()
 
             if selecao not in cidades_disponiveis:
@@ -350,9 +356,6 @@ def main():
                         print(f" {i+1}º caminho sugerido: {' -> '.join(opcao['percurso'])}")
                         print(f"Penalização total (Score): {round(opcao['score'], 0)}")
                         print("-" * 80)
-                        
-                app = AppBicicletas(gestor_bicicletas, db_cidades, mapa, user_login)
-                app.mainloop()  
 
             else:
                 print("Cidade não encontrada na base de dados.")  
